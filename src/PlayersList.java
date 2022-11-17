@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 
-public class PlayerList
+public class PlayersList
 {
   private ArrayList<Player> playerList;
 
-  PlayerList()
+  public PlayersList()
   {
     playerList = new ArrayList<>();
   }
 
-  PlayerList(ArrayList<Player> playerList)
+  public PlayersList(ArrayList<Player> playerList)
   {
     this.playerList = playerList;
   }
@@ -48,6 +48,6 @@ public class PlayerList
 
   @Override public String toString()
   {
-    return "PlayerList{" + "playerList=" + playerList + '}';
+    return "PlayersList{" + "playerList=" + playerList + '}';
   }
 }
