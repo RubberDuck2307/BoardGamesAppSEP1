@@ -27,6 +27,6 @@ public class Main
     FileReader.saveReservationsList(reservationsList);
 
     ReservationsList reservationsList1 = FileReader.readReservations();
-    System.out.println(reservationsList1);
+    FileReader.saveReservationsList(reservationsList);
   }
 }

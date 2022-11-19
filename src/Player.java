@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Player
@@ -12,6 +13,8 @@ public class Player
   private String comment;
   private String address;
   private Boolean voted;
+
+  private LocalDate feePaymentDate;
 
   public Player(int ID, String name, String phoneNumber, String email, boolean membership,
       ArrayList<Integer> ownedBoardGamesIDs, ArrayList<Integer> borrowingsIDS,
@@ -191,12 +194,23 @@ public class Player
     return voted;
   }
 
+  public LocalDate getFeePaymentDate()
+  {
+    return feePaymentDate;
+  }
+
+  public void setFeePaymentDate(LocalDate feePaymentDate)
+  {
+    this.feePaymentDate = feePaymentDate;
+  }
+
   @Override public String toString()
   {
     return "Player{" + "ID=" + ID + ", name='" + name + '\'' + ", phoneNumber='"
         + phoneNumber + '\'' + ", email='" + email + '\'' + ", membership="
         + membership + ", ownedBoardGamesIDs=" + ownedBoardGamesIDs
         + ", borrowingsIDs=" + borrowingsIDs + ", comment='" + comment + '\''
-        + ", address='" + address + '\'' + ", voted=" + voted + '}';
+        + ", address='" + address + '\'' + ", voted=" + voted
+        + ", feePaymentDate=" + feePaymentDate + '}';
   }
 }

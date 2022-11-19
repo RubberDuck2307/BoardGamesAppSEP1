@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Reservation extends Period
+public class Reservation extends Borrowing
 {
   private boolean ASAP;
   private int queue;
