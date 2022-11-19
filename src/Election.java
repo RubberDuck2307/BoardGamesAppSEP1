@@ -2,8 +2,8 @@ import java.time.LocalDateTime;
 
 public class Election
 {
-  LocalDateTime startingDate;
-  LocalDateTime endingDate;
+  private LocalDateTime startingDate;
+  private LocalDateTime endingDate;
 
   public Election(LocalDateTime startingDate, LocalDateTime endingDate){
     this.startingDate = startingDate;
