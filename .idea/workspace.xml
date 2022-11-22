@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="FileReader completed" />
+    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="FileReader completed">
+      <change afterPath="$PROJECT_DIR$/src/Gui/AddPlayerPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Events.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Borrowing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Borrowing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Period.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Reservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reservation.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -25,13 +40,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Java projects/VIA/BoardGamesApp&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Java projects/VIA/Handin7"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Java projects\VIA\BoardGamesApp\src" />
@@ -61,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668705527121</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="FileReader completed">
+      <created>1668855584945</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668855584945</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

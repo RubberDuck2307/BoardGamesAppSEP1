@@ -208,7 +208,7 @@ public class FileReader
     DocumentBuilder builder = factory.newDocumentBuilder();
     Document doc = builder.newDocument();
 
-    Element rootElement = doc.createElement("PlayersList");
+    Element rootElement = doc.createElement("BoardGamesList");
     BoardGame boardGame;
     Element subElement;
 
@@ -1221,14 +1221,6 @@ public class FileReader
       subElement.appendChild(subSubElement);
 
 
-      subSubElement = doc.createElement("ASAP");
-      subSubElement.appendChild(doc.createTextNode(String.valueOf(reservation.isASAP())));
-      subElement.appendChild(subSubElement);
-
-      subSubElement = doc.createElement("queue");
-      subSubElement.appendChild(doc.createTextNode(String.valueOf(reservation.getQueue())));
-      subElement.appendChild(subSubElement);
-
 
       rootElement.appendChild(subElement);
 
@@ -1353,18 +1345,8 @@ public class FileReader
           comment = subNode.getTextContent();
         }
 
-        else if (subNode.getNodeName().equals("ASAP"))
-        {
-          ASAP = Boolean.parseBoolean(subNode.getTextContent());
-        }
-
-        else if (subNode.getNodeName().equals("queue"))
-        {
-          queue = Integer.parseInt(subNode.getTextContent());
-        }
-
       }
-      reservation = new Reservation(ID, playerID, gameID, from, to, comment,ASAP,queue);
+      reservation = new Reservation(ID, playerID, gameID, from, to, comment);
       reservationsList.addReservation(reservation);
     }
     return reservationsList;

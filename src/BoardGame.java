@@ -25,12 +25,11 @@ public class BoardGame
   static public String WITHOUT_DICE_TYPE = "Without Dice";
   static public String ROLL_AND_WRITE = "Roll and Write";
   static public String OTHER = "Other";
-  static public String[] ALLOWED_STATUSES = {"Available","Borrowed","Unavailable","Considered to be bought", "Reserved"};
+  static public String[] ALLOWED_STATUSES = {"Available","Borrowed","Unavailable","Considered to be bought"};
   static public String AVAILABLE_STATUS = "Available";
   static public String BORROWED_STATUS = "Borrowed";
   static public String UNAVAILABLE_STATUS = "Unavailable";
   static public String CONSIDERED_TO_BE_BOUGHT_STATUS = "Considered to be bought";
-  static public String RESERVED_STATUS = "Reserved";
 
   public BoardGame(String name, String type, int numberOfPlayersMin, int numberOfPlayersMax, String availabilityStatus, String comment, int ownerID, int numberOfVotes){
     int ID = -1;

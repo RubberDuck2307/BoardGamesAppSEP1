@@ -13,20 +13,7 @@ public class Main
       throws ParserConfigurationException, TransformerException, IOException,
       SAXException
   {
-
-    LocalDate localDate = LocalDate.of(2003,03,24);
-    Reservation reservation = new Reservation(2,3,localDate,localDate,"xx",false,2);
-    Reservation reservation5 = new Reservation(5,2,3,localDate,localDate,"xx",false,2);
-    Reservation reservation6 = new Reservation(2,3,localDate,localDate,"xx",false,2);
-
-    ReservationsList reservationsList = new ReservationsList();
-    reservationsList.addReservation(reservation);
-    reservationsList.addReservation(reservation5);
-    reservationsList.addReservation(reservation6);
-    System.out.println(reservationsList);
-    FileReader.saveReservationsList(reservationsList);
-
-    ReservationsList reservationsList1 = FileReader.readReservations();
-    FileReader.saveReservationsList(reservationsList);
+    EventsList eventsList = new EventsList();
+    FileReader.saveEventsList(eventsList);
   }
 }
