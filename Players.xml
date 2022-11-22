@@ -24,6 +24,24 @@
     <phoneNumber>56</phoneNumber>
     <email/>
     <membership>true</membership>
+    <ownedBoardGamesIDs>
+      <ID>2</ID>
+      <ID>4</ID>
+    </ownedBoardGamesIDs>
+    <borrowingsIDs>
+      <ID>0</ID>
+      <ID>3</ID>
+    </borrowingsIDs>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+  </Player>
+  <Player>
+    <ID>2</ID>
+    <name>Alex</name>
+    <phoneNumber>777</phoneNumber>
+    <email>monke@banana.want</email>
+    <membership>true</membership>
     <ownedBoardGamesIDs/>
     <borrowingsIDs/>
     <comment/>
