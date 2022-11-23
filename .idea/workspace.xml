@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="Working">
-      <change afterPath="$PROJECT_DIR$/src/AddPlayerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BoardGameApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ModelManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ViewHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AddPlayerPageAlexEdir(1080p).fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HomePageTemplate.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/InsertDataPageTemplate.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TableTemplate.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/table.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/BoardGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/BoardGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Election.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Election.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FileReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Reservation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gui/AddPlayerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddPlayerPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -46,11 +44,18 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Java projects/VIA/GUI2"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Users/bolfa/Personal/VIA/SEP/BoardGamesApp/src",
+    "settings.editor.selected.configurable": "editor.preferences.jsOptions",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\bolfa\Personal\VIA\SEP\BoardGamesApp\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\bolfa\Personal\VIA\SEP\BoardGamesApp\src\css" />
       <recent name="C:\Java projects\VIA\BoardGamesApp\src" />
       <recent name="C:\Java projects\VIA\BoardGamesApp" />
     </key>
@@ -69,6 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668605954039</updated>
+      <workItem from="1669218165740" duration="3729000" />
     </task>
     <task id="LOCAL-00001" summary="Created Player, PlayerList and FileReader classes">
       <created>1668620610635</created>
@@ -101,6 +107,9 @@
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -117,17 +126,5 @@
     <MESSAGE value="FileReader completed" />
     <MESSAGE value="Working" />
     <option name="LAST_COMMIT_MESSAGE" value="Working" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/Borrowing.java</url>
-          <line>6</line>
-          <properties field="gameID" class="Borrowing" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
