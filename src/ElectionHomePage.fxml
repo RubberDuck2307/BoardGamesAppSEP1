@@ -18,7 +18,7 @@
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="560.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="269.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="269.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="121.0" valignment="TOP" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="121.0" valignment="TOP" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="121.0" valignment="TOP" vgrow="SOMETIMES" />
@@ -28,15 +28,12 @@
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="82.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="800.0" text="Home Page" GridPane.columnIndex="1">
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="800.0" text="Election" GridPane.columnIndex="1">
                <font>
                   <Font size="72.0" />
                </font>
-               <GridPane.margin>
-                  <Insets bottom="82.0" />
-               </GridPane.margin>
             </Label>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" text="Players" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" text="Add Election" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
@@ -44,7 +41,7 @@
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" text="Election" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" text="Detail Page" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
@@ -52,31 +49,7 @@
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" text="Board Games" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" text="Reservation" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" text="Borrowings" GridPane.columnIndex="1" GridPane.rowIndex="5">
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" text="Events" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" text="Add Vote" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>

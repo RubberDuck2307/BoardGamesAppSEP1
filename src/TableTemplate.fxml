@@ -111,7 +111,7 @@
                   </HBox>
                </children>
             </HBox>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="66.0" prefWidth="170.0" text="00 Players" GridPane.rowIndex="3">
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="170.0" text="00 Players" GridPane.rowIndex="3">
                <font>
                   <Font size="24.0" />
                </font>

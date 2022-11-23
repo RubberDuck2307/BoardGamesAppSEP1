@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="Working">
-      <change afterPath="$PROJECT_DIR$/src/AddPlayerPageAlexEdir(1080p).fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HomePageTemplate.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InsertDataPageTemplate.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TableTemplate.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ElectionHomePage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddPlayerPageAlexEdir(1080p).fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddPlayerPageAlexEdir(1080p).fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HomePageTemplate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/HomePageTemplate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TableTemplate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableTemplate.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,16 +39,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Users/bolfa/Personal/VIA/SEP/BoardGamesApp/src",
-    "settings.editor.selected.configurable": "editor.preferences.jsOptions",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Users/bolfa/Personal/VIA/SEP/BoardGamesApp/src&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.jsOptions&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\bolfa\Personal\VIA\SEP\BoardGamesApp\src" />
@@ -125,6 +124,7 @@
     <MESSAGE value="Created Player, PlayerList and FileReader classes" />
     <MESSAGE value="FileReader completed" />
     <MESSAGE value="Working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working" />
+    <MESSAGE value="Added HomePageTemplate.fxml table.css and TableTemplate.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added HomePageTemplate.fxml table.css and TableTemplate.fxml" />
   </component>
 </project>
