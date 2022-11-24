@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="Working">
-      <change afterPath="$PROJECT_DIR$/src/ElectionHomePage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddPlayerPageAlexEdir(1080p).fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddPlayerPageAlexEdir(1080p).fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HomePageTemplate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/HomePageTemplate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TableTemplate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableTemplate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/AddPlayerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/AddPlayerPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +62,14 @@
       <recent name="Gui" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.BoardGameApplication">
+    <configuration name="BoardGameApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BoardGameApplication" />
+      <module name="BoardGamesApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="BoardGamesApp" />
@@ -75,6 +79,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BoardGameApplication" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -117,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669123281135</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Working">
+      <created>1669284399305</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669284399305</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,8 +149,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created Player, PlayerList and FileReader classes" />
     <MESSAGE value="FileReader completed" />
-    <MESSAGE value="Working" />
     <MESSAGE value="Added HomePageTemplate.fxml table.css and TableTemplate.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added HomePageTemplate.fxml table.css and TableTemplate.fxml" />
+    <MESSAGE value="Working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working" />
   </component>
 </project>
