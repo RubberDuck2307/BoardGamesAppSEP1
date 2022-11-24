@@ -6,7 +6,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
@@ -14,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@css/style.css">
          <columnConstraints>
@@ -24,9 +23,8 @@
          </columnConstraints>
          <rowConstraints>
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="155.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="168.53330078124998" minHeight="-Infinity" prefHeight="168.53330078124998" valignment="TOP" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="109.60003662109375" minHeight="-Infinity" prefHeight="81.86669921875" valignment="TOP" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="313.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="166.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="397.0" valignment="BOTTOM" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" valignment="TOP" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
@@ -40,22 +38,25 @@
             </Label>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="166.0" prefWidth="820.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="166.0" prefWidth="410.0">
+                  <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="166.0" prefWidth="410.0">
                      <children>
-                        <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="410.0">
+                        <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="206.0">
                            <children>
-                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="140.0" styleClass="labels" text="Starting Date" textAlignment="CENTER">
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="117.0" styleClass="labels" text="Starting Date" textAlignment="CENTER">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
+                                 <HBox.margin>
+                                    <Insets right="50.0" />
+                                 </HBox.margin>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="410.0">
+                        <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="410.0">
                            <children>
                               <DatePicker maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="63.0" prefWidth="299.0" styleClass="input-field">
                                  <HBox.margin>
-                                    <Insets />
+                                    <Insets right="50.0" />
                                  </HBox.margin>
                               </DatePicker>
                            </children>
@@ -64,56 +65,41 @@
                   </VBox>
                   <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="166.0" prefWidth="410.0">
                      <children>
-                        <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="410.0">
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="206.0">
                            <children>
-                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="130.0" styleClass="labels" text="Ending Date">
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="109.0" styleClass="labels" text="Ending Date">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="410.0">
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="410.0">
                            <children>
-                              <DatePicker minWidth="-Infinity" prefHeight="63.0" prefWidth="299.0" styleClass="input-field" />
+                              <DatePicker maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="156.0" styleClass="input-field">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin></DatePicker>
                            </children>
                         </HBox>
                      </children>
                   </VBox>
                </children>
             </HBox>
-            <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="820.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <children>
-                  <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="621.0">
-                     <children>
-                        <TextField alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="349.0" promptText="Search..." styleClass="fields-search">
-                           <font>
-                              <Font size="24.0" />
-                           </font></TextField>
-                     </children>
-                  </HBox>
-                  <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="206.0">
-                     <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: #007BFF;" styleClass="button-search" text="Search" textFill="WHITE">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-            </HBox>
-            <TableView editable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="562.0" prefWidth="1196.0" styleClass="bootstrap" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <TableView editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="397.0" prefWidth="820.0" styleClass="bootstrap" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <columns>
-                  <TableColumn id="text" fx:id="text" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="101.0" style="-fx-font-size: 24px;" styleClass="text" text="Position" />
-                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="502.0" resizable="false" style="-fx-font-size: 24px;" text="Name" />
-                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="202.0" resizable="false" style="-fx-font-size: 24px;" text="Number of Votes" />
+                  <TableColumn id="text" fx:id="text" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="74.0" style="-fx-font-size: 24px;" styleClass="text" text="Position" />
+                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="589.0" resizable="false" style="-fx-font-size: 24px;" text="Name" />
+                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="142.0" resizable="false" style="-fx-font-size: 24px;" text="Number of Votes" />
                </columns>
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </TableView>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="225.0" styleClass="button-red" text="Delete Election" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-red" text="Delete Election" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="24.0" />
                </font>

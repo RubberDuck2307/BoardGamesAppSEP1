@@ -19,7 +19,7 @@
 -fx-background-color: #E5E5E5;
 -fx-pref-width: 596px;
 -fx-pref-height: 41px;
--fx-alignment: center ;
+-fx-alignment: center-left ;
 
 }
 /* for search buttons*/
@@ -184,9 +184,3 @@
 .table-view .virtual-flow .scroll-bar:horizontal .track-background {
     -fx-background-color: transparent;
 }
-
-
-
-
-
-
