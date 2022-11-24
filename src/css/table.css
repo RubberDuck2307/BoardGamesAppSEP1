@@ -1,6 +1,59 @@
-.text {
-    -fx-text-fill: red;
+/* for all texts*/
+.window{
+    -fx-background-color:white;
 }
-#text {
-    -fx-text-fill: red;
+/* for all headings*/
+.heading{
+-fx-font-size: 50px;
+-fx-font-weight: 700;
 }
+
+/* for labels*/
+.labels{
+-fx-font-weight: 400;
+-fx-font-size: 20px;
+-fx-text-fill: #212529;
+}
+
+/* for checkbox button*/
+.check-box > .box {
+    /* background color of unselected checkbox */
+    -fx-background-color: white;
+    -fx-border-color:grey;
+    -fx-border-radius:4px;
+}
+.check-box{
+    -fx-margin-top:50px;
+}
+/* for all blue buttons*/
+.button-blue{
+-fx-background-color: #007BFF;
+-fx-border-radius: 5px;
+-fx-padding: 8px 65px;
+-fx-text-fill: white;
+-fx-pref-width: 240px;
+-fx-pref-height: 46px;
+-fx-font-size: 20px;
+}
+.button-blue:hover{
+-fx-background-color: #006ADB;
+}
+
+
+/* for all red buttons*/
+.button-red{
+-fx-background-color: #DC3545;
+-fx-border-radius: 5px;
+-fx-padding: 8px 65px;
+-fx-text-fill: white;
+-fx-pref-width: 240px;
+-fx-pref-height: 46px;
+-fx-font-size: 20px;
+}
+.button-red:hover{
+-fx-background-color: #D02F3F;
+}
+
+
+
+
