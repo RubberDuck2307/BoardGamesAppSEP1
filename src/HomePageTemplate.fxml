@@ -28,7 +28,7 @@
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="82.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="800.0" styleClass="heading" stylesheets="@css/style.css" text="Home Page" GridPane.columnIndex="1">
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="800.0" styleClass="heading" stylesheets="@css/style.css" text="HOME PAGE" GridPane.columnIndex="1">
                <font>
                   <Font size="72.0" />
                </font>
