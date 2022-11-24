@@ -16,7 +16,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddPlayerController">
    <children>
-      <GridPane alignment="CENTER" layoutX="-4.0" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@css/table.css">
+      <GridPane alignment="CENTER" layoutX="-4.0" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@css/style.css">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="412.0" minWidth="10.0" prefWidth="354.3333435058594" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="1005.7777709960938" minWidth="10.0" prefWidth="773.6666564941406" />
@@ -38,22 +38,22 @@
           <RowConstraints maxHeight="147.1112060546874" minHeight="0.0" prefHeight="54.26666259765625" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="68.0" prefWidth="834.0" styleClass="heading" stylesheets="@css/table.css" text="ADD PLAYER" textAlignment="CENTER" GridPane.columnIndex="1">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="68.0" prefWidth="834.0" styleClass="heading" stylesheets="@css/style.css" text="ADD PLAYER" textAlignment="CENTER" GridPane.columnIndex="1">
                <font>
                   <Font size="46.0" />
                </font>
             </Label>
-            <Label styleClass="labels" stylesheets="@css/table.css" text="Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label styleClass="labels" stylesheets="@css/style.css" text="Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label prefHeight="47.0" prefWidth="246.0" styleClass="labels" stylesheets="@css/table.css" text="Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Label prefHeight="47.0" prefWidth="246.0" styleClass="labels" stylesheets="@css/style.css" text="Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label prefHeight="47.0" prefWidth="285.0" styleClass="labels" stylesheets="@css/table.css" text="Email" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Label prefHeight="47.0" prefWidth="285.0" styleClass="labels" stylesheets="@css/style.css" text="Email" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font size="32.0" />
                </font>
