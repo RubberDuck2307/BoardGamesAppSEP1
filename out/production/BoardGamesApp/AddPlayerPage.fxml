@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
@@ -15,7 +16,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddPlayerController">
    <children>
-      <GridPane alignment="CENTER" layoutX="-4.0" prefHeight="768.0" prefWidth="1366.0">
+      <GridPane alignment="CENTER" layoutX="-4.0" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@css/style.css">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="412.0" minWidth="10.0" prefWidth="354.3333435058594" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="1005.7777709960938" minWidth="10.0" prefWidth="773.6666564941406" />
@@ -31,38 +32,38 @@
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="151.111083984375" minHeight="10.0" prefHeight="127.33333333333337" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="147.1112060546874" minHeight="0.0" prefHeight="123.99999999999989" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="66.20004882812503" minHeight="10.0" prefHeight="60.866735839843784" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="53.533398437499955" minHeight="0.20002441406245453" prefHeight="53.533398437499955" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="151.111083984375" minHeight="10.0" prefHeight="122.5333374023437" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="147.1112060546874" minHeight="0.0" prefHeight="54.26666259765625" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="68.0" prefWidth="834.0" text="ADD PLAYER" textAlignment="CENTER" GridPane.columnIndex="1">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="68.0" prefWidth="834.0" styleClass="heading" stylesheets="@css/style.css" text="ADD PLAYER" textAlignment="CENTER" GridPane.columnIndex="1">
                <font>
                   <Font size="46.0" />
                </font>
             </Label>
-            <Label text="Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label styleClass="labels" stylesheets="@css/style.css" text="Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label prefHeight="47.0" prefWidth="246.0" text="Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Label prefHeight="47.0" prefWidth="246.0" styleClass="labels" stylesheets="@css/style.css" text="Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label prefHeight="47.0" prefWidth="285.0" text="Email" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Label prefHeight="47.0" prefWidth="285.0" styleClass="labels" stylesheets="@css/style.css" text="Email" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label prefHeight="47.0" prefWidth="121.0" text="Address" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <Label prefHeight="47.0" prefWidth="121.0" styleClass="labels" text="Address" GridPane.columnIndex="1" GridPane.rowIndex="7">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label text="Comment" GridPane.columnIndex="1" GridPane.rowIndex="10">
+            <Label styleClass="labels" text="Comment" GridPane.columnIndex="1" GridPane.rowIndex="10">
                <font>
                   <Font size="32.0" />
                </font>
@@ -72,14 +73,18 @@
             <TextField fx:id="phoneNumberField" prefHeight="42.0" prefWidth="754.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField fx:id="emailField" prefHeight="43.0" prefWidth="749.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <TextField fx:id="addressField" prefHeight="44.0" prefWidth="747.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <CheckBox fx:id="membershipBox" mnemonicParsing="false" prefHeight="45.0" prefWidth="164.0" text="Member" GridPane.columnIndex="1" GridPane.rowIndex="9">
+            <CheckBox fx:id="membershipBox" mnemonicParsing="false" prefHeight="45.0" prefWidth="164.0" style="-fx-background-color: white;" text="Member" GridPane.columnIndex="1" GridPane.rowIndex="9">
                <font>
                   <Font size="24.0" />
                </font>
+               <styleClass>
+                  <String fx:value="labels" />
+                  <String fx:value="check-box" />
+               </styleClass>
             </CheckBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="11" GridPane.rowSpan="2">
                <children>
-                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#addPlayer" prefHeight="106.0" prefWidth="290.0" text="Add Player">
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#addPlayer" prefHeight="106.0" prefWidth="290.0" styleClass="button-blue" text="Add Player">
                      <font>
                         <Font size="26.0" />
                      </font>
