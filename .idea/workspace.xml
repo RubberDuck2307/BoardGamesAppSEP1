@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="style.css edit buttons size">
-      <change afterPath="$PROJECT_DIR$/src/ElectionAddVoteSelectBoardgame.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ElectionAddVoteSelectPlayer.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Home.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Players.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ElectionDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElectionDetails.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlayersAddPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayersAddPlayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="added some guis" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669300416972</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added some guis">
+      <created>1669308895923</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669308895923</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +165,7 @@
     <MESSAGE value="Added HomePageTemplate.fxml table.css and TableTemplate.fxml" />
     <MESSAGE value="Style AddPlayerPage.fxml done" />
     <MESSAGE value="style.css edit buttons size" />
-    <option name="LAST_COMMIT_MESSAGE" value="style.css edit buttons size" />
+    <MESSAGE value="added some guis" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some guis" />
   </component>
 </project>
