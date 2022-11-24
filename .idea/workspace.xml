@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="Style AddPlayerPage.fxml done">
-      <change beforePath="$PROJECT_DIR$/src/AddPlayerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddPlayerPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HomePageTemplate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/HomePageTemplate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
+    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="Working">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/AddPlayerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/AddPlayerPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,12 +122,12 @@
       <option name="project" value="LOCAL" />
       <updated>1669123281135</updated>
     </task>
-    <task id="LOCAL-00005" summary="Style AddPlayerPage.fxml done">
-      <created>1669292292030</created>
+    <task id="LOCAL-00005" summary="Working">
+      <created>1669284399305</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1669292292030</updated>
+      <updated>1669284399305</updated>
     </task>
     <option name="localTasksCounter" value="6" />
     <servers />
@@ -150,9 +149,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created Player, PlayerList and FileReader classes" />
     <MESSAGE value="FileReader completed" />
-    <MESSAGE value="Working" />
     <MESSAGE value="Added HomePageTemplate.fxml table.css and TableTemplate.fxml" />
-    <MESSAGE value="Style AddPlayerPage.fxml done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Style AddPlayerPage.fxml done" />
+    <MESSAGE value="Working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working" />
   </component>
 </project>
