@@ -27,7 +27,7 @@ public class ViewHandler
 
   public void openView()
   {
-    Region root = loadSimpleGuiView("src/AddPlayerPage.fxml", addPlayerController);
+    Region root = loadSimpleGuiView("src/PlayersAddPlayer.fxml", addPlayerController);
     currentScene.setRoot(root);
     primaryStage.setTitle("hello");
     primaryStage.setScene(currentScene);
@@ -51,7 +51,7 @@ public class ViewHandler
       try
       {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("AddPlayerPage.fxml"));
+        loader.setLocation(getClass().getResource("PlayersAddPlayer.fxml"));
         root = loader.load();
         controller = loader.getController();
         controller.init(root, model, this);

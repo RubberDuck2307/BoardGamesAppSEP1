@@ -50,10 +50,9 @@
 .button-blue{
 -fx-background-color: #007BFF;
 -fx-border-radius: 5px;
--fx-padding: 8px 50px;
 -fx-text-fill: white;
--fx-pref-width: 240px;
--fx-pref-height: 46px;
+-fx-pref-width: 198px;
+-fx-pref-height: 63px;
 -fx-font-size: 20px;
 }
 .button-blue:hover{
@@ -65,10 +64,9 @@
 .button-red{
 -fx-background-color: #DC3545;
 -fx-border-radius: 5px;
--fx-padding: 8px 50px;
 -fx-text-fill: white;
--fx-pref-width: 240px;
--fx-pref-height: 46px;
+-fx-pref-width: 198px;
+-fx-pref-height: 63px;
 -fx-font-size: 20px;
 }
 .button-red:hover{
