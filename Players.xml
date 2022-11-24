@@ -9,8 +9,12 @@
     <ownedBoardGamesIDs>
       <ID>2</ID>
       <ID>4</ID>
+      <ID>2</ID>
+      <ID>4</ID>
     </ownedBoardGamesIDs>
     <borrowingsIDs>
+      <ID>0</ID>
+      <ID>3</ID>
       <ID>0</ID>
       <ID>3</ID>
     </borrowingsIDs>
@@ -27,8 +31,12 @@
     <ownedBoardGamesIDs>
       <ID>2</ID>
       <ID>4</ID>
+      <ID>2</ID>
+      <ID>4</ID>
     </ownedBoardGamesIDs>
     <borrowingsIDs>
+      <ID>0</ID>
+      <ID>3</ID>
       <ID>0</ID>
       <ID>3</ID>
     </borrowingsIDs>
@@ -42,9 +50,55 @@
     <phoneNumber>777</phoneNumber>
     <email>monke@banana.want</email>
     <membership>true</membership>
+    <ownedBoardGamesIDs>
+      <ID>2</ID>
+      <ID>4</ID>
+      <ID>2</ID>
+      <ID>4</ID>
+    </ownedBoardGamesIDs>
+    <borrowingsIDs>
+      <ID>0</ID>
+      <ID>3</ID>
+      <ID>0</ID>
+      <ID>3</ID>
+    </borrowingsIDs>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+  </Player>
+  <Player>
+    <ID>3</ID>
+    <name/>
+    <phoneNumber/>
+    <email/>
+    <membership>true</membership>
     <ownedBoardGamesIDs/>
     <borrowingsIDs/>
-    <comment/>
+    <comment>sisdrgrsuhfughdrugh</comment>
+    <address/>
+    <voted>false</voted>
+  </Player>
+  <Player>
+    <ID>4</ID>
+    <name/>
+    <phoneNumber/>
+    <email/>
+    <membership>true</membership>
+    <ownedBoardGamesIDs/>
+    <borrowingsIDs/>
+    <comment>sisdrgrsuhfughdrugh</comment>
+    <address/>
+    <voted>false</voted>
+  </Player>
+  <Player>
+    <ID>5</ID>
+    <name/>
+    <phoneNumber/>
+    <email/>
+    <membership>true</membership>
+    <ownedBoardGamesIDs/>
+    <borrowingsIDs/>
+    <comment>sisdrgrsuhfughdrugh</comment>
     <address/>
     <voted>false</voted>
   </Player>
