@@ -656,7 +656,7 @@ public class FileReader
 
       subSubElement = doc.createElement("playerID");
       subSubElement.appendChild(
-          doc.createTextNode(Integer.toString(rating.getplayerID())));
+          doc.createTextNode(Integer.toString(rating.getPlayerID())));
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("gameID");
@@ -664,9 +664,6 @@ public class FileReader
           doc.createTextNode(Integer.toString(rating.getGameID())));
       subElement.appendChild(subSubElement);
 
-      subSubElement = doc.createElement("review");
-      subSubElement.appendChild(doc.createTextNode((rating.getReview())));
-      subElement.appendChild(subSubElement);
 
       rootElement.appendChild(subElement);
     }
@@ -731,12 +728,8 @@ public class FileReader
           gameID = Integer.parseInt(subNode.getTextContent());
         }
 
-        else if (subNode.getNodeName().equals("review"))
-        {
-          review = subNode.getTextContent();
-        }
       }
-      rating = new Rating(ID, value, playerID, gameID, review);
+      rating = new Rating(ID, value, playerID, gameID);
       ratingsList.addRating(rating);
     }
     return ratingsList;
