@@ -7,6 +7,10 @@
 -fx-font-size: 50px;
 -fx-font-weight: 700;
 }
+.heading-2{
+-fx-font-size: 30px;
+-fx-font-weight: 700;
+}
 
 /* for labels*/
 .labels{

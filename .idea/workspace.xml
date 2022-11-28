@@ -1,38 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="style.css edit buttons size">
-      <change afterPath="$PROJECT_DIR$/src/BoardgamesAddBoardgame.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BoardgamesDeleteRating.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BoardgamesDetaiPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BoardgamesInsertRating.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BorrowingsAddFinalForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BorrowingsDetailPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ElectionAddElection.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventsAddEvent.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventsDetailPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PlayersDetailPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReservationsAddFinalForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReservationsDetailPage.fxml" afterDir="false" />
+    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="css and forms are done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Boardgames.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Boardgames.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BoardgamesAddRating.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoardgamesAddRating.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BoardgamesRatings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoardgamesRatings.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Borrowings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Borrowings.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BorrowingsAddSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BorrowingsAddSelectBoardgame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BorrowingsAddSelectPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BorrowingsAddSelectPlayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ElectionAddVoteSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElectionAddVoteSelectBoardgame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ElectionAddVoteSelectPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElectionAddVoteSelectPlayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ElectionDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElectionDetails.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Events.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Events.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventsAddParticipant.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventsAddParticipant.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventsSelectParticipant.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventsSelectParticipant.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Players.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Players.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlayersAddPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayersAddPlayer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventsAddEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventsAddEvent.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reservations.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReservationsAddSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReservationsAddSelectBoardgame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReservationsAddSelectMember.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReservationsAddSelectMember.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="forms" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -169,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669300416972</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="css and forms are done">
+      <created>1669622525371</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669622525371</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +172,7 @@
     <MESSAGE value="Added HomePageTemplate.fxml table.css and TableTemplate.fxml" />
     <MESSAGE value="Style AddPlayerPage.fxml done" />
     <MESSAGE value="style.css edit buttons size" />
-    <option name="LAST_COMMIT_MESSAGE" value="style.css edit buttons size" />
+    <MESSAGE value="css and forms are done" />
+    <option name="LAST_COMMIT_MESSAGE" value="css and forms are done" />
   </component>
 </project>
