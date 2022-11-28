@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="css and forms are done">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventsAddEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventsAddEvent.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reservations.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardgamesAddRating.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoardgamesAddRating.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardgamesRatings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoardgamesRatings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Players.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Players.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
