@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="edit in main">
+    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="tables are done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Borrowings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Borrowings.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BorrowingsAddSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BorrowingsAddSelectBoardgame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BorrowingsAddSelectPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BorrowingsAddSelectPlayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ElectionAddVoteSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElectionAddVoteSelectBoardgame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ElectionAddVoteSelectPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElectionAddVoteSelectMember.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ElectionDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElectionDetailPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reservations.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReservationsAddSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReservationsAddSelectBoardgame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReservationsAddSelectMember.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReservationsAddSelectMember.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
