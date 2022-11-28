@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="css and forms are done">
-      <change beforePath="$PROJECT_DIR$/src/BoardgamesAddRating.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoardgamesAddRating.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BoardgamesRatings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoardgamesRatings.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Players.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Players.fxml" afterDir="false" />
+    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="edit in main">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Borrowings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Borrowings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BorrowingsAddSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BorrowingsAddSelectBoardgame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BorrowingsAddSelectPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BorrowingsAddSelectPlayer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ElectionAddVoteSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElectionAddVoteSelectBoardgame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ElectionAddVoteSelectPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElectionAddVoteSelectMember.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ElectionDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElectionDetailPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reservations.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReservationsAddSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReservationsAddSelectBoardgame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReservationsAddSelectMember.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReservationsAddSelectMember.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="forms" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -148,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669622525371</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="edit in main">
+      <created>1669631714193</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669631714193</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +187,7 @@
     <MESSAGE value="Style AddPlayerPage.fxml done" />
     <MESSAGE value="style.css edit buttons size" />
     <MESSAGE value="css and forms are done" />
-    <option name="LAST_COMMIT_MESSAGE" value="css and forms are done" />
+    <MESSAGE value="edit in main" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit in main" />
   </component>
 </project>

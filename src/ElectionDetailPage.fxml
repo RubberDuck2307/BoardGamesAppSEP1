@@ -107,6 +107,14 @@
                   <Insets right="50.0" />
                </GridPane.margin>
             </Button>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
+               </children>
+               <GridPane.margin>
+                  <Insets left="60.0" top="40.0" />
+               </GridPane.margin>
+            </VBox>
          </children>
       </GridPane>
    </children>
