@@ -83,8 +83,9 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.BoardGameApplication" />
-        <item itemvalue="Application.BoardGameApplication" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.BoardGameApplication" />
+        <item itemvalue="Application.BoardGameApplication" />
       </list>
     </recent_temporary>
   </component>
