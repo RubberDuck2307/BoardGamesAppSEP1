@@ -51,7 +51,7 @@
                   </HBox>
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="198.0">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" style="-fx-background-color: #007BFF;" styleClass="button-search" text="Serach" textFill="WHITE">
+                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-search" text="Serach" textFill="WHITE">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -126,7 +126,7 @@
                   <Insets />
                </GridPane.margin>
             </TableView>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" style="-fx-background-color: #007BFF;" styleClass="button-blue" text="Confirm Player" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Confirm Player" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <font>
                   <Font size="24.0" />
                </font>
@@ -134,11 +134,19 @@
                   <Insets right="50.0" />
                </GridPane.margin>
             </Button>
-            <Label text="Select Player" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label styleClass="heading-2" text="Select Player" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="36.0" />
                </font>
             </Label>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
+               </children>
+               <GridPane.margin>
+                  <Insets left="60.0" top="40.0" />
+               </GridPane.margin>
+            </VBox>
          </children>
       </GridPane>
    </children>
