@@ -10,8 +10,6 @@ public class Player
   private String phoneNumber;
   private String email;
   private boolean membership;
-  private ArrayList<Integer> ownedBoardGamesIDs;
-  private ArrayList<Integer> borrowingsIDs;
   private String comment;
   private String address;
   private Boolean voted;
@@ -19,17 +17,15 @@ public class Player
   private LocalDate feePaymentDate;
 
   public Player(int ID, String name, String phoneNumber, String email, boolean membership,
-      ArrayList<Integer> ownedBoardGamesIDs, ArrayList<Integer> borrowingsIDS,
       String comment, String address, Boolean voted)
   {
-    set(ID, name, phoneNumber, email, membership, ownedBoardGamesIDs, borrowingsIDS, comment, address , voted);
+    set(ID, name, phoneNumber, email, membership, comment, address , voted);
   }
   public Player(String name, String phoneNumber, String email, boolean membership,
-      ArrayList<Integer> ownedBoardGamesIDs, ArrayList<Integer> borrowingsIDS,
       String comment, String address, Boolean voted)
   {
     int ID = -1;
-    set(ID,name, phoneNumber, email, membership, ownedBoardGamesIDs, borrowingsIDS, comment, address , voted);
+    set(ID,name, phoneNumber, email, membership, comment, address , voted);
   }
 
 
@@ -42,13 +38,12 @@ public class Player
     String address = "";
     boolean voted = false;
 
-    set(ID, name,phoneNumber,email, membership,ownedBoardGamesIDs,borrowingsIDs,comment,address,voted);
+    set(ID, name,phoneNumber,email, membership,comment,address,voted);
 
   }
 
   public void set(int ID,String name, String phoneNumber, String email,
-      boolean membership, ArrayList<Integer> ownedBoardGamesIDs,
-      ArrayList<Integer> borrowingsIDs, String comment, String address,
+      boolean membership, String comment, String address,
       Boolean voted)
   {
     name.trim();
@@ -61,8 +56,6 @@ public class Player
     this.phoneNumber = phoneNumber;
     this.email = email;
     this.membership = membership;
-    this.ownedBoardGamesIDs = ownedBoardGamesIDs;
-    this.borrowingsIDs = borrowingsIDs;
     this.comment = comment;
     this.address = address;
     this.voted = voted;
@@ -171,16 +164,6 @@ public class Player
     return membership;
   }
 
-  public ArrayList<Integer> getOwnedBoardGamesIDs()
-  {
-    return ownedBoardGamesIDs;
-  }
-
-  public ArrayList<Integer> getBorrowingsIDs()
-  {
-    return borrowingsIDs;
-  }
-
   public String getComment()
   {
     return comment;
@@ -210,8 +193,8 @@ public class Player
   {
     return "Model.Player{" + "ID=" + ID + ", name='" + name + '\'' + ", phoneNumber='"
         + phoneNumber + '\'' + ", email='" + email + '\'' + ", membership="
-        + membership + ", ownedBoardGamesIDs=" + ownedBoardGamesIDs
-        + ", borrowingsIDs=" + borrowingsIDs + ", comment='" + comment + '\''
+        + membership +
+        ", comment='" + comment + '\''
         + ", address='" + address + '\'' + ", voted=" + voted
         + ", feePaymentDate=" + feePaymentDate + '}';
   }

@@ -58,26 +58,6 @@ public class FileReader
           doc.createTextNode(String.valueOf(player.isMembership())));
       subElement.appendChild(subSubElement);
 
-      subSubElement = doc.createElement("ownedBoardGamesIDs");
-      Element subSubSubElement;
-      for (int j = 0; j < player.getOwnedBoardGamesIDs().size(); j++)
-      {
-        subSubSubElement = doc.createElement("ID");
-        subSubSubElement.appendChild(doc.createTextNode(
-            String.valueOf(player.getOwnedBoardGamesIDs().get(j))));
-        subSubElement.appendChild(subSubSubElement);
-      }
-      subElement.appendChild(subSubElement);
-
-      subSubElement = doc.createElement("borrowingsIDs");
-      for (int j = 0; j < player.getBorrowingsIDs().size(); j++)
-      {
-        subSubSubElement = doc.createElement("ID");
-        subSubSubElement.appendChild(doc.createTextNode(
-            String.valueOf(player.getBorrowingsIDs().get(j))));
-        subSubElement.appendChild(subSubSubElement);
-      }
-      subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("comment");
       subSubElement.appendChild(
@@ -124,8 +104,6 @@ public class FileReader
     String phoneNumber = null;
     String email = null;
     boolean membership = false;
-    ArrayList<Integer> ownedBoardGamesIDs = new ArrayList<>();
-    ArrayList<Integer> borrowingsIDs = new ArrayList<>();
     String comment = null;
     String address = null;
     boolean voted = false;
@@ -157,30 +135,6 @@ public class FileReader
         {
           membership = Boolean.parseBoolean(subNodes.item(j).getTextContent());
         }
-        else if (subNodes.item(j).getNodeName().equals("ownedBoardGamesIDs"))
-        {
-          NodeList subSubNodes = subNodes.item(j).getChildNodes();
-          for (int k = 0; k < subSubNodes.getLength(); k++)
-          {
-            if (subSubNodes.item(k).getNodeName().equals("ID"))
-            {
-              ownedBoardGamesIDs.add(
-                  Integer.parseInt(subSubNodes.item(k).getTextContent()));
-            }
-          }
-        }
-        else if (subNodes.item(j).getNodeName().equals("borrowingsIDs"))
-        {
-          NodeList subSubNodes = subNodes.item(j).getChildNodes();
-          for (int k = 0; k < subSubNodes.getLength(); k++)
-          {
-            if (subSubNodes.item(k).getNodeName().equals("ID"))
-            {
-              borrowingsIDs.add(
-                  Integer.parseInt(subSubNodes.item(k).getTextContent()));
-            }
-          }
-        }
 
         else if (subNodes.item(j).getNodeName().equals("comment"))
         {
@@ -197,8 +151,7 @@ public class FileReader
           voted = Boolean.parseBoolean(subNodes.item(j).getTextContent());
         }
       }
-      Player player = new Player(ID, name, phoneNumber, email, membership,
-          ownedBoardGamesIDs, borrowingsIDs, comment, address, voted);
+      Player player = new Player(ID, name, phoneNumber, email, membership, comment, address, voted);
 
       playersList.addPlayer(player);
     }
