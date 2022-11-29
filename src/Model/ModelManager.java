@@ -13,6 +13,8 @@ public class ModelManager
   PlayersList playersList = FileReader.readPlayersList();
   BoardGamesList boardGamesList = FileReader.readBoardGamesList();
 
+  ReservationsList reservationsList = FileReader.readReservations();
+
   public BoardGamesList getBoardGamesList()
   {
     return boardGamesList;
