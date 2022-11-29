@@ -41,18 +41,6 @@ public class AddPlayerController implements Controller
   public void reset()
   {
   }
-
-  @FXML private void addPlayer()
-      throws ParserConfigurationException, TransformerException
-  {
-    Player player = new Player(nameField.getText(), phoneNumberField.getText(),
-        emailField.getText(), membershipBox.isSelected(), new ArrayList<>(),
-        new ArrayList<>(), commentField.getText(), addressField.getText(),
-        false);
-    model.addPlayer(player);
-    model.savePlayers();
-  }
-
   public Region getRegion()
   {
     return region;

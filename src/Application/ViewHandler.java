@@ -17,7 +17,11 @@ public class ViewHandler
   private AddPlayerController addPlayerController;
   private PlayersDetailPageController playersDetailPageController;
   private PlayersController playersController;
-
+  private BoardGamesController boardGamesController;
+  private ElectionController electionController;
+  private ReservationController reservationController;
+  private BorrowingsController borrowingsController;
+  private EventsController eventsController;
 
   public ViewHandler(ModelManager model)
   {
@@ -32,22 +36,38 @@ public class ViewHandler
     openView(1, -1);
   }
 
-  public void openView(int IDofPage,int IDOfItem)
+  public void openView(int IDofPage, int IDOfItem)
   {
     Region root = null;
-    switch (IDofPage){
-      case 1: root = loadSimpleGuiView("/FXML/Home.fxml", homeController, -1);
-      break;
-      case 2: root = loadSimpleGuiView("/FXML/Players.fxml", playersController, -1);
-      break;
-      case 3: root = loadSimpleGuiView("/FXML/PlayersDetailPage.fxml",playersDetailPageController , IDOfItem);
+    switch (IDofPage)
+    {
+      case 1:
+        root = loadSimpleGuiView("/FXML/Home.fxml", homeController, -1);
+        break;
+      case 2:
+        root = loadSimpleGuiView("/FXML/Players.fxml", playersController, -1);
+        break;
+      case 3:
+        root = loadSimpleGuiView("/FXML/Boardgames.fxml",
+            playersDetailPageController, IDOfItem);
+        break;
+      case 4:
+        root = loadSimpleGuiView("/FXML/Election.fxml", electionController, -1);
+        break;
+      case 5:
+        root = loadSimpleGuiView("/FXML/Reservations.fxml",
+            reservationController, -1);
+        break;
+      case 6:
+        root = loadSimpleGuiView("/FXML/Borrowings.fxml", borrowingsController, -1);
+        break;
+      case 7:
+        root = loadSimpleGuiView("/FXML/Events.fxml", eventsController, -1);
         break;
     }
 
-
-
     currentScene.setRoot(root);
-    primaryStage.setTitle("hello");
+    primaryStage.setTitle("Board Games App");
     primaryStage.setScene(currentScene);
     primaryStage.setWidth(root.getPrefWidth());
     System.out.println(root.getPrefWidth());
@@ -56,15 +76,13 @@ public class ViewHandler
     primaryStage.show();
   }
 
-
   public void CloseView()
   {
     primaryStage.close();
   }
 
-
-
-  private Region loadSimpleGuiView(String fxmlFile, Controller controller, int ID)
+  private Region loadSimpleGuiView(String fxmlFile, Controller controller,
+      int ID)
   {
     Region root = null;
     if (controller == null)

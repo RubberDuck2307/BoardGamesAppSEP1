@@ -44,7 +44,7 @@
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Model.Election" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="electionButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openElectionPage" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Election" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
@@ -52,7 +52,7 @@
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Board Games" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="boardGamesButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openBoardGamesPage" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Board Games" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
@@ -60,7 +60,7 @@
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Model.Reservation" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button fx:id="reservationsButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openReservationPage" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Reservation" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
@@ -68,7 +68,7 @@
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Borrowings" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Button fx:id="borrowingsButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openBorrowingsPage" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Borrowings" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
@@ -76,7 +76,7 @@
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Events" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <Button fx:id="eventsButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openEventsPage" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Events" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
