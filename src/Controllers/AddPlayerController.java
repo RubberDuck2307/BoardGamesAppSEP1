@@ -31,7 +31,7 @@ public class AddPlayerController implements Controller
   {
   }
 
-  public void init(Region region, ModelManager model, ViewHandler viewHandler)
+  public void init(Region region, ModelManager model, ViewHandler viewHandler, int ID)
   {
     this.region = region;
     this.model = model;

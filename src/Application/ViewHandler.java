@@ -1,9 +1,6 @@
 package Application;
 
-import Controllers.AddPlayerController;
-import Controllers.Controller;
-import Controllers.HomeController;
-import Controllers.PlayersController;
+import Controllers.*;
 import Model.ModelManager;
 import javafx.scene.Scene;
 import javafx.scene.layout.Region;
@@ -18,6 +15,7 @@ public class ViewHandler
   private ModelManager model;
   private HomeController homeController;
   private AddPlayerController addPlayerController;
+  private PlayersDetailPageController playersDetailPageController;
   private PlayersController playersController;
 
 
@@ -31,18 +29,22 @@ public class ViewHandler
   public void start(Stage primaryStage)
   {
     this.primaryStage = primaryStage;
-    openView(1);
+    openView(1, -1);
   }
 
-  public void openView(int ID)
+  public void openView(int IDofPage,int IDOfItem)
   {
     Region root = null;
-    switch (ID){
-      case 1: root = loadSimpleGuiView("/FXML/Home.fxml", homeController);
+    switch (IDofPage){
+      case 1: root = loadSimpleGuiView("/FXML/Home.fxml", homeController, -1);
       break;
-      case 2: root = loadSimpleGuiView("/FXML/Players.fxml", playersController);
+      case 2: root = loadSimpleGuiView("/FXML/Players.fxml", playersController, -1);
       break;
+      case 3: root = loadSimpleGuiView("/FXML/PlayersDetailPage.fxml",playersDetailPageController , IDOfItem);
+        break;
     }
+
+
 
     currentScene.setRoot(root);
     primaryStage.setTitle("hello");
@@ -52,6 +54,7 @@ public class ViewHandler
     primaryStage.show();
   }
 
+
   public void CloseView()
   {
     primaryStage.close();
@@ -59,7 +62,7 @@ public class ViewHandler
 
 
 
-  private Region loadSimpleGuiView(String fxmlFile, Controller controller)
+  private Region loadSimpleGuiView(String fxmlFile, Controller controller, int ID)
   {
     Region root = null;
     if (controller == null)
@@ -70,7 +73,7 @@ public class ViewHandler
         loader.setLocation(getClass().getResource(fxmlFile));
         root = loader.load();
         controller = loader.getController();
-        controller.init(root, model, this);
+        controller.init(root, model, this, ID);
       }
       catch (Exception e)
       {

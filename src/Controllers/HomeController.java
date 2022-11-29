@@ -19,7 +19,7 @@ public class HomeController implements Controller
   public HomeController(){}
 
   @Override public void init(Region region, ModelManager model,
-      ViewHandler viewHandler)
+      ViewHandler viewHandler, int ID)
   {
     this.region = region;
     this.model = model;
@@ -27,8 +27,9 @@ public class HomeController implements Controller
 
   }
 
+
   @FXML public void openPlayerPage(){
-    viewHandler.openView(2);
+    viewHandler.openView(2, -1);
   }
 
   @Override public Region getRegion()

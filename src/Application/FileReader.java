@@ -115,7 +115,6 @@ public class FileReader
 
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     DocumentBuilder builder = factory.newDocumentBuilder();
-    //Document doc = builder.parse("C:\\Users\\START\\IdeaProjects\\BoardGamesApp\\src\\XML\\Players.xml");
     Document doc = builder.parse("./src/XML/Players.xml");
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");

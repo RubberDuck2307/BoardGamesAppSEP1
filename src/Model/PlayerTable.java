@@ -10,11 +10,24 @@ public class PlayerTable
   StringProperty email;
   StringProperty membership;
 
-  public PlayerTable(String name,String phone, String email, String membership){
+  int ID;
+
+  public PlayerTable(String name,String phone, String email, String membership, int ID){
     this.name = new SimpleStringProperty(name);
     this.phone = new SimpleStringProperty(phone);
     this.email = new SimpleStringProperty(email);
     this.membership = new SimpleStringProperty(membership);
+    this.ID = ID;
+  }
+
+  public int getID()
+  {
+    return ID;
+  }
+
+  public void setID(int ID)
+  {
+    this.ID = ID;
   }
 
   public String getName()

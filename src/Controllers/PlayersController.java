@@ -24,16 +24,16 @@ public class PlayersController implements Controller
   @FXML public TableColumn<PlayerTable, String> email;
   @FXML public TableColumn<PlayerTable, String> phone;
   @FXML public TableColumn<PlayerTable, String> membership;
+  private ObservableList<PlayerTable> playersTables = FXCollections.observableArrayList();
   public PlayersController(){}
   @Override public void init(Region region, ModelManager model,
-      ViewHandler viewHandler)
+      ViewHandler viewHandler, int ID)
   {
     this.region = region;
     this.model = model;
     this.viewHandler = viewHandler;
 
-    ObservableList<PlayerTable> playersTables = FXCollections.observableArrayList(
-    );
+
 
     for(int i = 0; i < model.getPlayersList().size(); i++){
       Player player = model.getPlayersList().getPlayer(i);
@@ -44,20 +44,23 @@ public class PlayersController implements Controller
       else {
         membership = "Guest";
       }
-      playersTables.add(new PlayerTable(player.getName(),player.getPhoneNumber(), player.getEmail(), membership));
+      playersTables.add(new PlayerTable(player.getName(),player.getPhoneNumber(), player.getEmail(), membership, player.getID()));
 
 
     }
-
 
     name.setCellValueFactory(new PropertyValueFactory<>("name"));
     email.setCellValueFactory(new PropertyValueFactory<>("email"));
     phone.setCellValueFactory(new PropertyValueFactory<>("phone"));
     membership.setCellValueFactory(new PropertyValueFactory<>("membership"));
-
     playersTable.setItems(playersTables);
   }
 
+
+
+  @FXML private void choosePlayer(){
+    viewHandler.openView(3, playersTable.getSelectionModel().getSelectedItem().getID());
+  }
 
   @Override public Region getRegion()
   {
