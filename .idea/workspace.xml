@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="IDK.fxml">
+      <change afterPath="$PROJECT_DIR$/src/Controllers/BoardGamesDetailPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/FileReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/ViewHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/ViewHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/AddPlayerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/AddPlayerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Boardgames.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Boardgames.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Borrowings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Borrowings.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Election.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Election.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Events.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Events.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Players.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Players.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Reservations.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/ModelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/ModelManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Application/ViewHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/ViewHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/BoardGamesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/BoardGamesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/BoardgamesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Boardgames.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Boardgames.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Reservations.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/BoardGamesList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BoardGamesList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/BoardgameTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BoardgameTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/XML/BoardGames.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/BoardGames.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/XML/Reservations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Reservations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/PlayersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/PlayersController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,16 +38,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/chris/IdeaProjects/BoardGamesApp",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/chris/IdeaProjects/BoardGamesApp&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\bolfa\Personal\VIA\SDJ\Classes\BoardGamesApp\src\css" />
