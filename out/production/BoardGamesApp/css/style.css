@@ -1,0 +1,267 @@
+/* for all texts*/
+.window{
+    -fx-background-color:white;
+}
+/* for all headings*/
+.heading{
+-fx-font-size: 50px;
+-fx-font-weight: 700;
+}
+.heading-2{
+-fx-font-size: 30px;
+-fx-font-weight: 700;
+}
+
+/* for labels*/
+.labels{
+-fx-font-weight: 400;
+-fx-font-size: 20px;
+-fx-text-fill: #212529;
+}
+/* for search fields*/
+.fields-search{
+-fx-background-color: #E5E5E5;
+-fx-pref-width: 596px;
+-fx-pref-height: 41px;
+-fx-alignment: center-left ;
+
+}
+/* for search buttons*/
+.button-search{
+-fx-background-color: #007BFF;
+-fx-pref-width: 90px;
+-fx-pref-height: 41px;
+-fx-font-size: 16px;
+}
+.button-search:hover{
+-fx-background-color: #006ADB;
+}
+/* for input fields*/
+.input-field{
+-fx-pref-width: 156px;
+-fx-pref-height: 24px;
+}
+.input-field-max-width{
+-fx-pref-height: 24px;
+-fx-font-size: 14px;
+}
+.input-textarea-max-width{
+-fx-pref-height: 64px;
+-fx-font-size: 14px;
+}
+.input-select{
+-fx-pref-width: 196px;
+-fx-pref-height: 40px;
+-fx-font-size: 16px;
+-fx-background-color: white;
+-fx-border-color:#CED4DA;
+-fx-border-radius: 5px;
+}
+.input-select-max-width{
+-fx-pref-height: 30px;
+-fx-font-size: 16px;
+-fx-background-color: white;
+-fx-border-color:#CED4DA;
+-fx-border-radius: 5px;
+}
+/* do not touch */
+.slider .track{
+-fx-margin-top:20px;
+    -progress : 0.2;
+    -fx-background-color: ABB5BE;
+    -fx-control-inner-background: black;
+}
+.slider .thumb{
+-fx-background-color: #007BFF;
+}
+.button-back{
+-icon-paint: red;
+    -fx-background-color: #007BFF;
+    -size: 44;
+    -fx-min-height: -size;
+    -fx-min-width: -size;
+    -fx-max-height: -size;
+    -fx-max-width: -size;
+-fx-shape: "M47 7.83331C68.62 7.83331 86.1667 25.38 86.1667 47C86.1667 68.62 68.62 86.1666 47 86.1666C25.38 86.1666 7.83337 68.62 7.83337 47C7.83337 25.38 25.38 7.83331 47 7.83331ZM47 43.0833V31.3333L31.3334 47L47 62.6666V50.9166H62.6667V43.0833H47Z" ;
+}
+.button-back:hover{
+-fx-background-color: #006ADB;
+}
+
+
+
+/* for checkbox button*/
+.check-box > .box {
+    /* background color of unselected checkbox */
+    -fx-background-color: white;
+    -fx-border-color:grey;
+    -fx-border-radius:4px;
+}
+.check-box{
+    -fx-margin-top:50px;
+}
+/* for all blue buttons*/
+.button-blue{
+-fx-background-color: #007BFF;
+-fx-border-radius: 5px;
+-fx-text-fill: white;
+-fx-pref-width: 158px;
+-fx-pref-height: 43px;
+-fx-font-size: 15px;
+}
+.button-blue:hover{
+-fx-background-color: #006ADB;
+}
+
+
+/* for all red buttons*/
+.button-red{
+-fx-background-color: #DC3545;
+-fx-border-radius: 5px;
+-fx-text-fill: white;
+-fx-pref-width: 158px;
+-fx-pref-height: 43px;
+-fx-font-size: 15px;
+}
+.button-red:hover{
+-fx-background-color: #D02F3F;
+}
+
+/* for all orange buttons*/
+.button-orange{
+-fx-background-color: #FFBC3B;
+-fx-border-radius: 5px;
+-fx-text-fill: white;
+-fx-pref-width: 158px;
+-fx-pref-height: 43px;
+-fx-font-size: 15px;
+}
+.button-orange:hover{
+-fx-background-color: #FFAE11;
+}
+
+/* home page buttons (navigation)*/
+.button-homepage{
+-fx-background-color: #CCE5FF;
+-fx-border-radius: 10px;
+-fx-text-fill: #212529;
+-fx-pref-width:683px;
+-fx-pref-height: 62px;
+-fx-font-size: 30px;
+}
+.button-homepage:hover{
+-fx-background-color: #A4CCF5;
+}
+
+/* button for showing more info: reservation rating,..*/
+
+.button-more-info{
+-fx-background-color: #CCE5FF;
+-fx-border-radius: 10px;
+-fx-text-fill: #212529;
+-fx-pref-width:300px;
+-fx-pref-height: 32px;
+-fx-font-size: 15px;
+}
+.button-more-info:hover{
+-fx-background-color: #A4CCF5;
+}
+/* tables
+
+
+
+*/
+.table-view {
+    -fx-background-color: transparent;
+
+}
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color:  white;
+    -fx-border-color: #DEE2E6 transparent #DEE2E6 transparent;
+}
+
+/* header*/
+.table-view .column-header .label{
+   -fx-text-fill: #152536;
+   -fx-font-weight: bold;
+   -fx-alignment: CENTER_LEFT;
+   -fx-font-size:16px;
+   -fx-border-color: #DEE2E6 transparent #DEE2E6 transparent;
+
+}
+/* body*/
+.table-view .cell{
+  -fx-cell-size: 35;
+  -fx-alignment: center-left;
+  -fx-background-color: #F8F9FA;
+  -fx-font-size: 16px !important;
+  -fx-text-fill: #152536;
+  -fx-alignment: CENTER_LEFT;
+}
+
+.table-view .cell:even{
+  -fx-background-color: F4F4F4;
+}
+.table-view .cell:odd{
+  -fx-background-color: white;
+}
+/* todo implement hover and selected this is not working*/
+.table-view .cell:hover{
+}
+
+
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+  -fx-background-color:transparent;
+	-fx-background-radius: 2em;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+	-fx-background-color: transparent;
+	-fx-border-color: transparent;
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:rgba(63, 67, 80, 0.24);
+	-fx-background-insets: 2, 0, 0;
+	-fx-background-radius: 2em;
+
+}
+
+/* chart properties */
+
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-legend-visible: false;
+
+}
+.chart-plot-background {
+    -fx-background-color:transparent;
+
+}
+
+.chart-pie {
+    -fx-border-color: transparent;
+    -fx-border-width: 0px;
+
+}
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}

@@ -2,8 +2,79 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="css and forms are done">
-      <change afterPath="$PROJECT_DIR$/src/Election.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/AddPlayerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/AddPlayerPage.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/BoardGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/BoardGameApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/BoardGamesList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Borrowing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/BorrowingsList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Election.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Event.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/EventsList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FileReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/ModelManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/PlayersList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Rating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/RatingsList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Reservation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/ReservationsList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/ViewHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddPlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/AddPlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BoardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardGameApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/BoardGameApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardGamesList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BoardGamesList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Boardgames.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Boardgames.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardgamesAddBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/BoardgamesAddBoardgame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardgamesAddRating.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/BoardgamesAddRating.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardgamesDeleteRating.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/BoardgamesDeleteRating.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardgamesDetaiPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/BoardgamesDetaiPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardgamesInsertRating.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/BoardgamesInsertRating.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardgamesRatings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/BoardgamesRatings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Borrowing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Borrowing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Borrowings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Borrowings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BorrowingsAddFinalForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/BorrowingsAddFinalForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BorrowingsAddSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/BorrowingsAddSelectBoardgame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BorrowingsAddSelectPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/BorrowingsAddSelectPlayer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BorrowingsDetailPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/BorrowingsDetailPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BorrowingsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BorrowingsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Election.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Election.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Election.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Election.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ElectionAddElection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/ElectionAddElection.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ElectionAddVoteSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/ElectionAddVoteSelectBoardgame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ElectionAddVoteSelectMember.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/ElectionAddVoteSelectMember.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ElectionDetailPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/ElectionDetailPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Events.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Events.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventsAddEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/EventsAddEvent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventsAddParticipant.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/EventsAddParticipant.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventsDetailPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/EventsDetailPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/EventsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventsSelectParticipant.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/EventsSelectParticipant.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ModelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Players.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Players.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayersAddPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/PlayersAddPlayer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayersDetailPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/PlayersDetailPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PlayersList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RatingsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/RatingsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Reservations.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReservationsAddFinalForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/ReservationsAddFinalForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReservationsAddSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/ReservationsAddSelectBoardgame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReservationsAddSelectMember.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/ReservationsAddSelectMember.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReservationsDetailPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/ReservationsDetailPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReservationsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ReservationsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ViewHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/ViewHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +85,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,6 +123,7 @@
       <recent name="D:\Users\bolfa\Personal\VIA\SEP\BoardGamesApp\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\START\IdeaProjects\BoardGamesApp\src\FXML" />
       <recent name="D:\Users\bolfa\Personal\VIA\SEP\BoardGamesApp\src\css" />
       <recent name="C:\Java projects\VIA\BoardGamesApp\src" />
       <recent name="C:\Java projects\VIA\BoardGamesApp" />
@@ -65,14 +137,14 @@
   </component>
   <component name="RunManager" selected="Application.BoardGameApplication">
     <configuration name="BoardGameApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BoardGameApplication" />
+      <option name="MAIN_CLASS_NAME" value="Application.BoardGameApplication" />
       <module name="BoardGamesApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="Application.Main" />
       <module name="BoardGamesApp" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -80,8 +152,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.BoardGameApplication" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.BoardGameApplication" />
         <item itemvalue="Application.Main" />
       </list>
@@ -146,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669622525371</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="css and forms are done">
+      <created>1669668359475</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669668359475</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
