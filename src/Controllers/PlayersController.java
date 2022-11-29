@@ -65,7 +65,7 @@ public class PlayersController implements Controller
 
   @FXML private void choosePlayer()
   {
-    viewHandler.openView(3,
+    viewHandler.openView(8,
         playersTable.getSelectionModel().getSelectedItem().getID());
   }
 

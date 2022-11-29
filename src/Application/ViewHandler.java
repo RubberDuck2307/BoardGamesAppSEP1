@@ -19,6 +19,7 @@ public class ViewHandler
   private PlayersController playersController;
 
   private BoardGamesController boardGamesController;
+  private BoardGamesDetailPageController boardGamesDetailPageController;
   private ElectionController electionController;
   private ReservationController reservationController;
   private BorrowingsController borrowingsController;
@@ -65,6 +66,12 @@ public class ViewHandler
         break;
       case 7:
         root = loadSimpleGuiView("/FXML/Events.fxml", eventsController, -1);
+        break;
+      case 8:
+        root = loadSimpleGuiView("/FXML/PlayersDetailPage.fxml", playersDetailPageController, IDOfItem);
+        break;
+      case 9:
+        root = loadSimpleGuiView("/FXML/BoardgamesDetailPage.fxml", boardGamesDetailPageController, IDOfItem);
         break;
     }
 

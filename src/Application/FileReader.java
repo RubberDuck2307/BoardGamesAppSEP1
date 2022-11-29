@@ -74,6 +74,25 @@ public class FileReader
           doc.createTextNode(String.valueOf(player.getVoted())));
       subElement.appendChild(subSubElement);
 
+      subSubElement = doc.createElement("voted");
+      subSubElement.appendChild(
+          doc.createTextNode(String.valueOf(player.getVoted())));
+      subElement.appendChild(subSubElement);
+
+      subSubElement = doc.createElement("feePayment");
+      Element subSubSubElement = doc.createElement("day");
+      subSubSubElement.appendChild(doc.createTextNode(String.valueOf(player.getFeePaymentDate().getDayOfMonth())));
+      subSubElement.appendChild(subSubSubElement);
+      subSubSubElement = doc.createElement("month");
+      subSubSubElement.appendChild(doc.createTextNode(String.valueOf(player.getFeePaymentDate().getMonthValue())));
+      subSubElement.appendChild(subSubSubElement);
+      subSubSubElement = doc.createElement("year");
+      subSubSubElement.appendChild(doc.createTextNode(String.valueOf(player.getFeePaymentDate().getYear())));
+      subSubElement.appendChild(subSubSubElement);
+      subElement.appendChild(subSubElement);
+
+
+
       rootElement.appendChild(subElement);
 
     }
@@ -83,7 +102,7 @@ public class FileReader
     transformer.setOutputProperty(OutputKeys.INDENT, "yes");
     transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount",
         "2");
-    File file = new File("Players.xml");
+    File file = new File("./src/XML/Players.xml");
     transformer.transform(new DOMSource(doc), new StreamResult(file));
   }
 
@@ -107,6 +126,7 @@ public class FileReader
     String comment = null;
     String address = null;
     boolean voted = false;
+    LocalDate feePayment = null;
 
     NodeList rootList = doc.getElementsByTagName("Player");
     for (int i = 0; i < rootList.getLength(); i++)
@@ -150,8 +170,35 @@ public class FileReader
         {
           voted = Boolean.parseBoolean(subNodes.item(j).getTextContent());
         }
+
+        else if (subNodes.item(j).getNodeName().equals("feePayment"))
+        {
+          int day = 0;
+          int month = 0;
+          int year = 0;
+
+          NodeList subSubList = subNodes.item(j).getChildNodes();
+          for (int k = 0; k < subSubList.getLength(); k++)
+          {
+            Node subSubNode = subSubList.item(k);
+            if (subSubNode.getNodeName().equals("day"))
+            {
+              day = Integer.parseInt(subSubNode.getTextContent());
+            }
+            else if (subSubNode.getNodeName().equals("month"))
+            {
+              month = Integer.parseInt(subSubNode.getTextContent());
+            }
+            else if (subSubNode.getNodeName().equals("year"))
+            {
+              year = Integer.parseInt(subSubNode.getTextContent());
+            }
+
+          }
+          feePayment = LocalDate.of(year, month, day);
+        }
       }
-      Player player = new Player(ID, name, phoneNumber, email, membership, comment, address, voted);
+      Player player = new Player(ID, name, phoneNumber, email, membership, comment, address, voted, feePayment);
 
       playersList.addPlayer(player);
     }
