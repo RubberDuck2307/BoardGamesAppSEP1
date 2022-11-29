@@ -11,6 +11,12 @@ import java.io.IOException;
 public class ModelManager
 {
   PlayersList playersList = FileReader.readPlayersList();
+  BoardGamesList boardGamesList = FileReader.readBoardGamesList();
+
+  public BoardGamesList getBoardGamesList()
+  {
+    return boardGamesList;
+  }
 
   public PlayersList getPlayersList()
   {

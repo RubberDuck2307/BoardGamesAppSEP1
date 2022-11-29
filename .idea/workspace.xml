@@ -3,21 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="css and forms are done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGames.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/BoardGames.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CurrentBorrowings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/CurrentBorrowings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Election.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Election.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Events.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Events.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PastBorrowings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/PastBorrowings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Players.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Players.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ratings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Ratings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Reservations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/FileReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/BoardgamesAddRating.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/BoardgamesAddRating.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/BorrowingsAddSelectPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/BorrowingsAddSelectPlayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/EventsSelectParticipant.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/EventsSelectParticipant.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/ModelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/ModelManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/FileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/PlayersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/PlayersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ModelManager.java" afterDir="false" />
     </list>
@@ -171,7 +156,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669668359475</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="css and forms are done">
+      <created>1669714337193</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669714337193</updated>
+    </task>
+    <task id="LOCAL-00010" summary="css and forms are done">
+      <created>1669714480059</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669714480059</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

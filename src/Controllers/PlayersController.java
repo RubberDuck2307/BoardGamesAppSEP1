@@ -21,9 +21,7 @@ public class PlayersController implements Controller
 
   @FXML private TableView<PlayerTable> playersTable;
   @FXML public TableColumn<PlayerTable, String> name;
-
   @FXML public TableColumn<PlayerTable, String> email;
-
   @FXML public TableColumn<PlayerTable, String> phone;
   @FXML public TableColumn<PlayerTable, String> membership;
   public PlayersController(){}
@@ -36,12 +34,6 @@ public class PlayersController implements Controller
 
     ObservableList<PlayerTable> playersTables = FXCollections.observableArrayList(
     );
-    try{
-      System.out.println(FileReader.readPlayersList());
-    }
-    catch (Exception e){
-
-    }
 
     for(int i = 0; i < model.getPlayersList().size(); i++){
       Player player = model.getPlayersList().getPlayer(i);
@@ -58,12 +50,11 @@ public class PlayersController implements Controller
     }
 
 
-    //make sure the property value factory should be exactly same as the e.g getStudentId from your model class
     name.setCellValueFactory(new PropertyValueFactory<>("name"));
     email.setCellValueFactory(new PropertyValueFactory<>("email"));
     phone.setCellValueFactory(new PropertyValueFactory<>("phone"));
     membership.setCellValueFactory(new PropertyValueFactory<>("membership"));
-    //add your data to the table here.
+
     playersTable.setItems(playersTables);
   }
 
