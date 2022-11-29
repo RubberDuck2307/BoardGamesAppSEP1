@@ -21,6 +21,18 @@ public class BoardgameTable {
     }
 
 
+    public String getNumberOfPlayers() {
+        return numberOfPlayers.get();
+    }
+
+    public StringProperty numberOfPlayersProperty() {
+        return numberOfPlayers;
+    }
+
+    public void setNumberOfPlayers(String numberOfPlayers) {
+        this.numberOfPlayers.set(numberOfPlayers);
+    }
+
     public int getID() {
         return ID;
     }

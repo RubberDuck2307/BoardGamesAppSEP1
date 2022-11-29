@@ -37,6 +37,10 @@ public class BoardGamesList
     return boardGamesList.get(index);
   }
 
+  public BoardGame getNameByID(int ID){
+    return boardGamesList.get(ID);
+  }
+
   public int size()
   {
     return boardGamesList.size();

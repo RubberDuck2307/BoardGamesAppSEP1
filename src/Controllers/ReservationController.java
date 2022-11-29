@@ -1,9 +1,7 @@
 package Controllers;
 
 import Application.ViewHandler;
-import Model.ModelManager;
-import Model.Reservation;
-import Model.ReservationTable;
+import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,9 +10,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
 
-public class ReservationController {
+public class ReservationController implements Controller {
 
-    public class PlayersController implements Controller {
         Region region;
         ModelManager model;
         ViewHandler viewHandler;
@@ -30,7 +27,7 @@ public class ReservationController {
         @FXML
         public TableColumn<ReservationTable, String> to;
 
-        public PlayersController() {
+        public ReservationController() {
         }
 
 
@@ -42,10 +39,13 @@ public class ReservationController {
 
             ObservableList<ReservationTable> reservationTables = FXCollections.observableArrayList();
 
-            for (int i = 0; i < model.getPlayersList().size(); i++) {
+            for (int i = 0; i < model.getReservationsList().size(); i++) {
+                System.out.println(model.getPlayersList().size());
+                System.out.println(i);
                 Reservation reservation = model.getReservationsList().getReservation(i);
+                BoardGame boardgame = model.getBoardGamesList().getBoardGame(reservation.getID());
 
-                reservationTables.add(new ReservationTable(String.valueOf(reservation.getGameID()), String.valueOf(reservation.getPlayerID()), String.valueOf(reservation.getFrom()), String.valueOf(reservation.getTo()), reservation.getID()));
+                reservationTables.add(new ReservationTable(String.valueOf(boardgame.getName()), String.valueOf(reservation.getPlayerID()), String.valueOf(reservation.getFrom()), String.valueOf(reservation.getTo()), reservation.getID()));
             }
 
 
@@ -58,6 +58,10 @@ public class ReservationController {
         }
 
 
+        @FXML
+        public void backToHomePage(){
+
+        }
         @Override
         public Region getRegion() {
             return region;
@@ -67,5 +71,4 @@ public class ReservationController {
         public void reset() {
 
         }
-    }
 }

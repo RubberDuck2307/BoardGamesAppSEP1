@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BoardgamesController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BoardGamesController">
    <children>
       <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css">
          <columnConstraints>
@@ -105,7 +105,7 @@
                   </HBox>
                </children>
             </HBox>
-            <TableView fx:id="BoardgameTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="314.0" prefWidth="820.0" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <TableView fx:id="boardGameTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="314.0" prefWidth="820.0" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <columns>
                   <TableColumn id="text" fx:id="name" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Name" />
                   <TableColumn fx:id="type" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Type" />
@@ -157,7 +157,7 @@
             </HBox>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
+                  <Button fx:id="backButton" alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#backToHomePage" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
                </children>
                <GridPane.margin>
                   <Insets left="60.0" top="40.0" />
