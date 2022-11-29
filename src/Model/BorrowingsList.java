@@ -4,19 +4,19 @@ import java.util.ArrayList;
 
 public class BorrowingsList
 {
-  private ArrayList<Borrowing> borrowingList;
+  private ArrayList<Reservation> borrowingList;
 
   public BorrowingsList()
   {
     borrowingList = new ArrayList<>();
   }
 
-  public BorrowingsList(ArrayList<Borrowing> borrowingList)
+  public BorrowingsList(ArrayList<Reservation> borrowingList)
   {
     this.borrowingList = borrowingList;
   }
 
-  public Borrowing getBorrowing(int index)
+  public Reservation getBorrowing(int index)
   {
     return borrowingList.get(index);
   }
@@ -26,7 +26,7 @@ public class BorrowingsList
     return borrowingList.size();
   }
 
-  public void addBorrowing(Borrowing borrowing)
+  public void addBorrowing(Reservation borrowing)
   {
     if (borrowing.getID() == -1)
     {

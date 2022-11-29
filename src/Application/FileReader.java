@@ -943,7 +943,7 @@ public class FileReader
     Document doc = builder.newDocument();
 
     Element rootElement = doc.createElement("borrowingsList");
-    Borrowing borrowing;
+    Reservation borrowing;
     Element subElement;
     Element subSubElement;
     for (int i = 0; i < borrowingsList.size(); i++)
@@ -1058,7 +1058,7 @@ public class FileReader
       Node rootNode = rootList.item(i);
       NodeList subList = rootNode.getChildNodes();
       Node subNode;
-      Borrowing borrowing;
+      Reservation borrowing;
 
       for (int j = 0; j < subList.getLength(); j++)
       {
@@ -1139,7 +1139,7 @@ public class FileReader
         }
 
       }
-      borrowing = new Borrowing(ID, playerID, gameID, from, to, comment);
+      borrowing = new Reservation(ID, playerID, gameID, from, to, comment);
       borrowingsList.addBorrowing(borrowing);
     }
     return borrowingsList;

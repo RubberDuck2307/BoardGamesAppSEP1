@@ -50,6 +50,8 @@ public class ViewHandler
     primaryStage.setTitle("hello");
     primaryStage.setScene(currentScene);
     primaryStage.setWidth(root.getPrefWidth());
+    System.out.println(root.getPrefWidth());
+    System.out.println(root.getWidth());
     primaryStage.setHeight(root.getPrefHeight());
     primaryStage.show();
   }
