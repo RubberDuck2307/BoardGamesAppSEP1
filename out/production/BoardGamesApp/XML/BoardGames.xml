@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <PlayersList>
   <BoardGame>
-    <ID>1</ID>
+    <ID>0</ID>
     <name>ss</name>
     <type>Engine Building</type>
     <numberOfPlayersMin>2</numberOfPlayersMin>
