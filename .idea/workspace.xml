@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="IDK.fxml">
-      <change afterPath="$PROJECT_DIR$/src/Controllers/BoardGamesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/BorrowingsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/ElectionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/EventsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/ReservationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/ViewHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/ViewHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/AddPlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/AddPlayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/PlayersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/PlayersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Boardgames.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Boardgames.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Borrowings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Borrowings.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Election.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Election.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Events.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Events.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Players.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Players.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Reservations.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Honza" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,14 +41,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Users/bolfa/Personal/VIA/SEP/BoardGamesApp/BoardGamesApp/src/Controllers&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Users/bolfa/Personal/VIA/SDJ/Classes/BoardGamesApp/src/css&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Users\bolfa\Personal\VIA\SEP\BoardGamesApp\BoardGamesApp\src\Controllers" />
       <recent name="D:\Users\bolfa\Personal\VIA\SDJ\Classes\BoardGamesApp\src\css" />
       <recent name="D:\Users\bolfa\Personal\VIA\SDJ\Classes\BoardGamesApp\src" />
       <recent name="D:\Users\bolfa\Personal\VIA\SEP\BoardGamesApp\src" />

@@ -15,6 +15,10 @@ public class ModelManager
 
   ReservationsList reservationsList = FileReader.readReservations();
 
+  public ReservationsList getReservationsList() {
+    return reservationsList;
+  }
+
   public BoardGamesList getBoardGamesList()
   {
     return boardGamesList;
