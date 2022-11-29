@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="IDK.fxml">
+      <change afterPath="$PROJECT_DIR$/src/Controllers/BoardgamesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controllers/ReservationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/BoardgameTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/ReservationTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/AddPlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/AddPlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ModelManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Honza" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,18 +41,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Users/bolfa/Personal/VIA/SDJ/Classes/BoardGamesApp/src/css&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/chris/IdeaProjects/BoardGamesApp/src/Model",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\chris\IdeaProjects\BoardGamesApp\src\Model" />
+      <recent name="C:\Users\chris\IdeaProjects\BoardGamesApp\src\Controllers" />
       <recent name="D:\Users\bolfa\Personal\VIA\SDJ\Classes\BoardGamesApp\src\css" />
       <recent name="D:\Users\bolfa\Personal\VIA\SDJ\Classes\BoardGamesApp\src" />
       <recent name="D:\Users\bolfa\Personal\VIA\SEP\BoardGamesApp\src" />
