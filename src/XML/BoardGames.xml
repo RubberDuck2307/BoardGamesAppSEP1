@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PlayersList>
+  <BoardGame>
+    <ID>1</ID>
+    <name>ss</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>2</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment>dd</comment>
+    <ownerID>1</ownerID>
+    <numberOfVotes>4</numberOfVotes>
+  </BoardGame>
+</PlayersList>
