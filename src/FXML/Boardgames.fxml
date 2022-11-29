@@ -105,7 +105,7 @@
                   </HBox>
                </children>
             </HBox>
-            <TableView fx:id="boardGameTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="314.0" prefWidth="820.0" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <TableView fx:id="boardGameTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="314.0" prefWidth="820.0" onMousePressed="#chooseBoardgame" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <columns>
                   <TableColumn id="text" fx:id="name" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Name" />
                   <TableColumn fx:id="type" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Type" />

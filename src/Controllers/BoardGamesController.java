@@ -48,7 +48,6 @@ public class BoardGamesController implements Controller{
         type.setCellValueFactory(new PropertyValueFactory<>("type"));
         availability.setCellValueFactory(new PropertyValueFactory<>("availability"));
         numberOfPlayers.setCellValueFactory(new PropertyValueFactory<>("numberOfPlayers"));
-
         boardGameTable.setItems(boardGameTables);
 
     }
@@ -59,7 +58,12 @@ public class BoardGamesController implements Controller{
     }
 
     @FXML public void backToHomePage(){
-
+        viewHandler.openView(1,-1);
+    }
+    @FXML private void chooseBoardgame()
+    {
+        viewHandler.openView(9,
+            boardGameTable.getSelectionModel().getSelectedItem().getID());
     }
 
     @Override
