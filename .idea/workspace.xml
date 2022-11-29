@@ -3,8 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="css and forms are done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGames.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/BoardGames.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CurrentBorrowings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/CurrentBorrowings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Election.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Election.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Events.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PastBorrowings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/PastBorrowings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Players.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Players.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ratings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Ratings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Reservations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/FileReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/BoardgamesAddRating.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/BoardgamesAddRating.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/BorrowingsAddSelectPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/BorrowingsAddSelectPlayer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/EventsSelectParticipant.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/EventsSelectParticipant.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/ModelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/ModelManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/FileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/PlayersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/PlayersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Players.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Players.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ModelManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,10 +68,11 @@
       <recent name="D:\Users\bolfa\Personal\VIA\SEP\BoardGamesApp\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\START\IdeaProjects\BoardGamesApp\src\XML" />
+      <recent name="C:\Users\START\IdeaProjects\BoardGamesApp\XML" />
       <recent name="C:\Users\START\IdeaProjects\BoardGamesApp\src\FXML" />
       <recent name="D:\Users\bolfa\Personal\VIA\SEP\BoardGamesApp\src\css" />
       <recent name="C:\Java projects\VIA\BoardGamesApp\src" />
-      <recent name="C:\Java projects\VIA\BoardGamesApp" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="model" />
@@ -65,7 +81,7 @@
       <recent name="Gui" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BoardGameApplication">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="BoardGameApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Application.BoardGameApplication" />
       <module name="BoardGamesApp" />
@@ -82,8 +98,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BoardGameApplication" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.BoardGameApplication" />
         <item itemvalue="Application.BoardGameApplication" />
         <item itemvalue="Application.Main" />
       </list>

@@ -1,7 +1,9 @@
 package Controllers;
 
+import Application.FileReader;
 import Application.ViewHandler;
 import Model.ModelManager;
+import Model.Player;
 import Model.PlayerTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -31,9 +33,30 @@ public class PlayersController implements Controller
     this.region = region;
     this.model = model;
     this.viewHandler = viewHandler;
+
     ObservableList<PlayerTable> playersTables = FXCollections.observableArrayList(
-        new PlayerTable("Alex", "5555555555","Alex@Monkey.com","Guest")
     );
+    try{
+      System.out.println(FileReader.readPlayersList());
+    }
+    catch (Exception e){
+
+    }
+
+    for(int i = 0; i < model.getPlayersList().size(); i++){
+      Player player = model.getPlayersList().getPlayer(i);
+      String membership = "";
+      if (player.isMembership()){
+        membership = "Member";
+      }
+      else {
+        membership = "Guest";
+      }
+      playersTables.add(new PlayerTable(player.getName(),player.getPhoneNumber(), player.getEmail(), membership));
+
+
+    }
+
 
     //make sure the property value factory should be exactly same as the e.g getStudentId from your model class
     name.setCellValueFactory(new PropertyValueFactory<>("name"));

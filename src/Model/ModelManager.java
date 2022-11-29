@@ -12,6 +12,10 @@ public class ModelManager
 {
   PlayersList playersList = FileReader.readPlayersList();
 
+  public PlayersList getPlayersList()
+  {
+    return playersList;
+  }
 
   public ModelManager()
       throws TransformerConfigurationException, ParserConfigurationException,

@@ -28,13 +28,13 @@ public class FileReader
     DocumentBuilder builder = factory.newDocumentBuilder();
     Document doc = builder.newDocument();
 
-    Element rootElement = doc.createElement("Model.PlayersList");
+    Element rootElement = doc.createElement("PlayersList");
     Player player;
     for (int i = 0; i < playersList.size(); i++)
     {
       player = playersList.getPlayer(i);
 
-      Element subElement = doc.createElement("Model.Player");
+      Element subElement = doc.createElement("Player");
 
       Element subSubElement = doc.createElement("ID");
       subSubElement.appendChild(
@@ -115,7 +115,8 @@ public class FileReader
 
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     DocumentBuilder builder = factory.newDocumentBuilder();
-    Document doc = builder.parse("Players.xml");
+    //Document doc = builder.parse("C:\\Users\\START\\IdeaProjects\\BoardGamesApp\\src\\XML\\Players.xml");
+    Document doc = builder.parse("./src/XML/Players.xml");
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
 
@@ -130,7 +131,7 @@ public class FileReader
     String address = null;
     boolean voted = false;
 
-    NodeList rootList = doc.getElementsByTagName("Model.Player");
+    NodeList rootList = doc.getElementsByTagName("Player");
     for (int i = 0; i < rootList.getLength(); i++)
     {
       Node rootNode = rootList.item(i);
@@ -199,6 +200,7 @@ public class FileReader
       }
       Player player = new Player(ID, name, phoneNumber, email, membership,
           ownedBoardGamesIDs, borrowingsIDs, comment, address, voted);
+
       playersList.addPlayer(player);
     }
     return playersList;
@@ -211,14 +213,14 @@ public class FileReader
     DocumentBuilder builder = factory.newDocumentBuilder();
     Document doc = builder.newDocument();
 
-    Element rootElement = doc.createElement("Model.BoardGamesList");
+    Element rootElement = doc.createElement("BoardGamesList");
     BoardGame boardGame;
     Element subElement;
 
     for (int i = 0; i < boardGamesList.size(); i++)
     {
       boardGame = boardGamesList.getBoardGame(i);
-      subElement = doc.createElement("Model.BoardGame");
+      subElement = doc.createElement("BoardGame");
 
       Element subSubElement = doc.createElement("ID");
       subSubElement.appendChild(
@@ -298,7 +300,7 @@ public class FileReader
     int ownerID = -1;
     int numberOfVotes = 0;
 
-    NodeList rootList = doc.getElementsByTagName("Model.BoardGame");
+    NodeList rootList = doc.getElementsByTagName("BoardGame");
     for (int i = 0; i < rootList.getLength(); i++)
     {
       Node rootNode = rootList.item(i);
@@ -364,14 +366,14 @@ public class FileReader
     DocumentBuilder builder = factory.newDocumentBuilder();
     Document doc = builder.newDocument();
 
-    Element rootElement = doc.createElement("Model.EventsList");
+    Element rootElement = doc.createElement("EventsList");
     Event event;
     Element subElement;
     Element subSubElement;
     for (int i = 0; i < eventsList.size(); i++)
     {
       event = eventsList.getEvent(i);
-      subElement = doc.createElement("Model.Event");
+      subElement = doc.createElement("Event");
 
       subSubElement = doc.createElement("ID");
       subSubElement.appendChild(
@@ -501,7 +503,7 @@ public class FileReader
     String comment = null;
     String link = null;
 
-    NodeList rootList = doc.getElementsByTagName("Model.Event");
+    NodeList rootList = doc.getElementsByTagName("Event");
 
     for (int i = 0; i < rootList.getLength(); i++)
     {
@@ -637,7 +639,7 @@ public class FileReader
     DocumentBuilder builder = factory.newDocumentBuilder();
     Document doc = builder.newDocument();
 
-    Element rootElement = doc.createElement("Model.RatingsList");
+    Element rootElement = doc.createElement("RatingsList");
     Rating rating;
     Element subElement;
     Element subSubElement;
@@ -645,7 +647,7 @@ public class FileReader
     for (int i = 0; i < ratingsList.size(); i++)
     {
       rating = ratingsList.getRating(i);
-      subElement = doc.createElement("Model.Rating");
+      subElement = doc.createElement("Rating");
 
       subSubElement = doc.createElement("ID");
       subSubElement.appendChild(
@@ -698,7 +700,7 @@ public class FileReader
     int gameID = -1;
     String review = null;
 
-    NodeList rootList = doc.getElementsByTagName("Model.Rating");
+    NodeList rootList = doc.getElementsByTagName("Rating");
 
     for (int i = 0; i < rootList.getLength(); i++)
     {
@@ -745,7 +747,7 @@ public class FileReader
     DocumentBuilder builder = factory.newDocumentBuilder();
     Document doc = builder.newDocument();
 
-    Element rootElement = doc.createElement("Model.Election");
+    Element rootElement = doc.createElement("Election");
     Element subElement;
     Element subSubElement;
 
@@ -811,7 +813,7 @@ public class FileReader
     transformer.setOutputProperty(OutputKeys.INDENT, "yes");
     transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount",
         "2");
-    File file = new File("Model.Election.xml");
+    File file = new File("Election.xml");
     transformer.transform(new DOMSource(doc), new StreamResult(file));
 
   }
@@ -823,14 +825,14 @@ public class FileReader
 
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     DocumentBuilder builder = factory.newDocumentBuilder();
-    Document doc = builder.parse("Model.Election.xml");
+    Document doc = builder.parse("Election.xml");
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
 
     LocalDateTime startingDate = null;
     LocalDateTime endingDate = null;
 
-    NodeList rootList = doc.getElementsByTagName("Model.Election");
+    NodeList rootList = doc.getElementsByTagName("Election");
     Node rootNode;
     try
     {
@@ -948,7 +950,7 @@ public class FileReader
     for (int i = 0; i < borrowingsList.size(); i++)
     {
       borrowing = borrowingsList.getBorrowing(i);
-      subElement = doc.createElement("Model.Borrowing");
+      subElement = doc.createElement("Borrowing");
 
       subSubElement = doc.createElement("ID");
       subSubElement.appendChild(
@@ -1050,7 +1052,7 @@ public class FileReader
     LocalDate to = null;
     String comment = null;
 
-    NodeList rootList = doc.getElementsByTagName("Model.Borrowing");
+    NodeList rootList = doc.getElementsByTagName("Borrowing");
 
     for (int i = 0; i < rootList.getLength(); i++)
     {
