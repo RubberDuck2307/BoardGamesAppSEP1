@@ -45,8 +45,6 @@ public class PlayersController implements Controller
         membership = "Guest";
       }
       playersTables.add(new PlayerTable(player.getName(),player.getPhoneNumber(), player.getEmail(), membership));
-
-
     }
 
 
