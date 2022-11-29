@@ -3,7 +3,7 @@
   <reservation>
     <ID>0</ID>
     <playerID>2</playerID>
-    <gameID>3</gameID>
+    <gameID>0</gameID>
     <from>
       <day>24</day>
       <month>3</month>
@@ -21,7 +21,7 @@
   <reservation>
     <ID>5</ID>
     <playerID>2</playerID>
-    <gameID>3</gameID>
+    <gameID>0</gameID>
     <from>
       <day>24</day>
       <month>3</month>
@@ -39,7 +39,7 @@
   <reservation>
     <ID>6</ID>
     <playerID>2</playerID>
-    <gameID>3</gameID>
+    <gameID>0</gameID>
     <from>
       <day>24</day>
       <month>3</month>

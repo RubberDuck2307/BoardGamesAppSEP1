@@ -17,34 +17,32 @@ public class Player
   private LocalDate feePaymentDate;
 
   public Player(int ID, String name, String phoneNumber, String email, boolean membership,
-      String comment, String address, Boolean voted)
+      String comment, String address, Boolean voted, LocalDate feePaymentDate)
   {
-    set(ID, name, phoneNumber, email, membership, comment, address , voted);
+    set(ID, name, phoneNumber, email, membership, comment, address , voted, feePaymentDate);
   }
   public Player(String name, String phoneNumber, String email, boolean membership,
-      String comment, String address, Boolean voted)
+      String comment, String address, Boolean voted, LocalDate feePaymentDate)
   {
     int ID = -1;
-    set(ID,name, phoneNumber, email, membership, comment, address , voted);
+    set(ID,name, phoneNumber, email, membership, comment, address , voted, feePaymentDate);
   }
 
 
   public Player(String name, String phoneNumber, boolean membership){
     int ID = -1;
     String email = "";
-    ArrayList<Integer> ownedBoardGamesIDs = new ArrayList<>();
-    ArrayList<Integer> borrowingsIDs = new ArrayList<>();
     String comment = "";
     String address = "";
     boolean voted = false;
 
-    set(ID, name,phoneNumber,email, membership,comment,address,voted);
+    set(ID, name,phoneNumber,email, membership,comment,address,voted, null);
 
   }
 
   public void set(int ID,String name, String phoneNumber, String email,
       boolean membership, String comment, String address,
-      Boolean voted)
+      Boolean voted, LocalDate feePaymentDate)
   {
     name.trim();
     phoneNumber.trim();
@@ -59,6 +57,7 @@ public class Player
     this.comment = comment;
     this.address = address;
     this.voted = voted;
+    this.feePaymentDate = feePaymentDate;
   }
 
   static public boolean validateName(String name)
