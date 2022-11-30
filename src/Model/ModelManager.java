@@ -48,4 +48,12 @@ public class ModelManager
   public void setPlayer(Player player, int ID){
     playersList.setPlayer(player, ID);
   }
+  public void setBoardGame(BoardGame boardGame, int ID){
+    boardGamesList.setBoardGame(boardGame, ID);
+  }
+  public void saveBoardGames ()
+      throws ParserConfigurationException, TransformerException
+  {
+    FileReader.saveBoardGameList(boardGamesList);
+  }
 }

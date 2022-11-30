@@ -275,7 +275,7 @@ public class FileReader
     transformer.setOutputProperty(OutputKeys.INDENT, "yes");
     transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount",
         "2");
-    File file = new File("BoardGames.xml");
+    File file = new File("./src/XML/BoardGames.xml");
     transformer.transform(new DOMSource(doc), new StreamResult(file));
 
   }
@@ -331,7 +331,7 @@ public class FileReader
         }
         else if (subNode.getNodeName().equals("numberOfPlayersMax"))
         {
-          numberOfPlayersMin = Integer.parseInt(subNode.getTextContent());
+          numberOfPlayersMax = Integer.parseInt(subNode.getTextContent());
         }
         else if (subNode.getNodeName().equals("availabilityStatus"))
         {
@@ -354,6 +354,7 @@ public class FileReader
       boardGame = new BoardGame(ID, name, type, numberOfPlayersMin,
           numberOfPlayersMax, availabilityStatus, comment, ownerID,
           numberOfVotes);
+      System.out.println(boardGame);
       boardGamesList.addBoardGame(boardGame);
 
     }

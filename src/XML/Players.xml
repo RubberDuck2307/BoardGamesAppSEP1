@@ -2,8 +2,8 @@
 <PlayersList>
   <Player>
     <ID>0</ID>
-    <name>Pavel</name>
-    <phoneNumber>5000</phoneNumber>
+    <name>Pavelaaa</name>
+    <phoneNumber>50002222</phoneNumber>
     <email>Lobotka@má.hlad</email>
     <membership>false</membership>
     <comment>XA</comment>
@@ -11,7 +11,7 @@
     <voted>false</voted>
     <voted>false</voted>
     <feePayment>
-      <day>29</day>
+      <day>17</day>
       <month>11</month>
       <year>2022</year>
     </feePayment>

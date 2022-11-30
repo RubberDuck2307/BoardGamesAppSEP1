@@ -31,6 +31,32 @@ public class BoardGamesList
     }
     boardGamesList.add(boardGame);
   }
+  public void setBoardGame(BoardGame boardgame, int ID)
+  {
+    for (int i = 0; i < boardGamesList.size(); i++)
+    {
+      if (boardGamesList.get(i).getID() == ID)
+      {
+        boardGamesList.set(i, boardgame);
+        break;
+      }
+      else
+      {
+        boardGamesList.add(boardgame);
+      }
+    }
+  }
+  public void deleteByID(int ID)
+  {
+    for (int i = 0; i < boardGamesList.size(); i++)
+    {
+      if (boardGamesList.get(i).getID() == ID)
+      {
+        boardGamesList.remove(i);
+        break;
+      }
+    }
+  }
 
   public BoardGame getBoardGame(int index)
   {
@@ -50,4 +76,5 @@ public class BoardGamesList
   {
     return "Model.BoardGamesList{" + "boardGamesList=" + boardGamesList + '}';
   }
+
 }
