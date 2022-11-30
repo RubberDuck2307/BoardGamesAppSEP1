@@ -387,34 +387,34 @@ public class FileReader
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("location");
-      subSubElement.appendChild(doc.createTextNode(event.getLocation()));
+      subSubElement.appendChild(doc.createTextNode(event.getPlace()));
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("startingDate");
 
       Element subSubSubElement = doc.createElement("day");
       subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getStartingDate().getDayOfMonth())));
+          String.valueOf(event.getFrom().getDayOfMonth())));
       subSubElement.appendChild(subSubSubElement);
 
       subSubSubElement = doc.createElement("month");
       subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getStartingDate().getMonthValue())));
+          String.valueOf(event.getFrom().getMonthValue())));
       subSubElement.appendChild(subSubSubElement);
 
       subSubSubElement = doc.createElement("year");
       subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getStartingDate().getYear())));
+          String.valueOf(event.getFrom().getYear())));
       subSubElement.appendChild(subSubSubElement);
 
       subSubSubElement = doc.createElement("hour");
       subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getStartingDate().getHour())));
+          String.valueOf(event.getFrom().getHour())));
       subSubElement.appendChild(subSubSubElement);
 
       subSubSubElement = doc.createElement("minute");
       subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getStartingDate().getMinute())));
+          String.valueOf(event.getFrom().getMinute())));
       subSubElement.appendChild(subSubSubElement);
 
       subElement.appendChild(subSubElement);
@@ -423,27 +423,27 @@ public class FileReader
 
       subSubSubElement = doc.createElement("day");
       subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getEndingDate().getDayOfMonth())));
+          String.valueOf(event.getTo().getDayOfMonth())));
       subSubElement.appendChild(subSubSubElement);
 
       subSubSubElement = doc.createElement("month");
       subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getEndingDate().getMonthValue())));
+          String.valueOf(event.getTo().getMonthValue())));
       subSubElement.appendChild(subSubSubElement);
 
       subSubSubElement = doc.createElement("year");
       subSubSubElement.appendChild(
-          doc.createTextNode(String.valueOf(event.getEndingDate().getYear())));
+          doc.createTextNode(String.valueOf(event.getTo().getYear())));
       subSubElement.appendChild(subSubSubElement);
 
       subSubSubElement = doc.createElement("hour");
       subSubSubElement.appendChild(
-          doc.createTextNode(String.valueOf(event.getEndingDate().getHour())));
+          doc.createTextNode(String.valueOf(event.getTo().getHour())));
       subSubElement.appendChild(subSubSubElement);
 
       subSubSubElement = doc.createElement("minute");
       subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getEndingDate().getMinute())));
+          String.valueOf(event.getTo().getMinute())));
       subSubElement.appendChild(subSubSubElement);
 
       subElement.appendChild(subSubElement);
@@ -478,7 +478,7 @@ public class FileReader
     transformer.setOutputProperty(OutputKeys.INDENT, "yes");
     transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount",
         "2");
-    File file = new File("Events.xml");
+    File file = new File("./src/XML/Events.xml");
     transformer.transform(new DOMSource(doc), new StreamResult(file));
 
   }

@@ -1,9 +1,14 @@
 package Controllers;
 
 import Application.ViewHandler;
-import Model.ModelManager;
+import Model.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
 
 public class EventsController implements Controller
@@ -12,6 +17,15 @@ public class EventsController implements Controller
   Region region;
   ModelManager model;
   ViewHandler viewHandler;
+
+
+  @FXML public TableView<EventsTable> eventsTable;
+  @FXML public TableColumn<EventsTable, String> name;
+  @FXML public TableColumn<EventsTable, String> place;
+  @FXML public TableColumn<EventsTable, String> from;
+  @FXML public TableColumn<EventsTable, String> to;
+  private ObservableList<EventsTable> eventsTables = FXCollections.observableArrayList();
+
 
   public EventsController()
   {
@@ -23,6 +37,20 @@ public class EventsController implements Controller
     this.region = region;
     this.model = model;
     this.viewHandler = viewHandler;
+
+    for (int i = 0; i < model.getEventsList().size(); i++)
+    {
+      Event event = model.getEventsList().getEvent(i);
+      String startingDate = event.getFrom().getDayOfMonth() + "/" + event.getFrom().getMonthValue() + "/" + event.getFrom().getYear()  + " - " + event.getFrom().getHour()  + ":" + event.getFrom().getMinute();
+      String endingDate = event.getTo().getDayOfMonth() + "/" + event.getTo().getMonthValue() + "/" + event.getTo().getYear()  + " - " + event.getTo().getHour()  + ":" + event.getTo().getMinute();
+      eventsTables.add(new EventsTable(event.getName(), event.getPlace(), startingDate, endingDate, event.getID()));
+
+    }
+    name.setCellValueFactory(new PropertyValueFactory<>("name"));
+    place.setCellValueFactory(new PropertyValueFactory<>("place"));
+    from.setCellValueFactory(new PropertyValueFactory<>("from"));
+    to.setCellValueFactory(new PropertyValueFactory<>("to"));
+    eventsTable.setItems(eventsTables);
   }
 
   @FXML public void backToHomePage()

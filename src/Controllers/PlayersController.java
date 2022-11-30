@@ -20,7 +20,7 @@ public class PlayersController implements Controller
   ModelManager model;
   ViewHandler viewHandler;
   @FXML Button backButton;
-  @FXML private TableView<PlayerTable> playersTable;
+  @FXML public TableView<PlayerTable> playersTable;
   @FXML public TableColumn<PlayerTable, String> name;
   @FXML public TableColumn<PlayerTable, String> email;
   @FXML public TableColumn<PlayerTable, String> phone;
