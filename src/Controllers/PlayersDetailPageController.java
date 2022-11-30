@@ -96,27 +96,36 @@ public class PlayersDetailPageController implements Controller
       String comment = commentField.getText();
       String address = addressField.getText();
       boolean membership = membershipBox.isSelected();
-      if (Player.validateData(name,phone,email)){
-        Player player = new Player(ID,name, phone, email, membership, comment, address, votedBox.isSelected(), feePayment);
-        model.setPlayer(player, ID);
-        try
-        {
-          model.savePlayers();
-        }
-        catch (ParserConfigurationException e)
-        {
-          throw new RuntimeException(e);
-        }
-        catch (TransformerException e)
-        {
-          throw new RuntimeException(e);
-        }
-        setData();
-        editButton.setOnAction(this::edit);
-        editButton.setText("Edit");
+      try
+      {
 
+        if (Player.validateData(name, phone, email))
+        {
+          Player player = new Player(ID, name, phone, email, membership, comment, address, votedBox.isSelected(), feePayment);
+          model.setPlayer(player, ID);
+          try
+          {
+            model.savePlayers();
+          }
+          catch (ParserConfigurationException e)
+          {
+            throw new RuntimeException(e);
+          }
+          catch (TransformerException e)
+          {
+            throw new RuntimeException(e);
+          }
+          setData();
+          editButton.setOnAction(this::edit);
+          editButton.setText("Edit");
+
+        }
       }
-      else {
+      catch (Exception e){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Invalid data");
+        alert.setHeaderText(e.getMessage());
+        Optional<ButtonType> result = alert.showAndWait();
       }
 
     };

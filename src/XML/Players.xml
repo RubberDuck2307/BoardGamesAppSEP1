@@ -16,4 +16,15 @@
       <year>2022</year>
     </feePayment>
   </Player>
+  <Player>
+    <ID>2</ID>
+    <name>Pavel</name>
+    <phoneNumber>456</phoneNumber>
+    <email>is@back.Pavel</email>
+    <membership>false</membership>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+    <voted>false</voted>
+  </Player>
 </PlayersList>
