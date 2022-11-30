@@ -69,7 +69,7 @@
                         <Insets />
                     </GridPane.margin>
                 </TextField>
-                <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-red" text="Delete" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="15">
+                <Button fx:id="deteteButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="63.0" prefWidth="198.0" styleClass="button-red" text="Delete" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="15">
                     <font>
                         <Font size="26.0" />
                     </font>
@@ -88,7 +88,7 @@
                 </VBox>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="15">
                     <children>
-                        <Button fx:id="edit" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Edit" textAlignment="CENTER">
+                        <Button fx:id="edit" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#edit" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Edit" textAlignment="CENTER">
                             <font>
                                 <Font size="26.0" />
                             </font>
@@ -115,7 +115,7 @@
                 </VBox>
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>
-                        <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
+                        <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#goBack" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
                     </children>
                     <GridPane.margin>
                         <Insets left="60.0" top="40.0" />
@@ -169,11 +169,6 @@
                   <Font size="32.0" />
                </font>
             </Label>
-            <Button fx:id="addButton21" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-orange" text="Select owner" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="9">
-               <font>
-                  <Font size="26.0" />
-               </font>
-            </Button>
             <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="170.0" styleClass="labels" stylesheets="@../css/style.css" text="Number of votes" GridPane.columnIndex="1" GridPane.rowIndex="12">
                <font>
                   <Font size="32.0" />
@@ -184,6 +179,44 @@
                   <Font size="24.0" />
                </font>
             </TextField>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="386.0">
+                     <children>
+                        <Button fx:id="selectOwner" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectOwner" prefHeight="63.0" prefWidth="196.0" styleClass="button-orange" text="Select other owner" textAlignment="CENTER">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="selectAsocAsOwner" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="24.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectAsocAsOwner" prefHeight="63.0" prefWidth="196.0" styleClass="button-blue" text="Association owner" textAlignment="CENTER">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="129.0" styleClass="labels" stylesheets="@../css/style.css" text="Actual owner">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="owner" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="282.0" styleClass="input-field-max-width">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
             </children>
         </GridPane>
     </children>

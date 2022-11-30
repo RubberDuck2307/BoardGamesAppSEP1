@@ -1,7 +1,5 @@
 package Model;
 
-import java.util.ArrayList;
-
 public class BoardGame
 {
   private int ID;
@@ -152,5 +150,36 @@ public class BoardGame
         + ", availabilityStatus='" + availabilityStatus + '\'' + ", comment='"
         + comment + '\'' + ", ownerID=" + ownerID + ", numberOfVotes="
         + numberOfVotes + '}';
+  }
+  static public boolean validateName(String name)
+  {
+    name = name.trim();
+    if (name.length() > 0)
+    {
+      return true;
+    }
+    return false;
+  }
+  static public boolean validateData(String name, int min, int max)
+  {
+    return validateName(name) && validateMinAndMax(min, max);
+  }
+  static public boolean validateMinAndMax(int min, int max)
+  {
+    if (min < 0  || min > max)
+    {
+      return false;
+    }
+    return true;
+  }
+
+  public static String[] getAllowedTypes()
+  {
+    return ALLOWED_TYPES;
+  }
+
+  public static String[] getAllowedStatuses()
+  {
+    return ALLOWED_STATUSES;
   }
 }

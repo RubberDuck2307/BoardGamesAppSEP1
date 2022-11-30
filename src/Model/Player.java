@@ -1,11 +1,13 @@
 package Model;
 
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Player
 {
   private int ID;
+
   private String name;
   private String phoneNumber;
   private String email;
@@ -203,4 +205,5 @@ public class Player
         + ", address='" + address + '\'' + ", voted=" + voted
         + ", feePaymentDate=" + feePaymentDate + '}';
   }
+
 }

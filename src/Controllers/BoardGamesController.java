@@ -38,7 +38,8 @@ public class BoardGamesController implements Controller{
 
         for (int i = 0; i < model.getBoardGamesList().size(); i++) {
             BoardGame boardGame = model.getBoardGamesList().getBoardGame(i);
-            String numberOfPlayer = boardGame.getNumberOfPlayersMin() + "" + boardGame.getNumberOfPlayersMax();
+            System.out.println(boardGame);
+            String numberOfPlayer = boardGame.getNumberOfPlayersMin() + " - " + boardGame.getNumberOfPlayersMax();
             System.out.println(numberOfPlayer);
             boardGameTables.add(new BoardgameTable(boardGame.getName(), boardGame.getType(), boardGame.getAvailabilityStatus(),numberOfPlayer, boardGame.getID()));
         }
