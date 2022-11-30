@@ -12,8 +12,14 @@ public class ModelManager
 {
   PlayersList playersList = FileReader.readPlayersList();
   BoardGamesList boardGamesList = FileReader.readBoardGamesList();
-
   ReservationsList reservationsList = FileReader.readReservations();
+  EventsList eventsList = FileReader.readEventsList();
+
+  BorrowingsList borrowingsList = FileReader.readCurrentBorrowings();
+
+  public BorrowingsList getBorrowingsList() {
+    return borrowingsList;
+  }
 
   public ReservationsList getReservationsList() {
     return reservationsList;
@@ -27,6 +33,11 @@ public class ModelManager
   public PlayersList getPlayersList()
   {
     return playersList;
+  }
+
+  public EventsList getEventsList()
+  {
+    return eventsList;
   }
 
   public ModelManager()

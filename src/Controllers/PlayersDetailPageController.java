@@ -17,6 +17,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Optional;
 
 public class PlayersDetailPageController implements Controller
 {
@@ -126,9 +127,14 @@ public class PlayersDetailPageController implements Controller
 
   public void delete() throws ParserConfigurationException, TransformerException
   {
+    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+    alert.setTitle("Confirmation");
+    alert.setHeaderText("Are you sure you want to delete the player ");
+    Optional<ButtonType> result = alert.showAndWait();
+    if(result.isPresent() && result.get() == ButtonType.OK){
     model.getPlayersList().deleteByID(ID);
     model.savePlayers();
-    viewHandler.openView(2,-1);
+    viewHandler.openView(2,-1);}
 
   }
   public void goBack(){

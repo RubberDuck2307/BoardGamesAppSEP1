@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <PlayersList>
   <Player>
-    <ID>0</ID>
-    <name>Pavel</name>
-    <phoneNumber>5000</phoneNumber>
-    <email>Lobotka@má.hlad</email>
-    <membership>false</membership>
-    <comment>XA</comment>
-    <address>AA</address>
-    <voted>false</voted>
-    <voted>false</voted>
-    <feePayment>
-      <day>29</day>
-      <month>11</month>
-      <year>2022</year>
-    </feePayment>
-  </Player>
-  <Player>
     <ID>1</ID>
     <name>Java</name>
     <phoneNumber>100</phoneNumber>

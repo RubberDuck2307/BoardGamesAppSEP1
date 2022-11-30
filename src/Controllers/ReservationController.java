@@ -38,15 +38,16 @@ public class ReservationController implements Controller
 
     for (int i = 0; i < model.getReservationsList().size(); i++)
     {
-      System.out.println(model.getPlayersList().size());
+      System.out.println(model.getReservationsList().size());
       System.out.println(i);
       Reservation reservation = model.getReservationsList().getReservation(i);
-      BoardGame boardgame = model.getBoardGamesList()
-          .getBoardGame(reservation.getGameID());
+      String boardgame = model.getBoardGamesList()
+          .getNameByID(reservation.getGameID());
+      String player = model.getPlayersList().getNameByID(reservation.getPlayerID());
 
       reservationTables.add(
-          new ReservationTable(String.valueOf(boardgame.getName()),
-              String.valueOf(reservation.getPlayerID()),
+          new ReservationTable(boardgame,
+              player,
               String.valueOf(reservation.getFrom()),
               String.valueOf(reservation.getTo()), reservation.getID()));
     }

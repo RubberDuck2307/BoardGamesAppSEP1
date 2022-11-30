@@ -84,7 +84,55 @@ public class PlayersList
     }
   }
 
-    @Override public String toString () {
+  public PlayersList getGuests(){
+    PlayersList newPlayerList = new PlayersList();
+    for (int i =0; i < size(); i++){
+
+      if(!playerList.get(i).isMembership()){
+        newPlayerList.addPlayer(playerList.get(i));
+      }
+
+    }
+    return newPlayerList;
+  }
+  public PlayersList getMembers(){
+    PlayersList newPlayerList = new PlayersList();
+    for (int i =0; i < size(); i++){
+
+      if(playerList.get(i).isMembership()){
+        newPlayerList.addPlayer(playerList.get(i));
+      }
+
+    }
+    return newPlayerList;
+  }
+
+  public PlayersList filterPlayerList(String charSequence){
+    PlayersList newPlayerList = new PlayersList();
+    for (int i = 0; i < size(); i++)
+    {
+      if (playerList.get(i).getName().contains(charSequence) || playerList.get(i).getPhoneNumber().contains(charSequence)){
+        newPlayerList.addPlayer(playerList.get(i));
+      }
+    }
+    return newPlayerList;
+  }
+
+  public String getNameByID(int ID)
+  {
+    System.out.println("hello" + ID);
+    for (int i = 0; i < playerList.size(); i++)
+    {
+      if ( playerList.get(i).getID() == ID)
+      {
+        return playerList.get(i).getName();
+      }
+    }
+    return null;
+  }
+
+  @Override public String toString()
+  {
     return "Model.PlayersList{" + "playerList=" + playerList + '}';
   }
   }
