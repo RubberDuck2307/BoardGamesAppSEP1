@@ -1,6 +1,5 @@
 package Model;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -9,28 +8,28 @@ public class Event
 {
   private int ID;
   private String name;
-  private String location;
-  private LocalDateTime startingDate;
-  private LocalDateTime endingDate;
+  private String place;
+  private LocalDateTime from;
+  private LocalDateTime to;
   private String description;
   private ArrayList<Integer> participantsIDs;
   private String comment;
   private String link;
 
-  public Event(int ID, String name, String location, LocalDateTime startingDate,
-      LocalDateTime endingDate, String description, ArrayList<Integer> participantsIDs,
+  public Event(int ID, String name, String place, LocalDateTime from,
+      LocalDateTime to, String description, ArrayList<Integer> participantsIDs,
       String comment, String link)
   {
-    set(ID, name, location, startingDate, endingDate, description,
+    set(ID, name, place, from, to, description,
         participantsIDs, comment, link);
   }
 
-  Event(String name, String location, LocalDateTime startingDate,
-      LocalDateTime endingDate, String description, ArrayList<Integer> participantsIDs,
+  Event(String name, String place, LocalDateTime from,
+      LocalDateTime to, String description, ArrayList<Integer> participantsIDs,
       String comment, String link)
   {
     int ID = -1;
-    set(ID, name, location, startingDate, endingDate, description,
+    set(ID, name, place, from, to, description,
         participantsIDs, comment, link);
   }
 
@@ -40,9 +39,9 @@ public class Event
   {
     this.ID = ID;
     this.name = name;
-    this.location = location;
-    this.startingDate = startingDate;
-    this.endingDate = endingDate;
+    this.place = location;
+    this.from = startingDate;
+    this.to = endingDate;
     this.description = description;
     this.participantsIDs = participantsIDs;
     this.comment = comment;
@@ -69,34 +68,34 @@ public class Event
     this.name = name;
   }
 
-  public String getLocation()
+  public String getPlace()
   {
-    return location;
+    return place;
   }
 
-  public void setLocation(String location)
+  public void setPlace(String place)
   {
-    this.location = location;
+    this.place = place;
   }
 
-  public LocalDateTime getStartingDate()
+  public LocalDateTime getFrom()
   {
-    return startingDate;
+    return from;
   }
 
-  public void setStartingDate(LocalDateTime startingDate)
+  public void setFrom(LocalDateTime from)
   {
-    this.startingDate = startingDate;
+    this.from = from;
   }
 
-  public LocalDateTime getEndingDate()
+  public LocalDateTime getTo()
   {
-    return endingDate;
+    return to;
   }
 
-  public void setEndingDate(LocalDateTime endingDate)
+  public void setTo(LocalDateTime to)
   {
-    this.endingDate = endingDate;
+    this.to = to;
   }
 
   public String getDescription()
@@ -142,8 +141,8 @@ public class Event
   @Override public String toString()
   {
     return "Model.Event{" + "ID=" + ID + ", name='" + name + '\'' + ", location='"
-        + location + '\'' + ", startingDate=" + startingDate + ", endingDate="
-        + endingDate + ", description='" + description + '\''
+        + place + '\'' + ", startingDate=" + from + ", endingDate="
+        + to + ", description='" + description + '\''
         + ", participantsIDs=" + participantsIDs + ", comment='" + comment
         + '\'' + ", link='" + link + '\'' + '}';
   }

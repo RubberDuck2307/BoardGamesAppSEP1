@@ -4,8 +4,6 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.scene.control.TableView;
 
-import javax.swing.*;
-
 public class PlayerTable
 {
   StringProperty name;

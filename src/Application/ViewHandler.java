@@ -110,6 +110,7 @@ public class ViewHandler
       catch (Exception e)
       {
         e.printStackTrace();
+        System.out.println("fhjgkugufjhkf");
       }
     }
     else
