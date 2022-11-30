@@ -1023,7 +1023,7 @@ public class FileReader
       throws TransformerConfigurationException, ParserConfigurationException,
       IOException, SAXException
   {
-    return readBorrowings("CurrentBorrowings.xml");
+    return readBorrowings("./src/XML/CurrentBorrowings.xml");
   }
 
   public static BorrowingsList readPastBorrowings()

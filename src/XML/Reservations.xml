@@ -2,7 +2,7 @@
 <reservationsList>
   <reservation>
     <ID>0</ID>
-    <playerID>2</playerID>
+    <playerID>0</playerID>
     <gameID>0</gameID>
     <from>
       <day>24</day>
@@ -20,7 +20,7 @@
   </reservation>
   <reservation>
     <ID>5</ID>
-    <playerID>2</playerID>
+    <playerID>0</playerID>
     <gameID>0</gameID>
     <from>
       <day>24</day>
@@ -38,7 +38,7 @@
   </reservation>
   <reservation>
     <ID>6</ID>
-    <playerID>2</playerID>
+    <playerID>0</playerID>
     <gameID>0</gameID>
     <from>
       <day>24</day>

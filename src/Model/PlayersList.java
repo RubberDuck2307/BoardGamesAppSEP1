@@ -48,6 +48,19 @@ public class PlayersList
     }
   }
 
+  public String getNameByID(int ID)
+  {
+    System.out.println("hello" + ID);
+    for (int i = 0; i < playerList.size(); i++)
+    {
+      if ( playerList.get(i).getID() == ID)
+      {
+        return playerList.get(i).getName();
+      }
+    }
+    return null;
+  }
+
   @Override public String toString()
   {
     return "Model.PlayersList{" + "playerList=" + playerList + '}';

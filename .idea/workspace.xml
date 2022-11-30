@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="edit table headings and buttons">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/FileReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Borrowings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Borrowings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Reservations.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/BoardGamesList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/BoardGamesList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/ModelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/ModelManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/PlayersList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/PlayersList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/BorrowingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/BorrowingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ReservationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FXML/Borrowings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Borrowings.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Events.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Events.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/BoardGamesList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BoardGamesList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ModelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/PlayersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PlayersList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/XML/Reservations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Reservations.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Alex" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,7 +78,7 @@
       <recent name="Gui" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.BoardGameApplication">
     <configuration name="BoardGameApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Application.BoardGameApplication" />
       <module name="BoardGamesApp" />
@@ -83,8 +95,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.BoardGameApplication" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.BoardGameApplication" />
         <item itemvalue="Application.Main" />
@@ -220,6 +232,16 @@
     <MESSAGE value="IDK.fxml" />
     <MESSAGE value="edit table headings and buttons" />
     <option name="LAST_COMMIT_MESSAGE" value="edit table headings and buttons" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.FileNotFoundException" package="java.io" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
