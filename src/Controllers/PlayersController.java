@@ -5,27 +5,33 @@ import Application.ViewHandler;
 import Model.ModelManager;
 import Model.Player;
 import Model.PlayerTable;
+import Model.PlayersList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
 
 public class PlayersController implements Controller
 {
-  Region region;
-  ModelManager model;
-  ViewHandler viewHandler;
-  @FXML Button backButton;
-  @FXML private TableView<PlayerTable> playersTable;
+  private Region region;
+  private ModelManager model;
+  private ViewHandler viewHandler;
+
+  @FXML public TextField searchField;
+  @FXML public Button backButton;
+  @FXML public RadioButton allRadio;
+  @FXML public RadioButton membersRadio;
+  @FXML public RadioButton guestsRadio;
+  @FXML public TableView<PlayerTable> playersTable;
   @FXML public TableColumn<PlayerTable, String> name;
   @FXML public TableColumn<PlayerTable, String> email;
   @FXML public TableColumn<PlayerTable, String> phone;
   @FXML public TableColumn<PlayerTable, String> membership;
   private ObservableList<PlayerTable> playersTables = FXCollections.observableArrayList();
+
+  private PlayersList shownPlayers;
 
   public PlayersController()
   {
@@ -38,23 +44,9 @@ public class PlayersController implements Controller
     this.model = model;
     this.viewHandler = viewHandler;
 
-    for (int i = 0; i < model.getPlayersList().size(); i++)
-    {
-      Player player = model.getPlayersList().getPlayer(i);
-      String membership = "";
-      if (player.isMembership())
-      {
-        membership = "Member";
-      }
-      else
-      {
-        membership = "Guest";
-      }
-      playersTables.add(
-          new PlayerTable(player.getName(), player.getPhoneNumber(),
-              player.getEmail(), membership, player.getID()));
 
-    }
+    fillTable();
+    shownPlayers = model.getPlayersList();
 
     name.setCellValueFactory(new PropertyValueFactory<>("name"));
     email.setCellValueFactory(new PropertyValueFactory<>("email"));
@@ -82,6 +74,42 @@ public class PlayersController implements Controller
   @Override public void reset()
   {
 
+  }
+
+  public void fillTable(){
+    playersTables.clear();
+
+
+
+    PlayersList playersList = model.getPlayersList();
+
+    playersList = playersList.filterPlayerList(searchField.getText());
+    if (guestsRadio.isSelected()){
+      playersList = playersList.getGuests();
+    }
+
+    else if (membersRadio.isSelected())
+    {
+      playersList = playersList.getMembers();
+    }
+
+    for (int i = 0; i < playersList.size(); i++)
+    {
+      Player player = playersList.getPlayer(i);
+      String membership = "";
+      if (player.isMembership())
+      {
+        membership = "Member";
+      }
+      else
+      {
+        membership = "Guest";
+      }
+      playersTables.add(
+          new PlayerTable(player.getName(), player.getPhoneNumber(),
+              player.getEmail(), membership, player.getID()));
+
+    }
   }
 
   public void loadAddPlayerPage(){
