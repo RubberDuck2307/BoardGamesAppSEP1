@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BoardGamesList>
+  <BoardGame>
+    <ID>0</ID>
+    <name>ss</name>
+    <type>ChoiceBox</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>4</numberOfPlayersMax>
+    <availabilityStatus>ChoiceBox</availabilityStatus>
+    <comment>dd</comment>
+    <ownerID>1</ownerID>
+    <numberOfVotes>4</numberOfVotes>
+  </BoardGame>
+</BoardGamesList>
