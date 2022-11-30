@@ -50,7 +50,7 @@ public class BoardGamesDetailPageController implements Controller
 
   public void setData()
   {
-    BoardGame boardGame = model.getBoardGamesList().getBoardGame(ID);
+    BoardGame boardGame = model.getBoardGamesList().getBoardGameByID(ID);
     PlayersList playersList = model.getPlayersList();
     heading.setText(boardGame.getName());
     comment.setText(boardGame.getComment());
