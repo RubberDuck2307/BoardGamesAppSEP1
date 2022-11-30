@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="edit table headings and buttons">
-      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Borrowings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Borrowings.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Borrowings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Borrowings.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Events.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Events.fxml" afterDir="false" />
+    <list default="true" id="fc21a1e3-9ebe-44ef-b077-8bd44eb18999" name="Changes" comment="IDK.fxml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/FileReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/ViewHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Application/ViewHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersDetailPageController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersDetailPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersDetailPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Players.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Players.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/PlayersAddPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/PlayersAddPlayer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/PlayersDetailPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/PlayersDetailPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Reservations.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/ModelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/ModelManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/PlayersList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/PlayersList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/XML/Players.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/XML/Players.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/ViewHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/ViewHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/PlayersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/PlayersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/PlayersDetailPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/PlayersDetailPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FXML/Players.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Players.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FXML/PlayersAddPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/PlayersAddPlayer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FXML/PlayersDetailPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/PlayersDetailPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ModelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/PlayersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PlayersList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/XML/Players.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Players.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Alex" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -185,14 +207,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669723002641</updated>
     </task>
-    <task id="LOCAL-00013" summary="edit table headings and buttons">
-      <created>1669739028763</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1669739028763</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,8 +233,7 @@
     <MESSAGE value="style.css edit buttons size" />
     <MESSAGE value="css and forms are done" />
     <MESSAGE value="IDK.fxml" />
-    <MESSAGE value="edit table headings and buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit table headings and buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="IDK.fxml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

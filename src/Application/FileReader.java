@@ -79,17 +79,20 @@ public class FileReader
           doc.createTextNode(String.valueOf(player.getVoted())));
       subElement.appendChild(subSubElement);
 
-      subSubElement = doc.createElement("feePayment");
-      Element subSubSubElement = doc.createElement("day");
-      subSubSubElement.appendChild(doc.createTextNode(String.valueOf(player.getFeePaymentDate().getDayOfMonth())));
-      subSubElement.appendChild(subSubSubElement);
-      subSubSubElement = doc.createElement("month");
-      subSubSubElement.appendChild(doc.createTextNode(String.valueOf(player.getFeePaymentDate().getMonthValue())));
-      subSubElement.appendChild(subSubSubElement);
-      subSubSubElement = doc.createElement("year");
-      subSubSubElement.appendChild(doc.createTextNode(String.valueOf(player.getFeePaymentDate().getYear())));
-      subSubElement.appendChild(subSubSubElement);
-      subElement.appendChild(subSubElement);
+      if (player.getFeePaymentDate() != null)
+      {
+        subSubElement = doc.createElement("feePayment");
+        Element subSubSubElement = doc.createElement("day");
+        subSubSubElement.appendChild(doc.createTextNode(String.valueOf(player.getFeePaymentDate().getDayOfMonth())));
+        subSubElement.appendChild(subSubSubElement);
+        subSubSubElement = doc.createElement("month");
+        subSubSubElement.appendChild(doc.createTextNode(String.valueOf(player.getFeePaymentDate().getMonthValue())));
+        subSubElement.appendChild(subSubSubElement);
+        subSubSubElement = doc.createElement("year");
+        subSubSubElement.appendChild(doc.createTextNode(String.valueOf(player.getFeePaymentDate().getYear())));
+        subSubElement.appendChild(subSubSubElement);
+        subElement.appendChild(subSubElement);
+      }
 
 
 

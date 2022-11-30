@@ -24,6 +24,7 @@ public class ViewHandler
   private ReservationController reservationController;
   private BorrowingsController borrowingsController;
   private EventsController eventsController;
+  private PlayersAddPlayerController playersAddPlayerController;
 
 
   public ViewHandler(ModelManager model)
@@ -73,6 +74,8 @@ public class ViewHandler
       case 9:
         root = loadSimpleGuiView("/FXML/BoardgamesDetailPage.fxml", boardGamesDetailPageController, IDOfItem);
         break;
+      case 10:
+        root = loadSimpleGuiView("/FXML/PlayersAddPlayer.fxml", playersAddPlayerController,-1);
     }
 
     currentScene.setRoot(root);

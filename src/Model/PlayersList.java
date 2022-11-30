@@ -21,6 +21,14 @@ public class PlayersList
     return playerList.get(index);
   }
 
+  public Player getPlayerByID(int ID){
+    for (int i = 0; i < size(); i++){
+      if (playerList.get(i).getID() == ID){
+        return playerList.get(i);
+      }
+    }
+    return playerList.get(0);
+  }
   public int size()
   {
     return playerList.size();
@@ -48,8 +56,35 @@ public class PlayersList
     }
   }
 
-  @Override public String toString()
+  public void setPlayer(Player player, int ID)
   {
+    for (int i = 0; i < playerList.size(); i++)
+    {
+      if (playerList.get(i).getID() == ID)
+      {
+        playerList.set(i, player);
+        break;
+      }
+      else
+      {
+        playerList.add(player);
+      }
+    }
+  }
+
+  public void deleteByID(int ID)
+  {
+    for (int i = 0; i < playerList.size(); i++)
+    {
+      if (playerList.get(i).getID() == ID)
+      {
+        playerList.remove(i);
+        break;
+      }
+    }
+  }
+
+    @Override public String toString () {
     return "Model.PlayersList{" + "playerList=" + playerList + '}';
   }
-}
+  }

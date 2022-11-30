@@ -101,7 +101,7 @@
                         <Font size="24.0" />
                     </font>
                 </TextField>
-                <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-red" text="Delete" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="15">
+                <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="63.0" prefWidth="198.0" styleClass="button-red" text="Delete" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="15">
                     <font>
                         <Font size="26.0" />
                     </font>
@@ -169,7 +169,7 @@
                 </VBox>
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>
-                        <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
+                        <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#goBack" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
                     </children>
                     <GridPane.margin>
                         <Insets left="60.0" top="40.0" />

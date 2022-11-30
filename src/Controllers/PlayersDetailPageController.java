@@ -1,5 +1,6 @@
 package Controllers;
 
+import Application.FileReader;
 import Application.ViewHandler;
 import Model.ModelManager;
 import Model.Player;
@@ -11,6 +12,11 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.layout.Region;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class PlayersDetailPageController implements Controller
 {
@@ -39,7 +45,7 @@ public class PlayersDetailPageController implements Controller
     setData();
   }
   public void setData(){
-    Player player = model.getPlayersList().getPlayer(ID);
+    Player player = model.getPlayersList().getPlayerByID(ID);
     nameField.setText(player.getName());
     commentField.setText(player.getComment());
     emailField.setText(player.getEmail());
@@ -55,8 +61,8 @@ public class PlayersDetailPageController implements Controller
     }
     membershipBox.setDisable(true);
     votedBox.setDisable(true);
-
-    // TODO implemet feepayment date -- paymentField.setDayCellFactory(Player.get,22);
+    paymentField.setValue(player.getFeePaymentDate());
+    paymentField.setDisable(true);
   }
 
   @Override public Region getRegion()
@@ -77,18 +83,55 @@ public class PlayersDetailPageController implements Controller
     phoneNumberField.setDisable(false);
     addressField.setDisable(false);
     membershipBox.setDisable(false);
-    votedBox.setDisable(false);
     editButton.setText("Save Changes");
+    paymentField.setDisable(false);
 
-    save = new EventHandler()
-    {
-      @Override public void handle(Event event)
-      {
-        System.out.println(paymentField.getTranslateX());
+    save = event -> {
+      System.out.println("hello");
+      String name = nameField.getText();
+      String phone = phoneNumberField.getText();
+      String email = emailField.getText();
+      LocalDate feePayment = paymentField.getValue();
+      String comment = commentField.getText();
+      String address = addressField.getText();
+      boolean membership = membershipBox.isSelected();
+      if (Player.validateData(name,phone,email)){
+        Player player = new Player(ID,name, phone, email, membership, comment, address, votedBox.isSelected(), feePayment);
+        model.setPlayer(player, ID);
+        try
+        {
+          model.savePlayers();
+        }
+        catch (ParserConfigurationException e)
+        {
+          throw new RuntimeException(e);
+        }
+        catch (TransformerException e)
+        {
+          throw new RuntimeException(e);
+        }
+        setData();
+        editButton.setOnAction(this::edit);
+        editButton.setText("Edit");
+
       }
+      else {
+      }
+
     };
 
     editButton.setOnAction(save);
 
+  }
+
+  public void delete() throws ParserConfigurationException, TransformerException
+  {
+    model.getPlayersList().deleteByID(ID);
+    model.savePlayers();
+    viewHandler.openView(2,-1);
+
+  }
+  public void goBack(){
+    viewHandler.openView(2,-1);
   }
 }

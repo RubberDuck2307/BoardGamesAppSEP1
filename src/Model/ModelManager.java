@@ -44,4 +44,8 @@ public class ModelManager
   {
     FileReader.savePlayersList(playersList);
   }
+
+  public void setPlayer(Player player, int ID){
+    playersList.setPlayer(player, ID);
+  }
 }

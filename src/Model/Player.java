@@ -62,6 +62,7 @@ public class Player
 
   static public boolean validateName(String name)
   {
+    name = name.trim();
     if (name.length() > 0)
     {
       return true;
@@ -71,6 +72,7 @@ public class Player
 
   static public boolean validatePhoneNumber(String phoneNumber)
   {
+    phoneNumber = phoneNumber.trim();
     if(phoneNumber.length() == 0){
       return false;
     }
@@ -93,6 +95,7 @@ public class Player
 
   static public boolean validateEmail(String email)
   {
+    email = email.trim();
     if (email.equals("")){
       return true;
     }
@@ -129,6 +132,9 @@ public class Player
   static public boolean validateData(String name, String phoneNumber,
       String email)
   {
+    System.out.println(validateName(name));
+    System.out.println(validatePhoneNumber(phoneNumber));
+    System.out.println(validateEmail(email));
     return validateName(name) && validatePhoneNumber(phoneNumber)
         && validateEmail(email);
   }

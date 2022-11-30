@@ -83,4 +83,8 @@ public class PlayersController implements Controller
   {
 
   }
+
+  public void loadAddPlayerPage(){
+    viewHandler.openView(10,-1);
+  }
 }
