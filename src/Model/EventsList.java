@@ -32,9 +32,46 @@ public class EventsList
     eventsList.add(event);
   }
 
+  public void setEvent(Event event, int ID)
+  {
+    for (int i = 0; i < eventsList.size(); i++)
+    {
+      if (eventsList.get(i).getID() == ID)
+      {
+        eventsList.set(i, event);
+        break;
+      }
+      else
+      {
+        eventsList.add(event);
+      }
+    }
+  }
+
+  public void deleteByID(int ID)
+  {
+    for (int i = 0; i < eventsList.size(); i++)
+    {
+      if (eventsList.get(i).getID() == ID)
+      {
+        eventsList.remove(i);
+        break;
+      }
+    }
+  }
+
   public Event getEvent(int index)
   {
     return eventsList.get(index);
+  }
+
+  public Event getEventByID(int ID){
+    for (int i = 0; i < size(); i++){
+      if (eventsList.get(i).getID() == ID){
+        return eventsList.get(i);
+      }
+    }
+    return eventsList.get(0);
   }
 
   public int size()

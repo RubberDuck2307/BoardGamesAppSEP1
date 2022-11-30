@@ -13,12 +13,11 @@ import javafx.scene.layout.Region;
 
 public class EventsController implements Controller
 {
-  @FXML Button backButton;
   Region region;
   ModelManager model;
   ViewHandler viewHandler;
 
-
+  @FXML Button backButton;
   @FXML public TableView<EventsTable> eventsTable;
   @FXML public TableColumn<EventsTable, String> name;
   @FXML public TableColumn<EventsTable, String> place;
@@ -56,6 +55,16 @@ public class EventsController implements Controller
   @FXML public void backToHomePage()
   {
     viewHandler.openView(1, -1);
+  }
+
+  @FXML private void chooseEvent()
+  {
+    viewHandler.openView(11,
+        eventsTable.getSelectionModel().getSelectedItem().getID());
+  }
+
+  public void loadAddEventPage(){
+    viewHandler.openView(12,-1);
   }
 
   @Override public Region getRegion()

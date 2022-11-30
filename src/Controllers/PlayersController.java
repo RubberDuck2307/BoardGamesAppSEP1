@@ -60,19 +60,9 @@ public class PlayersController implements Controller
         playersTable.getSelectionModel().getSelectedItem().getID());
   }
 
-  @Override public Region getRegion()
-  {
-    return region;
-  }
-
   @FXML public void backToHomePage()
   {
     viewHandler.openView(1, -1);
-  }
-
-  @Override public void reset()
-  {
-
   }
 
   public void fillTable(){
@@ -113,5 +103,15 @@ public class PlayersController implements Controller
 
   public void loadAddPlayerPage(){
     viewHandler.openView(10,-1);
+  }
+
+  @Override public Region getRegion()
+  {
+    return region;
+  }
+
+  @Override public void reset()
+  {
+
   }
 }

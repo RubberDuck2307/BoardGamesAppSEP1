@@ -17,7 +17,6 @@ public class ViewHandler
   private AddPlayerController addPlayerController;
   private PlayersDetailPageController playersDetailPageController;
   private PlayersController playersController;
-
   private BoardGamesController boardGamesController;
   private BoardGamesDetailPageController boardGamesDetailPageController;
   private ElectionController electionController;
@@ -25,7 +24,8 @@ public class ViewHandler
   private BorrowingsController borrowingsController;
   private EventsController eventsController;
   private PlayersAddPlayerController playersAddPlayerController;
-
+  private EventsDetailPageController eventsDetailPageController;
+  private EventsAddEventController eventsAddEventController;
 
   public ViewHandler(ModelManager model)
   {
@@ -76,6 +76,12 @@ public class ViewHandler
         break;
       case 10:
         root = loadSimpleGuiView("/FXML/PlayersAddPlayer.fxml", playersAddPlayerController,-1);
+        break;
+      case 11:
+        root = loadSimpleGuiView("/FXML/EventsDetailPage.fxml", eventsDetailPageController, IDOfItem);
+        break;
+      case 12:
+        root = loadSimpleGuiView("/FXML/EventsAddEvent.fxml", eventsAddEventController,-1);
     }
 
     currentScene.setRoot(root);

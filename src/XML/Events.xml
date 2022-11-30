@@ -2,22 +2,68 @@
 <EventsList>
   <Event>
     <ID>0</ID>
-    <name>name ex</name>
-    <location>place</location>
-    <startingDate>
-      <day>30</day>
-      <month>11</month>
-      <year>2022</year>
-      <hour>9</hour>
-      <minute>52</minute>
-    </startingDate>
-    <endingDate>
-      <day>31</day>
+    <name>bbb</name>
+    <location>aaa</location>
+    <fromDate>
+      <day>3</day>
       <month>12</month>
       <year>2022</year>
-      <hour>1</hour>
-      <minute>2</minute>
-    </endingDate>
+    </fromDate>
+    <fromHours>1</fromHours>
+    <fromMinutes>2</fromMinutes>
+    <toDate>
+      <day>4</day>
+      <month>12</month>
+      <year>2022</year>
+    </toDate>
+    <toHours>1</toHours>
+    <toMinutes>2</toMinutes>
+    <description>aaa</description>
+    <playersIDs/>
+    <comment>aaa</comment>
+    <link>aaa</link>
+  </Event>
+  <Event>
+    <ID>1</ID>
+    <name>ccc</name>
+    <location>cccc</location>
+    <fromDate>
+      <day>1</day>
+      <month>12</month>
+      <year>2022</year>
+    </fromDate>
+    <fromHours>1</fromHours>
+    <fromMinutes>2</fromMinutes>
+    <toDate>
+      <day>2</day>
+      <month>12</month>
+      <year>2022</year>
+    </toDate>
+    <toHours>1</toHours>
+    <toMinutes>2</toMinutes>
+    <description>ccc</description>
+    <playersIDs/>
+    <comment>ccc</comment>
+    <link>ccc</link>
+  </Event>
+  <Event>
+    <ID>2</ID>
+    <name>aaa</name>
+    <location>aaa</location>
+    <fromDate>
+      <day>1</day>
+      <month>12</month>
+      <year>2022</year>
+    </fromDate>
+    <fromHours>1</fromHours>
+    <fromMinutes>2</fromMinutes>
+    <toDate>
+      <day>2</day>
+      <month>12</month>
+      <year>2022</year>
+    </toDate>
+    <toHours>1</toHours>
+    <toMinutes>2</toMinutes>
     <description/>
     <playersIDs/>
     <comment/>

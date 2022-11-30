@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EventsDetailPageController">
     <children>
         <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0">
             <columnConstraints>
@@ -40,12 +40,12 @@
                 <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="820.0" styleClass="heading" stylesheets="@../css/style.css" text="EVENT NAME" textAlignment="CENTER" GridPane.columnIndex="1">
+                <Label fx:id="eventNameLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="820.0" styleClass="heading" stylesheets="@../css/style.css" text="EVENT NAME" textAlignment="CENTER" GridPane.columnIndex="1">
                     <font>
                         <Font size="46.0" />
                     </font>
                 </Label>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="204.0" styleClass="labels" stylesheets="@../css/style.css" text="Model.Event name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="204.0" styleClass="labels" stylesheets="@../css/style.css" text="Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <font>
                         <Font size="32.0" />
                     </font>
@@ -58,7 +58,7 @@
                         <Insets />
                     </GridPane.margin>
                 </TextField>
-                <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-red" text="Delete" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="14">
+                <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="63.0" prefWidth="198.0" styleClass="button-red" text="Delete" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="14">
                     <font>
                         <Font size="26.0" />
                     </font>
@@ -68,7 +68,7 @@
                 </Button>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="13">
                     <children>
-                        <Button fx:id="addButton1" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="SEE PARTICIPANTS" textAlignment="CENTER">
+                        <Button fx:id="seeParticipantsButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="SEE PARTICIPANTS" textAlignment="CENTER">
                             <font>
                                 <Font size="26.0" />
                             </font>
@@ -77,7 +77,7 @@
                 </VBox>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="14">
                     <children>
-                        <Button fx:id="addButton2" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Edit" textAlignment="CENTER">
+                        <Button fx:id="editButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#edit" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Edit" textAlignment="CENTER">
                             <font>
                                 <Font size="26.0" />
                             </font>
@@ -88,7 +88,7 @@
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="15" />
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>
-                        <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
+                        <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#goBack" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
                     </children>
                     <GridPane.margin>
                         <Insets left="60.0" top="40.0" />
@@ -98,7 +98,7 @@
                     <children>
                         <VBox prefHeight="30.0" prefWidth="563.0">
                             <children>
-                        <TextField fx:id="nameField11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width">
+                        <TextField fx:id="placeField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -113,34 +113,6 @@
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                    <children>
-                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="230.0" styleClass="labels" stylesheets="@../css/style.css" text="Ending date">
-                            <font>
-                                <Font size="32.0" />
-                            </font>
-                        </Label>
-                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="299.0" styleClass="labels" stylesheets="@../css/style.css" text="Starting date">
-                            <font>
-                                <Font size="32.0" />
-                            </font>
-                        </Label>
-                    </children>
-                </HBox>
-                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                    <children>
-                        <VBox prefHeight="40.0" prefWidth="234.0">
-                            <children>
-                                <DatePicker prefHeight="26.0" prefWidth="218.0" styleClass="input-field" />
-                            </children>
-                        </VBox>
-                        <VBox prefHeight="40.0" prefWidth="282.0">
-                            <children>
-                                <DatePicker prefHeight="26.0" prefWidth="260.0" styleClass="input-field" />
-                            </children>
-                        </VBox>
-                    </children>
-                </HBox>
                 <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Comments" GridPane.columnIndex="1" GridPane.rowIndex="11">
                     <font>
                         <Font size="32.0" />
@@ -148,7 +120,7 @@
                 </Label>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
                <children>
-                      <TextArea prefHeight="200.0" prefWidth="200.0" />
+                      <TextArea fx:id="commentField" prefHeight="200.0" prefWidth="200.0" />
                </children>
                 </VBox>
             <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Link" GridPane.columnIndex="1" GridPane.rowIndex="7">
@@ -156,7 +128,7 @@
                   <Font size="32.0" />
                </font>
             </Label>
-                    <TextField fx:id="nameField1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                    <TextField fx:id="linkField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width" GridPane.columnIndex="1" GridPane.rowIndex="8">
                         <font>
                             <Font size="24.0" />
                         </font>
@@ -166,7 +138,83 @@
                   <Font size="32.0" />
                </font>
             </Label>
-            <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <TextArea fx:id="descriptionField" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="820.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="205.0" styleClass="labels" stylesheets="@../css/style.css" text="Starting Date">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="205.0" styleClass="labels" stylesheets="@../css/style.css" text="Starting Time">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="205.0" styleClass="labels" stylesheets="@../css/style.css" text="Ending Date">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="205.0" styleClass="labels" stylesheets="@../css/style.css" text="Ending Time">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="820.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="205.0">
+                     <children>
+                        <DatePicker fx:id="fromDateField" prefHeight="26.0" prefWidth="218.0" styleClass="input-field" />
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="100.0" prefWidth="205.0">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="68.0">
+                           <children>
+                              <TextField fx:id="fromHoursField" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="18.0">
+                           <children>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" styleClass="labels" text=":" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="69.0">
+                           <children>
+                              <TextField fx:id="fromMinutesField" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="205.0">
+                     <children>
+                        <DatePicker fx:id="toDateField" prefHeight="26.0" prefWidth="218.0" styleClass="input-field" />
+                     </children>
+                  </VBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="205.0">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="68.0">
+                           <children>
+                              <TextField fx:id="toHoursField" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="18.0">
+                           <children>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" styleClass="labels" text=":" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="69.0">
+                           <children>
+                              <TextField fx:id="toMinutesField" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
             </children>
         </GridPane>
     </children>

@@ -33,7 +33,7 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <TableView fx:id="eventsTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="562.0" prefWidth="820.0" styleClass="bootstrap" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TableView fx:id="eventsTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMousePressed="#chooseEvent" prefHeight="562.0" prefWidth="820.0" styleClass="bootstrap" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <columns>
                   <TableColumn id="text" fx:id="name" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Name" />
                   <TableColumn fx:id="place" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Location" />
@@ -44,7 +44,7 @@
                   <Insets />
                </GridPane.margin>
             </TableView>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Add Event" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadAddEventPage" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Add Event" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="24.0" />
                </font>

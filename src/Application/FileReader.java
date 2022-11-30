@@ -390,7 +390,7 @@ public class FileReader
       subSubElement.appendChild(doc.createTextNode(event.getPlace()));
       subElement.appendChild(subSubElement);
 
-      subSubElement = doc.createElement("startingDate");
+      subSubElement = doc.createElement("fromDate");
 
       Element subSubSubElement = doc.createElement("day");
       subSubSubElement.appendChild(doc.createTextNode(
@@ -407,19 +407,19 @@ public class FileReader
           String.valueOf(event.getFrom().getYear())));
       subSubElement.appendChild(subSubSubElement);
 
-      subSubSubElement = doc.createElement("hour");
-      subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getFrom().getHour())));
-      subSubElement.appendChild(subSubSubElement);
-
-      subSubSubElement = doc.createElement("minute");
-      subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getFrom().getMinute())));
-      subSubElement.appendChild(subSubSubElement);
-
       subElement.appendChild(subSubElement);
 
-      subSubElement = doc.createElement("endingDate");
+      subSubElement = doc.createElement("fromHours");
+      subSubElement.appendChild(doc.createTextNode(
+          String.valueOf(event.getFrom().getHour())));
+      subElement.appendChild(subSubElement);
+
+      subSubElement = doc.createElement("fromMinutes");
+      subSubElement.appendChild(doc.createTextNode(
+          String.valueOf(event.getFrom().getMinute())));
+      subElement.appendChild(subSubElement);
+
+      subSubElement = doc.createElement("toDate");
 
       subSubSubElement = doc.createElement("day");
       subSubSubElement.appendChild(doc.createTextNode(
@@ -436,16 +436,16 @@ public class FileReader
           doc.createTextNode(String.valueOf(event.getTo().getYear())));
       subSubElement.appendChild(subSubSubElement);
 
-      subSubSubElement = doc.createElement("hour");
-      subSubSubElement.appendChild(
-          doc.createTextNode(String.valueOf(event.getTo().getHour())));
-      subSubElement.appendChild(subSubSubElement);
+      subElement.appendChild(subSubElement);
 
-      subSubSubElement = doc.createElement("minute");
-      subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getTo().getMinute())));
-      subSubElement.appendChild(subSubSubElement);
+      subSubElement = doc.createElement("toHours");
+      subSubElement.appendChild(doc.createTextNode(
+          String.valueOf(event.getFrom().getHour())));
+      subElement.appendChild(subSubElement);
 
+      subSubElement = doc.createElement("toMinutes");
+      subSubElement.appendChild(doc.createTextNode(
+          String.valueOf(event.getFrom().getMinute())));
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("description");
@@ -498,8 +498,12 @@ public class FileReader
     int ID = -1;
     String name = null;
     String location = null;
-    LocalDateTime startingDate = null;
-    LocalDateTime endingDate = null;
+    LocalDate fromDate = null;
+    int fromHours = 0;
+    int fromMinutes = 0;
+    LocalDate toDate = null;
+    int toHours = 0;
+    int toMinutes = 0;
     String description = null;
     ArrayList<Integer> participantsIDs = new ArrayList<>();
     String comment = null;
@@ -531,13 +535,11 @@ public class FileReader
           location = subNode.getTextContent();
         }
 
-        else if (subNode.getNodeName().equals("startingDate"))
+        else if (subNode.getNodeName().equals("fromDate"))
         {
           int day = 0;
           int month = 0;
           int year = 0;
-          int minute = 0;
-          int hour = 0;
           NodeList subSubList = subNode.getChildNodes();
           for (int k = 0; k < subSubList.getLength(); k++)
           {
@@ -554,25 +556,27 @@ public class FileReader
             {
               year = Integer.parseInt(subSubNode.getTextContent());
             }
-            else if (subSubNode.getNodeName().equals("hour"))
-            {
-              hour = Integer.parseInt(subSubNode.getTextContent());
-            }
-            else if (subSubNode.getNodeName().equals("minute"))
-            {
-              minute = Integer.parseInt(subSubNode.getTextContent());
-            }
           }
-          startingDate = LocalDateTime.of(year, month, day, hour, minute);
+          fromDate = LocalDate.of(year, month, day);
         }
 
-        else if (subNode.getNodeName().equals("endingDate"))
+        else if (subNode.getNodeName().equals("fromHours"))
+        {
+          String stringFromHours = subNode.getTextContent();
+          fromHours = Integer.parseInt(stringFromHours);
+        }
+
+        else if (subNode.getNodeName().equals("fromMinutes"))
+        {
+          String stringFromMinutes = subNode.getTextContent();
+          fromMinutes = Integer.parseInt(stringFromMinutes);
+        }
+
+        else if (subNode.getNodeName().equals("toDate"))
         {
           int day = 0;
           int month = 0;
           int year = 0;
-          int minute = 0;
-          int hour = 0;
           NodeList subSubList = subNode.getChildNodes();
           for (int k = 0; k < subSubList.getLength(); k++)
           {
@@ -589,19 +593,11 @@ public class FileReader
             {
               year = Integer.parseInt(subSubNode.getTextContent());
             }
-            else if (subSubNode.getNodeName().equals("hour"))
-            {
-              hour = Integer.parseInt(subSubNode.getTextContent());
-            }
-            else if (subSubNode.getNodeName().equals("minute"))
-            {
-              minute = Integer.parseInt(subSubNode.getTextContent());
-            }
           }
-          endingDate = LocalDateTime.of(year, month, day, hour, minute);
+          toDate = LocalDate.of(year, month, day);
         }
 
-        else if (subNode.getNodeName().equals("endingDate"))
+        else if (subNode.getNodeName().equals("toDate"))
         {
           NodeList subSubList = subNode.getChildNodes();
           for (int k = 0; k < subSubList.getLength(); k++)
@@ -614,6 +610,19 @@ public class FileReader
             }
           }
         }
+
+        else if (subNode.getNodeName().equals("toHours"))
+        {
+          String stringToHours = subNode.getTextContent();
+          toHours = Integer.parseInt(stringToHours);
+        }
+
+        else if (subNode.getNodeName().equals("toMinutes"))
+        {
+          String stringToMinutes = subNode.getTextContent();
+          toMinutes = Integer.parseInt(stringToMinutes);
+        }
+
         else if (subNode.getNodeName().equals("description"))
         {
           description = subNode.getTextContent();
@@ -627,7 +636,7 @@ public class FileReader
           link = subNode.getTextContent();
         }
       }
-      event = new Event(ID, name, location, startingDate, endingDate,
+      event = new Event(ID, name, location, fromDate, fromHours, fromMinutes, toDate, toHours, toMinutes,
           description, participantsIDs, comment, link);
       eventsList.addEvent(event);
     }

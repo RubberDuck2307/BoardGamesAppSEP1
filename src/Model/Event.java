@@ -1,5 +1,6 @@
 package Model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -9,6 +10,8 @@ public class Event
   private int ID;
   private String name;
   private String place;
+  private LocalDate fromDate, toDate;
+  private int intFromHours, intFromMinutes, intToHours, intToMinutes;
   private LocalDateTime from;
   private LocalDateTime to;
   private String description;
@@ -16,36 +19,48 @@ public class Event
   private String comment;
   private String link;
 
-  public Event(int ID, String name, String place, LocalDateTime from,
-      LocalDateTime to, String description, ArrayList<Integer> participantsIDs,
+  public Event(int ID, String name, String place, LocalDate fromDate, int intFromHours, int intFromMinutes,
+      LocalDate toDate, int intToHours, int intToMinutes, String description, ArrayList<Integer> participantsIDs,
       String comment, String link)
   {
-    set(ID, name, place, from, to, description,
+    set(ID, name, place, fromDate, intFromHours, intFromMinutes, toDate, intToHours, intToMinutes, description,
         participantsIDs, comment, link);
   }
 
-  Event(String name, String place, LocalDateTime from,
-      LocalDateTime to, String description, ArrayList<Integer> participantsIDs,
+  public Event(String name, String place, LocalDate fromDate, int intFromHours, int intFromMinutes,
+      LocalDate toDate, int intToHours, int intToMinutes, String description, ArrayList<Integer> participantsIDs,
       String comment, String link)
   {
     int ID = -1;
-    set(ID, name, place, from, to, description,
+    set(ID, name, place, fromDate, intFromHours, intFromMinutes, toDate, intToHours, intToMinutes, description,
         participantsIDs, comment, link);
   }
 
-  public void set(int ID, String name, String location, LocalDateTime startingDate,
-      LocalDateTime endingDate, String description, ArrayList<Integer> participantsIDs,
+  public void set(int ID, String name, String place, LocalDate fromDate, int intFromHours, int intFromMinutes,
+      LocalDate toDate, int intToHours, int intToMinutes, String description, ArrayList<Integer> participantsIDs,
       String comment, String link)
   {
     this.ID = ID;
     this.name = name;
-    this.place = location;
-    this.from = startingDate;
-    this.to = endingDate;
+    this.place = place;
+    this.fromDate = fromDate;
+    this.intFromHours = intFromHours;
+    this.intFromMinutes = intFromMinutes;
+    this.toDate = toDate;
+    this.intToHours = intToHours;
+    this.intToMinutes = intToMinutes;
     this.description = description;
     this.participantsIDs = participantsIDs;
     this.comment = comment;
     this.link = link;
+    this.from = fromDate.atTime(intFromHours,intFromMinutes);
+    this.to = toDate.atTime(intToHours,intToMinutes);
+  }
+
+  static public boolean validateData(LocalDateTime from, LocalDateTime to)
+  {
+    return (from.isAfter(LocalDateTime.now()) && to.isAfter(LocalDateTime.now())
+        && to.isAfter(from));
   }
 
   public int getID()
@@ -76,6 +91,66 @@ public class Event
   public void setPlace(String place)
   {
     this.place = place;
+  }
+
+  public LocalDate getFromDate()
+  {
+    return fromDate;
+  }
+
+  public void setFromDate(LocalDate fromDate)
+  {
+    this.fromDate = fromDate;
+  }
+
+  public LocalDate getToDate()
+  {
+    return toDate;
+  }
+
+  public void setToDate(LocalDate toDate)
+  {
+    this.toDate = toDate;
+  }
+
+  public int getIntFromHours()
+  {
+    return intFromHours;
+  }
+
+  public void setIntFromHours(int intFromHours)
+  {
+    this.intFromHours = intFromHours;
+  }
+
+  public int getIntFromMinutes()
+  {
+    return intFromMinutes;
+  }
+
+  public void setIntFromMinutes(int intFromMinutes)
+  {
+    this.intFromMinutes = intFromMinutes;
+  }
+
+  public int getIntToHours()
+  {
+    return intToHours;
+  }
+
+  public void setIntToHours(int intToHours)
+  {
+    this.intToHours = intToHours;
+  }
+
+  public int getIntToMinutes()
+  {
+    return intToMinutes;
+  }
+
+  public void setIntToMinutes(int intToMinutes)
+  {
+    this.intToMinutes = intToMinutes;
   }
 
   public LocalDateTime getFrom()
@@ -145,5 +220,22 @@ public class Event
         + to + ", description='" + description + '\''
         + ", participantsIDs=" + participantsIDs + ", comment='" + comment
         + '\'' + ", link='" + link + '\'' + '}';
+  }
+
+  public String getFromHours()
+  {
+    return "" + this.getIntFromHours() + "";
+  }
+  public String getFromMinutes()
+  {
+    return "" + this.getIntFromMinutes() + "";
+  }
+  public String getToHours()
+  {
+    return "" + this.getIntToHours() + "";
+  }
+  public String getToMinutes()
+  {
+    return "" + this.getIntToMinutes() + "";
   }
 }
