@@ -6,6 +6,7 @@ import Model.BoardgameTable;
 import Model.ModelManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -70,5 +71,10 @@ public class BoardGamesController implements Controller{
     @Override
     public void reset() {
 
+    }
+
+    public void addBoardgame()
+    {
+        viewHandler.openView(130,-1);
     }
 }

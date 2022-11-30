@@ -16,6 +16,7 @@ import javafx.scene.layout.Region;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.time.LocalDate;
+import java.util.Optional;
 
 public class BoardGamesDetailPageController implements Controller
 {
@@ -104,7 +105,7 @@ public class BoardGamesDetailPageController implements Controller
     max.setDisable(false);
     type.setDisable(false);
     status.setDisable(false);
-    numberOfVotes.setDisable(false);
+    //numberOfVotes.setDisable(false);
     edit.setText("Save Changes");
     save = event -> {
       //System.out.println("hello");
@@ -149,10 +150,15 @@ public class BoardGamesDetailPageController implements Controller
 
   public void delete() throws ParserConfigurationException, TransformerException
   {
+    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+    alert.setTitle("Confirmation");
+    alert.setHeaderText("Are you sure you want to delete the player ");
+    Optional<ButtonType> result = alert.showAndWait();
+    if(result.isPresent() && result.get() == ButtonType.OK){
     model.getBoardGamesList().deleteByID(ID);
     model.saveBoardGames();
     viewHandler.openView(3, -1);
-
+    }
   }
 
   public void goBack()
