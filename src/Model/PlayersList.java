@@ -55,7 +55,6 @@ public class PlayersList
       playerList.add(player);
     }
   }
-
   public void setPlayer(Player player, int ID)
   {
     for (int i = 0; i < playerList.size(); i++)
@@ -84,7 +83,20 @@ public class PlayersList
     }
   }
 
-    @Override public String toString () {
+  public String getNameByID(int ID)
+  {
+    System.out.println("hello" + ID);
+    for (int i = 0; i < playerList.size(); i++)
+    {
+      if ( playerList.get(i).getID() == ID)
+      {
+        return playerList.get(i).getName();
+      }
+    }
+    return null;
+  }
+  @Override public String toString()
+  {
     return "Model.PlayersList{" + "playerList=" + playerList + '}';
   }
-  }
+}

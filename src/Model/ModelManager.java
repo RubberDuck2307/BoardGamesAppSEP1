@@ -15,6 +15,12 @@ public class ModelManager
 
   ReservationsList reservationsList = FileReader.readReservations();
 
+  BorrowingsList borrowingsList = FileReader.readCurrentBorrowings();
+
+  public BorrowingsList getBorrowingsList() {
+    return borrowingsList;
+  }
+
   public ReservationsList getReservationsList() {
     return reservationsList;
   }
