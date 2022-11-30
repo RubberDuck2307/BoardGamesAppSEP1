@@ -8,10 +8,16 @@ import javafx.scene.layout.Region;
 
 public class ElectionController implements Controller
 {
-  @FXML Button backButton;
-  Region region;
-  ModelManager model;
-  ViewHandler viewHandler;
+  public @FXML Button backButton;
+  private Region region;
+  private ModelManager model;
+  private ViewHandler viewHandler;
+
+  public @FXML Button detailPageButton;
+  @FXML public Button addVoteButton;
+  @FXML public Button addElectionButton;
+
+
 
   public ElectionController()
   {
@@ -23,6 +29,7 @@ public class ElectionController implements Controller
     this.region = region;
     this.model = model;
     this.viewHandler = viewHandler;
+
   }
 
   @FXML public void backToHomePage()

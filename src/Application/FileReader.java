@@ -815,7 +815,7 @@ public class FileReader
     transformer.setOutputProperty(OutputKeys.INDENT, "yes");
     transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount",
         "2");
-    File file = new File("Election.xml");
+    File file = new File("./src/XML/Election.xml");
     transformer.transform(new DOMSource(doc), new StreamResult(file));
 
   }
@@ -827,7 +827,7 @@ public class FileReader
 
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     DocumentBuilder builder = factory.newDocumentBuilder();
-    Document doc = builder.parse("Election.xml");
+    Document doc = builder.parse("./src/XML/Election.xml");
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
 

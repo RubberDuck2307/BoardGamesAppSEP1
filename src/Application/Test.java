@@ -14,12 +14,9 @@ public class Test
   public static void main(String[] args)
       throws ParserConfigurationException, TransformerException
   {
-    LocalDateTime startingDate = LocalDateTime.now();
-    LocalDateTime endingDate = LocalDateTime.of(2022, 12, 31, 01,02);
-    Event event = new Event(0, "name ex", "place", startingDate, endingDate,"", new ArrayList<>(), "", "");
-    EventsList eventsList = new EventsList();
-    eventsList.addEvent(event);
-    FileReader.saveEventsList(eventsList);
+      LocalDate localDate = LocalDate.now();
+      LocalDateTime localDateTime = localDate.atTime(2,23);
+      System.out.println(localDate);
 
     }
 }

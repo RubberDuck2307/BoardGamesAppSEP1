@@ -14,8 +14,9 @@ public class ModelManager
   BoardGamesList boardGamesList = FileReader.readBoardGamesList();
   ReservationsList reservationsList = FileReader.readReservations();
   EventsList eventsList = FileReader.readEventsList();
-
   BorrowingsList borrowingsList = FileReader.readCurrentBorrowings();
+
+  Election election = FileReader.readElection();
 
   public BorrowingsList getBorrowingsList() {
     return borrowingsList;
@@ -56,6 +57,9 @@ public class ModelManager
     FileReader.savePlayersList(playersList);
   }
 
+  public void saveElection(){
+
+  }
   public void setPlayer(Player player, int ID){
     playersList.setPlayer(player, ID);
   }
