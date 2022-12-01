@@ -929,13 +929,13 @@ public class FileReader
   public static void saveCurrentBorrowings(BorrowingsList borrowingsList)
       throws ParserConfigurationException, TransformerException
   {
-    saveBorrowingsList(borrowingsList, "CurrentBorrowings.xml");
+    saveBorrowingsList(borrowingsList, "./src/XML/CurrentBorrowings.xml");
   }
 
   public static void savePastBorrowings(BorrowingsList borrowingsList)
       throws ParserConfigurationException, TransformerException
   {
-    saveBorrowingsList(borrowingsList, "PastBorrowings.xml");
+    saveBorrowingsList(borrowingsList, "./src/XML/PastBorrowings.xml");
   }
 
   private static void saveBorrowingsList(BorrowingsList borrowingsList,
@@ -1034,7 +1034,7 @@ public class FileReader
       throws TransformerConfigurationException, ParserConfigurationException,
       IOException, SAXException
   {
-    return readBorrowings("PastBorrowings.xml");
+    return readBorrowings("./src/XML/PastBorrowings.xml");
   }
   static private BorrowingsList readBorrowings(String filename)
       throws ParserConfigurationException, IOException, SAXException,

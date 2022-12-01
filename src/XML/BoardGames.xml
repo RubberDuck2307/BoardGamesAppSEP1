@@ -3,12 +3,12 @@
   <BoardGame>
     <ID>2</ID>
     <name>ss</name>
-    <type>Coop</type>
+    <type>Engine Building</type>
     <numberOfPlayersMin>2</numberOfPlayersMin>
     <numberOfPlayersMax>3</numberOfPlayersMax>
     <availabilityStatus>Unavailable</availabilityStatus>
     <comment>dd</comment>
-    <ownerID>0</ownerID>
+    <ownerID>1</ownerID>
     <numberOfVotes>4</numberOfVotes>
   </BoardGame>
   <BoardGame>
@@ -35,6 +35,17 @@
   </BoardGame>
   <BoardGame>
     <ID>5</ID>
+    <name>gbgfbfb</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>1</numberOfPlayersMin>
+    <numberOfPlayersMax>2</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment>tzdhg</comment>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>0</ID>
     <name>gbgfbfb</name>
     <type>Engine Building</type>
     <numberOfPlayersMin>1</numberOfPlayersMin>

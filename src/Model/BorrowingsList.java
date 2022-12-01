@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class BorrowingsList
 {
@@ -24,6 +25,35 @@ public class BorrowingsList
   public int size()
   {
     return borrowingList.size();
+  }
+
+  public Reservation getBorrowingByID(int id)
+  {
+    for (int i = 0; i < size(); i++)
+    {
+      if (borrowingList.get(i).getID() == id)
+      {
+        return borrowingList.get(i);
+      }
+    }
+    return null;
+  }
+
+  public BorrowingsList filterBorrowingList(String charSequence, PlayersList playersList, BoardGamesList boardGamesList)
+  {
+    BorrowingsList newBorrowingList = new BorrowingsList();
+
+    for (int i = 0; i < size(); i++)
+    {
+      if (playersList.getPlayerByID(borrowingList.get(i).getPlayerID())
+              .getName().contains(charSequence) ||
+          boardGamesList.getBoardGameByID(borrowingList.get(i).getGameID())
+              .getName().contains(charSequence))
+      {
+        newBorrowingList.addBorrowing(borrowingList.get(i));
+      }
+    }
+    return newBorrowingList;
   }
 
   public void addBorrowing(Reservation borrowing)
@@ -51,5 +81,33 @@ public class BorrowingsList
   @Override public String toString()
   {
     return "Model.BorrowingsList{" + "borrowingList=" + borrowingList + '}';
+  }
+
+  public void deleteByID(int ID)
+  {
+    for (int i = 0; i < borrowingList.size(); i++)
+    {
+      if (borrowingList.get(i).getID() == ID)
+      {
+        borrowingList.remove(i);
+        break;
+      }
+    }
+  }
+
+  public void setBorrowing(Reservation borrowing, int ID)
+  {
+    for (int i = 0; i < borrowingList.size(); i++)
+    {
+      if (borrowingList.get(i).getID() == ID)
+      {
+        borrowingList.set(i, borrowing);
+        break;
+      }
+      else
+      {
+        borrowingList.add(borrowing);
+      }
+    }
   }
 }

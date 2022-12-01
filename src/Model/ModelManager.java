@@ -58,12 +58,20 @@ public class ModelManager
   {
     FileReader.savePlayersList(playersList);
   }
+  public void saveBorrowing ()
+      throws ParserConfigurationException, TransformerException
+  {
+    FileReader.saveCurrentBorrowings(borrowingsList);
+  }
 
   public void setPlayer(Player player, int ID){
     playersList.setPlayer(player, ID);
   }
   public void setBoardGame(BoardGame boardGame, int ID){
     boardGamesList.setBoardGame(boardGame, ID);
+  }
+  public void setBorrowing(Reservation borrowing, int ID){
+    borrowingsList.setBorrowing(borrowing, ID);
   }
   public void saveBoardGames ()
       throws ParserConfigurationException, TransformerException

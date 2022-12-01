@@ -77,11 +77,7 @@ public class PlayersController implements Controller
 
   public void fillTable(){
     playersTables.clear();
-
-
-
     PlayersList playersList = model.getPlayersList();
-
     playersList = playersList.filterPlayerList(searchField.getText());
     if (guestsRadio.isSelected()){
       playersList = playersList.getGuests();
