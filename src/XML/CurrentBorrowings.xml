@@ -18,22 +18,6 @@
   </Borrowing>
   <Borrowing>
     <ID>5</ID>
-    <playerID>0</playerID>
-    <gameID>4</gameID>
-    <from>
-      <day>24</day>
-      <month>3</month>
-      <year>2003</year>
-    </from>
-    <to>
-      <day>24</day>
-      <month>3</month>
-      <year>2003</year>
-    </to>
-    <comment>s</comment>
-  </Borrowing>
-  <Borrowing>
-    <ID>5</ID>
     <playerID>2</playerID>
     <gameID>4</gameID>
     <from>
