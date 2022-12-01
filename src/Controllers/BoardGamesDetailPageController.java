@@ -222,4 +222,8 @@ public class BoardGamesDetailPageController implements Controller
 
   }
 
+  public void showRatings(ActionEvent actionEvent)
+  {
+    viewHandler.openView(3, ID);
+  }
 }

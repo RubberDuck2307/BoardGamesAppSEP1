@@ -25,7 +25,7 @@
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" valignment="TOP" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="820.0" styleClass="heading" text="BOARD GAME NAME" textAlignment="CENTER" GridPane.columnIndex="1">
+            <Label fx:id="headingLable" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="820.0" styleClass="heading" text="BOARD GAME NAME" textAlignment="CENTER" GridPane.columnIndex="1">
                <font>
                   <Font size="72.0" />
                </font>
@@ -33,16 +33,16 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <TableView editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="562.0" prefWidth="820.0" styleClass="bootstrap" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TableView fx:id="ratingsTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="562.0" prefWidth="820.0" styleClass="bootstrap" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <columns>
-                  <TableColumn id="text" fx:id="text" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="410.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Model.Player" />
-                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="395.0" resizable="false" style="-fx-font-size: 24px;" text="Model.Rating" />
+                  <TableColumn id="text" fx:id="player" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="410.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Player" />
+                  <TableColumn fx:id="rating" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="395.0" resizable="false" style="-fx-font-size: 24px;" text="Rating" />
                </columns>
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </TableView>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Add Model.Rating" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addRating" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Add Rating" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="24.0" />
                </font>
@@ -52,7 +52,7 @@
             </Button>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
+                  <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#goBack" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
                </children>
                <GridPane.margin>
                   <Insets left="60.0" top="40.0" />

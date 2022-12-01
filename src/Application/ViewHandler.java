@@ -35,6 +35,7 @@ public class ViewHandler
   private BoardGamesAddBoardGameControllerSelectOwner boardGamesAddBoardGameControllerSelectOwner;
   private EventsAddParticipantController eventsAddParticipantController;
   private EventsSelectParticipantController eventsSelectParticipantController;
+  private BoardgamesAddRatingController boardgamesAddRatingController;
 
   public ViewHandler(ModelManager model)
   {
@@ -131,6 +132,8 @@ public class ViewHandler
         root = loadSimpleGuiView("/FXML/BoardgamesAddBoardgameSelectOwner.fxml",
             boardGamesAddBoardGameControllerSelectOwner, -1);
         break;
+      case 15:
+        root = loadSimpleGuiView("/FXML/BoardgamesAddRating.fxml",boardgamesAddRatingController ,IDOfItem);
     }
 
     currentScene.setRoot(root);

@@ -49,7 +49,7 @@
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <TextField fx:id="nameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <TextField fx:id="nameBoardField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <font>
                         <Font size="24.0" />
                     </font>
@@ -60,7 +60,7 @@
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
                     <children>
-                        <Button fx:id="addButton2" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Create rating" textAlignment="CENTER">
+                        <Button fx:id="addButton2" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#confirmRating" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Create Rating" textAlignment="CENTER">
                             <font>
                                 <Font size="26.0" />
                             </font>
@@ -71,7 +71,7 @@
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="16" />
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>
-                        <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
+                        <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#goBack" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
                     </children>
                     <GridPane.margin>
                         <Insets left="60.0" top="40.0" />
@@ -81,7 +81,7 @@
                     <children>
                         <VBox prefHeight="30.0" prefWidth="563.0">
                      <children>
-                        <TextField fx:id="nameField1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width">
+                        <TextField fx:id="nameMemberField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -100,12 +100,12 @@
                       </Label>
                </children>
                 </HBox>
-            <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="252.0" styleClass="labels" stylesheets="@../css/style.css" text="Model.Rating" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="252.0" styleClass="labels" stylesheets="@../css/style.css" text="Rating" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <TextField fx:id="nameField11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <TextField fx:id="ratingField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <font>
                   <Font size="24.0" />
                </font>
