@@ -20,7 +20,7 @@ public class EventsController implements Controller
   @FXML Button backButton;
   @FXML public TableView<EventsTable> eventsTable;
   @FXML public TableColumn<EventsTable, String> name;
-  @FXML public TableColumn<EventsTable, String> place;
+  @FXML public TableColumn<EventsTable, String> notaplace;
   @FXML public TableColumn<EventsTable, String> from;
   @FXML public TableColumn<EventsTable, String> to;
   private ObservableList<EventsTable> eventsTables = FXCollections.observableArrayList();
@@ -46,7 +46,7 @@ public class EventsController implements Controller
 
     }
     name.setCellValueFactory(new PropertyValueFactory<>("name"));
-    place.setCellValueFactory(new PropertyValueFactory<>("place"));
+    notaplace.setCellValueFactory(new PropertyValueFactory<>("place"));
     from.setCellValueFactory(new PropertyValueFactory<>("from"));
     to.setCellValueFactory(new PropertyValueFactory<>("to"));
     eventsTable.setItems(eventsTables);
