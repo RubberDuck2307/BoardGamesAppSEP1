@@ -34,17 +34,19 @@ public class EventsList
 
   public void setEvent(Event event, int ID)
   {
+    boolean found = false;
     for (int i = 0; i < eventsList.size(); i++)
     {
       if (eventsList.get(i).getID() == ID)
       {
         eventsList.set(i, event);
+        found = true;
         break;
       }
-      else
-      {
-        eventsList.add(event);
-      }
+    }
+    if(!found)
+    {
+      eventsList.add(event);
     }
   }
 

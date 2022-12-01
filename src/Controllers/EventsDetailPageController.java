@@ -37,8 +37,8 @@ public class EventsDetailPageController implements Controller
   private int ID;
   private EventHandler save;
 
-
-  private void save(){
+  private void save()
+  {
   }
 
   @Override public void init(Region region, ModelManager model,
@@ -51,7 +51,8 @@ public class EventsDetailPageController implements Controller
     setData();
   }
 
-  public void setData(){
+  public void setData()
+  {
     Event event = model.getEventsList().getEventByID(ID);
     nameField.setText(event.getName());
     placeField.setText(event.getPlace());
@@ -113,6 +114,7 @@ public class EventsDetailPageController implements Controller
       String fromMinutes = fromMinutesField.getText();
       int intFromMinutes = Integer.parseInt(fromMinutes);
       LocalDate toDate = toDateField.getValue();
+      System.out.println(toDate);
       String toHours = toHoursField.getText();
       int intToHours = Integer.parseInt(toHours);
       String toMinutes = toMinutesField.getText();
@@ -120,33 +122,45 @@ public class EventsDetailPageController implements Controller
       String comment = commentField.getText();
       String description = descriptionField.getText();
 
+      try
+      {
       LocalDateTime from = fromDate.atTime(intFromHours, intFromMinutes);
-      LocalDateTime to = fromDate.atTime(intToHours, intToMinutes);
+      LocalDateTime to = toDate.atTime(intToHours, intToMinutes);
+      System.out.println(to);
 
-      if (Event.validateData(from,to)){
-        Event event1 = new Event(ID, name, place, fromDate, intFromHours, intFromMinutes, toDate, intToHours, intToMinutes, description,
-            new ArrayList<>(), comment, link);
-        model.setEvent(event1, ID);
-        try
+
+        if (Event.VALIDATE_DATA(name, place, from, to))
         {
-          model.saveEvent();
+          System.out.println("I am validated");
+          Event event1 = new Event(ID, name, place, fromDate, intFromHours,
+              intFromMinutes, toDate, intToHours, intToMinutes, description,
+              new ArrayList<>(), comment, link);
+          model.setEvent(event1, ID);
+          try
+          {
+            model.saveEvent();
+          }
+          catch (ParserConfigurationException e)
+          {
+            throw new RuntimeException(e);
+          }
+          catch (TransformerException e)
+          {
+            throw new RuntimeException(e);
+          }
+          setData();
+          editButton.setOnAction(this::edit);
+          editButton.setText("Edit");
         }
-        catch (ParserConfigurationException e)
-        {
-          throw new RuntimeException(e);
-        }
-        catch (TransformerException e)
-        {
-          throw new RuntimeException(e);
-        }
-        setData();
-        editButton.setOnAction(this::edit);
-        editButton.setText("Edit");
       }
-      else {
+      catch (Exception e)
+      {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Invalid data");
+        alert.setHeaderText(e.getMessage());
+        Optional<ButtonType> result = alert.showAndWait();
       }
-    };
-    editButton.setOnAction(save);
+    }; editButton.setOnAction(save);
   }
 
   public void delete() throws ParserConfigurationException, TransformerException
@@ -162,7 +176,9 @@ public class EventsDetailPageController implements Controller
       viewHandler.openView(7, -1);
     }
   }
-  public void goBack(){
-    viewHandler.openView(7,-1);
+
+  public void goBack()
+  {
+    viewHandler.openView(7, -1);
   }
 }

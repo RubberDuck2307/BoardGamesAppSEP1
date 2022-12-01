@@ -55,12 +55,30 @@ public class Event
     this.link = link;
     this.from = fromDate.atTime(intFromHours,intFromMinutes);
     this.to = toDate.atTime(intToHours,intToMinutes);
+    System.out.println("Constructor" + toDate);
   }
 
-  static public boolean validateData(LocalDateTime from, LocalDateTime to)
+  static public boolean VALIDATE_DATA(String name, String place, LocalDateTime from,LocalDateTime to)
   {
-    return (from.isAfter(LocalDateTime.now()) && to.isAfter(LocalDateTime.now())
-        && to.isAfter(from));
+    if(!from.isAfter(LocalDateTime.now())){
+      throw new RuntimeException("The event has to start in the future");
+    }
+    if (!to.isAfter(from)){
+      throw new RuntimeException("The event has to end after it starts");
+    }
+    name = name.trim();
+    if (!(name.length() > 0))
+    {
+      throw new RuntimeException("The event must have a name");
+    }
+
+    place = place.trim();
+    if (!(place.length() > 0))
+    {
+      throw new RuntimeException("The event must have a location");
+    }
+
+    return true;
   }
 
   public int getID()
