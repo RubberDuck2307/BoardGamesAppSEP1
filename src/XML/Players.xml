@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <PlayersList>
   <Player>
-    <ID>0</ID>
+    <ID>1</ID>
     <name>Pavelaaa</name>
     <phoneNumber>50002222</phoneNumber>
     <email>Lobotka@má.hlad</email>
@@ -32,7 +32,7 @@
     </feePayment>
   </Player>
   <Player>
-    <ID>2</ID>
+    <ID>1</ID>
     <name>Pavel</name>
     <phoneNumber>4565</phoneNumber>
     <email>is@back.Pavel</email>
@@ -76,75 +76,4 @@
       <year>2022</year>
     </feePayment>
   </Player>
-  <Player>
-    <ID>2</ID>
-    <name>aaa</name>
-    <phoneNumber>200</phoneNumber>
-    <email>aaa@aaa.com</email>
-    <membership>true</membership>
-    <comment>aaa</comment>
-    <address>aaa</address>
-    <voted>false</voted>
-    <voted>false</voted>
-    <feePayment>
-      <day>2</day>
-      <month>12</month>
-      <year>2022</year>
-    </feePayment>
-  </Player>
-  <Player>
-    <ID>3</ID>
-    <name>bbbzz</name>
-    <phoneNumber>300</phoneNumber>
-    <email>bbb@bbb.com</email>
-    <membership>false</membership>
-    <comment>bbb</comment>
-    <address>bbb</address>
-    <voted>false</voted>
-    <voted>false</voted>
-  </Player>
-  <Player>
-    <ID>3</ID>
-    <name>bbbz</name>
-    <phoneNumber>300</phoneNumber>
-    <email>bbb@bbb.com</email>
-    <membership>false</membership>
-    <comment>bbb</comment>
-    <address>bbb</address>
-    <voted>false</voted>
-    <voted>false</voted>
-  </Player>
-  <Player>
-    <ID>3</ID>
-    <name>bbbz</name>
-    <phoneNumber>300</phoneNumber>
-    <email>bbb@bbb.com</email>
-    <membership>false</membership>
-    <comment>bbb</comment>
-    <address>bbb</address>
-    <voted>false</voted>
-    <voted>false</voted>
-  </Player>
-  <Player>
-    <ID>3</ID>
-    <name>bbbzz</name>
-    <phoneNumber>300</phoneNumber>
-    <email>bbb@bbb.com</email>
-    <membership>false</membership>
-    <comment>bbb</comment>
-    <address>bbb</address>
-    <voted>false</voted>
-    <voted>false</voted>
-  </Player>
-  <Player>
-    <ID>3</ID>
-    <name>bbbzz</name>
-    <phoneNumber>300</phoneNumber>
-    <email>bbb@bbb.com</email>
-    <membership>false</membership>
-    <comment>bbb</comment>
-    <address>bbb</address>
-    <voted>false</voted>
-    <voted>false</voted>
-  </Player>
-</PlayersList>
+  </PlayersList>

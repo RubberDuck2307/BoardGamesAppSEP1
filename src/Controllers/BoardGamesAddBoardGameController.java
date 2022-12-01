@@ -1,10 +1,7 @@
 package Controllers;
 
 import Application.ViewHandler;
-import Model.BoardGame;
-import Model.BoardGamesList;
-import Model.ModelManager;
-import Model.Player;
+import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,6 +15,7 @@ import javax.xml.transform.TransformerException;
 
 public class BoardGamesAddBoardGameController  implements Controller
 {
+  public TextField owner;
   private Region region;
   private ModelManager model;
   private ViewHandler viewHandler;
@@ -27,12 +25,18 @@ public class BoardGamesAddBoardGameController  implements Controller
   public TextField min;
   public TextField nameField;
   public TextArea commentField;
+  private int ID;
   @Override public void init(Region region, ModelManager model,
       ViewHandler viewHandler, int ID)
   {
     this.region = region;
     this.model = model;
     this.viewHandler = viewHandler;
+    this.ID = ID;
+    setData();
+
+  }
+  public void setData(){
     ObservableList<String> items = FXCollections.observableArrayList(
         BoardGame.getAllowedTypes());
     type.setItems(items);
@@ -41,6 +45,14 @@ public class BoardGamesAddBoardGameController  implements Controller
     status.setItems(items2);
     type.setValue(items.get(0));
     status.setValue(items2.get(0));
+    PlayersList playersList= model.getPlayersList();
+    if(ID == 0){
+      owner.setText("Association");
+    }
+    else{
+      owner.setText(playersList.getNameByID(ID));
+    }
+
   }
 
   @Override public Region getRegion()
@@ -58,10 +70,12 @@ public class BoardGamesAddBoardGameController  implements Controller
   {
     int minimum = Integer.parseInt(min.getText());
     int maximum = Integer.parseInt(max.getText());
+    System.out.println("this is id " +ID);
+    int owner = ID;
     String typeOfGame = type.getValue().toString();
     String statusOfGame = status.getValue().toString();
     if(BoardGame.validateData(nameField.getText(), minimum, maximum)){
-      model.addBoardGame(new BoardGame( nameField.getText(), typeOfGame, minimum,maximum, statusOfGame, commentField.getText(), 0, 0 ));
+      model.addBoardGame(new BoardGame( nameField.getText(), typeOfGame, minimum,maximum, statusOfGame, commentField.getText(), owner, 0 ));
       model.saveBoardGames();
       viewHandler.openView(9,model.getBoardGamesList().size() -1);
     }
@@ -73,7 +87,5 @@ public class BoardGamesAddBoardGameController  implements Controller
     viewHandler.openView(3, -1);
   }
 
-  public void selectOwner(ActionEvent actionEvent)
-  {
-  }
+
 }

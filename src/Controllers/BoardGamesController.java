@@ -89,7 +89,7 @@ public class BoardGamesController implements Controller
 
   public void addBoardgame()
   {
-    viewHandler.openView(130, -1);
+    viewHandler.openView(132, -1);
   }
 
   /*public void fillTable()

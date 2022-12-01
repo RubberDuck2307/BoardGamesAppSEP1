@@ -181,13 +181,8 @@
             </TextField>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
                <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="386.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="181.0">
                      <children>
-                        <Button fx:id="selectOwner" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectOwner" prefHeight="63.0" prefWidth="196.0" styleClass="button-orange" text="Select other owner" textAlignment="CENTER">
-                           <font>
-                              <Font size="26.0" />
-                           </font>
-                        </Button>
                         <Button fx:id="selectAsocAsOwner" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="24.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectAsocAsOwner" prefHeight="63.0" prefWidth="196.0" styleClass="button-blue" text="Association owner" textAlignment="CENTER">
                            <font>
                               <Font size="26.0" />
@@ -196,7 +191,7 @@
                               <Insets />
                            </opaqueInsets>
                            <HBox.margin>
-                              <Insets left="40.0" />
+                              <Insets />
                            </HBox.margin>
                         </Button>
                      </children>

@@ -133,7 +133,7 @@ public class BoardGamesDetailPageController implements Controller
       int numberOfVotesOfGame = Integer.parseInt(numberOfVotes.getText());
       String typeOfGame = type.getValue().toString();
       String statusOfGame = status.getValue().toString();
-      int ownerName = 1;
+      int ownerName = Integer.parseInt(owner.getText());
       try{
         if (BoardGame.validateData(name, minimum, maximum))
         {
@@ -188,12 +188,8 @@ public class BoardGamesDetailPageController implements Controller
     viewHandler.openView(3, -1);
   }
 
-  public void selectOwner(ActionEvent actionEvent)
-  {
-    viewHandler.openView(2, -1);
-  }
 
-  public void selectAsocAsOwner(ActionEvent actionEvent)
+  public void selectAsocAsOwner()
   {
     //System.out.println("hello");
     String name = nameField.getText();
