@@ -67,4 +67,18 @@ public class ModelManager
   {
     FileReader.saveBoardGameList(boardGamesList);
   }
+
+  public void addEvent(Event event){
+    eventsList.addEvent(event);
+  }
+
+  public void saveEvent()
+      throws ParserConfigurationException, TransformerException
+  {
+    FileReader.saveEventsList(eventsList);
+  }
+
+  public void setEvent(Event event, int ID){
+    eventsList.setEvent(event, ID);
+  }
 }
