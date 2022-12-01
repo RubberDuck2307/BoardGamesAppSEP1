@@ -92,4 +92,27 @@
     <comment/>
     <link/>
   </Event>
+  <Event>
+    <ID>4</ID>
+    <name>fff</name>
+    <location>ggg</location>
+    <fromDate>
+      <day>1</day>
+      <month>12</month>
+      <year>2022</year>
+    </fromDate>
+    <fromHours>16</fromHours>
+    <fromMinutes>0</fromMinutes>
+    <toDate>
+      <day>1</day>
+      <month>12</month>
+      <year>2022</year>
+    </toDate>
+    <toHours>16</toHours>
+    <toMinutes>0</toMinutes>
+    <description/>
+    <playersIDs/>
+    <comment/>
+    <link/>
+  </Event>
 </EventsList>
