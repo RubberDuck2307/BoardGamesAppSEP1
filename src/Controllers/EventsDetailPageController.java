@@ -17,6 +17,7 @@ import java.util.Optional;
 
 public class EventsDetailPageController implements Controller
 {
+  public Label heading;
   public TextField nameField;
   public TextField placeField;
   public TextField linkField;
@@ -54,6 +55,7 @@ public class EventsDetailPageController implements Controller
   public void setData()
   {
     Event event = model.getEventsList().getEventByID(ID);
+    heading.setText(event.getName());
     nameField.setText(event.getName());
     placeField.setText(event.getPlace());
     fromDateField.setValue(event.getFromDate());
