@@ -133,15 +133,7 @@ public class BoardGamesList
   {
     return boardGamesList.get(index);
   }
-  public BoardGame getBoardGameByID(int id)
-  {
-    for (int i = 0; i < size(); i++){
-      if (boardGamesList.get(i).getID() == id){
-        return boardGamesList.get(i);
-      }
-    }
-    return null;
-  }
+
   public BoardGamesList filterBoardGameList(String charSequence){
     BoardGamesList newBoardGameList = new BoardGamesList();
     for (int i = 0; i < size(); i++)
