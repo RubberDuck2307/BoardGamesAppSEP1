@@ -32,11 +32,24 @@ public class Reservation
     this.to = to;
     this.comment = comment;
   }
+  static public boolean validateData(LocalDate start, LocalDate end)
+  {
+    if (!end.isAfter(start)){
+      throw new RuntimeException("The borrowing must end after it starts");
+    }
+
+    if(!start.isAfter(LocalDate.now())){
+      throw new RuntimeException("The borrowing must be in the future");
+    }
+    // TODO check if there are no reservation or borrowings for this date for this bg
+    return true;
+  }
 
   public int getID()
   {
     return ID;
   }
+
 
   public void setID(int ID)
   {

@@ -8,11 +8,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Region;
 
 public class BorrowingsController implements Controller
 {
+  public TextField searchField;
   @FXML Button backButton;
   Region region;
   ModelManager model;
@@ -23,6 +26,8 @@ public class BorrowingsController implements Controller
   @FXML public TableColumn<BoardgameTable, String> playerName;
   @FXML public TableColumn<BoardgameTable, String> from;
   @FXML public TableColumn<BoardgameTable, String> to;
+  ObservableList<BorrowingsTable> borrowingsTables = FXCollections.observableArrayList();
+
 
   public BorrowingsController()
   {
@@ -34,24 +39,25 @@ public class BorrowingsController implements Controller
     this.region = region;
     this.model = model;
     this.viewHandler = viewHandler;
+    fillTable();
 
-    ObservableList<BorrowingsTable> borrowingsTables = FXCollections.observableArrayList();
 
-    for (int i = 0; i < model.getBorrowingsList().size(); i++)
+    /*for (int i = 0; i < model.getBorrowingsList().size(); i++)
     {
       System.out.println(model.getBorrowingsList().size());
       System.out.println(i);
       Reservation reservation = model.getBorrowingsList().getBorrowing(i);
       String boardgame = model.getBoardGamesList()
               .getNameByID(reservation.getGameID());
-      String player = model.getPlayersList().getNameByID(reservation.getID());
+      String player = model.getPlayersList().getNameByID(
+          reservation.getPlayerID());
 
       borrowingsTables.add(
                 new BorrowingsTable(boardgame,
                       player,
                       String.valueOf(reservation.getFrom()),
                       String.valueOf(reservation.getTo()), reservation.getID()));
-    }
+    }*/
 
     boardGameName.setCellValueFactory(new PropertyValueFactory<>("boardGameName"));
     playerName.setCellValueFactory(new PropertyValueFactory<>("playerName"));
@@ -73,5 +79,33 @@ public class BorrowingsController implements Controller
   @Override public void reset()
   {
 
+  }
+  public void fillTable(){
+    borrowingsTables.clear();
+    BorrowingsList borrowingsList = model.getBorrowingsList();
+    PlayersList playersList = model.getPlayersList();
+    BoardGamesList boardGamesList = model.getBoardGamesList();
+    borrowingsList = borrowingsList.filterBorrowingList(searchField.getText(), playersList,boardGamesList);
+    for (int i = 0; i < borrowingsList.size(); i++)
+    {
+
+
+      Reservation borrowing = borrowingsList.getBorrowing(i);
+      System.out.println(borrowing.toString());
+      String from = borrowing.getFrom() + "";
+      String to = borrowing.getTo() + "";
+      System.out.println(borrowing.toString());
+      borrowingsTables.add(
+          new BorrowingsTable(boardGamesList.getBoardGameByID(borrowing.getGameID()).getName(), playersList.getPlayerByID(borrowing.getPlayerID()).getName()
+              ,from, to, borrowing.getID()));
+
+
+    }
+  }
+
+  public void chooseBorrowings()
+  {
+    viewHandler.openView(131,
+        borrowingsTable.getSelectionModel().getSelectedItem().getID());
   }
 }

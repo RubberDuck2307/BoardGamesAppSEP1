@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class BoardGamesList
 {
@@ -57,6 +58,70 @@ public class BoardGamesList
       }
     }
   }
+  public BoardGamesList getBoardgameListByStatus(String status){
+    BoardGamesList newBoardGameList = new BoardGamesList();
+    for (int i =0; i < size(); i++){
+      if(Objects.equals(boardGamesList.get(i).getAvailabilityStatus(), status)){
+        newBoardGameList.addBoardGame(boardGamesList.get(i));
+      }
+    }
+    return newBoardGameList;
+  }public BoardGamesList getBoardgameListByGenre(String genre){
+    BoardGamesList newBoardGameList = new BoardGamesList();
+    for (int i =0; i < size(); i++){
+      if(Objects.equals(boardGamesList.get(i).getType(), genre)){
+        newBoardGameList.addBoardGame(boardGamesList.get(i));
+      }
+    }
+    return newBoardGameList;
+  }
+  public BoardGamesList getBoardgameListByNumbeOfPlayers(int numberOfPlayers){
+    BoardGamesList newBoardGameList = new BoardGamesList();
+    for (int i =0; i < size(); i++){
+      if(boardGamesList.get(i).getNumberOfPlayersMin() <= numberOfPlayers && numberOfPlayers<=boardGamesList.get(i).getNumberOfPlayersMax()){
+    }
+    }
+    return newBoardGameList;
+  }
+  public BoardGamesList getBoardgameListByGenreAndStatus(String genre, String status){
+    BoardGamesList newBoardGameListGenre = new BoardGamesList();
+    BoardGamesList newBoardGameList = new BoardGamesList();
+    for (int i =0; i < size(); i++){
+      if(Objects.equals(boardGamesList.get(i).getType(), genre)){
+        newBoardGameListGenre.addBoardGame(boardGamesList.get(i));
+      }
+    }
+    BoardGamesList newBoardGameListStatus = new BoardGamesList();
+    for (int i =0; i < size(); i++){
+      if(Objects.equals(boardGamesList.get(i).getAvailabilityStatus(), status)){
+        newBoardGameListStatus.addBoardGame(boardGamesList.get(i));
+      }
+    }
+    for(int i = 0; i<newBoardGameListStatus.size(); i++){
+      for(int k = 0; k<newBoardGameListGenre.size(); k++){
+        if(newBoardGameListStatus.getBoardGame(i).getID() == newBoardGameListGenre.getBoardGame(k).getID()){
+          if(newBoardGameList.size()==0){
+            newBoardGameList.addBoardGame(newBoardGameListGenre.getBoardGame(i));
+          }
+          else{
+            for(int j =0; j<newBoardGameList.size(); j++){
+              if(newBoardGameListStatus.getBoardGame(i).getID() != newBoardGameList.getBoardGame(j).getID()){
+                newBoardGameList.addBoardGame(newBoardGameListGenre.getBoardGame(i));
+                System.out.println("toto je filter "+newBoardGameList.toString());
+              }
+            }
+          }
+
+
+          if(newBoardGameListStatus.getBoardGame(i).getID() !=newBoardGameList.getBoardGame(k).getID()){
+            newBoardGameList.addBoardGame(newBoardGameListGenre.getBoardGame(i));
+            System.out.println("toto je filter "+newBoardGameList.toString());
+          }
+        }
+      }
+    }
+    return newBoardGameList;
+  }
 
   public BoardGame getBoardGame(int index)
   {
@@ -70,6 +135,16 @@ public class BoardGamesList
       }
     }
     return null;
+  }
+  public BoardGamesList filterBoardGameList(String charSequence){
+    BoardGamesList newBoardGameList = new BoardGamesList();
+    for (int i = 0; i < size(); i++)
+    {
+      if (boardGamesList.get(i).getName().contains(charSequence)) {
+        newBoardGameList.addBoardGame(boardGamesList.get(i));
+      }
+    }
+    return newBoardGameList;
   }
 
   public String getNameByID(int ID)
@@ -93,5 +168,7 @@ public class BoardGamesList
   {
     return "Model.BoardGamesList{" + "boardGamesList=" + boardGamesList + '}';
   }
+
+
 
 }

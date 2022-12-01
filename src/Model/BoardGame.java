@@ -1,5 +1,7 @@
 package Model;
 
+import java.time.LocalDate;
+
 public class BoardGame
 {
   private int ID;
@@ -162,7 +164,14 @@ public class BoardGame
   }
   static public boolean validateData(String name, int min, int max)
   {
-    return validateName(name) && validateMinAndMax(min, max);
+    if (!validateName(name)){
+    throw new RuntimeException("The name is empty");
+  }
+
+    if(!validateMinAndMax(min, max)){
+      throw new RuntimeException("The numbers are weird");
+    }
+    return true;
   }
   static public boolean validateMinAndMax(int min, int max)
   {
@@ -182,4 +191,5 @@ public class BoardGame
   {
     return ALLOWED_STATUSES;
   }
+
 }
