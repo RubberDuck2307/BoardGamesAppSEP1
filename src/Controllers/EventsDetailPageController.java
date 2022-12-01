@@ -17,6 +17,7 @@ import java.util.Optional;
 
 public class EventsDetailPageController implements Controller
 {
+  public Label heading;
   public TextField nameField;
   public TextField placeField;
   public TextField linkField;
@@ -48,12 +49,14 @@ public class EventsDetailPageController implements Controller
     this.model = model;
     this.viewHandler = viewHandler;
     this.ID = ID;
+    System.out.println("I HAVE The ID of" + ID);
     setData();
   }
 
   public void setData()
   {
     Event event = model.getEventsList().getEventByID(ID);
+    heading.setText(event.getName());
     nameField.setText(event.getName());
     placeField.setText(event.getPlace());
     fromDateField.setValue(event.getFromDate());
@@ -172,9 +175,15 @@ public class EventsDetailPageController implements Controller
     if (result.isPresent() && result.get() == ButtonType.OK)
     {
       model.getEventsList().deleteByID(ID);
+      System.out.println(model.getEventsList());
       model.saveEvent();
       viewHandler.openView(7, -1);
     }
+  }
+
+  public void seeParticipants()
+  {
+    viewHandler.openView(13, ID);
   }
 
   public void goBack()

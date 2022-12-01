@@ -1,7 +1,6 @@
 package Model;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class PlayersList
 {
@@ -22,9 +21,12 @@ public class PlayersList
     return playerList.get(index);
   }
 
-  public Player getPlayerByID(int ID){
-    for (int i = 0; i < size(); i++){
-      if (playerList.get(i).getID() == ID){
+  public Player getPlayerByID(int ID)
+  {
+    for (int i = 0; i < size(); i++)
+    {
+      if (playerList.get(i).getID() == ID)
+      {
         return playerList.get(i);
       }
     }
@@ -59,17 +61,19 @@ public class PlayersList
 
   public void setPlayer(Player player, int ID)
   {
+    boolean found = false;
     for (int i = 0; i < playerList.size(); i++)
     {
       if (playerList.get(i).getID() == ID)
       {
         playerList.set(i, player);
+        found = true;
         break;
       }
-      else
-      {
-        playerList.add(player);
-      }
+    }
+    if (!found)
+    {
+      playerList.add(player);
     }
   }
 
@@ -85,22 +89,14 @@ public class PlayersList
     }
   }
 
-  public PlayersList getGuests(){
+  public PlayersList getGuests()
+  {
     PlayersList newPlayerList = new PlayersList();
-    for (int i =0; i < size(); i++){
+    for (int i = 0; i < size(); i++)
+    {
 
-      if(!playerList.get(i).isMembership()){
-        newPlayerList.addPlayer(playerList.get(i));
-      }
-
-    }
-    return newPlayerList;
-  }
-  public PlayersList getMembers(){
-    PlayersList newPlayerList = new PlayersList();
-    for (int i =0; i < size(); i++){
-
-      if(playerList.get(i).isMembership()){
+      if (!playerList.get(i).isMembership())
+      {
         newPlayerList.addPlayer(playerList.get(i));
       }
 
@@ -108,7 +104,23 @@ public class PlayersList
     return newPlayerList;
   }
 
-  public PlayersList filterPlayerList(String charSequence){
+  public PlayersList getMembers()
+  {
+    PlayersList newPlayerList = new PlayersList();
+    for (int i = 0; i < size(); i++)
+    {
+
+      if (playerList.get(i).isMembership())
+      {
+        newPlayerList.addPlayer(playerList.get(i));
+      }
+
+    }
+    return newPlayerList;
+  }
+
+  public PlayersList filterPlayerList(String charSequence)
+  {
     PlayersList newPlayerList = new PlayersList();
     for (int i = 0; i < size(); i++)
     {
@@ -124,7 +136,7 @@ public class PlayersList
     System.out.println("hello" + ID);
     for (int i = 0; i < playerList.size(); i++)
     {
-      if ( playerList.get(i).getID() == ID)
+      if (playerList.get(i).getID() == ID)
       {
         return playerList.get(i).getName();
       }
@@ -144,5 +156,4 @@ public class PlayersList
   {
     return "Model.PlayersList{" + "playerList=" + playerList + '}';
   }
-
   }

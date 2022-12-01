@@ -17,7 +17,6 @@ public class ViewHandler
   private AddPlayerController addPlayerController;
   private PlayersDetailPageController playersDetailPageController;
   private PlayersController playersController;
-
   private BoardGamesController boardGamesController;
   private BoardGamesDetailPageController boardGamesDetailPageController;
   private ElectionController electionController;
@@ -34,6 +33,8 @@ public class ViewHandler
   private ElectionDetailPageController electionDetailPageController;
   private ElectionAddVoteSelectGameController electionAddVoteSelectGameController;
   private BoardGamesAddBoardGameControllerSelectOwner boardGamesAddBoardGameControllerSelectOwner;
+  private EventsAddParticipantController eventsAddParticipantController;
+  private EventsSelectParticipantController eventsSelectParticipantController;
 
   public ViewHandler(ModelManager model)
   {
@@ -110,8 +111,13 @@ public class ViewHandler
             eventsDetailPageController, IDOfItem);
         break;
       case 12:
-        root = loadSimpleGuiView("/FXML/EventsAddEvent.fxml",
-            eventsAddEventController, -1);
+        root = loadSimpleGuiView("/FXML/EventsAddEvent.fxml", eventsAddEventController,-1);
+        break;
+      case 13:
+        root = loadSimpleGuiView("/FXML/EventsAddParticipant.fxml", eventsAddParticipantController, IDOfItem);
+        break;
+      case 14:
+        root = loadSimpleGuiView("/FXML/EventsSelectParticipant.fxml",eventsSelectParticipantController, IDOfItem);
         break;
       case 130:
         root = loadSimpleGuiView("/FXML/BoardgamesAddBoardgame.fxml",
@@ -125,20 +131,6 @@ public class ViewHandler
         root = loadSimpleGuiView("/FXML/BoardgamesAddBoardgameSelectOwner.fxml",
             boardGamesAddBoardGameControllerSelectOwner, -1);
         break;
-    }
-
-    currentScene.setRoot(root);
-    primaryStage.setTitle("Board Games App");
-    primaryStage.setScene(currentScene);
-    primaryStage.setWidth(root.getPrefWidth());
-    primaryStage.setHeight(root.getPrefHeight());
-    primaryStage.show();
-  }
-  public void openView(int IDofPage, int IDOfItem, int IDOfItem2)
-  {
-    Region root = null;
-    switch (IDofPage)
-    {
     }
 
     currentScene.setRoot(root);

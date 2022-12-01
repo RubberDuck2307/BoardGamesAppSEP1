@@ -69,6 +69,8 @@ public class EventsList
 
   public Event getEventByID(int ID){
     for (int i = 0; i < size(); i++){
+      System.out.println(ID);
+      System.out.println("dd" + eventsList.get(i).getID());
       if (eventsList.get(i).getID() == ID){
         return eventsList.get(i);
       }

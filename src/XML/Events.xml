@@ -2,31 +2,8 @@
 <EventsList>
   <Event>
     <ID>0</ID>
-    <name>aaa</name>
-    <location>bbb</location>
-    <fromDate>
-      <day>4</day>
-      <month>12</month>
-      <year>2022</year>
-    </fromDate>
-    <fromHours>5</fromHours>
-    <fromMinutes>6</fromMinutes>
-    <toDate>
-      <day>5</day>
-      <month>12</month>
-      <year>2022</year>
-    </toDate>
-    <toHours>5</toHours>
-    <toMinutes>6</toMinutes>
-    <description>bbb</description>
-    <playersIDs/>
-    <comment>bbb</comment>
-    <link>bbbbbb</link>
-  </Event>
-  <Event>
-    <ID>1</ID>
-    <name>Pavels birthdaz</name>
-    <location>Annas bed room</location>
+    <name>uhu</name>
+    <location>jbhu</location>
     <fromDate>
       <day>2</day>
       <month>12</month>
@@ -87,29 +64,6 @@
     </toDate>
     <toHours>1</toHours>
     <toMinutes>2</toMinutes>
-    <description/>
-    <playersIDs/>
-    <comment/>
-    <link/>
-  </Event>
-  <Event>
-    <ID>4</ID>
-    <name>fff</name>
-    <location>ggg</location>
-    <fromDate>
-      <day>1</day>
-      <month>12</month>
-      <year>2022</year>
-    </fromDate>
-    <fromHours>16</fromHours>
-    <fromMinutes>0</fromMinutes>
-    <toDate>
-      <day>1</day>
-      <month>12</month>
-      <year>2022</year>
-    </toDate>
-    <toHours>16</toHours>
-    <toMinutes>0</toMinutes>
     <description/>
     <playersIDs/>
     <comment/>
