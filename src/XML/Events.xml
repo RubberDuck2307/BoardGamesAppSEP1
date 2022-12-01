@@ -16,10 +16,12 @@
       <month>12</month>
       <year>2022</year>
     </toDate>
-    <toHours>20</toHours>
+    <toHours>22</toHours>
     <toMinutes>0</toMinutes>
     <description/>
-    <playersIDs/>
+    <playersIDs>
+      <ID>0</ID>
+    </playersIDs>
     <comment/>
     <link/>
   </Event>
@@ -65,7 +67,9 @@
     <toHours>1</toHours>
     <toMinutes>2</toMinutes>
     <description/>
-    <playersIDs/>
+    <playersIDs>
+      <ID>2</ID>
+    </playersIDs>
     <comment/>
     <link/>
   </Event>

@@ -12,6 +12,7 @@ import javafx.scene.layout.Region;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.util.ArrayList;
+import java.util.SimpleTimeZone;
 
 public class EventsSelectParticipantController implements Controller
 {
@@ -75,6 +76,7 @@ public class EventsSelectParticipantController implements Controller
             new PlayerTable(player.getName(), player.getPhoneNumber(),
                 player.getEmail(), membership, player.getID()));
       }
+      System.out.println(participantsInTable);
     }
   }
 
@@ -90,7 +92,7 @@ public class EventsSelectParticipantController implements Controller
     int playerID = participantsTable.getSelectionModel().getSelectedItem()
         .getID();
     model.getEventsList().getEventByID(IDOfEvent).getParticipantsIDs().add(playerID);
-    System.out.println( model.getEventsList().getEventByID(IDOfEvent));
+    System.out.println( model.getEventsList());
     model.saveEvent();
     viewHandler.openView(13,IDOfEvent);
   }

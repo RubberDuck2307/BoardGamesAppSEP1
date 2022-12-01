@@ -48,6 +48,7 @@ public class EventsAddParticipantController implements Controller
     ArrayList<Integer> participantsID = model.getEventsList()
         .getEventByID(IDOfEvent).getParticipantsIDs();
 
+    System.out.println( model.getEventsList());
     PlayersList playersList = model.getPlayersList();
     for (int i = 0; i < playersList.size(); i++)
     {

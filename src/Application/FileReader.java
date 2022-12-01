@@ -117,19 +117,19 @@ public class FileReader
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
 
-    int ID = -1;
-    String name = null;
-    String phoneNumber = null;
-    String email = null;
-    boolean membership = false;
-    String comment = null;
-    String address = null;
-    boolean voted = false;
-    LocalDate feePayment = null;
-
     NodeList rootList = doc.getElementsByTagName("Player");
     for (int i = 0; i < rootList.getLength(); i++)
     {
+      int ID = -1;
+      String name = null;
+      String phoneNumber = null;
+      String email = null;
+      boolean membership = false;
+      String comment = null;
+      String address = null;
+      boolean voted = false;
+      LocalDate feePayment = null;
+
       Node rootNode = rootList.item(i);
       NodeList subNodes = rootNode.getChildNodes();
       for (int j = 0; j < subNodes.getLength(); j++)
@@ -288,19 +288,20 @@ public class FileReader
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
 
-    int ID = -1;
-    String name = null;
-    String type = null;
-    int numberOfPlayersMin = -1;
-    int numberOfPlayersMax = -1;
-    String availabilityStatus = null;
-    String comment = null;
-    int ownerID = -1;
-    int numberOfVotes = 0;
 
     NodeList rootList = doc.getElementsByTagName("BoardGame");
     for (int i = 0; i < rootList.getLength(); i++)
     {
+      int ID = -1;
+      String name = null;
+      String type = null;
+      int numberOfPlayersMin = -1;
+      int numberOfPlayersMax = -1;
+      String availabilityStatus = null;
+      String comment = null;
+      int ownerID = -1;
+      int numberOfVotes = 0;
+
       Node rootNode = rootList.item(i);
       NodeList subList = rootNode.getChildNodes();
       Node subNode;
@@ -437,12 +438,12 @@ public class FileReader
 
       subSubElement = doc.createElement("toHours");
       subSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getFrom().getHour())));
+          String.valueOf(event.getTo().getHour())));
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("toMinutes");
       subSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getFrom().getMinute())));
+          String.valueOf(event.getTo().getMinute())));
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("description");
@@ -492,24 +493,26 @@ public class FileReader
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
 
-    int ID = -1;
-    String name = null;
-    String location = null;
-    LocalDate fromDate = null;
-    int fromHours = 0;
-    int fromMinutes = 0;
-    LocalDate toDate = null;
-    int toHours = 0;
-    int toMinutes = 0;
-    String description = null;
-    ArrayList<Integer> participantsIDs = new ArrayList<>();
-    String comment = null;
-    String link = null;
 
     NodeList rootList = doc.getElementsByTagName("Event");
 
     for (int i = 0; i < rootList.getLength(); i++)
     {
+
+      int ID = -1;
+      String name = null;
+      String location = null;
+      LocalDate fromDate = null;
+      int fromHours = 0;
+      int fromMinutes = 0;
+      LocalDate toDate = null;
+      int toHours = 0;
+      int toMinutes = 0;
+      String description = null;
+      String comment = null;
+      String link = null;
+      ArrayList<Integer> participantsIDs = new ArrayList<>();
+
       Node rootNode = rootList.item(i);
       NodeList subList = rootNode.getChildNodes();
       Node subNode;
@@ -594,7 +597,7 @@ public class FileReader
           toDate = LocalDate.of(year, month, day);
         }
 
-        else if (subNode.getNodeName().equals("toDate"))
+        else if (subNode.getNodeName().equals("playersIDs"))
         {
           NodeList subSubList = subNode.getChildNodes();
           for (int k = 0; k < subSubList.getLength(); k++)
@@ -702,16 +705,17 @@ public class FileReader
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
 
-    int ID = -1;
-    int value = -1;
-    int playerID = -1;
-    int gameID = -1;
-    String review = null;
 
     NodeList rootList = doc.getElementsByTagName("Rating");
 
     for (int i = 0; i < rootList.getLength(); i++)
     {
+
+      int ID = -1;
+      int value = -1;
+      int playerID = -1;
+      int gameID = -1;
+
       Node rootNode = rootList.item(i);
       NodeList subList = rootNode.getChildNodes();
       Node subNode;
@@ -1014,17 +1018,17 @@ public class FileReader
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
 
-    int ID = -1;
-    int playerID = -1;
-    int gameID = -1;
-    LocalDate from = null;
-    LocalDate to = null;
-    String comment = null;
 
     NodeList rootList = doc.getElementsByTagName("Borrowing");
 
     for (int i = 0; i < rootList.getLength(); i++)
     {
+      int ID = -1;
+      int playerID = -1;
+      int gameID = -1;
+      LocalDate from = null;
+      LocalDate to = null;
+      String comment = null;
       Node rootNode = rootList.item(i);
       NodeList subList = rootNode.getChildNodes();
       Node subNode;
@@ -1216,19 +1220,19 @@ public class FileReader
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
 
-    int ID = -1;
-    int playerID = -1;
-    int gameID = -1;
-    LocalDate from = null;
-    LocalDate to = null;
-    String comment = null;
-    boolean ASAP = true;
-    int queue = -1;
+
 
     NodeList rootList = doc.getElementsByTagName("reservation");
 
     for (int i = 0; i < rootList.getLength(); i++)
     {
+      int ID = -1;
+      int playerID = -1;
+      int gameID = -1;
+      LocalDate from = null;
+      LocalDate to = null;
+      String comment = null;
+
       Node rootNode = rootList.item(i);
       NodeList subList = rootNode.getChildNodes();
       Node subNode;
