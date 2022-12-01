@@ -141,6 +141,21 @@ public class ViewHandler
     primaryStage.show();
   }
 
+  public void openView(int IDofPage, int IDOfItem, int IDOfItem2)
+  {
+    Region root = null;
+    switch (IDofPage)
+    {
+    }
+
+    currentScene.setRoot(root);
+    primaryStage.setTitle("Board Games App");
+    primaryStage.setScene(currentScene);
+    primaryStage.setWidth(root.getPrefWidth());
+    primaryStage.setHeight(root.getPrefHeight());
+    primaryStage.show();
+  }
+
   public void CloseView()
   {
     primaryStage.close();
@@ -159,6 +174,34 @@ public class ViewHandler
         root = loader.load();
         controller = loader.getController();
         controller.init(root, model, this, ID);
+      }
+      catch (Exception e)
+      {
+        e.printStackTrace();
+      }
+    }
+    else
+    {
+      controller.reset();
+    }
+
+    return controller.getRegion();
+
+  }
+
+  private Region loadExtendedGuiView(String fxmlFile, ExtendedController controller,
+      int ID, int ID2)
+  {
+    Region root = null;
+    if (controller == null)
+    {
+      try
+      {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource(fxmlFile));
+        root = loader.load();
+        controller = loader.getController();
+        controller.init(root, model, this, ID, ID2);
       }
       catch (Exception e)
       {

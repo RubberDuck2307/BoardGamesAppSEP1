@@ -141,6 +141,13 @@ public class BorrowingsDetailPageController implements Controller
 
   }
 
+  public void showMemberInfo(){
+    viewHandler.openView(8, model.getBorrowingsList().getBorrowingByID(ID).getPlayerID());
+  }
+
+  public void showBoardGameInfo(){
+    viewHandler.openView(9, model.getBorrowingsList().getBorrowingByID(ID).getGameID());
+  }
   public void goBack()
   {
     viewHandler.openView(6,-1);
