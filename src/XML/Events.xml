@@ -2,93 +2,54 @@
 <EventsList>
   <Event>
     <ID>0</ID>
-    <name>aaa</name>
-    <location>bbb</location>
+    <name>uhu</name>
+    <location>jbhu</location>
     <fromDate>
-      <day>4</day>
+      <day>1</day>
       <month>12</month>
       <year>2022</year>
     </fromDate>
-    <fromHours>5</fromHours>
-    <fromMinutes>6</fromMinutes>
-    <toDate>
-      <day>5</day>
-      <month>12</month>
-      <year>2022</year>
-    </toDate>
-    <toHours>5</toHours>
-    <toMinutes>6</toMinutes>
-    <description>bbb</description>
-    <playersIDs/>
-    <comment>bbb</comment>
-    <link>bbb</link>
-  </Event>
-  <Event>
-    <ID>1</ID>
-    <name>Pavels birthdaz</name>
-    <location>Annas bed room</location>
-    <fromDate>
-      <day>2</day>
-      <month>12</month>
-      <year>2022</year>
-    </fromDate>
-    <fromHours>20</fromHours>
+    <fromHours>16</fromHours>
     <fromMinutes>0</fromMinutes>
     <toDate>
-      <day>3</day>
+      <day>1</day>
       <month>12</month>
       <year>2022</year>
     </toDate>
-    <toHours>20</toHours>
+    <toHours>16</toHours>
     <toMinutes>0</toMinutes>
     <description/>
-    <playersIDs/>
+    <playersIDs>
+      <ID>3</ID>
+    </playersIDs>
     <comment/>
     <link/>
   </Event>
+
+
+
   <Event>
-    <ID>2</ID>
-    <name>zzz</name>
-    <location>zzz</location>
+    <ID>1</ID>
+    <name>kk</name>
+    <location>uhu</location>
     <fromDate>
-      <day>25</day>
+      <day>1</day>
       <month>12</month>
       <year>2022</year>
     </fromDate>
-    <fromHours>1</fromHours>
-    <fromMinutes>2</fromMinutes>
+    <fromHours>16</fromHours>
+    <fromMinutes>0</fromMinutes>
     <toDate>
-      <day>26</day>
+      <day>1</day>
       <month>12</month>
       <year>2022</year>
     </toDate>
-    <toHours>1</toHours>
-    <toMinutes>2</toMinutes>
+    <toHours>16</toHours>
+    <toMinutes>0</toMinutes>
     <description/>
-    <playersIDs/>
-    <comment/>
-    <link/>
-  </Event>
-  <Event>
-    <ID>3</ID>
-    <name>yyy</name>
-    <location>yyy</location>
-    <fromDate>
-      <day>27</day>
-      <month>12</month>
-      <year>2022</year>
-    </fromDate>
-    <fromHours>1</fromHours>
-    <fromMinutes>2</fromMinutes>
-    <toDate>
-      <day>28</day>
-      <month>12</month>
-      <year>2022</year>
-    </toDate>
-    <toHours>1</toHours>
-    <toMinutes>2</toMinutes>
-    <description/>
-    <playersIDs/>
+    <playersIDs>
+      <ID>3</ID>
+    </playersIDs>
     <comment/>
     <link/>
   </Event>

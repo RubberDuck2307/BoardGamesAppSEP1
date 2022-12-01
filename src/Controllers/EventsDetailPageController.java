@@ -49,6 +49,7 @@ public class EventsDetailPageController implements Controller
     this.model = model;
     this.viewHandler = viewHandler;
     this.ID = ID;
+    System.out.println("I HAVE The ID of" + ID);
     setData();
   }
 
@@ -174,9 +175,15 @@ public class EventsDetailPageController implements Controller
     if (result.isPresent() && result.get() == ButtonType.OK)
     {
       model.getEventsList().deleteByID(ID);
+      System.out.println(model.getEventsList());
       model.saveEvent();
       viewHandler.openView(7, -1);
     }
+  }
+
+  public void seeParticipants()
+  {
+    viewHandler.openView(13, ID);
   }
 
   public void goBack()

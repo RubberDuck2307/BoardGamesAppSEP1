@@ -68,7 +68,7 @@
                 </Button>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="13">
                     <children>
-                        <Button fx:id="seeParticipantsButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="SEE PARTICIPANTS" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#seeParticipants" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="SEE PARTICIPANTS" textAlignment="CENTER">
                             <font>
                                 <Font size="26.0" />
                             </font>

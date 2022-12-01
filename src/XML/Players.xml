@@ -1,89 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <PlayersList>
   <Player>
-    <ID>1</ID>
-    <name>Java</name>
-    <phoneNumber>100</phoneNumber>
-    <email>It@isnot.working</email>
+    <ID>0</ID>
+    <name>player1</name>
+    <phoneNumber>1</phoneNumber>
+    <email/>
     <membership>false</membership>
     <comment/>
     <address/>
     <voted>false</voted>
     <voted>false</voted>
-    <feePayment>
-      <day>29</day>
-      <month>11</month>
-      <year>2022</year>
-    </feePayment>
+  </Player>
+  <Player>
+    <ID>1</ID>
+    <name>player2</name>
+    <phoneNumber>2</phoneNumber>
+    <email/>
+    <membership>false</membership>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+    <voted>false</voted>
   </Player>
   <Player>
     <ID>2</ID>
-    <name>aaa</name>
-    <phoneNumber>200</phoneNumber>
-    <email>aaa@aaa.com</email>
-    <membership>true</membership>
-    <comment>aaa</comment>
-    <address>aaa</address>
-    <voted>false</voted>
-    <voted>false</voted>
-    <feePayment>
-      <day>2</day>
-      <month>12</month>
-      <year>2022</year>
-    </feePayment>
-  </Player>
-  <Player>
-    <ID>3</ID>
-    <name>bbbzz</name>
-    <phoneNumber>300</phoneNumber>
-    <email>bbb@bbb.com</email>
+    <name>PLAZER</name>
+    <phoneNumber>89</phoneNumber>
+    <email/>
     <membership>false</membership>
-    <comment>bbb</comment>
-    <address>bbb</address>
+    <comment/>
+    <address/>
     <voted>false</voted>
     <voted>false</voted>
   </Player>
   <Player>
     <ID>3</ID>
-    <name>bbbz</name>
-    <phoneNumber>300</phoneNumber>
-    <email>bbb@bbb.com</email>
+    <name>Pavel</name>
+    <phoneNumber>23</phoneNumber>
+    <email/>
     <membership>false</membership>
-    <comment>bbb</comment>
-    <address>bbb</address>
-    <voted>false</voted>
-    <voted>false</voted>
-  </Player>
-  <Player>
-    <ID>3</ID>
-    <name>bbbz</name>
-    <phoneNumber>300</phoneNumber>
-    <email>bbb@bbb.com</email>
-    <membership>false</membership>
-    <comment>bbb</comment>
-    <address>bbb</address>
-    <voted>false</voted>
-    <voted>false</voted>
-  </Player>
-  <Player>
-    <ID>3</ID>
-    <name>bbbzz</name>
-    <phoneNumber>300</phoneNumber>
-    <email>bbb@bbb.com</email>
-    <membership>false</membership>
-    <comment>bbb</comment>
-    <address>bbb</address>
-    <voted>false</voted>
-    <voted>false</voted>
-  </Player>
-  <Player>
-    <ID>3</ID>
-    <name>bbbzz</name>
-    <phoneNumber>300</phoneNumber>
-    <email>bbb@bbb.com</email>
-    <membership>false</membership>
-    <comment>bbb</comment>
-    <address>bbb</address>
+    <comment/>
+    <address/>
     <voted>false</voted>
     <voted>false</voted>
   </Player>
