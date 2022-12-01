@@ -10,12 +10,12 @@ import java.io.IOException;
 
 public class ModelManager
 {
-  PlayersList playersList = FileReader.readPlayersList();
-  BoardGamesList boardGamesList = FileReader.readBoardGamesList();
-  ReservationsList reservationsList = FileReader.readReservations();
-  EventsList eventsList = FileReader.readEventsList();
-
-  BorrowingsList borrowingsList = FileReader.readCurrentBorrowings();
+  private PlayersList playersList = FileReader.readPlayersList();
+  private BoardGamesList boardGamesList = FileReader.readBoardGamesList();
+  private ReservationsList reservationsList = FileReader.readReservations();
+  private EventsList eventsList = FileReader.readEventsList();
+  private BorrowingsList borrowingsList = FileReader.readCurrentBorrowings();
+  private Election election = FileReader.readElection();
 
   public BorrowingsList getBorrowingsList() {
     return borrowingsList;
@@ -67,17 +67,43 @@ public class ModelManager
   public void setPlayer(Player player, int ID){
     playersList.setPlayer(player, ID);
   }
+
+  public Election getElection()
+  {
+    return election;
+  }
+
+  public void setElection(Election election)
+  {
+    this.election = election;
+  }
+
+  public void saveElection()
+      throws ParserConfigurationException, TransformerException
+  {
+    FileReader.saveElection(election);
+  }
+
+  public void resetVotedOfAllPlayers(){
+    playersList.setAllPlayersVotedFalse();
+  }
+
+  public void saveBoardGames()
+      throws ParserConfigurationException, TransformerException
+  {
+    FileReader.saveBoardGameList(boardGamesList);
+  }
+
+  public void setAllVotesTo0(){
+    boardGamesList.setAllVotesTo0();
+  }
   public void setBoardGame(BoardGame boardGame, int ID){
     boardGamesList.setBoardGame(boardGame, ID);
   }
   public void setBorrowing(Reservation borrowing, int ID){
     borrowingsList.setBorrowing(borrowing, ID);
   }
-  public void saveBoardGames ()
-      throws ParserConfigurationException, TransformerException
-  {
-    FileReader.saveBoardGameList(boardGamesList);
-  }
+
 
   public void addEvent(Event event){
     eventsList.addEvent(event);

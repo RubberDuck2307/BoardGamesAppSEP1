@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ElectionController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ElectionController">
     <children>
         <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css">
             <columnConstraints>
@@ -25,7 +25,8 @@
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="94.0" valignment="BOTTOM" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="94.0" valignment="BOTTOM" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="94.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="94.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="820.0" styleClass="heading" text="ELECTION" GridPane.columnIndex="1">
@@ -36,7 +37,7 @@
                         <Insets />
                     </GridPane.margin>
                 </Label>
-                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Add Election" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <Button fx:id="addElectionButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadAddElectionPage" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Add Election" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <GridPane.margin>
                         <Insets />
                     </GridPane.margin>
@@ -44,7 +45,7 @@
                         <Font size="24.0" />
                     </font>
                 </Button>
-                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Detail Page" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <Button fx:id="detailPageButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadDetailPage" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Detail Page" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <GridPane.margin>
                         <Insets />
                     </GridPane.margin>
@@ -52,7 +53,7 @@
                         <Font size="24.0" />
                     </font>
                 </Button>
-                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Add Vote" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <Button fx:id="addVoteButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadAddVotePage" prefHeight="78.0" prefWidth="640.0" styleClass="button-homepage" text="Add Vote" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <GridPane.margin>
                         <Insets />
                     </GridPane.margin>

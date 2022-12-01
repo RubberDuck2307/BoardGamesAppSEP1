@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ElectionAddElectionController">
     <children>
         <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0">
             <columnConstraints>
@@ -48,7 +48,7 @@
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="15" />
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>
-                        <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
+                        <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#goBack" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
                     </children>
                     <GridPane.margin>
                         <Insets left="60.0" top="40.0" />
@@ -60,7 +60,7 @@
                      <children>
                             <VBox alignment="CENTER" prefHeight="43.0" prefWidth="712.0">
                                 <children>
-                                    <Button fx:id="addButton2" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Create election" textAlignment="CENTER">
+                                    <Button fx:id="addButton2" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createElection" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Create election" textAlignment="CENTER">
                                         <font>
                                             <Font size="26.0" />
                                         </font>
@@ -73,12 +73,12 @@
                 </HBox>
                 <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <children>
-                        <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="326.0" styleClass="labels" stylesheets="@../css/style.css" text="Ending date">
+                        <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="326.0" styleClass="labels" stylesheets="@../css/style.css" text="Starting date">
                             <font>
                                 <Font size="32.0" />
                             </font>
                         </Label>
-                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="427.0" styleClass="labels" stylesheets="@../css/style.css" text="Starting date">
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="427.0" styleClass="labels" stylesheets="@../css/style.css" text="Ending Date">
                             <font>
                                 <Font size="32.0" />
                             </font>
@@ -92,15 +92,16 @@
                     <children>
                         <VBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="377.0">
                             <children>
-                                <DatePicker prefHeight="26.0" prefWidth="218.0" styleClass="input-field" />
+                                <DatePicker fx:id="startingDate" prefHeight="26.0" prefWidth="218.0" styleClass="input-field" />
                             </children>
                         </VBox>
                         <VBox prefHeight="40.0" prefWidth="282.0">
                             <children>
-                                <DatePicker prefHeight="26.0" prefWidth="220.0" styleClass="input-field">
+                                <DatePicker fx:id="endingDate" prefHeight="26.0" prefWidth="220.0" styleClass="input-field">
                            <VBox.margin>
                               <Insets left="40.0" />
-                           </VBox.margin></DatePicker>
+                           </VBox.margin>
+                        </DatePicker>
                             </children>
                         </VBox>
                     </children>

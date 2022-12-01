@@ -1,33 +1,44 @@
 package Model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Election
 {
-  private LocalDateTime startingDate;
-  private LocalDateTime endingDate;
+  private LocalDate startingDate;
+  private LocalDate endingDate;
 
-  public Election(LocalDateTime startingDate, LocalDateTime endingDate){
+  public Election(LocalDate startingDate, LocalDate endingDate){
+
     this.startingDate = startingDate;
     this.endingDate = endingDate;
   }
 
-  public LocalDateTime getStartingDate()
+  public static boolean VALIDATE_DATA(LocalDate startingDate, LocalDate endingDate){
+    if(!startingDate.isAfter(LocalDate.now())){
+      throw new RuntimeException("Election has to start in future");
+    }
+    if (!endingDate.isAfter(startingDate)){
+      throw new RuntimeException("Election has to end after it starts");
+    }
+    return true;
+  }
+  public LocalDate getStartingDate()
   {
     return startingDate;
   }
 
-  public void setStartingDate(LocalDateTime startingDate)
+  public void setStartingDate(LocalDate startingDate)
   {
     this.startingDate = startingDate;
   }
 
-  public LocalDateTime getEndingDate()
+  public LocalDate getEndingDate()
   {
     return endingDate;
   }
 
-  public void setEndingDate(LocalDateTime endingDate)
+  public void setEndingDate(LocalDate endingDate)
   {
     this.endingDate = endingDate;
   }

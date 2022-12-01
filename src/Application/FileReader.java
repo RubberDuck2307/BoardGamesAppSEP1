@@ -74,10 +74,6 @@ public class FileReader
           doc.createTextNode(String.valueOf(player.getVoted())));
       subElement.appendChild(subSubElement);
 
-      subSubElement = doc.createElement("voted");
-      subSubElement.appendChild(
-          doc.createTextNode(String.valueOf(player.getVoted())));
-      subElement.appendChild(subSubElement);
 
       if (player.getFeePaymentDate() != null)
       {
@@ -760,64 +756,42 @@ public class FileReader
     Document doc = builder.newDocument();
 
     Element rootElement = doc.createElement("Election");
-    Element subElement;
-    Element subSubElement;
 
-    subElement = doc.createElement("startingDate");
-    subSubElement = doc.createElement("day");
-    subSubElement.appendChild(doc.createTextNode(
-        String.valueOf(election.getEndingDate().getDayOfMonth())));
-    subElement.appendChild(subSubElement);
+    if (!(election == null)){
 
-    subSubElement = doc.createElement("month");
-    subSubElement.appendChild(doc.createTextNode(
-        String.valueOf(election.getEndingDate().getMonthValue())));
-    subElement.appendChild(subSubElement);
+      Element subElement;
+      Element subSubElement;
 
-    subSubElement = doc.createElement("year");
-    subSubElement.appendChild(
-        doc.createTextNode(String.valueOf(election.getEndingDate().getYear())));
-    subElement.appendChild(subSubElement);
+      subElement = doc.createElement("startingDate");
+      subSubElement = doc.createElement("day");
+      subSubElement.appendChild(doc.createTextNode(String.valueOf(election.getStartingDate().getDayOfMonth())));
+      subElement.appendChild(subSubElement);
 
-    subSubElement = doc.createElement("hour");
-    subSubElement.appendChild(
-        doc.createTextNode(String.valueOf(election.getEndingDate().getHour())));
-    subElement.appendChild(subSubElement);
+      subSubElement = doc.createElement("month");
+      subSubElement.appendChild(doc.createTextNode(String.valueOf(election.getStartingDate().getMonthValue())));
+      subElement.appendChild(subSubElement);
 
-    subSubElement = doc.createElement("minute");
-    subSubElement.appendChild(doc.createTextNode(
-        String.valueOf(election.getEndingDate().getMinute())));
-    subElement.appendChild(subSubElement);
+      subSubElement = doc.createElement("year");
+      subSubElement.appendChild(doc.createTextNode(String.valueOf(election.getStartingDate().getYear())));
+      subElement.appendChild(subSubElement);
 
-    rootElement.appendChild(subElement);
+      rootElement.appendChild(subElement);
 
-    subElement = doc.createElement("endingDate");
-    subSubElement = doc.createElement("day");
-    subSubElement.appendChild(doc.createTextNode(
-        String.valueOf(election.getEndingDate().getDayOfMonth())));
-    subElement.appendChild(subSubElement);
+      subElement = doc.createElement("endingDate");
+      subSubElement = doc.createElement("day");
+      subSubElement.appendChild(doc.createTextNode(String.valueOf(election.getEndingDate().getDayOfMonth())));
+      subElement.appendChild(subSubElement);
 
-    subSubElement = doc.createElement("month");
-    subSubElement.appendChild(doc.createTextNode(
-        String.valueOf(election.getEndingDate().getMonthValue())));
-    subElement.appendChild(subSubElement);
+      subSubElement = doc.createElement("month");
+      subSubElement.appendChild(doc.createTextNode(String.valueOf(election.getEndingDate().getMonthValue())));
+      subElement.appendChild(subSubElement);
 
-    subSubElement = doc.createElement("year");
-    subSubElement.appendChild(
-        doc.createTextNode(String.valueOf(election.getEndingDate().getYear())));
-    subElement.appendChild(subSubElement);
+      subSubElement = doc.createElement("year");
+      subSubElement.appendChild(doc.createTextNode(String.valueOf(election.getEndingDate().getYear())));
+      subElement.appendChild(subSubElement);
 
-    subSubElement = doc.createElement("hour");
-    subSubElement.appendChild(
-        doc.createTextNode(String.valueOf(election.getEndingDate().getHour())));
-    subElement.appendChild(subSubElement);
-
-    subSubElement = doc.createElement("minute");
-    subSubElement.appendChild(doc.createTextNode(
-        String.valueOf(election.getEndingDate().getMinute())));
-    subElement.appendChild(subSubElement);
-
-    rootElement.appendChild(subElement);
+      rootElement.appendChild(subElement);
+    }
 
     doc.appendChild(rootElement);
 
@@ -825,7 +799,7 @@ public class FileReader
     transformer.setOutputProperty(OutputKeys.INDENT, "yes");
     transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount",
         "2");
-    File file = new File("Election.xml");
+    File file = new File("./src/XML/Election.xml");
     transformer.transform(new DOMSource(doc), new StreamResult(file));
 
   }
@@ -837,12 +811,12 @@ public class FileReader
 
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     DocumentBuilder builder = factory.newDocumentBuilder();
-    Document doc = builder.parse("Election.xml");
+    Document doc = builder.parse("./src/XML/Election.xml");
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
 
-    LocalDateTime startingDate = null;
-    LocalDateTime endingDate = null;
+    LocalDate startingDate = null;
+    LocalDate endingDate = null;
 
     NodeList rootList = doc.getElementsByTagName("Election");
     Node rootNode;
@@ -867,8 +841,6 @@ public class FileReader
         int day = 0;
         int month = 0;
         int year = 0;
-        int minute = 0;
-        int hour = 0;
         NodeList subSubList = subNode.getChildNodes();
         for (int k = 0; k < subSubList.getLength(); k++)
         {
@@ -885,16 +857,8 @@ public class FileReader
           {
             year = Integer.parseInt(subSubNode.getTextContent());
           }
-          else if (subSubNode.getNodeName().equals("hour"))
-          {
-            hour = Integer.parseInt(subSubNode.getTextContent());
-          }
-          else if (subSubNode.getNodeName().equals("minute"))
-          {
-            minute = Integer.parseInt(subSubNode.getTextContent());
-          }
         }
-        startingDate = LocalDateTime.of(year, month, day, hour, minute);
+        startingDate = LocalDate.of(year, month, day);
       }
 
       else if (subNode.getNodeName().equals("endingDate"))
@@ -902,8 +866,6 @@ public class FileReader
         int day = 0;
         int month = 0;
         int year = 0;
-        int minute = 0;
-        int hour = 0;
         NodeList subSubList = subNode.getChildNodes();
         for (int k = 0; k < subSubList.getLength(); k++)
         {
@@ -920,17 +882,12 @@ public class FileReader
           {
             year = Integer.parseInt(subSubNode.getTextContent());
           }
-          else if (subSubNode.getNodeName().equals("hour"))
-          {
-            hour = Integer.parseInt(subSubNode.getTextContent());
-          }
-          else if (subSubNode.getNodeName().equals("minute"))
-          {
-            minute = Integer.parseInt(subSubNode.getTextContent());
-          }
         }
-        endingDate = LocalDateTime.of(year, month, day, hour, minute);
+        endingDate = LocalDate.of(year, month, day);
       }
+    }
+    if (startingDate == null || endingDate == null){
+      return null;
     }
     return new Election(startingDate, endingDate);
   }

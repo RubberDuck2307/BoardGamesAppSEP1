@@ -21,10 +21,54 @@
     <name>Java</name>
     <phoneNumber>100</phoneNumber>
     <email>It@isnot.working</email>
-    <membership>false</membership>
+    <membership>true</membership>
     <comment/>
     <address/>
     <voted>false</voted>
+    <feePayment>
+      <day>29</day>
+      <month>11</month>
+      <year>2022</year>
+    </feePayment>
+  </Player>
+  <Player>
+    <ID>2</ID>
+    <name>Pavel</name>
+    <phoneNumber>4565</phoneNumber>
+    <email>is@back.Pavel</email>
+    <membership>true</membership>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+    <feePayment>
+      <day>29</day>
+      <month>11</month>
+      <year>2022</year>
+    </feePayment>
+  </Player>
+  <Player>
+    <ID>3</ID>
+    <name>Karel</name>
+    <phoneNumber>5464</phoneNumber>
+    <email/>
+    <membership>true</membership>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+    <feePayment>
+      <day>29</day>
+      <month>11</month>
+      <year>2022</year>
+    </feePayment>
+  </Player>
+  <Player>
+    <ID>4</ID>
+    <name>ALEX</name>
+    <phoneNumber>64684</phoneNumber>
+    <email/>
+    <membership>true</membership>
+    <comment/>
+    <address/>
     <voted>false</voted>
     <feePayment>
       <day>29</day>

@@ -69,14 +69,14 @@ public class Player
     {
       return true;
     }
-    return false;
+    throw new RuntimeException("Name is not valid");
   }
 
   static public boolean validatePhoneNumber(String phoneNumber)
   {
     phoneNumber = phoneNumber.trim();
     if(phoneNumber.length() == 0){
-      return false;
+      throw new RuntimeException("Phone number is not valid");
     }
     for (int i = 0; i < phoneNumber.length(); i++)
     {
@@ -84,13 +84,13 @@ public class Player
       if (Character.compare(phoneNumber.charAt(i), ('+')) != 0
           && !Character.isDigit(phoneNumber.charAt(i)))
       {
-        return false;
+        throw new RuntimeException("Phone number is not valid");
       }
     }
     if (phoneNumber.contains("+")
         && Character.compare(phoneNumber.charAt(0), ('+')) != 0)
     {
-      return false;
+      throw new RuntimeException("Phone number is not valid");
     }
     return true;
   }
@@ -106,30 +106,26 @@ public class Player
 
     if (!email.contains(".") || amountOfAts != 1)
     {
-      return false;
+      throw new RuntimeException("Email is not valid");
     }
     if (email.indexOf('@') == 0 || email.lastIndexOf('.') == email.length() - 1)
     {
-      return false;
+      throw new RuntimeException("Email is not valid");
     }
 
     if (email.lastIndexOf(".") <= email.indexOf('@') + 1)
     {
-      return false;
+      throw new RuntimeException("Email is not valid");
     }
     String subString;
     subString = email.substring(email.indexOf('@'));
     if ((subString.length() - subString.replace(".", "").length()) != 1)
     {
-      return false;
+      throw new RuntimeException("Email is not valid");
     }
     return true;
   }
 
-  static public boolean validateData(String name, String phoneNumber)
-  {
-    return validateName(name) && validatePhoneNumber(phoneNumber);
-  }
 
   static public boolean validateData(String name, String phoneNumber,
       String email)
@@ -184,6 +180,11 @@ public class Player
   public Boolean getVoted()
   {
     return voted;
+  }
+
+  public void setVoted(Boolean voted)
+  {
+    this.voted = voted;
   }
 
   public LocalDate getFeePaymentDate()

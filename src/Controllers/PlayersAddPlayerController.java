@@ -4,14 +4,12 @@ import Application.ViewHandler;
 import Model.ModelManager;
 import Model.Player;
 import javafx.fxml.FXML;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.Region;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
+import java.util.Optional;
 
 public class PlayersAddPlayerController implements Controller
 {
@@ -47,13 +45,24 @@ public class PlayersAddPlayerController implements Controller
   }
 
   public void addPlayer()
-      throws ParserConfigurationException, TransformerException
   {
-
-    if(Player.validateData(nameField.getText(), phoneNumberField.getText(), emailField.getText())){
-      model.addPlayer(new Player(nameField.getText(), phoneNumberField.getText(), emailField.getText(), membershipBox.isSelected(), commentField.getText(), addressField.getText(), false, feeDatePicker.getValue() ));
-      model.savePlayers();
-      viewHandler.openView(8,model.getPlayersList().size() -1);
+    try
+    {
+      if (Player.validateData(nameField.getText(), phoneNumberField.getText(),
+          emailField.getText()))
+      {
+        model.addPlayer(new Player(nameField.getText(), phoneNumberField.getText(),
+            emailField.getText(), membershipBox.isSelected(), commentField.getText(), addressField.getText(), false,
+            feeDatePicker.getValue()));
+        model.savePlayers();
+        viewHandler.openView(8, model.getPlayersList().size() - 1);
+      }
+    }
+    catch (Exception e){
+      Alert alert = new Alert(Alert.AlertType.ERROR);
+      alert.setTitle("Invalid data");
+      alert.setHeaderText(e.getMessage());
+      Optional<ButtonType> result = alert.showAndWait();
     }
   }
   public void goBack(){

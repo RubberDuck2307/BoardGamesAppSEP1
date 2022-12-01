@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ElectionAddVoteSelectGameController">
    <children>
       <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css">
          <columnConstraints>
@@ -59,7 +59,7 @@
                   </HBox>
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="198.0">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-search" text="Serach" textFill="WHITE">
+                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-search" text="Search" textFill="WHITE">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -115,28 +115,20 @@
                   </HBox>
                </children>
             </HBox>
-            <TableView editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="314.0" prefWidth="820.0" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <TableView fx:id="gamesTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#vote" prefHeight="314.0" prefWidth="820.0" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <columns>
-                  <TableColumn id="text" fx:id="text" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Name" />
-                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Number" />
-                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Email" />
-                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="190.0" resizable="false" style="-fx-font-size: 24px;" text="Membership" />
+                  <TableColumn id="text" fx:id="name" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Name" />
+                  <TableColumn fx:id="type" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Type" />
+                  <TableColumn fx:id="numberOfPlayers" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Players" />
+                  <TableColumn fx:id="numberOfVotes" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="190.0" resizable="false" style="-fx-font-size: 24px;" text="Votes" />
                </columns>
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </TableView>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Confirm Vote" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets right="50.0" />
-               </GridPane.margin>
-            </Button>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
+                  <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#goBack" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
                </children>
                <GridPane.margin>
                   <Insets left="60.0" top="40.0" />

@@ -29,6 +29,10 @@ public class ViewHandler
   private EventsAddEventController eventsAddEventController;
   private BoardGamesAddBoardGameController boardGamesAddBoardGameController;
   private BorrowingsDetailPageController borrowingsDetailPageController;
+  private ElectionAddElectionController electionAddElectionController;
+  private ElectionAddVoteSelectMemberController electionAddVoteSelectMemberController;
+  private ElectionDetailPageController electionDetailPageController;
+  private ElectionAddVoteSelectGameController electionAddVoteSelectGameController;
 
 
   public ViewHandler(ModelManager model)
@@ -81,6 +85,18 @@ public class ViewHandler
       case 10:
         root = loadSimpleGuiView("/FXML/PlayersAddPlayer.fxml", playersAddPlayerController,-1);
         break;
+      case 31:
+        root = loadSimpleGuiView("/FXML/ElectionAddElection.fxml",electionAddElectionController,-1);
+        break;
+      case 32:
+        root = loadSimpleGuiView("/FXML/ElectionDetailPage.fxml",electionDetailPageController, -1);
+        break;
+      case 33:
+        root = loadSimpleGuiView("/FXML/ElectionAddVoteSelectMember.fxml",electionAddVoteSelectMemberController, -1);
+        break;
+      case 34:
+        root =loadSimpleGuiView("/FXML/ElectionAddVoteSelectBoardgame.fxml", electionAddVoteSelectGameController, IDOfItem);
+        break;
       case 11:
         root = loadSimpleGuiView("/FXML/EventsDetailPage.fxml", eventsDetailPageController, IDOfItem);
         break;
@@ -99,8 +115,6 @@ public class ViewHandler
     primaryStage.setTitle("Board Games App");
     primaryStage.setScene(currentScene);
     primaryStage.setWidth(root.getPrefWidth());
-    System.out.println(root.getPrefWidth());
-    System.out.println(root.getWidth());
     primaryStage.setHeight(root.getPrefHeight());
     primaryStage.show();
   }
@@ -127,7 +141,6 @@ public class ViewHandler
       catch (Exception e)
       {
         e.printStackTrace();
-        System.out.println("fhjgkugufjhkf");
       }
     }
     else

@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class PlayersList
 {
@@ -111,7 +112,7 @@ public class PlayersList
     PlayersList newPlayerList = new PlayersList();
     for (int i = 0; i < size(); i++)
     {
-      if (playerList.get(i).getName().contains(charSequence) || playerList.get(i).getPhoneNumber().contains(charSequence)){
+      if (playerList.get(i).getName().toLowerCase().contains(charSequence.toLowerCase()) || playerList.get(i).getPhoneNumber().contains(charSequence)){
         newPlayerList.addPlayer(playerList.get(i));
       }
     }
@@ -129,6 +130,14 @@ public class PlayersList
       }
     }
     return null;
+  }
+
+  public void setAllPlayersVotedFalse(){
+    for (int i = 0; i < size(); i++)
+    {
+      System.out.println("false");
+      getPlayer(i).setVoted(false);
+    }
   }
 
   @Override public String toString()

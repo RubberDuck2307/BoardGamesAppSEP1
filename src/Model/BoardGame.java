@@ -139,9 +139,17 @@ public class BoardGame
     return numberOfVotes;
   }
 
+  public void addVote(){
+    numberOfVotes ++;
+  }
+
   public void setNumberOfVotes(int numberOfVotes)
   {
     this.numberOfVotes = numberOfVotes;
+  }
+
+  public BoardGame copy(){
+    return new BoardGame(ID,name,type,numberOfPlayersMin,numberOfPlayersMax,availabilityStatus,comment,ownerID,numberOfVotes);
   }
 
   @Override public String toString()
