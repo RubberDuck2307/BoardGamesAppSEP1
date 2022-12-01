@@ -135,15 +135,5 @@ public class PlayersList
   {
     return "Model.PlayersList{" + "playerList=" + playerList + '}';
   }
-  public String getNameByID(int ID)
-  {
-    for (int i = 0; i < playerList.size(); i++)
-    {
-      if (playerList.get(i).getID() == ID)
-      {
-        return playerList.get(i).getName();
-      }
-    }
-    return "Anna";
-  }
+
   }
