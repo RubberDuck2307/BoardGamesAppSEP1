@@ -133,7 +133,7 @@
                 </HBox>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="14">
                     <children>
-                        <Button fx:id="addButton1" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="SHOW OWNED GAMES" textAlignment="CENTER">
+                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showOwnedGames" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="SHOW OWNED GAMES" textAlignment="CENTER">
                             <font>
                                 <Font size="26.0" />
                             </font>
@@ -160,7 +160,7 @@
                 </VBox>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="16">
                     <children>
-                        <Button fx:id="addButton12" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="SHOW RESERVATIONS" textAlignment="CENTER">
+                        <Button fx:id="addButton12" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showReservations" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="SHOW RESERVATIONS" textAlignment="CENTER">
                             <font>
                                 <Font size="26.0" />
                             </font>

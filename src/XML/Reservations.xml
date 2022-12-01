@@ -2,7 +2,7 @@
 <reservationsList>
   <reservation>
     <ID>0</ID>
-    <playerID>0</playerID>
+    <playerID>3</playerID>
     <gameID>0</gameID>
     <from>
       <day>24</day>

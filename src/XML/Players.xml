@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <PlayersList>
   <Player>
-    <ID>0</ID>
+    <ID>3</ID>
     <name>Pavel</name>
-    <phoneNumber>55</phoneNumber>
+    <phoneNumber>555</phoneNumber>
     <email/>
     <membership>true</membership>
     <comment>Pepe</comment>
     <address/>
     <voted>false</voted>
+    <feePayment>
+      <day>7</day>
+      <month>12</month>
+      <year>2022</year>
+    </feePayment>
   </Player>
   <Player>
     <ID>1</ID>
@@ -18,7 +23,7 @@
     <membership>true</membership>
     <comment/>
     <address/>
-    <voted>false</voted>
+    <voted>true</voted>
   </Player>
   <Player>
     <ID>2</ID>

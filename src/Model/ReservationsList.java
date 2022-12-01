@@ -37,6 +37,17 @@ public class ReservationsList
     return reservationsList.get(index);
   }
 
+  public ReservationsList getReservationsByPlayer(int ID){
+    ReservationsList newReservationList = new ReservationsList();
+    for (int i = 0; i < size(); i++)
+    {
+      if(getReservation(i).getPlayerID() == ID){
+        newReservationList.addReservation(getReservation(i));
+      }
+    }
+    return newReservationList;
+  }
+
   public int size(){
     return reservationsList.size();
   }

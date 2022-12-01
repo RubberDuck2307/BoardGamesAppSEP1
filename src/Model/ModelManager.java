@@ -115,6 +115,13 @@ public class ModelManager
     FileReader.saveEventsList(eventsList);
   }
 
+  public BoardGamesList getBoardGamesByOwnership(int ID){
+    return boardGamesList.findByOwnership(ID);
+  }
+
+  public ReservationsList getReservationsByPlayer(int ID){
+    return reservationsList.getReservationsByPlayer(ID);
+  }
   public void setEvent(Event event, int ID){
     eventsList.setEvent(event, ID);
   }

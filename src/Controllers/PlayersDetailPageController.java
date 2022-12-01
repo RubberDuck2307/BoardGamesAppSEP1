@@ -10,6 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.Region;
 
@@ -47,6 +48,7 @@ public class PlayersDetailPageController implements Controller
   }
   public void setData(){
     Player player = model.getPlayersList().getPlayerByID(ID);
+    votedBox.setSelected(player.getVoted());
     nameField.setText(player.getName());
     commentField.setText(player.getComment());
     emailField.setText(player.getEmail());
@@ -145,6 +147,15 @@ public class PlayersDetailPageController implements Controller
     model.getPlayersList().deleteByID(ID);
     model.savePlayers();
     viewHandler.openView(2,-1);}
+
+  }
+
+  @FXML public void showOwnedGames(){
+    viewHandler.openView(3,ID);
+  }
+
+  @FXML public void showReservations(){
+    viewHandler.openView(5,ID);
 
   }
   public void goBack(){
