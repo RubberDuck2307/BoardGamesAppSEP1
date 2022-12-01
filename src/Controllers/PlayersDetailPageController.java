@@ -140,7 +140,8 @@ public class PlayersDetailPageController implements Controller
     alert.setTitle("Confirmation");
     alert.setHeaderText("Are you sure you want to delete the player ");
     Optional<ButtonType> result = alert.showAndWait();
-    if(result.isPresent() && result.get() == ButtonType.OK){
+    if (result.isPresent() && result.get() == ButtonType.OK)
+    {
     model.getPlayersList().deleteByID(ID);
     model.savePlayers();
     viewHandler.openView(2,-1);}

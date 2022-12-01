@@ -124,10 +124,6 @@ public class Player
     return true;
   }
 
-  static public boolean validateData(String name, String phoneNumber)
-  {
-    return validateName(name) && validatePhoneNumber(phoneNumber);
-  }
 
   static public boolean validateData(String name, String phoneNumber,
       String email)
@@ -182,6 +178,11 @@ public class Player
   public Boolean getVoted()
   {
     return voted;
+  }
+
+  public void setVoted(Boolean voted)
+  {
+    this.voted = voted;
   }
 
   public LocalDate getFeePaymentDate()

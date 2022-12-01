@@ -21,6 +21,14 @@ public class PlayerTable
     this.ID = ID;
   }
 
+  public PlayerTable(String name,String phone, String email, int ID){
+    this.name = new SimpleStringProperty(name);
+    this.phone = new SimpleStringProperty(phone);
+    this.email = new SimpleStringProperty(email);
+    this.ID = ID;
+  }
+
+
   public int getID()
   {
     return ID;

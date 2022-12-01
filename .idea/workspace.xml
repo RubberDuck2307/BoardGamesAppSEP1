@@ -8,20 +8,43 @@
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersDetailPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Controllers/PlayersDetailPageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Election.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Election.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/ElectionAddElection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/ElectionAddElection.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/ElectionAddVoteSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/ElectionAddVoteSelectBoardgame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/ElectionAddVoteSelectMember.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/ElectionAddVoteSelectMember.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/ElectionDetailPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/ElectionDetailPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Events.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Events.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Players.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/FXML/Players.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/BoardGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/BoardGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/BoardGamesList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/BoardGamesList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/Election.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/Election.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/Event.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/ModelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/ModelManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/PlayerTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/PlayerTable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/PlayersList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/Model/PlayersList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/XML/BoardGames.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/XML/BoardGames.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/XML/Election.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/XML/Election.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/XML/Events.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/XML/Events.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BoardGamesApp/XML/Players.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardGamesApp/XML/Players.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Application/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/FileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Application/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/ViewHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/ViewHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/ElectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ElectionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/Election.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/Election.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/PlayersDetailPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/PlayersDetailPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FXML/ElectionAddElection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/ElectionAddElection.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FXML/ElectionAddVoteSelectBoardgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/ElectionAddVoteSelectBoardgame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FXML/ElectionAddVoteSelectMember.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/ElectionAddVoteSelectMember.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FXML/ElectionDetailPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/ElectionDetailPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BoardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/BoardGamesList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BoardGamesList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Election.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Election.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ModelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/PlayerTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PlayerTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/PlayersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PlayersList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/XML/BoardGames.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/BoardGames.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/XML/Election.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Election.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/XML/Players.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/Players.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669805399896</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Election start working">
+      <created>1669809249306</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669809249306</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

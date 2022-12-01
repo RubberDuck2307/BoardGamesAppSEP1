@@ -1,5 +1,7 @@
 package Application;
 
+import Model.BoardGame;
+import Model.BoardGamesList;
 import Model.Event;
 import Model.EventsList;
 
@@ -14,9 +16,12 @@ public class Test
   public static void main(String[] args)
       throws ParserConfigurationException, TransformerException
   {
-      LocalDate localDate = LocalDate.now();
-      LocalDateTime localDateTime = localDate.atTime(2,23);
-      System.out.println(localDate);
-
+    BoardGame boardGame = new BoardGame("aa","aa",2,2,"aa","aa",2,2);
+    ArrayList<BoardGame> boardGameArrayList = new ArrayList<>();
+    boardGameArrayList.add(boardGame);
+    BoardGamesList boardGamesList = new BoardGamesList(boardGameArrayList);
+    System.out.println(boardGamesList);
+    boardGameArrayList.remove(0);
+    System.out.println(boardGamesList);
     }
 }
