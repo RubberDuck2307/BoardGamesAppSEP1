@@ -13,6 +13,7 @@ import Model.ModelManager;
 import Model.Event;
 import javafx.scene.control.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -44,7 +45,13 @@ public class EventsAddEventController implements Controller
     this.model = model;
     this.viewHandler = viewHandler;
     fromDateField.setDisable(false);
+    fromDateField.setValue(LocalDate.now());
+    fromHoursField.setText("16");
+    fromMinutesField.setText("00");
     toDateField.setDisable(false);
+    toDateField.setValue(LocalDate.now());
+    toHoursField.setText("18");
+    toMinutesField.setText("00");
   }
 
   @Override public Region getRegion()

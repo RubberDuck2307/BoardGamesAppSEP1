@@ -131,7 +131,7 @@
                      <children>
                         <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="68.0">
                            <children>
-                              <TextField fx:id="fromHoursField" />
+                              <TextField fx:id="fromHoursField" alignment="CENTER" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="18.0">
@@ -141,7 +141,7 @@
                         </HBox>
                         <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="69.0">
                            <children>
-                              <TextField fx:id="fromMinutesField" />
+                              <TextField fx:id="fromMinutesField" alignment="CENTER" />
                            </children>
                         </HBox>
                      </children>
@@ -155,7 +155,7 @@
                      <children>
                         <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="68.0">
                            <children>
-                              <TextField fx:id="toHoursField" />
+                              <TextField fx:id="toHoursField" alignment="CENTER" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="18.0">
@@ -165,7 +165,7 @@
                         </HBox>
                         <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="69.0">
                            <children>
-                              <TextField fx:id="toMinutesField" />
+                              <TextField fx:id="toMinutesField" alignment="CENTER" />
                            </children>
                         </HBox>
                      </children>
