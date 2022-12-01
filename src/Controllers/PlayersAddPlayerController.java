@@ -44,7 +44,6 @@ public class PlayersAddPlayerController implements Controller
 
   @Override public void reset()
   {
-
   }
 
   public void addPlayer()
