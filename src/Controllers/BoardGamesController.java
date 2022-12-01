@@ -22,11 +22,13 @@ public class BoardGamesController implements Controller
   ModelManager model;
   ViewHandler viewHandler;
 
-  @FXML private TableView<BoardgameTable> boardGameTable;
+  private int ID;
+  @FXML public TableView<BoardgameTable> boardGameTable;
   @FXML public TableColumn<BoardgameTable, String> name;
   @FXML public TableColumn<BoardgameTable, String> type;
   @FXML public TableColumn<BoardgameTable, String> availability;
   @FXML public TableColumn<BoardgameTable, String> numberOfPlayers;
+  @FXML public Button addButton;
   ObservableList<BoardgameTable> boardGameTables = FXCollections.observableArrayList();
 
   public BoardGamesController()
@@ -39,6 +41,7 @@ public class BoardGamesController implements Controller
     this.region = region;
     this.model = model;
     this.viewHandler = viewHandler;
+    this.ID = ID;
     //fillTable();
     ObservableList<BoardgameTable> boardGameTables = FXCollections.observableArrayList();
     ObservableList<String> items = FXCollections.observableArrayList(
@@ -48,11 +51,20 @@ public class BoardGamesController implements Controller
         BoardGame.getAllowedStatuses());
     status.setItems(items2);
 
-        for (int i = 0; i < model.getBoardGamesList().size(); i++) {
-            BoardGame boardGame = model.getBoardGamesList().getBoardGame(i);
-            System.out.println(boardGame);
+    BoardGamesList boardGamesList;
+
+    if (ID == -1){
+      boardGamesList = model.getBoardGamesList();
+    }
+
+    else {
+      addButton.setVisible(false);
+      boardGamesList = model.getBoardGamesByOwnership(ID);
+      System.out.println(boardGamesList);
+    }
+        for (int i = 0; i < boardGamesList.size(); i++) {
+            BoardGame boardGame = boardGamesList.getBoardGame(i);
             String numberOfPlayer = boardGame.getNumberOfPlayersMin() + " - " + boardGame.getNumberOfPlayersMax();
-            System.out.println(numberOfPlayer);
             boardGameTables.add(new BoardgameTable(boardGame.getName(), boardGame.getType(), boardGame.getAvailabilityStatus(),numberOfPlayer, boardGame.getID()));
         }
 
@@ -73,7 +85,13 @@ public class BoardGamesController implements Controller
 
   @FXML public void backToHomePage()
   {
-    viewHandler.openView(1, -1);
+    if (ID == -1)
+    {
+      viewHandler.openView(1, -1);
+    }
+    else{
+     viewHandler.openView(8, ID);
+      }
   }
 
   @FXML private void chooseBoardgame()

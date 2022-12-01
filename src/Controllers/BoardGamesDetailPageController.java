@@ -189,6 +189,7 @@ public class BoardGamesDetailPageController implements Controller
   }
 
 
+
   public void selectAsocAsOwner()
   {
     //System.out.println("hello");

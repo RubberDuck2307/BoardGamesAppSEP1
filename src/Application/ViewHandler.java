@@ -63,14 +63,14 @@ public class ViewHandler
         break;
       case 3:
         root = loadSimpleGuiView("/FXML/Boardgames.fxml", boardGamesController,
-            -1);
+            IDOfItem);
         break;
       case 4:
         root = loadSimpleGuiView("/FXML/Election.fxml", electionController, -1);
         break;
       case 5:
         root = loadSimpleGuiView("/FXML/Reservations.fxml",
-            reservationController, -1);
+            reservationController, IDOfItem);
         break;
       case 6:
         root = loadSimpleGuiView("/FXML/Borrowings.fxml", borrowingsController,
