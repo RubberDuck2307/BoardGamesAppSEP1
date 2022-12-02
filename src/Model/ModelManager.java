@@ -161,4 +161,11 @@ public class ModelManager
   {
     FileReader.saveRatingsList(ratingsList);
   }
+
+  public void setReservationByID(Reservation reservation, int ID){
+    reservationsList.setReservationByID(reservation, ID);
+  }
+  public void saveReservation() throws ParserConfigurationException, TransformerException {
+    FileReader.saveReservationsList(reservationsList);
+  }
 }
