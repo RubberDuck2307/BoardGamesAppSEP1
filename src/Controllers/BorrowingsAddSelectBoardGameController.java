@@ -29,12 +29,14 @@ public class BorrowingsAddSelectBoardGameController implements Controller
   public TextField numberOfPlayersFilter;
   public TextField searchField;
   public ChoiceBox genre;
+  public TextField number;
   Region region;
   ModelManager model;
   ViewHandler viewHandler;
   private String genreValue;
   private String statusValue;
   private int ID;
+
   ObservableList<BoardgameTable> boardGameTables = FXCollections.observableArrayList();
 
   @Override public void init(Region region, ModelManager model,
@@ -100,14 +102,11 @@ public class BorrowingsAddSelectBoardGameController implements Controller
     boardGameTables.clear();
     BoardGamesList boardGamesList;
 
-    if (ID == -1){
-      boardGamesList = model.getBoardGamesList();
-    }
 
-    else {
-      boardGamesList = model.getBoardGamesByOwnership(ID);
-      System.out.println(boardGamesList);
-    }
+    boardGamesList = model.getBoardGamesList();
+
+
+
     boardGamesList = boardGamesList.filterBoardGameList(searchField.getText());
     String numberString = numberOfPlayersFilter.getText();
 

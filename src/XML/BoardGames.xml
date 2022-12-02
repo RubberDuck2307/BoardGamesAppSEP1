@@ -11,4 +11,26 @@
     <ownerID>0</ownerID>
     <numberOfVotes>0</numberOfVotes>
   </BoardGame>
+  <BoardGame>
+    <ID>2</ID>
+    <name>aaaa</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>66</numberOfPlayersMin>
+    <numberOfPlayersMax>66</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment>cc</comment>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>3</ID>
+    <name>aaa</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>6</numberOfPlayersMin>
+    <numberOfPlayersMax>7</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment>km</comment>
+    <ownerID>1</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
 </BoardGamesList>

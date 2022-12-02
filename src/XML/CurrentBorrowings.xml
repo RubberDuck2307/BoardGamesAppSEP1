@@ -176,4 +176,20 @@
     </to>
     <comment>vf</comment>
   </Borrowing>
+  <Borrowing>
+    <ID>16</ID>
+    <playerID>1</playerID>
+    <gameID>3</gameID>
+    <from>
+      <day>16</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>21</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment>d</comment>
+  </Borrowing>
 </borrowingsList>
