@@ -14,7 +14,6 @@ public class BoardGamesController implements Controller
 {
 
   public TextField searchField;
-
   public Slider numberOfplayers;
   public ChoiceBox genre;
   public ChoiceBox status;

@@ -38,9 +38,6 @@ public class Reservation
       throw new RuntimeException("The borrowing must end after it starts");
     }
 
-    if(!start.isAfter(LocalDate.now())){
-      throw new RuntimeException("The borrowing must be in the future");
-    }
     // TODO check if there are no reservation or borrowings for this date for this bg
     return true;
   }
