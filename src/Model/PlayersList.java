@@ -43,7 +43,7 @@ public class PlayersList
     {
       if (playerList.size() == 0)
       {
-        player.setID(0);
+        player.setID(1);
         playerList.add(player);
       }
       else

@@ -2,10 +2,7 @@ package Controllers;
 
 import Application.FileReader;
 import Application.ViewHandler;
-import Model.BoardGamesList;
-import Model.ModelManager;
-import Model.Player;
-import Model.PlayerTable;
+import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -151,6 +148,24 @@ public class PlayersDetailPageController implements Controller
     Optional<ButtonType> result = alert.showAndWait();
     if (result.isPresent() && result.get() == ButtonType.OK)
     {
+      RatingsList ratingsList = model.getRatingsByPlayer(ID);
+
+      for (int i = 0; i < ratingsList.size(); i++)
+      {
+        model.deleteRatingByID(ratingsList.getRating(i).getID());
+      }
+
+      ReservationsList reservationsList = model.getReservationsByPlayer(ID);
+      for (int i = 0; i < reservationsList.size(); i++)
+      {
+        model.deleteReservationByID(reservationsList.getReservation(i).getID());
+      }
+      model.saveRatings();
+      for (int i = 0; i < reservationsList.size(); i++)
+      {
+        reservationsList.delete(i);
+      }
+
       BoardGamesList ownedBoardGames = model.getBoardGamesByOwnership(ID);
       if (ownedBoardGames.size() > 0)
       {

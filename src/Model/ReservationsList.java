@@ -48,8 +48,22 @@ public class ReservationsList
     return newReservationList;
   }
 
+  public void delete(int index){
+    reservationsList.remove(index);
+  }
   public int size(){
     return reservationsList.size();
+  }
+
+
+  public void deleteByID(int ID){
+    System.out.println(ID);
+    for (int i = 0; i < size(); i++)
+    {
+      if(getReservation(i).getID() == ID){
+        delete(i);
+      }
+    }
   }
 
   @Override public String toString()

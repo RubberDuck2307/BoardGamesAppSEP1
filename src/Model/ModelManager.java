@@ -161,4 +161,16 @@ public class ModelManager
   {
     FileReader.saveRatingsList(ratingsList);
   }
+
+  public void deleteReservationByID(int ID){
+    reservationsList.deleteByID(ID);
+  }
+
+  public void deleteRatingByID(int ID){
+    ratingsList.deleteByID(ID);
+  }
+
+  public RatingsList getRatingsByPlayer(int ID){
+    return ratingsList.getRatingsByPlayer(ID);
+  }
 }
