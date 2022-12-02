@@ -32,6 +32,16 @@ public class ReservationsList
     reservationsList.add(reservation);
   }
 
+  public void deleteByID(int ID){
+    for (int i = 0; i < reservationsList.size(); i++) {
+      if(getReservation(i).getID() == ID){
+        reservationsList.remove(i);
+        break;
+      }
+    }
+
+    }
+
   public Reservation getReservation(int index)
   {
     return reservationsList.get(index);
@@ -50,6 +60,25 @@ public class ReservationsList
 
   public int size(){
     return reservationsList.size();
+  }
+
+  public void setReservationByID(Reservation reservation, int ID){
+    for (int i = 0; i < size(); i++) {
+      if(reservationsList.get(i).getID() == ID){
+        reservationsList.set(i, reservation);
+        break;
+      }
+
+    }
+  }
+
+  public Reservation getReservationByID( int ID) {
+    for (int i = 0; i < size(); i++) {
+      if (reservationsList.get(i).getID() == ID) {
+        return reservationsList.get(i);
+      }
+    }
+    return reservationsList.get(0);
   }
 
   @Override public String toString()

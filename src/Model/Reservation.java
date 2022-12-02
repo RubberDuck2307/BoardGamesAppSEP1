@@ -88,6 +88,7 @@ public class Reservation
     return to;
   }
 
+
   public void setTo(LocalDate to)
   {
     this.to = to;
@@ -103,6 +104,9 @@ public class Reservation
     this.comment = comment;
   }
 
+  public static boolean VALIDATE_DATA(LocalDate from, LocalDate to){
+    return true;
+  }
   @Override public String toString()
   {
     return "Model.Borrowing{" + "ID=" + ID + ", playerID=" + playerID + ", gameID="

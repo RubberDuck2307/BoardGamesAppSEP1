@@ -43,6 +43,8 @@ public class ViewHandler
   private BorrowingsAddSelectBoardGameController borrowingsAddSelectBoardGameController;
   private BorrowingsAddFinalFormController borrowingsAddFinalFormController;
 
+  private ReservationsDetailsPageController reservationsDetailsPageController;
+
   public ViewHandler(ModelManager model)
   {
 
@@ -157,6 +159,9 @@ public class ViewHandler
       case 134:
         root = loadSimpleGuiView("/FXML/BorrowingsAddSelectBoardgame.fxml",
             borrowingsAddSelectBoardGameController, IDOfItem);
+        break;
+      case 401:
+        root = loadSimpleGuiView("/FXML/ReservationsDetailPage.fxml", reservationsDetailsPageController, IDOfItem);
         break;
     }
 
