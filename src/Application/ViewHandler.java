@@ -160,7 +160,7 @@ public class ViewHandler
         root = loadSimpleGuiView("/FXML/BorrowingsAddSelectBoardgame.fxml",
             borrowingsAddSelectBoardGameController, IDOfItem);
         break;
-      case 401:
+      case 201:
         root = loadSimpleGuiView("/FXML/ReservationsDetailPage.fxml", reservationsDetailsPageController, IDOfItem);
         break;
     }

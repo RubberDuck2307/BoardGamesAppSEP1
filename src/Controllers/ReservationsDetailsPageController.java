@@ -80,6 +80,7 @@ public class ReservationsDetailsPageController implements Controller{
 
     public void edit(ActionEvent actionEvent)
     {
+        Reservation reservation = model.getReservationsList().getReservationByID(ID);
         startingDateField.setMouseTransparent(false);
         startingDateField.setFocusTraversable(true);
         endingDateField.setMouseTransparent(false);
@@ -90,7 +91,6 @@ public class ReservationsDetailsPageController implements Controller{
         editButton.setText("Save Changes");
 
         save = event -> {
-            Reservation reservation = model.getReservationsList().getReservationByID(ID);
             int boardGameName = reservation.getGameID();
             int memberName = reservation.getPlayerID();
             LocalDate startingDate = startingDateField.getValue();
@@ -132,9 +132,8 @@ public class ReservationsDetailsPageController implements Controller{
         Optional<ButtonType> result = alert.showAndWait();
         if(result.isPresent() && result.get() == ButtonType.OK){
             model.getReservationsList().deleteByID(ID);
-            model.savePlayers();
+            model.saveReservation();
             viewHandler.openView(5,-1);}
-
     }
 
     public void goBack(){

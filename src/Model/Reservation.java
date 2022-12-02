@@ -1,6 +1,7 @@
 package Model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Reservation
 {
@@ -105,6 +106,12 @@ public class Reservation
   }
 
   public static boolean VALIDATE_DATA(LocalDate from, LocalDate to){
+    if(!from.isAfter(LocalDate.now())){
+      throw new RuntimeException("The event has to start in the future");
+    }
+    if (!to.isAfter(from)){
+      throw new RuntimeException("The event has to end after it starts");
+    }
     return true;
   }
   @Override public String toString()

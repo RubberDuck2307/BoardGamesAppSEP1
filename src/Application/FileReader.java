@@ -1203,7 +1203,7 @@ public class FileReader
     transformer.setOutputProperty(OutputKeys.INDENT, "yes");
     transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount",
         "2");
-    File file = new File("Reservations.xml");
+    File file = new File("src/XML/Reservations.xml");
     transformer.transform(new DOMSource(doc), new StreamResult(file));
 
   }
