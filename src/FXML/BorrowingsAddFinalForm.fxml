@@ -43,7 +43,7 @@
                         <Font size="46.0" />
                     </font>
                 </Label>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="204.0" styleClass="labels" stylesheets="@../css/style.css" text="Name of board game" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="204.0" styleClass="labels" stylesheets="@../css/style.css" text="Name of Board Game" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <font>
                         <Font size="32.0" />
                     </font>
@@ -58,7 +58,7 @@
                 </TextField>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
                <children>
-                      <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createBorrowing" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Create borrowing" textAlignment="CENTER">
+                      <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createBorrowing" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Create Borrowing" textAlignment="CENTER">
                           <font>
                               <Font size="26.0" />
                           </font>
@@ -90,19 +90,19 @@
                         <VBox prefHeight="30.0" prefWidth="355.0" />
                     </children>
                 </HBox>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Name of member" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Name of Member" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
                 <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                     <children>
-                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="230.0" styleClass="labels" stylesheets="@../css/style.css" text="Starting date">
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="230.0" styleClass="labels" stylesheets="@../css/style.css" text="Starting Date">
                             <font>
                                 <Font size="32.0" />
                             </font>
                         </Label>
-                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="299.0" styleClass="labels" stylesheets="@../css/style.css" text="Ending date">
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="299.0" styleClass="labels" stylesheets="@../css/style.css" text="Ending Date">
                             <font>
                                 <Font size="32.0" />
                             </font>
