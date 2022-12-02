@@ -160,4 +160,20 @@
     </to>
     <comment>a</comment>
   </Borrowing>
+  <Borrowing>
+    <ID>15</ID>
+    <playerID>0</playerID>
+    <gameID>0</gameID>
+    <from>
+      <day>10</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>25</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment>vf</comment>
+  </Borrowing>
 </borrowingsList>

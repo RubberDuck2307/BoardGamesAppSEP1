@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BorrowingsAddFinalFormController">
     <children>
         <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0">
             <columnConstraints>
@@ -48,7 +48,7 @@
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <TextField fx:id="nameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <TextField fx:id="bgname" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <font>
                         <Font size="24.0" />
                     </font>
@@ -58,7 +58,7 @@
                 </TextField>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
                <children>
-                      <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Create borrowing" textAlignment="CENTER">
+                      <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createBorrowing" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Create borrowing" textAlignment="CENTER">
                           <font>
                               <Font size="26.0" />
                           </font>
@@ -70,7 +70,7 @@
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>
-                        <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
+                        <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#goBack" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
                     </children>
                     <GridPane.margin>
                         <Insets left="60.0" top="40.0" />
@@ -80,7 +80,7 @@
                     <children>
                         <VBox prefHeight="30.0" prefWidth="563.0">
                             <children>
-                                <TextField fx:id="nameField1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width">
+                                <TextField fx:id="playername" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" styleClass="input-field-max-width">
                                     <font>
                                         <Font size="24.0" />
                                     </font>
@@ -97,12 +97,12 @@
                 </Label>
                 <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                     <children>
-                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="230.0" styleClass="labels" stylesheets="@../css/style.css" text="Ending date">
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="230.0" styleClass="labels" stylesheets="@../css/style.css" text="Starting date">
                             <font>
                                 <Font size="32.0" />
                             </font>
                         </Label>
-                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="299.0" styleClass="labels" stylesheets="@../css/style.css" text="Starting date">
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="299.0" styleClass="labels" stylesheets="@../css/style.css" text="Ending date">
                             <font>
                                 <Font size="32.0" />
                             </font>
@@ -113,12 +113,12 @@
                     <children>
                         <VBox prefHeight="40.0" prefWidth="234.0">
                             <children>
-                                <DatePicker prefHeight="26.0" prefWidth="218.0" styleClass="input-field" />
+                                <DatePicker fx:id="start" prefHeight="26.0" prefWidth="218.0" styleClass="input-field" />
                             </children>
                         </VBox>
                         <VBox prefHeight="40.0" prefWidth="282.0">
                             <children>
-                                <DatePicker prefHeight="26.0" prefWidth="260.0" styleClass="input-field" />
+                                <DatePicker fx:id="end" prefHeight="26.0" prefWidth="260.0" styleClass="input-field" />
                             </children>
                         </VBox>
                     </children>
@@ -128,7 +128,7 @@
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                <TextArea fx:id="comments" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             </children>
         </GridPane>
     </children>

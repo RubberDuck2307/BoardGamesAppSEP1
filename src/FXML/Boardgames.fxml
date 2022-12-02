@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -15,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BoardGamesController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BoardGamesController">
    <children>
       <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css">
          <columnConstraints>
@@ -53,7 +52,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="198.0">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-search" text="Serach" textFill="WHITE">
+                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fillTable" prefHeight="63.0" prefWidth="198.0" styleClass="button-search" text="Serach" textFill="WHITE">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -76,7 +75,7 @@
                                     <Font size="24.0" />
                                  </font>
                               </Label>
-                              <ChoiceBox fx:id="status" prefWidth="150.0" styleClass="input-select" />
+                              <ChoiceBox fx:id="status" onMousePressed="#fillTable" prefWidth="150.0" styleClass="input-select" />
                            </children>
                         </VBox>
                      </children>
@@ -114,7 +113,7 @@
             </Button>
             <HBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="820.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="299.0">
+                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="344.0">
                      <children>
                         <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="164.0" styleClass="labels" text="Number of Players">
                            <font>
@@ -129,23 +128,19 @@
                         <Insets left="20.0" right="25.0" />
                      </HBox.margin>
                   </HBox>
-                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="299.0">
-                     <children>
-                        <Slider fx:id="numberOfplayers" majorTickUnit="1.0" max="12.0" maxHeight="-Infinity" maxWidth="-Infinity" min="1.0" minHeight="-Infinity" minWidth="-Infinity" minorTickCount="2" prefHeight="84.0" prefWidth="299.0" showTickLabels="true" snapToTicks="true" value="1.0">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Slider>
-                     </children>
+                  <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="299.0">
                      <HBox.margin>
                         <Insets left="25.0" />
                      </HBox.margin>
+                     <children>
+                        <TextField fx:id="numberOfPlayersFilter" alignment="CENTER" onKeyTyped="#fillTable" />
+                     </children>
                   </HBox>
                </children>
             </HBox>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button fx:id="backButton" alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#backToHomePage" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
+                  <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#backToHomePage" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
                </children>
                <GridPane.margin>
                   <Insets left="60.0" top="40.0" />
