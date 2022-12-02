@@ -73,4 +73,16 @@ public class RatingsList
   {
     return "Model.RatingsList{" + "ratingList=" + ratingList + '}';
   }
+
+  public void deleteByID(int ID){
+    for (int i = 0; i < size(); i++)
+    {
+      if (getRating(i).getID() == ID){
+        ratingList.remove(i);
+      }
+    }
+  }
+  public void delete(int index){
+    ratingList.remove(index);
+  }
 }

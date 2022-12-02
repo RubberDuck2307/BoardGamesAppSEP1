@@ -1,13 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<PlayersList>
-  <Player>
-    <ID>0</ID>
-    <name>Pavel</name>
-    <phoneNumber>8456</phoneNumber>
-    <email>pavel@seznam.cz</email>
-    <membership>false</membership>
-    <comment/>
-    <address/>
-    <voted>false</voted>
-  </Player>
-</PlayersList>
+<PlayersList/>

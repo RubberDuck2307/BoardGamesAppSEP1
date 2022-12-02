@@ -1,76 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <BoardGamesList>
   <BoardGame>
-    <ID>0</ID>
-    <name>ss</name>
-    <type>Engine Building</type>
-    <numberOfPlayersMin>2</numberOfPlayersMin>
-    <numberOfPlayersMax>3</numberOfPlayersMax>
-    <availabilityStatus>Unavailable</availabilityStatus>
-    <comment>dd</comment>
-    <ownerID>0</ownerID>
-    <numberOfVotes>0</numberOfVotes>
-  </BoardGame>
-  <BoardGame>
-    <ID>2</ID>
-    <name>jmhmj</name>
+    <ID>1</ID>
+    <name>LOKOKOKO</name>
     <type>Engine Building</type>
     <numberOfPlayersMin>1</numberOfPlayersMin>
-    <numberOfPlayersMax>2</numberOfPlayersMax>
-    <availabilityStatus>Available</availabilityStatus>
-    <comment>uhgjhjh</comment>
-    <ownerID>0</ownerID>
-    <numberOfVotes>0</numberOfVotes>
-  </BoardGame>
-  <BoardGame>
-    <ID>3</ID>
-    <name>gbgfbfb</name>
-    <type>Engine Building</type>
-    <numberOfPlayersMin>1</numberOfPlayersMin>
-    <numberOfPlayersMax>2</numberOfPlayersMax>
-    <availabilityStatus>Available</availabilityStatus>
-    <comment>tzdhg</comment>
-    <ownerID>0</ownerID>
-    <numberOfVotes>0</numberOfVotes>
-  </BoardGame>
-  <BoardGame>
-    <ID>4</ID>
-    <name>gbgfbfb</name>
-    <type>Engine Building</type>
-    <numberOfPlayersMin>1</numberOfPlayersMin>
-    <numberOfPlayersMax>2</numberOfPlayersMax>
-    <availabilityStatus>Unavailable</availabilityStatus>
-    <comment>tzdhg</comment>
-    <ownerID>0</ownerID>
-    <numberOfVotes>0</numberOfVotes>
-  </BoardGame>
-  <BoardGame>
-    <ID>5</ID>
-    <name>dfgdfgfdgfd</name>
-    <type>Engine Building</type>
-    <numberOfPlayersMin>2</numberOfPlayersMin>
-    <numberOfPlayersMax>3</numberOfPlayersMax>
-    <availabilityStatus>Available</availabilityStatus>
-    <comment/>
-    <ownerID>0</ownerID>
-    <numberOfVotes>0</numberOfVotes>
-  </BoardGame>
-  <BoardGame>
-    <ID>6</ID>
-    <name>dsfgvdsgvdfgfdgbdsgfsd</name>
-    <type>Engine Building</type>
-    <numberOfPlayersMin>33</numberOfPlayersMin>
-    <numberOfPlayersMax>333</numberOfPlayersMax>
-    <availabilityStatus>Available</availabilityStatus>
-    <comment/>
-    <ownerID>0</ownerID>
-    <numberOfVotes>0</numberOfVotes>
-  </BoardGame>
-  <BoardGame>
-    <ID>7</ID>
-    <name>BoardGames</name>
-    <type>Engine Building</type>
-    <numberOfPlayersMin>0</numberOfPlayersMin>
     <numberOfPlayersMax>1</numberOfPlayersMax>
     <availabilityStatus>Available</availabilityStatus>
     <comment/>
