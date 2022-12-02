@@ -102,9 +102,8 @@ public class ReservationController implements Controller
     viewHandler.openView(202,-1);
   }
 
-  public void fillTable(ActionEvent actionEvent) {
+  public void fillTable() {
   }
 
-  public void addReservation(ActionEvent actionEvent) {
-  }
+
 }

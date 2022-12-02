@@ -46,6 +46,7 @@ public class ViewHandler
   private ReservationAddSelectMemberController reservationAddSelectMemberController;
 
   private ReservationsDetailsPageController reservationsDetailsPageController;
+  private ReservationAddSelectBoardGameController reservationAddSelectBoardGameController;
 
   public ViewHandler(ModelManager model)
   {
@@ -166,7 +167,10 @@ public class ViewHandler
         root = loadSimpleGuiView("/FXML/ReservationsDetailPage.fxml", reservationsDetailsPageController, IDOfItem);
         break;
       case 202:
-        root = loadSimpleGuiView("/FXML/Reservation/AddSelectMember.fxml", reservationAddSelectMemberController, -1);
+        root = loadSimpleGuiView("/FXML/ReservationsAddSelectMember.fxml", reservationAddSelectMemberController, -1);
+        break;
+      case 203:
+        root = loadSimpleGuiView("/FXML/ReservationsAddSelectBoardgame.fxml", reservationAddSelectBoardGameController, IDOfItem);
     }
 
     currentScene.setRoot(root);
