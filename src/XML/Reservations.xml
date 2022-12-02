@@ -15,43 +15,5 @@
       <year>2003</year>
     </to>
     <comment>xx</comment>
-    <ASAP>false</ASAP>
-    <queue>2</queue>
-  </reservation>
-  <reservation>
-    <ID>5</ID>
-    <playerID>0</playerID>
-    <gameID>0</gameID>
-    <from>
-      <day>24</day>
-      <month>3</month>
-      <year>2003</year>
-    </from>
-    <to>
-      <day>24</day>
-      <month>3</month>
-      <year>2003</year>
-    </to>
-    <comment>xx</comment>
-    <ASAP>false</ASAP>
-    <queue>2</queue>
-  </reservation>
-  <reservation>
-    <ID>6</ID>
-    <playerID>0</playerID>
-    <gameID>0</gameID>
-    <from>
-      <day>24</day>
-      <month>3</month>
-      <year>2003</year>
-    </from>
-    <to>
-      <day>24</day>
-      <month>3</month>
-      <year>2003</year>
-    </to>
-    <comment>xx</comment>
-    <ASAP>false</ASAP>
-    <queue>2</queue>
   </reservation>
 </reservationsList>
