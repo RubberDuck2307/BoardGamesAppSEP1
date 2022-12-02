@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <BoardGamesList>
   <BoardGame>
-    <ID>1</ID>
-    <name>LOKOKOKO</name>
+    <ID>0</ID>
+    <name>lolko</name>
     <type>Engine Building</type>
     <numberOfPlayersMin>1</numberOfPlayersMin>
-    <numberOfPlayersMax>1</numberOfPlayersMax>
+    <numberOfPlayersMax>2</numberOfPlayersMax>
     <availabilityStatus>Available</availabilityStatus>
     <comment/>
     <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>1</ID>
+    <name>po</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>3</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment>po</comment>
+    <ownerID>1</ownerID>
     <numberOfVotes>0</numberOfVotes>
   </BoardGame>
 </BoardGamesList>

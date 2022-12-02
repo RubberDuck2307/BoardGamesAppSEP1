@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<PlayersList/>
+<PlayersList>
+  <Player>
+    <ID>1</ID>
+    <name>Pavel</name>
+    <phoneNumber>12</phoneNumber>
+    <email/>
+    <membership>true</membership>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+  </Player>
+</PlayersList>
