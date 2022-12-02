@@ -24,4 +24,10 @@
     <playerID>3</playerID>
     <gameID>2</gameID>
   </Rating>
+  <Rating>
+    <ID>5</ID>
+    <value>4</value>
+    <playerID>0</playerID>
+    <gameID>0</gameID>
+  </Rating>
 </RatingsList>

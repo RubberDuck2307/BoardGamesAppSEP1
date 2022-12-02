@@ -50,7 +50,10 @@ public class BoardGamesInsertRatingController implements ExtendedController
     nameMemberField.setText(player);
 
 
-
+    nameBoardField.setMouseTransparent(true);
+    nameMemberField.setMouseTransparent(true);
+    nameMemberField.setFocusTraversable(false);
+    nameMemberField.setFocusTraversable(false);
 
   }
 

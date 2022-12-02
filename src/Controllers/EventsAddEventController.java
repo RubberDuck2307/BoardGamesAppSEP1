@@ -44,11 +44,15 @@ public class EventsAddEventController implements Controller
     this.region = region;
     this.model = model;
     this.viewHandler = viewHandler;
-    fromDateField.setDisable(false);
+    //fromDateField.setDisable(false);
+    fromDateField.setMouseTransparent(false);
+    fromDateField.setFocusTraversable(true);
     fromDateField.setValue(LocalDate.now());
     fromHoursField.setText("16");
     fromMinutesField.setText("00");
     toDateField.setDisable(false);
+    fromDateField.setMouseTransparent(false);
+    fromDateField.setFocusTraversable(true);
     toDateField.setValue(LocalDate.now());
     toHoursField.setText("18");
     toMinutesField.setText("00");
