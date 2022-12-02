@@ -69,17 +69,29 @@ public class EventsDetailPageController implements Controller
     descriptionField.setText(event.getDescription());
     commentField.setText(event.getComment());
 
-    nameField.setDisable(true);
-    placeField.setDisable(true);
-    fromDateField.setDisable(true);
-    fromHoursField.setDisable(true);
-    fromMinutesField.setDisable(true);
-    toDateField.setDisable(true);
-    toHoursField.setDisable(true);
-    toMinutesField.setDisable(true);
-    linkField.setDisable(true);
-    descriptionField.setDisable(true);
-    commentField.setDisable(true);
+    nameField.setMouseTransparent(true);
+    placeField.setMouseTransparent(true);
+    fromDateField.setMouseTransparent(true);
+    fromHoursField.setMouseTransparent(true);
+    fromMinutesField.setMouseTransparent(true);
+    toDateField.setMouseTransparent(true);
+    toHoursField.setMouseTransparent(true);
+    toMinutesField.setMouseTransparent(true);
+    linkField.setMouseTransparent(true);
+    descriptionField.setMouseTransparent(true);
+    commentField.setMouseTransparent(true);
+
+    nameField.setFocusTraversable(false);
+    placeField.setFocusTraversable(false);
+    fromDateField.setFocusTraversable(false);
+    fromHoursField.setFocusTraversable(false);
+    fromMinutesField.setFocusTraversable(false);
+    toDateField.setFocusTraversable(false);
+    toHoursField.setFocusTraversable(false);
+    toMinutesField.setFocusTraversable(false);
+    linkField.setFocusTraversable(false);
+    descriptionField.setFocusTraversable(false);
+    commentField.setFocusTraversable(false);
   }
 
   @Override public Region getRegion()
@@ -93,17 +105,29 @@ public class EventsDetailPageController implements Controller
 
   public void edit(ActionEvent actionEvent)
   {
-    nameField.setDisable(false);
-    placeField.setDisable(false);
-    linkField.setDisable(false);
-    fromDateField.setDisable(false);
-    fromHoursField.setDisable(false);
-    fromMinutesField.setDisable(false);
-    toDateField.setDisable(false);
-    toHoursField.setDisable(false);
-    toMinutesField.setDisable(false);
-    descriptionField.setDisable(false);
-    commentField.setDisable(false);
+    nameField.setMouseTransparent(false);
+    placeField.setMouseTransparent(false);
+    fromDateField.setMouseTransparent(false);
+    fromHoursField.setMouseTransparent(false);
+    fromMinutesField.setMouseTransparent(false);
+    toDateField.setMouseTransparent(false);
+    toHoursField.setMouseTransparent(false);
+    toMinutesField.setMouseTransparent(false);
+    linkField.setMouseTransparent(false);
+    descriptionField.setMouseTransparent(false);
+    commentField.setMouseTransparent(false);
+
+    nameField.setFocusTraversable(true);
+    placeField.setFocusTraversable(true);
+    fromDateField.setFocusTraversable(true);
+    fromHoursField.setFocusTraversable(true);
+    fromMinutesField.setFocusTraversable(true);
+    toDateField.setFocusTraversable(true);
+    toHoursField.setFocusTraversable(true);
+    toMinutesField.setFocusTraversable(true);
+    linkField.setFocusTraversable(true);
+    descriptionField.setFocusTraversable(true);
+    commentField.setFocusTraversable(true);
     editButton.setText("Save Changes");
 
     save = event -> {

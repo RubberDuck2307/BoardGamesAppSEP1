@@ -118,7 +118,7 @@
                   </HBox>
                </children>
             </HBox>
-            <Label fx:id="playerCount" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="63.0" prefWidth="107.0" styleClass="labels" text="00 Players" GridPane.rowIndex="3">
+            <Label fx:id="playerCount" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="63.0" prefWidth="117.0" styleClass="labels" text="00 Members" GridPane.rowIndex="3">
                <font>
                   <Font size="24.0" />
                </font>
