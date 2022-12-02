@@ -33,10 +33,24 @@ public class Reservation
     this.to = to;
     this.comment = comment;
   }
-  static public boolean validateData(LocalDate start, LocalDate end)
+  static public boolean validateData(ReservationsList reservationsList, BorrowingsList borrowingsList, LocalDate start, LocalDate end, int gameID)
   {
     if (!end.isAfter(start)){
       throw new RuntimeException("The borrowing must end after it starts");
+    }
+
+    for(int i = 0; i<reservationsList.size(); i++){
+      if(reservationsList.getReservation(i).getGameID()==gameID){
+        if( (start.isAfter(reservationsList.getReservation(i).from)&& start.isBefore(reservationsList.getReservation(i).to)) ||
+            (end.isAfter(reservationsList.getReservation(i).from)&&end.isBefore(reservationsList.getReservation(i).to))||
+            (reservationsList.getReservation(i).from.isAfter(start)&& reservationsList.getReservation(i).from.isBefore(end))||
+            (reservationsList.getReservation(i).to.isAfter(start)&& reservationsList.getReservation(i).to.isBefore(start))
+            // TODO comlete validation - same days
+        ){
+          throw new RuntimeException("This game is not available for this date, please change the date ");
+        }
+
+      }
     }
 
     // TODO check if there are no reservation or borrowings for this date for this bg

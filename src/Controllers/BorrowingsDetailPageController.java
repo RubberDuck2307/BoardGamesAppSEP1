@@ -92,8 +92,11 @@ public class BorrowingsDetailPageController implements Controller
       String comment = comments.getText();
       try
       {
+        ReservationsList reservationsList = model.getReservationsList();
+        BorrowingsList borrowingsList = model.getBorrowingsList();
+        BoardGamesList boardGamesList = model.getBoardGamesList();
 
-      if (Reservation.validateData(startDate, endDate))
+      if (Reservation.validateData(reservationsList, borrowingsList,startDate, endDate, nameOfBG))
       {
         Reservation reservation1 = new Reservation(ID,nameOfBG,nameOfP,startDate,endDate, comment);
         model.setBorrowing(reservation1, ID);
