@@ -40,6 +40,8 @@ public class ModelManager
     return eventsList;
   }
 
+
+
   public ModelManager()
       throws TransformerConfigurationException, ParserConfigurationException,
       IOException, SAXException
@@ -68,6 +70,13 @@ public class ModelManager
       throws ParserConfigurationException, TransformerException
   {
     FileReader.saveEventsList(eventsList);
+  }
+
+  public void setReservationByID(Reservation reservation, int ID){
+    reservationsList.setReservationByID(reservation, ID);
+  }
+  public void saveReservation() throws ParserConfigurationException, TransformerException {
+    FileReader.saveReservationsList(reservationsList);
   }
 
   public void setEvent(Event event, int ID){
