@@ -4,6 +4,7 @@ import Application.ViewHandler;
 import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -85,7 +86,7 @@ public class ReservationController implements Controller
   }
 
   public void chooseReservation(){
-    viewHandler.openView(401, reservationTable.getSelectionModel().getSelectedItem().getID());
+    viewHandler.openView(201, reservationTable.getSelectionModel().getSelectedItem().getID());
   }
   @Override public Region getRegion()
   {
@@ -95,5 +96,11 @@ public class ReservationController implements Controller
   @Override public void reset()
   {
 
+  }
+
+  public void fillTable(ActionEvent actionEvent) {
+  }
+
+  public void addReservation(ActionEvent actionEvent) {
   }
 }
