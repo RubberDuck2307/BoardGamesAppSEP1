@@ -62,11 +62,13 @@ public class BorrowingsAddFinalFormController implements ExtendedController
     LocalDate endDate = end.getValue();
     String comment = comments.getText();
 
+
     try
   {
+    ReservationsList reservationsList = model.getReservationsList();
+    BorrowingsList borrowingsList = model.getBorrowingsList();
 
-
-    if (Reservation.validateData(startDate, endDate))
+    if (Reservation.validateData(reservationsList, borrowingsList,startDate, endDate,ID2))
     {
       model.addBorrowing( new Reservation(ID,ID2,startDate,endDate, comment));
       model.saveBorrowing();

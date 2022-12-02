@@ -3,16 +3,16 @@
   <reservation>
     <ID>0</ID>
     <playerID>3</playerID>
-    <gameID>0</gameID>
+    <gameID>1</gameID>
     <from>
-      <day>24</day>
-      <month>3</month>
-      <year>2003</year>
+      <day>1</day>
+      <month>12</month>
+      <year>2022</year>
     </from>
     <to>
-      <day>24</day>
-      <month>3</month>
-      <year>2003</year>
+      <day>6</day>
+      <month>12</month>
+      <year>2022</year>
     </to>
     <comment>xx</comment>
   </reservation>
