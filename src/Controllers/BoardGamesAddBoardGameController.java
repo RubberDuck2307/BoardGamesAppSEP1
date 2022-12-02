@@ -77,7 +77,9 @@ public class BoardGamesAddBoardGameController  implements Controller
     if(BoardGame.validateData(nameField.getText(), minimum, maximum)){
       model.addBoardGame(new BoardGame( nameField.getText(), typeOfGame, minimum,maximum, statusOfGame, commentField.getText(), owner, 0 ));
       model.saveBoardGames();
-      viewHandler.openView(9,model.getBoardGamesList().size() -1);
+      System.out.println(model.getBoardGamesList());
+      viewHandler.openView(9,model.getBoardGamesList().getBoardGame(model.getBoardGamesList()
+          .size() -1).getID());
     }
 
   }
