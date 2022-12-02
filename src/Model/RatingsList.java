@@ -48,6 +48,27 @@ public class RatingsList
     }
   }
 
+  public RatingsList getRatingByBoardGame(int ID){
+   RatingsList newRatingsList = new RatingsList();
+    for (int i = 0; i < size(); i++)
+    {
+      if(ID == getRating(i).getGameID()){
+        newRatingsList.addRating(getRating(i));
+      }
+    }
+    return newRatingsList;
+  }
+
+  public RatingsList getRatingsByPlayer(int ID){
+    RatingsList newRatingsList = new RatingsList();
+    for (int i = 0; i < size(); i++)
+    {
+      if(ID == getRating(i).getPlayerID()){
+        newRatingsList.addRating(getRating(i));
+      }
+    }
+    return newRatingsList;
+  }
   @Override public String toString()
   {
     return "Model.RatingsList{" + "ratingList=" + ratingList + '}';

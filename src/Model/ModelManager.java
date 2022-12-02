@@ -15,13 +15,17 @@ public class ModelManager
   private ReservationsList reservationsList = FileReader.readReservations();
   private EventsList eventsList = FileReader.readEventsList();
   private BorrowingsList borrowingsList = FileReader.readCurrentBorrowings();
+
+  private RatingsList ratingsList = FileReader.readRatingsList();
   private Election election = FileReader.readElection();
 
-  public BorrowingsList getBorrowingsList() {
+  public BorrowingsList getBorrowingsList()
+  {
     return borrowingsList;
   }
 
-  public ReservationsList getReservationsList() {
+  public ReservationsList getReservationsList()
+  {
     return reservationsList;
   }
 
@@ -46,25 +50,30 @@ public class ModelManager
   {
   }
 
-  public void addPlayer(Player player){
+  public void addPlayer(Player player)
+  {
     playersList.addPlayer(player);
   }
-  public void addBoardGame(BoardGame boardGame){
+
+  public void addBoardGame(BoardGame boardGame)
+  {
     boardGamesList.addBoardGame(boardGame);
   }
 
-  public void savePlayers ()
+  public void savePlayers()
       throws ParserConfigurationException, TransformerException
   {
     FileReader.savePlayersList(playersList);
   }
-  public void saveBorrowing ()
+
+  public void saveBorrowing()
       throws ParserConfigurationException, TransformerException
   {
     FileReader.saveCurrentBorrowings(borrowingsList);
   }
 
-  public void setPlayer(Player player, int ID){
+  public void setPlayer(Player player, int ID)
+  {
     playersList.setPlayer(player, ID);
   }
 
@@ -84,7 +93,8 @@ public class ModelManager
     FileReader.saveElection(election);
   }
 
-  public void resetVotedOfAllPlayers(){
+  public void resetVotedOfAllPlayers()
+  {
     playersList.setAllPlayersVotedFalse();
   }
 
@@ -94,18 +104,23 @@ public class ModelManager
     FileReader.saveBoardGameList(boardGamesList);
   }
 
-  public void setAllVotesTo0(){
+  public void setAllVotesTo0()
+  {
     boardGamesList.setAllVotesTo0();
   }
-  public void setBoardGame(BoardGame boardGame, int ID){
+
+  public void setBoardGame(BoardGame boardGame, int ID)
+  {
     boardGamesList.setBoardGame(boardGame, ID);
   }
-  public void setBorrowing(Reservation borrowing, int ID){
+
+  public void setBorrowing(Reservation borrowing, int ID)
+  {
     borrowingsList.setBorrowing(borrowing, ID);
   }
 
-
-  public void addEvent(Event event){
+  public void addEvent(Event event)
+  {
     eventsList.addEvent(event);
   }
 
@@ -115,14 +130,32 @@ public class ModelManager
     FileReader.saveEventsList(eventsList);
   }
 
-  public BoardGamesList getBoardGamesByOwnership(int ID){
+  public BoardGamesList getBoardGamesByOwnership(int ID)
+  {
     return boardGamesList.findByOwnership(ID);
   }
 
-  public ReservationsList getReservationsByPlayer(int ID){
+  public ReservationsList getReservationsByPlayer(int ID)
+  {
     return reservationsList.getReservationsByPlayer(ID);
   }
-  public void setEvent(Event event, int ID){
+
+  public void setEvent(Event event, int ID)
+  {
     eventsList.setEvent(event, ID);
+  }
+
+  public RatingsList getRatingsByGame(int ID){
+    return ratingsList.getRatingByBoardGame(ID);
+  }
+
+  public void addRating(Rating rating){
+    ratingsList.addRating(rating);
+  }
+
+  public void saveRatings()
+      throws ParserConfigurationException, TransformerException
+  {
+    FileReader.saveRatingsList(ratingsList);
   }
 }

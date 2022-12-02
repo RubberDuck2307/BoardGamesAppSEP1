@@ -2,6 +2,7 @@ package Controllers;
 
 import Application.FileReader;
 import Application.ViewHandler;
+import Model.BoardGamesList;
 import Model.ModelManager;
 import Model.Player;
 import Model.PlayerTable;
@@ -37,6 +38,7 @@ public class PlayersDetailPageController implements Controller
   private int ID;
 
   private EventHandler save;
+
   @Override public void init(Region region, ModelManager model,
       ViewHandler viewHandler, int ID)
   {
@@ -46,7 +48,9 @@ public class PlayersDetailPageController implements Controller
     this.ID = ID;
     setData();
   }
-  public void setData(){
+
+  public void setData()
+  {
     Player player = model.getPlayersList().getPlayerByID(ID);
     votedBox.setSelected(player.getVoted());
     nameField.setText(player.getName());
@@ -59,7 +63,8 @@ public class PlayersDetailPageController implements Controller
     emailField.setDisable(true);
     phoneNumberField.setDisable(true);
     addressField.setDisable(true);
-    if(player.isMembership()){
+    if (player.isMembership())
+    {
       membershipBox.setSelected(true);
     }
     membershipBox.setDisable(true);
@@ -103,7 +108,8 @@ public class PlayersDetailPageController implements Controller
 
         if (Player.validateData(name, phone, email))
         {
-          Player player = new Player(ID, name, phone, email, membership, comment, address, votedBox.isSelected(), feePayment);
+          Player player = new Player(ID, name, phone, email, membership,
+              comment, address, votedBox.isSelected(), feePayment);
           model.setPlayer(player, ID);
           try
           {
@@ -123,7 +129,8 @@ public class PlayersDetailPageController implements Controller
 
         }
       }
-      catch (Exception e){
+      catch (Exception e)
+      {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Invalid data");
         alert.setHeaderText(e.getMessage());
@@ -144,21 +151,34 @@ public class PlayersDetailPageController implements Controller
     Optional<ButtonType> result = alert.showAndWait();
     if (result.isPresent() && result.get() == ButtonType.OK)
     {
-    model.getPlayersList().deleteByID(ID);
-    model.savePlayers();
-    viewHandler.openView(2,-1);}
+      BoardGamesList ownedBoardGames = model.getBoardGamesByOwnership(ID);
+      if (ownedBoardGames.size() > 0)
+      {
+        viewHandler.openView(17, ID);
+      }
+      else
+      {
+        model.getPlayersList().deleteByID(ID);
+        model.savePlayers();
+        viewHandler.openView(2, -1);
+      }
+    }
 
   }
 
-  @FXML public void showOwnedGames(){
-    viewHandler.openView(3,ID);
+  @FXML public void showOwnedGames()
+  {
+    viewHandler.openView(3, ID);
   }
 
-  @FXML public void showReservations(){
-    viewHandler.openView(5,ID);
+  @FXML public void showReservations()
+  {
+    viewHandler.openView(5, ID);
 
   }
-  public void goBack(){
-    viewHandler.openView(2,-1);
+
+  public void goBack()
+  {
+    viewHandler.openView(2, -1);
   }
 }

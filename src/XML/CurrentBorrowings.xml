@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <borrowingsList>
   <Borrowing>
-    <ID>4</ID>
-    <playerID>4</playerID>
-    <gameID>0</gameID>
-    <from>
-      <day>15</day>
-      <month>3</month>
-      <year>2025</year>
-    </from>
-    <to>
-      <day>15</day>
-      <month>3</month>
-      <year>2029</year>
-    </to>
-    <comment>s</comment>
-  </Borrowing>
-  <Borrowing>
     <ID>5</ID>
     <playerID>2</playerID>
     <gameID>4</gameID>

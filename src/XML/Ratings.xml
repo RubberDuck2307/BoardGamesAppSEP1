@@ -3,22 +3,25 @@
   <Rating>
     <ID>0</ID>
     <value>2</value>
-    <playerID>5</playerID>
-    <gameID>3</gameID>
-    <review>hello</review>
+    <playerID>2</playerID>
+    <gameID>1</gameID>
   </Rating>
   <Rating>
     <ID>2</ID>
     <value>2</value>
-    <playerID>5</playerID>
-    <gameID>3</gameID>
-    <review>hello</review>
+    <playerID>1</playerID>
+    <gameID>1</gameID>
   </Rating>
   <Rating>
     <ID>3</ID>
     <value>2</value>
-    <playerID>5</playerID>
-    <gameID>3</gameID>
-    <review>hello</review>
+    <playerID>2</playerID>
+    <gameID>1</gameID>
+  </Rating>
+  <Rating>
+    <ID>4</ID>
+    <value>1</value>
+    <playerID>3</playerID>
+    <gameID>2</gameID>
   </Rating>
 </RatingsList>

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BoardGamesRatingsController">
    <children>
       <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css">
          <columnConstraints>
@@ -25,7 +25,7 @@
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" valignment="TOP" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Label fx:id="headingLable" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="820.0" styleClass="heading" text="BOARD GAME NAME" textAlignment="CENTER" GridPane.columnIndex="1">
+            <Label fx:id="headingLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="820.0" styleClass="heading" text="BOARD GAME NAME" textAlignment="CENTER" GridPane.columnIndex="1">
                <font>
                   <Font size="72.0" />
                </font>

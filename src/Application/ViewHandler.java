@@ -36,6 +36,9 @@ public class ViewHandler
   private EventsAddParticipantController eventsAddParticipantController;
   private EventsSelectParticipantController eventsSelectParticipantController;
   private BoardgamesAddRatingController boardgamesAddRatingController;
+  private BoardGamesRatingsController boardGamesRatingsController;
+  private BoardGamesInsertRatingController boardGamesInsertRatingController;
+  private PlayersDeletePlayerController playersDeletePlayerController;
 
   public ViewHandler(ModelManager model)
   {
@@ -134,6 +137,13 @@ public class ViewHandler
         break;
       case 15:
         root = loadSimpleGuiView("/FXML/BoardgamesAddRating.fxml",boardgamesAddRatingController ,IDOfItem);
+        break;
+      case 16:
+        root = loadSimpleGuiView("/FXML/BoardgamesRatings.fxml", boardGamesRatingsController, IDOfItem);
+        break;
+      case 17:
+        root = loadSimpleGuiView("/FXML/PlayersDeletePlayer.fxml", playersDeletePlayerController ,IDOfItem);
+
     }
 
     currentScene.setRoot(root);
@@ -149,6 +159,8 @@ public class ViewHandler
     Region root = null;
     switch (IDofPage)
     {
+      case 1: root = loadExtendedGuiView("/FXML/BoardgamesInsertRating.fxml", boardGamesInsertRatingController, IDOfItem, IDOfItem2);
+      break;
     }
 
     currentScene.setRoot(root);

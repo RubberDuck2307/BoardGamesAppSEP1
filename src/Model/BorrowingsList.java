@@ -39,16 +39,16 @@ public class BorrowingsList
     return null;
   }
 
-  public BorrowingsList filterBorrowingList(String charSequence, PlayersList playersList, BoardGamesList boardGamesList)
+  public BorrowingsList filterBorrowingList(String charSequence,
+      PlayersList playersList, BoardGamesList boardGamesList)
   {
     BorrowingsList newBorrowingList = new BorrowingsList();
 
     for (int i = 0; i < size(); i++)
     {
       if (playersList.getPlayerByID(borrowingList.get(i).getPlayerID())
-              .getName().contains(charSequence) ||
-          boardGamesList.getBoardGameByID(borrowingList.get(i).getGameID())
-              .getName().contains(charSequence))
+          .getName().contains(charSequence) || boardGamesList.getBoardGameByID(
+          borrowingList.get(i).getGameID()).getName().contains(charSequence))
       {
         newBorrowingList.addBorrowing(borrowingList.get(i));
       }
@@ -93,6 +93,19 @@ public class BorrowingsList
         break;
       }
     }
+  }
+
+  public BorrowingsList getByGameID(int ID)
+  {
+    BorrowingsList newBorrowingList = new BorrowingsList();
+    for (int i = 0; i < size(); i++)
+    {
+      if (getBorrowing(i).getGameID() == ID)
+      {
+        newBorrowingList.addBorrowing(getBorrowing(i));
+      }
+    }
+    return newBorrowingList;
   }
 
   public void setBorrowing(Reservation borrowing, int ID)

@@ -76,9 +76,6 @@ public class ElectionAddVoteSelectGameController implements Controller
       throws ParserConfigurationException, TransformerException
   {
     model.getPlayersList().getPlayerByID(IDOfPlayer).setVoted(true);
-    System.out.println(IDOfPlayer);
-    System.out.println(model.getPlayersList().getPlayerByID(IDOfPlayer));
-    System.out.println(model.getPlayersList());
     model.getBoardGamesList().getBoardGameByID(gamesTable.getSelectionModel().getSelectedItem().getID()).addVote();
     model.savePlayers();
     model.saveBoardGames();

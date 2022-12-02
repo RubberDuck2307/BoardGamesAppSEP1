@@ -45,4 +45,12 @@ public class AddPlayerController implements Controller
   {
     return region;
   }
+
+  public void goBack(){
+
+  }
+
+  public void confirmRating(){
+
+  }
 }
