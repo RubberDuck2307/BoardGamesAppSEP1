@@ -27,6 +27,8 @@ public class ViewHandler
   private EventsDetailPageController eventsDetailPageController;
   private EventsAddEventController eventsAddEventController;
 
+  private ReservationsDetailsPageController reservationsDetailsPageController;
+
   public ViewHandler(ModelManager model)
   {
 
@@ -82,6 +84,10 @@ public class ViewHandler
         break;
       case 12:
         root = loadSimpleGuiView("/FXML/EventsAddEvent.fxml", eventsAddEventController,-1);
+        break;
+      case 401:
+        root = loadSimpleGuiView("/FXML/ReservationsDetailPage.fxml", reservationsDetailsPageController, IDOfItem);
+        break;
     }
 
     currentScene.setRoot(root);

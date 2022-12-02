@@ -4,6 +4,7 @@ import Application.ViewHandler;
 import Model.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.Region;
 
@@ -28,6 +29,7 @@ public class ReservationsDetailsPageController implements Controller{
     public Button deleteButton;
     public Button memberInfoButton;
     public Button boardGameButton;
+
 
     private int ID;
     private EventHandler save;
