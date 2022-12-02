@@ -68,7 +68,7 @@ public class BoardGamesList
     }
   }
 
-  public BoardGamesList getBoardgameListByStatus(String status)
+  public BoardGamesList getBoardGameListByStatus(String status)
   {
     BoardGamesList newBoardGameList = new BoardGamesList();
     for (int i = 0; i < size(); i++)
@@ -81,7 +81,7 @@ public class BoardGamesList
     return newBoardGameList;
   }
 
-  public BoardGamesList getBoardgameListByGenre(String genre)
+  public BoardGamesList getBoardGameListByGenre(String genre)
   {
     BoardGamesList newBoardGameList = new BoardGamesList();
     for (int i = 0; i < size(); i++)
@@ -94,7 +94,7 @@ public class BoardGamesList
     return newBoardGameList;
   }
 
-  public BoardGamesList getBoardgameListByNumbeOfPlayers(int numberOfPlayers)
+  public BoardGamesList getBoardGameListByNumberOfPlayers(int numberOfPlayers)
   {
     BoardGamesList newBoardGameList = new BoardGamesList();
     for (int i = 0; i < size(); i++)
@@ -102,70 +102,12 @@ public class BoardGamesList
       if (boardGamesList.get(i).getNumberOfPlayersMin() <= numberOfPlayers
           && numberOfPlayers <= boardGamesList.get(i).getNumberOfPlayersMax())
       {
+        newBoardGameList.addBoardGame(boardGamesList.get(i));
       }
     }
     return newBoardGameList;
   }
 
-  public BoardGamesList getBoardgameListByGenreAndStatus(String genre,
-      String status)
-  {
-    BoardGamesList newBoardGameListGenre = new BoardGamesList();
-    BoardGamesList newBoardGameList = new BoardGamesList();
-    for (int i = 0; i < size(); i++)
-    {
-      if (Objects.equals(boardGamesList.get(i).getType(), genre))
-      {
-        newBoardGameListGenre.addBoardGame(boardGamesList.get(i));
-      }
-    }
-    BoardGamesList newBoardGameListStatus = new BoardGamesList();
-    for (int i = 0; i < size(); i++)
-    {
-      if (Objects.equals(boardGamesList.get(i).getAvailabilityStatus(), status))
-      {
-        newBoardGameListStatus.addBoardGame(boardGamesList.get(i));
-      }
-    }
-    for (int i = 0; i < newBoardGameListStatus.size(); i++)
-    {
-      for (int k = 0; k < newBoardGameListGenre.size(); k++)
-      {
-        if (newBoardGameListStatus.getBoardGame(i).getID()
-            == newBoardGameListGenre.getBoardGame(k).getID())
-        {
-          if (newBoardGameList.size() == 0)
-          {
-            newBoardGameList.addBoardGame(
-                newBoardGameListGenre.getBoardGame(i));
-          }
-          else
-          {
-            for (int j = 0; j < newBoardGameList.size(); j++)
-            {
-              if (newBoardGameListStatus.getBoardGame(i).getID()
-                  != newBoardGameList.getBoardGame(j).getID())
-              {
-                newBoardGameList.addBoardGame(
-                    newBoardGameListGenre.getBoardGame(i));
-                System.out.println(
-                    "toto je filter " + newBoardGameList.toString());
-              }
-            }
-          }
-
-          if (newBoardGameListStatus.getBoardGame(i).getID()
-              != newBoardGameList.getBoardGame(k).getID())
-          {
-            newBoardGameList.addBoardGame(
-                newBoardGameListGenre.getBoardGame(i));
-            System.out.println("toto je filter " + newBoardGameList.toString());
-          }
-        }
-      }
-    }
-    return newBoardGameList;
-  }
 
   public BoardGame getBoardGame(int index)
   {
