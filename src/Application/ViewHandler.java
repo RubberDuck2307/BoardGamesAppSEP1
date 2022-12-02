@@ -36,6 +36,9 @@ public class ViewHandler
   private EventsAddParticipantController eventsAddParticipantController;
   private EventsSelectParticipantController eventsSelectParticipantController;
   private BoardgamesAddRatingController boardgamesAddRatingController;
+  private BorrowingsAddSelectPlayerController borrowingsAddSelectPlayerController;
+  private BorrowingsAddSelectBoardGameController borrowingsAddSelectBoardGameController;
+  private BorrowingsAddFinalFormController borrowingsAddFinalFormController;
 
   public ViewHandler(ModelManager model)
   {
@@ -112,13 +115,16 @@ public class ViewHandler
             eventsDetailPageController, IDOfItem);
         break;
       case 12:
-        root = loadSimpleGuiView("/FXML/EventsAddEvent.fxml", eventsAddEventController,-1);
+        root = loadSimpleGuiView("/FXML/EventsAddEvent.fxml",
+            eventsAddEventController, -1);
         break;
       case 13:
-        root = loadSimpleGuiView("/FXML/EventsAddParticipant.fxml", eventsAddParticipantController, IDOfItem);
+        root = loadSimpleGuiView("/FXML/EventsAddParticipant.fxml",
+            eventsAddParticipantController, IDOfItem);
         break;
       case 14:
-        root = loadSimpleGuiView("/FXML/EventsSelectParticipant.fxml",eventsSelectParticipantController, IDOfItem);
+        root = loadSimpleGuiView("/FXML/EventsSelectParticipant.fxml",
+            eventsSelectParticipantController, IDOfItem);
         break;
       case 130:
         root = loadSimpleGuiView("/FXML/BoardgamesAddBoardgame.fxml",
@@ -133,7 +139,19 @@ public class ViewHandler
             boardGamesAddBoardGameControllerSelectOwner, -1);
         break;
       case 15:
-        root = loadSimpleGuiView("/FXML/BoardgamesAddRating.fxml",boardgamesAddRatingController ,IDOfItem);
+        root = loadSimpleGuiView("/FXML/BoardgamesAddRating.fxml",
+            boardgamesAddRatingController, IDOfItem);
+        break;
+      case 133:
+        root = loadSimpleGuiView("/FXML/BorrowingsAddSelectPlayer.fxml",
+            borrowingsAddSelectPlayerController, -1);
+        break;
+      case 134:
+        root = loadSimpleGuiView("/FXML/BorrowingsAddSelectBoardgame.fxml",
+            borrowingsAddSelectBoardGameController, IDOfItem);
+        break;
+
+
     }
 
     currentScene.setRoot(root);
@@ -149,6 +167,10 @@ public class ViewHandler
     Region root = null;
     switch (IDofPage)
     {
+      case 135:
+        root = loadExtendedGuiView("/FXML/BorrowingsAddFinalForm.fxml",
+            borrowingsAddFinalFormController, IDOfItem,IDOfItem2 );
+        break;
     }
 
     currentScene.setRoot(root);
@@ -192,8 +214,8 @@ public class ViewHandler
 
   }
 
-  private Region loadExtendedGuiView(String fxmlFile, ExtendedController controller,
-      int ID, int ID2)
+  private Region loadExtendedGuiView(String fxmlFile,
+      ExtendedController controller, int ID, int ID2)
   {
     Region root = null;
     if (controller == null)

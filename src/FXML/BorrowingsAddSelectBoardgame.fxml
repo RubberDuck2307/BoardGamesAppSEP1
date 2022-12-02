@@ -5,7 +5,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -16,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BorrowingsAddSelectBoardGameController">
    <children>
       <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css">
          <columnConstraints>
@@ -26,12 +25,12 @@
          </columnConstraints>
          <rowConstraints>
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="155.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="83.0" valignment="TOP" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="83.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="83.0" valignment="TOP" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="83.0" valignment="CENTER" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="231.0" valignment="BOTTOM" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="83.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="300.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="TOP" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="820.0" styleClass="heading" text="ADD BORROWING" textAlignment="CENTER" GridPane.columnIndex="1">
@@ -42,11 +41,11 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="820.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="820.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="622.0">
+                  <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="622.0">
                      <children>
-                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="63.0" prefWidth="622.0" promptText="Search..." styleClass="fields-search">
+                        <TextField fx:id="serach" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="622.0" promptText="Search..." styleClass="fields-search">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -68,7 +67,7 @@
                <children>
                   <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="219.0">
                      <children>
-                        <MenuButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="53.0" prefWidth="213.0" styleClass="input-select" text="Select Status">
+                        <MenuButton fx:id="status" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="53.0" prefWidth="213.0" styleClass="input-select" text="Select Status">
                           <items>
                             <MenuItem mnemonicParsing="false" text="Action 1" />
                             <MenuItem mnemonicParsing="false" text="Action 2" />
@@ -87,7 +86,7 @@
                   </HBox>
                   <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="219.0">
                      <children>
-                        <MenuButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="53.0" prefWidth="213.0" styleClass="input-select" text="Select Genre">
+                        <MenuButton fx:id="genre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="53.0" prefWidth="213.0" styleClass="input-select" text="Select Genre">
                            <items>
                               <MenuItem mnemonicParsing="false" text="Action 1" />
                               <MenuItem mnemonicParsing="false" text="Action 2" />
@@ -106,28 +105,20 @@
                   </HBox>
                </children>
             </HBox>
-            <TableView editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="231.0" prefWidth="820.0" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <TableView fx:id="boardGameTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMousePressed="#chooseBoardgame" prefHeight="322.0" prefWidth="820.0" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <columns>
-                  <TableColumn id="text" fx:id="text" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Name" />
-                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Type" />
-                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Availability" />
-                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="190.0" resizable="false" style="-fx-font-size: 24px;" text="Number of Players" />
+                  <TableColumn id="text" fx:id="name" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Name" />
+                  <TableColumn fx:id="type" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Type" />
+                  <TableColumn fx:id="availability" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Availability" />
+                  <TableColumn fx:id="numberofPlayers" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="190.0" resizable="false" style="-fx-font-size: 24px;" text="Number of Players" />
                </columns>
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </TableView>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Confirm Model.Borrowing" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets right="50.0" />
-               </GridPane.margin>
-            </Button>
-            <HBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="820.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <HBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="820.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="299.0">
+                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="362.0">
                      <children>
                         <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="164.0" styleClass="labels" text="Number of Players">
                            <font>
@@ -142,17 +133,13 @@
                         <Insets left="20.0" right="25.0" />
                      </HBox.margin>
                   </HBox>
-                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="299.0">
-                     <children>
-                        <Slider majorTickUnit="1.0" max="12.0" maxHeight="-Infinity" maxWidth="-Infinity" min="1.0" minHeight="-Infinity" minWidth="-Infinity" minorTickCount="2" prefHeight="84.0" prefWidth="299.0" showTickLabels="true" snapToTicks="true" value="1.0">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Slider>
-                     </children>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="299.0">
                      <HBox.margin>
                         <Insets left="25.0" />
                      </HBox.margin>
+                     <children>
+                        <TextField fx:id="number" alignment="CENTER" styleClass="input-field" />
+                     </children>
                   </HBox>
                </children>
             </HBox>
@@ -163,7 +150,7 @@
             </Label>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
+                  <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#goBack" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
                </children>
                <GridPane.margin>
                   <Insets left="60.0" top="40.0" />

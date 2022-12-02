@@ -4,6 +4,7 @@ import Application.ViewHandler;
 import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -107,5 +108,11 @@ public class BorrowingsController implements Controller
   {
     viewHandler.openView(131,
         borrowingsTable.getSelectionModel().getSelectedItem().getID());
+  }
+
+  public void addBorrowing()
+  {
+    viewHandler.openView(133,
+        -1);
   }
 }

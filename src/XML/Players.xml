@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <PlayersList>
   <Player>
-    <ID>3</ID>
+    <ID>1</ID>
     <name>Pavel</name>
     <phoneNumber>555</phoneNumber>
     <email/>
@@ -16,7 +16,7 @@
     </feePayment>
   </Player>
   <Player>
-    <ID>1</ID>
+    <ID>2</ID>
     <name>Karel</name>
     <phoneNumber>37</phoneNumber>
     <email/>
@@ -26,7 +26,7 @@
     <voted>true</voted>
   </Player>
   <Player>
-    <ID>2</ID>
+    <ID>3</ID>
     <name>Josef</name>
     <phoneNumber>85</phoneNumber>
     <email/>

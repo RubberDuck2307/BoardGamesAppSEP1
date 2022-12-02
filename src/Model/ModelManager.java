@@ -52,6 +52,9 @@ public class ModelManager
   public void addBoardGame(BoardGame boardGame){
     boardGamesList.addBoardGame(boardGame);
   }
+  public void addBorrowing(Reservation reservation){
+    borrowingsList.addBorrowing(reservation);
+  }
 
   public void savePlayers ()
       throws ParserConfigurationException, TransformerException
