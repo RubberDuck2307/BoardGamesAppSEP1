@@ -52,22 +52,57 @@ public class PlayersAddPlayerController implements Controller
       if (Player.validateData(nameField.getText(), phoneNumberField.getText(),
           emailField.getText()))
       {
-        model.addPlayer(new Player(nameField.getText(), phoneNumberField.getText(),
-            emailField.getText(), membershipBox.isSelected(), commentField.getText(), addressField.getText(), false,
-            feeDatePicker.getValue()));
-        model.savePlayers();
-        viewHandler.openView(8, model.getPlayersList().size() - 1);
+        Player newPlayer = new Player(nameField.getText(),
+            phoneNumberField.getText(), emailField.getText(),
+            membershipBox.isSelected(), commentField.getText(),
+            addressField.getText(), false, feeDatePicker.getValue());
+        boolean existing = false;
+        for (int i = 0; i < model.getPlayersList().size(); i++)
+        {
+          if (newPlayer.getName()
+              .equals(model.getPlayersList().getPlayer(i).getName())
+              && newPlayer.getPhoneNumber()
+              .equals(model.getPlayersList().getPlayer(i).getPhoneNumber()))
+          {
+            existing = true;
+          }
+        }
+        if (existing)
+        {
+          Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+          alert.setTitle("The player exists already!");
+          alert.setHeaderText(
+              "A player with the same data is already existing. Do you want to create it anyway?");
+          Optional<ButtonType> result = alert.showAndWait();
+          if (result.isPresent() && result.get() == ButtonType.OK)
+          {
+            model.addPlayer(newPlayer);
+            viewHandler.openView(2, model.getPlayersList().size() - 1);
+          }
+          model.savePlayers();
+
+        }
+        else
+        {
+          model.addPlayer(newPlayer);
+          model.savePlayers();
+          viewHandler.openView(2, model.getPlayersList().size() - 1);
+        }
       }
+
     }
-    catch (Exception e){
+    catch (Exception e)
+    {
       Alert alert = new Alert(Alert.AlertType.ERROR);
       alert.setTitle("Invalid data");
       alert.setHeaderText(e.getMessage());
       Optional<ButtonType> result = alert.showAndWait();
     }
   }
-  public void goBack(){
-    viewHandler.openView(2,-1);
+
+  public void goBack()
+  {
+    viewHandler.openView(2, -1);
   }
 
   public void switchFeePayment()
