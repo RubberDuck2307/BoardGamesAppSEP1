@@ -2,7 +2,7 @@
 <EventsList>
   <Event>
     <ID>0</ID>
-    <name>uhu</name>
+    <name>anna's party</name>
     <location>jbhu</location>
     <fromDate>
       <day>2</day>
@@ -19,9 +19,7 @@
     <toHours>22</toHours>
     <toMinutes>0</toMinutes>
     <description/>
-    <playersIDs>
-      <ID>0</ID>
-    </playersIDs>
+    <playersIDs/>
     <comment/>
     <link/>
   </Event>

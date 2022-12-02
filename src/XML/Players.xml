@@ -20,9 +20,13 @@
     <name>Anna</name>
     <phoneNumber>6456</phoneNumber>
     <email>a@seznam.cz</email>
+    <ID>0</ID>
+    <name>Pavel Maria De la Nemas</name>
+    <phoneNumber>8456</phoneNumber>
+    <email>pavel@seznam.cz</email>
     <membership>false</membership>
     <comment/>
-    <address>lů lů</address>
+    <address/>
     <voted>false</voted>
   </Player>
 </PlayersList>

@@ -55,19 +55,28 @@ public class PlayersDetailPageController implements Controller
     emailField.setText(player.getEmail());
     phoneNumberField.setText(player.getPhoneNumber());
     addressField.setText(player.getAddress());
-    nameField.setDisable(true);
-    commentField.setDisable(true);
-    emailField.setDisable(true);
-    phoneNumberField.setDisable(true);
-    addressField.setDisable(true);
+
+    nameField.setMouseTransparent(true);
+    commentField.setMouseTransparent(true);
+    emailField.setMouseTransparent(true);
+    phoneNumberField.setMouseTransparent(true);
+    addressField.setMouseTransparent(true);
+    nameField.setFocusTraversable(false);
+    commentField.setFocusTraversable(false);
+    emailField.setFocusTraversable(false);
+    phoneNumberField.setFocusTraversable(false);
+    addressField.setFocusTraversable(false);
     if (player.isMembership())
     {
       membershipBox.setSelected(true);
     }
-    membershipBox.setDisable(true);
-    votedBox.setDisable(true);
+    membershipBox.setMouseTransparent(true);
+    membershipBox.setFocusTraversable(false);
+    votedBox.setMouseTransparent(true);
+    votedBox.setFocusTraversable(false);
     paymentField.setValue(player.getFeePaymentDate());
-    paymentField.setDisable(true);
+    paymentField.setMouseTransparent(true);
+    paymentField.setFocusTraversable(false);
   }
 
   @Override public Region getRegion()
@@ -82,14 +91,23 @@ public class PlayersDetailPageController implements Controller
 
   public void edit(ActionEvent actionEvent)
   {
-    nameField.setDisable(false);
-    commentField.setDisable(false);
-    emailField.setDisable(false);
-    phoneNumberField.setDisable(false);
-    addressField.setDisable(false);
-    membershipBox.setDisable(false);
+    nameField.setMouseTransparent(false);
+    commentField.setMouseTransparent(false);
+    emailField.setMouseTransparent(false);
+    phoneNumberField.setMouseTransparent(false);
+    addressField.setMouseTransparent(false);
+    membershipBox.setMouseTransparent(false);
+    paymentField.setMouseTransparent(false);
+
+    nameField.setFocusTraversable(true);
+    commentField.setFocusTraversable(true);
+    emailField.setFocusTraversable(true);
+    phoneNumberField.setFocusTraversable(true);
+    addressField.setFocusTraversable(true);
+    membershipBox.setFocusTraversable(true);
+    paymentField.setFocusTraversable(true);
+
     editButton.setText("Save Changes");
-    paymentField.setDisable(false);
 
     save = event -> {
       System.out.println("hello");
