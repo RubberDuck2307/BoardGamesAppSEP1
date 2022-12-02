@@ -161,6 +161,7 @@ public class PlayersDetailPageController implements Controller
         model.deleteReservationByID(reservationsList.getReservation(i).getID());
       }
       model.saveRatings();
+      model.saveReservation();
       for (int i = 0; i < reservationsList.size(); i++)
       {
         reservationsList.delete(i);
