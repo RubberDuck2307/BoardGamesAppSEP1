@@ -240,7 +240,7 @@ public class BoardGamesList
         return getBoardGame(i);
       }
     }
-    return null;
+    return new BoardGame("Board Game not Found","Error",0,0,BoardGame.UNAVAILABLE_STATUS,"",0,0);
   }
 
   public BoardGame getBoardGameWithMostVotes()
