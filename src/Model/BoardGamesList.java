@@ -34,7 +34,7 @@ public class BoardGamesList
       }
       else
       {
-        boardGame.setID(1);
+        boardGame.setID(0);
       }
     }
     boardGamesList.add(boardGame);

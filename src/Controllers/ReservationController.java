@@ -98,9 +98,12 @@ public class ReservationController implements Controller
 
   }
 
-  public void fillTable(ActionEvent actionEvent) {
+  @FXML public void addReservation(){
+    viewHandler.openView(202,-1);
   }
 
-  public void addReservation(ActionEvent actionEvent) {
+  public void fillTable() {
   }
+
+
 }

@@ -100,7 +100,7 @@ public class ReservationsDetailsPageController implements Controller{
             try {
                 if (Reservation.VALIDATE_DATA(startingDate, endingDate)) {
                     Reservation reservation1 = new Reservation(ID, boardGameName, memberName, startingDate, endingDate, comment);
-                    model.setReservationByID(reservation, ID);
+                    model.setReservationByID(reservation1, ID);
                     try {
                         model.saveReservation();
                     } catch (ParserConfigurationException e) {
@@ -148,6 +148,29 @@ public class ReservationsDetailsPageController implements Controller{
         viewHandler.openView(8, ID);
     }
 
+    @FXML public void borrowGame()
+        throws ParserConfigurationException, TransformerException
+    {
+        Reservation reservation = model.getReservationsList()
+            .getReservationByID(ID);
+        if (model.getBorrowingsList().getByGameID(reservation.getGameID()).size() > 0){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Game is borrowed");
+            alert.setHeaderText("The Game is already borrowed");
+            Optional<ButtonType> result = alert.showAndWait();
+        }
+        else {
+            Reservation newBorrowing = new Reservation(reservation.getPlayerID(),
+                reservation.getID(), reservation.getFrom(), reservation.getTo(), reservation.getComment());
+            model.deleteReservationByID(reservation.getPlayerID());
+            model.getBorrowingsList().addBorrowing(newBorrowing);
+            model.saveReservation();
+            model.saveBorrowing();
+            viewHandler.openView(6, -1);
+        }
+
+
+    }
 //    public void borrowGame()
 //    {
 //        viewHandler.openView();

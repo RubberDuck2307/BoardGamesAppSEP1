@@ -2,6 +2,7 @@ package Application;
 
 import Controllers.*;
 import Model.ModelManager;
+import Model.Reservation;
 import javafx.scene.Scene;
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;
@@ -42,8 +43,10 @@ public class ViewHandler
   private BorrowingsAddSelectPlayerController borrowingsAddSelectPlayerController;
   private BorrowingsAddSelectBoardGameController borrowingsAddSelectBoardGameController;
   private BorrowingsAddFinalFormController borrowingsAddFinalFormController;
+  private ReservationAddSelectMemberController reservationAddSelectMemberController;
 
   private ReservationsDetailsPageController reservationsDetailsPageController;
+  private ReservationAddSelectBoardGameController reservationAddSelectBoardGameController;
 
   public ViewHandler(ModelManager model)
   {
@@ -158,6 +161,12 @@ public class ViewHandler
         break;
       case 201:
         root = loadSimpleGuiView("/FXML/ReservationsDetailPage.fxml", reservationsDetailsPageController, IDOfItem);
+        break;
+      case 202:
+        root = loadSimpleGuiView("/FXML/ReservationsAddSelectMember.fxml", reservationAddSelectMemberController, -1);
+        break;
+      case 203:
+        root = loadSimpleGuiView("/FXML/ReservationsAddSelectBoardgame.fxml", reservationAddSelectBoardGameController, IDOfItem);
         break;
       case 134:
         root = loadSimpleGuiView("/FXML/BorrowingsAddSelectBoardgame.fxml",
