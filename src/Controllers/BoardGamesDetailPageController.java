@@ -1,10 +1,7 @@
 package Controllers;
 
 import Application.ViewHandler;
-import Model.BoardGame;
-import Model.ModelManager;
-import Model.Player;
-import Model.PlayersList;
+import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -133,8 +130,10 @@ public class BoardGamesDetailPageController implements Controller
       int numberOfVotesOfGame = Integer.parseInt(numberOfVotes.getText());
       String typeOfGame = type.getValue().toString();
       String statusOfGame = status.getValue().toString();
-      int ownerName = model.getBoardGamesList().getBoardGameByID(ID).getOwnerID();
-      try{
+      int ownerName = model.getBoardGamesList().getBoardGameByID(ID)
+          .getOwnerID();
+      try
+      {
         if (BoardGame.validateData(name, minimum, maximum))
         {
           BoardGame boardGame = new BoardGame(ID, name, typeOfGame, minimum,
@@ -155,10 +154,11 @@ public class BoardGamesDetailPageController implements Controller
           setData();
           edit.setOnAction(this::edit);
           edit.setText("Edit");
+        }
+
       }
-
-
-      } catch (Exception e){
+      catch (Exception e)
+      {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Invalid Data");
         alert.setHeaderText(e.getMessage());
@@ -173,22 +173,69 @@ public class BoardGamesDetailPageController implements Controller
   public void delete() throws ParserConfigurationException, TransformerException
   {
     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-    alert.setTitle("Confirmation");
-    alert.setHeaderText("Are you sure you want to delete the player ");
-    Optional<ButtonType> result = alert.showAndWait();
-    if(result.isPresent() && result.get() == ButtonType.OK){
-    model.getBoardGamesList().deleteByID(ID);
-    model.saveBoardGames();
-    viewHandler.openView(3, -1);
+    BorrowingsList borrowingsList = model.getBorrowingsList();
+    Reservation reservation = borrowingsList.getBorrowingByBoardGame(ID);
+    boolean isCurrentlyBorrowed = false;
+    if (reservation != null)
+    {
+      System.out.println("Borrowings of game " + reservation);
+      isCurrentlyBorrowed = true;
     }
+    if (isCurrentlyBorrowed)
+    {
+      alert.setTitle("Warning");
+      alert.setHeaderText(
+          "There is an ongoing borrowing. Try to delete the game after this date: "
+              + reservation.getTo()+ ".");
+      Optional<ButtonType> result = alert.showAndWait();
+      if (result.isPresent() && result.get() == ButtonType.OK)
+      {
+        String name = nameField.getText();
+        String comments = comment.getText();
+        int minimum = Integer.parseInt(min.getText());
+        int maximum = Integer.parseInt(max.getText());
+        int numberOfVotesOfGame = Integer.parseInt(numberOfVotes.getText());
+        String typeOfGame = type.getValue().toString();
+        String statusOfGame = "Unavailable";
+        int ownerName = model.getBoardGamesList().getBoardGameByID(ID)
+            .getOwnerID();
+        BoardGame boardGame = new BoardGame(ID, name, typeOfGame, minimum,
+            maximum, statusOfGame, comments, ownerName, numberOfVotesOfGame);
+        model.setBoardGame(boardGame, ID);
+        model.saveBoardGames();
+      }
+
+    }
+
+    else
+    {
+      alert.setTitle("Confirmation");
+      alert.setHeaderText("Are you sure you want to delete the player ");
+      Optional<ButtonType> result = alert.showAndWait();
+      if (result.isPresent() && result.get() == ButtonType.OK)
+      {
+        model.getBoardGamesList().deleteByID(ID);
+        model.saveBoardGames();
+      }
+    }
+    ReservationsList reservationsList = model.getReservationsList();
+    for (int k = 0; k < reservationsList.size(); k++)
+    {
+      if (reservationsList.getReservation(k).getGameID() == ID)
+      {
+        model.getReservationsList().deleteByID(k);
+        System.out.println("All reservation for this game was deleted");
+        model.saveReservation();
+      }
+    }
+    model.saveReservation();
+    viewHandler.openView(3, -1);
   }
 
   public void goBack()
   {
     viewHandler.openView(3, -1);
   }
-
-
 
   public void selectAsocAsOwner()
   {

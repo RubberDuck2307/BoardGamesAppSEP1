@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <borrowingsList>
   <Borrowing>
-    <ID>23</ID>
-    <playerID>0</playerID>
-    <gameID>1</gameID>
-    <from>
-      <day>2</day>
-      <month>12</month>
-      <year>2022</year>
-    </from>
-    <to>
-      <day>3</day>
-      <month>12</month>
-      <year>2022</year>
-    </to>
-    <comment/>
-  </Borrowing>
-  <Borrowing>
     <ID>24</ID>
     <playerID>1</playerID>
     <gameID>1</gameID>
@@ -33,17 +17,17 @@
     <comment/>
   </Borrowing>
   <Borrowing>
-    <ID>25</ID>
+    <ID>27</ID>
     <playerID>1</playerID>
-    <gameID>2</gameID>
+    <gameID>4</gameID>
     <from>
       <day>1</day>
-      <month>12</month>
+      <month>11</month>
       <year>2022</year>
     </from>
     <to>
       <day>2</day>
-      <month>12</month>
+      <month>11</month>
       <year>2022</year>
     </to>
     <comment/>

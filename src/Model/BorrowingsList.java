@@ -65,6 +65,17 @@ public class BorrowingsList
     }
     return newBorrowingList;
   }
+  public Reservation getBorrowingByBoardGame(int ID){
+    Reservation reservation;
+    for (int i = 0; i < size(); i++)
+    {
+      if(getBorrowing(i).getGameID() == ID){
+        reservation = getBorrowing(i);
+        return reservation;
+      }
+    }
+    return null;
+  }
 
   public void addBorrowing(Reservation borrowing)
   {
