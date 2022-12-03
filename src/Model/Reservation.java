@@ -33,10 +33,17 @@ public class Reservation
     this.to = to;
     this.comment = comment;
   }
-  static public boolean validateData(ReservationsList reservationsList, BorrowingsList borrowingsList, LocalDate start, LocalDate end, int gameID)
+  static public boolean validateData(ReservationsList reservationsList, BorrowingsList borrowingsList, LocalDate start, LocalDate end, int gameID, PlayersList playersList, int playerID)
   {
     if (!end.isAfter(start)){
       throw new RuntimeException("The borrowing must end after it starts");
+    }
+    if(!playersList.getPlayerByID(playerID).isMembership()){
+      for(int j = 0; j <borrowingsList.size();j++){
+        if(borrowingsList.getBorrowing(j).getPlayerID() == playerID){
+          throw new RuntimeException("Guest can not make 2 borrowings in the same time");
+        }
+      }
     }
 
     for(int i = 0; i<reservationsList.size(); i++){

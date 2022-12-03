@@ -2,7 +2,7 @@
 <borrowingsList>
   <Borrowing>
     <ID>23</ID>
-    <playerID>1</playerID>
+    <playerID>0</playerID>
     <gameID>1</gameID>
     <from>
       <day>2</day>
@@ -12,6 +12,22 @@
     <to>
       <day>3</day>
       <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </Borrowing>
+  <Borrowing>
+    <ID>24</ID>
+    <playerID>1</playerID>
+    <gameID>1</gameID>
+    <from>
+      <day>1</day>
+      <month>11</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>30</day>
+      <month>11</month>
       <year>2022</year>
     </to>
     <comment/>

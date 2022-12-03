@@ -16,10 +16,6 @@
     </feePayment>
   </Player>
   <Player>
-    <ID>2</ID>
-    <name>Anna</name>
-    <phoneNumber>6456</phoneNumber>
-    <email>a@seznam.cz</email>
     <ID>0</ID>
     <name>Pavel Maria De la Nemas</name>
     <phoneNumber>8456</phoneNumber>

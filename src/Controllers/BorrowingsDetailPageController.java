@@ -95,8 +95,9 @@ public class BorrowingsDetailPageController implements Controller
         ReservationsList reservationsList = model.getReservationsList();
         BorrowingsList borrowingsList = model.getBorrowingsList();
         BoardGamesList boardGamesList = model.getBoardGamesList();
+        PlayersList playersList = model.getPlayersList();
 
-      if (Reservation.validateData(reservationsList, borrowingsList,startDate, endDate, nameOfBG))
+      if (Reservation.validateData(reservationsList, borrowingsList,startDate, endDate, nameOfBG,playersList, nameOfP))
       {
         Reservation reservation1 = new Reservation(ID,nameOfBG,nameOfP,startDate,endDate, comment);
         model.setBorrowing(reservation1, ID);
