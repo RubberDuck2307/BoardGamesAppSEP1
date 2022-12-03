@@ -1,35 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <PlayersList>
   <Player>
-    <ID>0</ID>
-    <name>Pavelaaa</name>
-    <phoneNumber>50002222</phoneNumber>
-    <email>Lobotka@má.hlad</email>
-    <membership>false</membership>
-    <comment>XA</comment>
-    <address>AA</address>
-    <voted>false</voted>
+    <ID>1</ID>
+    <name>Alex</name>
+    <phoneNumber>123456789</phoneNumber>
+    <email>alex@iamalex.com</email>
+    <membership>true</membership>
+    <comment/>
+    <address>jome</address>
     <voted>false</voted>
     <feePayment>
-      <day>17</day>
-      <month>11</month>
+      <day>3</day>
+      <month>12</month>
       <year>2022</year>
     </feePayment>
   </Player>
   <Player>
-    <ID>1</ID>
-    <name>Java</name>
-    <phoneNumber>100</phoneNumber>
-    <email>It@isnot.working</email>
+    <ID>0</ID>
+    <name>Pavel Maria De la Nemas</name>
+    <phoneNumber>8456</phoneNumber>
+    <email>pavel@seznam.cz</email>
     <membership>false</membership>
     <comment/>
     <address/>
     <voted>false</voted>
+  </Player>
+  <Player>
+    <ID>3</ID>
+    <name>Anna</name>
+    <phoneNumber>6456</phoneNumber>
+    <email>a@seznam.cz</email>
+    <membership>false</membership>
+    <comment/>
+    <address>lů lů</address>
     <voted>false</voted>
-    <feePayment>
-      <day>29</day>
-      <month>11</month>
-      <year>2022</year>
-    </feePayment>
+  </Player>
+  <Player>
+    <ID>4</ID>
+    <name>a</name>
+    <phoneNumber>1</phoneNumber>
+    <email/>
+    <membership>true</membership>
+    <comment/>
+    <address/>
+    <voted>false</voted>
   </Player>
 </PlayersList>

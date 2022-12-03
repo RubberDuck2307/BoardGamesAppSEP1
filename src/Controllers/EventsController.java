@@ -59,9 +59,13 @@ public class EventsController implements Controller
 
   @FXML private void chooseEvent()
   {
-    System.out.println("YOU CLICKED" + eventsTable.getSelectionModel().getSelectedItem().getID());
-    viewHandler.openView(11,
-        eventsTable.getSelectionModel().getSelectedItem().getID());
+    if (eventsTable.getSelectionModel().getSelectedItem() != null)
+    {
+      System.out.println(
+          "YOU CLICKED" + eventsTable.getSelectionModel().getSelectedItem().getID());
+      viewHandler.openView(11,
+          eventsTable.getSelectionModel().getSelectedItem().getID());
+    }
   }
 
   public void loadAddEventPage(){

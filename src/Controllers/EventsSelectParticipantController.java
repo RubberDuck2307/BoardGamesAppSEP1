@@ -88,13 +88,14 @@ public class EventsSelectParticipantController implements Controller
   public void selectParticipant()
       throws ParserConfigurationException, TransformerException
   {
-
-    int playerID = participantsTable.getSelectionModel().getSelectedItem()
-        .getID();
-    model.getEventsList().getEventByID(IDOfEvent).getParticipantsIDs().add(playerID);
-    System.out.println( model.getEventsList());
-    model.saveEvent();
-    viewHandler.openView(13,IDOfEvent);
+    if (participantsTable.getSelectionModel().getSelectedItem() != null)
+    {
+      int playerID = participantsTable.getSelectionModel().getSelectedItem().getID();
+      model.getEventsList().getEventByID(IDOfEvent).getParticipantsIDs().add(playerID);
+      System.out.println(model.getEventsList());
+      model.saveEvent();
+      viewHandler.openView(13, IDOfEvent);
+    }
   }
 
   @Override public Region getRegion()

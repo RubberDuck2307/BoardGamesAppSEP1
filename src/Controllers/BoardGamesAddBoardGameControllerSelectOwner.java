@@ -49,8 +49,11 @@ public class BoardGamesAddBoardGameControllerSelectOwner implements Controller
 
   @FXML private void choosePlayer()
   {
-    viewHandler.openView(130,
-        playersTable.getSelectionModel().getSelectedItem().getID());
+    if (playersTable.getSelectionModel().getSelectedItem() != null)
+    {
+      viewHandler.openView(130,
+          playersTable.getSelectionModel().getSelectedItem().getID());
+    }
   }
 
   @FXML public void backToHomePage()

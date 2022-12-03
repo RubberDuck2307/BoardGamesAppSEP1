@@ -114,8 +114,11 @@ public class BoardgamesAddRatingController implements Controller
 
   @FXML public void confirmPlayer()
   {
-    viewHandler.openView(1,
-        playersTable.getSelectionModel().getSelectedItem().getID(), ID);
+    if (playersTable.getSelectionModel().getSelectedItem() != null)
+    {
+      viewHandler.openView(1,
+          playersTable.getSelectionModel().getSelectedItem().getID(), ID);
+    }
   }
 
   public void goBack()

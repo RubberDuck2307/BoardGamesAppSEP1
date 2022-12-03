@@ -52,7 +52,7 @@ public class BorrowingsAddFinalFormController implements ExtendedController
 
   public void goBack()
   {
-    viewHandler.openView(6, -1);
+    viewHandler.openView(134, -1);
   }
 
   public void createBorrowing()throws ParserConfigurationException,

@@ -75,10 +75,14 @@ public class ElectionAddVoteSelectGameController implements Controller
   @FXML public void vote()
       throws ParserConfigurationException, TransformerException
   {
-    model.getPlayersList().getPlayerByID(IDOfPlayer).setVoted(true);
-    model.getBoardGamesList().getBoardGameByID(gamesTable.getSelectionModel().getSelectedItem().getID()).addVote();
-    model.savePlayers();
-    model.saveBoardGames();
-    viewHandler.openView(32,-1);
+    if (gamesTable.getSelectionModel().getSelectedItem() != null)
+    {
+      model.getPlayersList().getPlayerByID(IDOfPlayer).setVoted(true);
+      model.getBoardGamesList().getBoardGameByID(
+          gamesTable.getSelectionModel().getSelectedItem().getID()).addVote();
+      model.savePlayers();
+      model.saveBoardGames();
+      viewHandler.openView(32, -1);
+    }
   }
 }

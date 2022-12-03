@@ -21,7 +21,6 @@ import java.util.Optional;
 
 public class PlayersDeletePlayerController implements Controller
 {
-
   @FXML public TableView<ConsideredToBeBoughtTable> gamesTable;
   @FXML public TableColumn<ConsideredToBeBoughtTable, Integer> numberOfVotes;
   @FXML public TableColumn<ConsideredToBeBoughtTable, String> type;

@@ -14,7 +14,7 @@ public class ReservationAddSelectBoardGameController implements Controller
 {
 
   @FXML public TableView<BoardgameTable> gamesTable;
-  @FXML public TableColumn<BoardgameTable, Integer> availibility;
+  @FXML public TableColumn<BoardgameTable, Integer> availability;
   @FXML public TableColumn<BoardgameTable, String> type;
   @FXML public TableColumn<BoardgameTable, String> name;
   @FXML public TableColumn<BoardgameTable, String> numberOfPlayers;
@@ -37,7 +37,7 @@ public class ReservationAddSelectBoardGameController implements Controller
 
     name.setCellValueFactory(new PropertyValueFactory<>("name"));
     type.setCellValueFactory(new PropertyValueFactory<>("type"));
-    availibility.setCellValueFactory(new PropertyValueFactory<>("availability"));
+    availability.setCellValueFactory(new PropertyValueFactory<>("availability"));
     numberOfPlayers.setCellValueFactory(new PropertyValueFactory<>("numberOfPlayers"));
     gamesTable.setItems(gamesInTable);
   }
