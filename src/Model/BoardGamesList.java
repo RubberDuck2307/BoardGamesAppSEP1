@@ -195,7 +195,6 @@ public class BoardGamesList
         max = boardGamesList.get(i);
       }
     }
-
     return max;
   }
 

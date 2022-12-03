@@ -44,10 +44,26 @@ public class Reservation
         if( (start.isAfter(reservationsList.getReservation(i).from)&& start.isBefore(reservationsList.getReservation(i).to)) ||
             (end.isAfter(reservationsList.getReservation(i).from)&&end.isBefore(reservationsList.getReservation(i).to))||
             (reservationsList.getReservation(i).from.isAfter(start)&& reservationsList.getReservation(i).from.isBefore(end))||
-            (reservationsList.getReservation(i).to.isAfter(start)&& reservationsList.getReservation(i).to.isBefore(start))
-            // TODO comlete validation - same days
+            (reservationsList.getReservation(i).to.isAfter(start)&& reservationsList.getReservation(i).to.isBefore(start))||
+            reservationsList.getReservation(i).from.equals(start)||reservationsList.getReservation(i).to.equals(end)
         ){
-          throw new RuntimeException("This game is not available for this date, please change the date ");
+          throw new RuntimeException("This game is already reserved for this date, please change the date ");
+        }
+        else{
+          for(int k = 0; k<borrowingsList.size(); k++){
+            if(borrowingsList.getBorrowing(i).getGameID()==gameID){
+              if( (start.isAfter(borrowingsList.getBorrowing(i).from)&& start.isBefore(borrowingsList.getBorrowing(i).to)) ||
+                  (end.isAfter(borrowingsList.getBorrowing(i).from)&&end.isBefore(borrowingsList.getBorrowing(i).to))||
+                  (borrowingsList.getBorrowing(i).from.isAfter(start)&& borrowingsList.getBorrowing(i).from.isBefore(end))||
+                  (borrowingsList.getBorrowing(i).to.isAfter(start)&& borrowingsList.getBorrowing(i).to.isBefore(start))||
+                  borrowingsList.getBorrowing(i).from.equals(start)||borrowingsList.getBorrowing(i).to.equals(end)
+
+              ){
+                throw new RuntimeException("This game is currently borrowed for this date, please change the date ");
+              }
+            }
+
+          }
         }
 
       }
