@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <borrowingsList>
   <Borrowing>
-    <ID>5</ID>
-    <playerID>1</playerID>
-    <gameID>1</gameID>
-    <from>
-      <day>2</day>
-      <month>12</month>
-      <year>2022</year>
-    </from>
-    <to>
-      <day>3</day>
-      <month>12</month>
-      <year>2022</year>
-    </to>
-    <comment>mm</comment>
-  </Borrowing>
-  <Borrowing>
     <ID>6</ID>
     <playerID>2</playerID>
     <gameID>0</gameID>
@@ -47,38 +31,6 @@
       <year>2022</year>
     </to>
     <comment/>
-  </Borrowing>
-  <Borrowing>
-    <ID>8</ID>
-    <playerID>2</playerID>
-    <gameID>1</gameID>
-    <from>
-      <day>2</day>
-      <month>12</month>
-      <year>2022</year>
-    </from>
-    <to>
-      <day>4</day>
-      <month>12</month>
-      <year>2022</year>
-    </to>
-    <comment/>
-  </Borrowing>
-  <Borrowing>
-    <ID>9</ID>
-    <playerID>2</playerID>
-    <gameID>1</gameID>
-    <from>
-      <day>8</day>
-      <month>12</month>
-      <year>2022</year>
-    </from>
-    <to>
-      <day>9</day>
-      <month>12</month>
-      <year>2022</year>
-    </to>
-    <comment>m</comment>
   </Borrowing>
   <Borrowing>
     <ID>10</ID>
@@ -191,117 +143,5 @@
       <year>2022</year>
     </to>
     <comment>d</comment>
-  </Borrowing>
-  <Borrowing>
-    <ID>17</ID>
-    <playerID>1</playerID>
-    <gameID>1</gameID>
-    <from>
-      <day>1</day>
-      <month>12</month>
-      <year>2022</year>
-    </from>
-    <to>
-      <day>2</day>
-      <month>12</month>
-      <year>2022</year>
-    </to>
-    <comment/>
-  </Borrowing>
-  <Borrowing>
-    <ID>18</ID>
-    <playerID>1</playerID>
-    <gameID>1</gameID>
-    <from>
-      <day>3</day>
-      <month>12</month>
-      <year>2022</year>
-    </from>
-    <to>
-      <day>4</day>
-      <month>12</month>
-      <year>2022</year>
-    </to>
-    <comment/>
-  </Borrowing>
-  <Borrowing>
-    <ID>19</ID>
-    <playerID>1</playerID>
-    <gameID>1</gameID>
-    <from>
-      <day>1</day>
-      <month>12</month>
-      <year>2022</year>
-    </from>
-    <to>
-      <day>2</day>
-      <month>12</month>
-      <year>2022</year>
-    </to>
-    <comment/>
-  </Borrowing>
-  <Borrowing>
-    <ID>20</ID>
-    <playerID>1</playerID>
-    <gameID>1</gameID>
-    <from>
-      <day>1</day>
-      <month>12</month>
-      <year>2022</year>
-    </from>
-    <to>
-      <day>2</day>
-      <month>12</month>
-      <year>2022</year>
-    </to>
-    <comment/>
-  </Borrowing>
-  <Borrowing>
-    <ID>21</ID>
-    <playerID>1</playerID>
-    <gameID>1</gameID>
-    <from>
-      <day>1</day>
-      <month>12</month>
-      <year>2022</year>
-    </from>
-    <to>
-      <day>2</day>
-      <month>12</month>
-      <year>2022</year>
-    </to>
-    <comment/>
-  </Borrowing>
-  <Borrowing>
-    <ID>22</ID>
-    <playerID>1</playerID>
-    <gameID>1</gameID>
-    <from>
-      <day>30</day>
-      <month>11</month>
-      <year>2022</year>
-    </from>
-    <to>
-      <day>1</day>
-      <month>12</month>
-      <year>2022</year>
-    </to>
-    <comment/>
-  </Borrowing>
-  <Borrowing>
-    <ID>23</ID>
-    <playerID>1</playerID>
-    <gameID>1</gameID>
-    <from>
-      <day>15</day>
-      <month>12</month>
-      <year>2022</year>
-    </from>
-    <to>
-      <day>16</day>
-      <month>12</month>
-      <year>2022</year>
-    </to>
-    <comment/>
   </Borrowing>
 </borrowingsList>

@@ -64,4 +64,11 @@ public class ReservationAddSelectBoardGameController implements Controller
     }
   }
 
+  @FXML public void goBack(){
+    viewHandler.openView(202,-1);
+}
+
+  @FXML public void confirmBoardGame(){
+    viewHandler.openView(204,IDOfPlayer, gamesTable.getSelectionModel().getSelectedItem().getID());
+  }
 }
