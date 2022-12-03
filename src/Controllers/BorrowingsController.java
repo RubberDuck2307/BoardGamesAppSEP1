@@ -21,6 +21,7 @@ public class BorrowingsController implements Controller
   Region region;
   ModelManager model;
   ViewHandler viewHandler;
+  private int ID;
 
   @FXML private TableView<BorrowingsTable> borrowingsTable;
   @FXML public TableColumn<BoardgameTable, String> boardGameName;
@@ -40,25 +41,8 @@ public class BorrowingsController implements Controller
     this.region = region;
     this.model = model;
     this.viewHandler = viewHandler;
+    this.ID = ID;
     fillTable();
-
-
-    /*for (int i = 0; i < model.getBorrowingsList().size(); i++)
-    {
-      System.out.println(model.getBorrowingsList().size());
-      System.out.println(i);
-      Reservation reservation = model.getBorrowingsList().getBorrowing(i);
-      String boardgame = model.getBoardGamesList()
-              .getNameByID(reservation.getGameID());
-      String player = model.getPlayersList().getNameByID(
-          reservation.getPlayerID());
-
-      borrowingsTables.add(
-                new BorrowingsTable(boardgame,
-                      player,
-                      String.valueOf(reservation.getFrom()),
-                      String.valueOf(reservation.getTo()), reservation.getID()));
-    }*/
 
     boardGameName.setCellValueFactory(new PropertyValueFactory<>("boardGameName"));
     playerName.setCellValueFactory(new PropertyValueFactory<>("playerName"));
@@ -83,7 +67,16 @@ public class BorrowingsController implements Controller
   }
   public void fillTable(){
     borrowingsTables.clear();
-    BorrowingsList borrowingsList = model.getBorrowingsList();
+    BorrowingsList borrowingsList;
+    //System.out.println("ID is " + ID);
+    if (ID == -1)
+    {
+      borrowingsList = model.getBorrowingsList();
+    }
+
+    else {
+      borrowingsList = model.getBorrowingsByPlayer(ID);
+    }
     PlayersList playersList = model.getPlayersList();
     BoardGamesList boardGamesList = model.getBoardGamesList();
     borrowingsList = borrowingsList.filterBorrowingList(searchField.getText(), playersList,boardGamesList);
@@ -92,10 +85,8 @@ public class BorrowingsController implements Controller
 
 
       Reservation borrowing = borrowingsList.getBorrowing(i);
-      System.out.println(borrowing.toString());
       String from = borrowing.getFrom() + "";
       String to = borrowing.getTo() + "";
-      System.out.println(borrowing.toString());
       borrowingsTables.add(
           new BorrowingsTable(boardGamesList.getBoardGameByID(borrowing.getGameID()).getName(), playersList.getPlayerByID(borrowing.getPlayerID()).getName()
               ,from, to, borrowing.getID()));

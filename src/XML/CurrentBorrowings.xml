@@ -32,4 +32,20 @@
     </to>
     <comment/>
   </Borrowing>
+  <Borrowing>
+    <ID>25</ID>
+    <playerID>1</playerID>
+    <gameID>2</gameID>
+    <from>
+      <day>1</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>2</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </Borrowing>
 </borrowingsList>

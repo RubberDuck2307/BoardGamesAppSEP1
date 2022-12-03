@@ -133,7 +133,7 @@ public class BoardGamesDetailPageController implements Controller
       int numberOfVotesOfGame = Integer.parseInt(numberOfVotes.getText());
       String typeOfGame = type.getValue().toString();
       String statusOfGame = status.getValue().toString();
-      int ownerName = Integer.parseInt(owner.getText());
+      int ownerName = model.getBoardGamesList().getBoardGameByID(ID).getOwnerID();
       try{
         if (BoardGame.validateData(name, minimum, maximum))
         {

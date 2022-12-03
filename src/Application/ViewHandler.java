@@ -85,7 +85,7 @@ public class ViewHandler
         break;
       case 6:
         root = loadSimpleGuiView("/FXML/Borrowings.fxml", borrowingsController,
-            -1);
+            IDOfItem);
         break;
       case 7:
         root = loadSimpleGuiView("/FXML/Events.fxml", eventsController, -1);

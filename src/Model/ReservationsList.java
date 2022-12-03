@@ -58,6 +58,7 @@ public class ReservationsList
     return newReservationList;
   }
 
+
   public void delete(int index){
     reservationsList.remove(index);
   }

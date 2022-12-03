@@ -142,6 +142,10 @@ public class ModelManager
   {
     return reservationsList.getReservationsByPlayer(ID);
   }
+  public BorrowingsList getBorrowingsByPlayer(int ID)
+  {
+    return borrowingsList.getBorrowingsByPlayer(ID);
+  }
 
   public void setEvent(Event event, int ID)
   {

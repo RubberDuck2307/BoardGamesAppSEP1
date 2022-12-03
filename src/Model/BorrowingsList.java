@@ -55,6 +55,16 @@ public class BorrowingsList
     }
     return newBorrowingList;
   }
+  public BorrowingsList getBorrowingsByPlayer(int ID){
+    BorrowingsList newBorrowingList = new BorrowingsList();
+    for (int i = 0; i < size(); i++)
+    {
+      if(getBorrowing(i).getPlayerID() == ID){
+        newBorrowingList.addBorrowing(getBorrowing(i));
+      }
+    }
+    return newBorrowingList;
+  }
 
   public void addBorrowing(Reservation borrowing)
   {

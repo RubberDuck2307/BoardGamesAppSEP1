@@ -215,4 +215,9 @@ public class PlayersDetailPageController implements Controller
   {
     viewHandler.openView(2, -1);
   }
+
+  @FXML public void showBorrowedGames()
+  {
+    viewHandler.openView(6, ID);
+  }
 }
