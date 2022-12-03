@@ -16,10 +16,6 @@
     </feePayment>
   </Player>
   <Player>
-    <ID>2</ID>
-    <name>Anna</name>
-    <phoneNumber>6456</phoneNumber>
-    <email>a@seznam.cz</email>
     <ID>0</ID>
     <name>Pavel Maria De la Nemas</name>
     <phoneNumber>8456</phoneNumber>
@@ -37,6 +33,16 @@
     <membership>false</membership>
     <comment/>
     <address>lů lů</address>
+    <voted>false</voted>
+  </Player>
+  <Player>
+    <ID>4</ID>
+    <name>a</name>
+    <phoneNumber>1</phoneNumber>
+    <email/>
+    <membership>true</membership>
+    <comment/>
+    <address/>
     <voted>false</voted>
   </Player>
 </PlayersList>

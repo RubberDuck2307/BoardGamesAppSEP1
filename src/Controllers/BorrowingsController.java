@@ -106,8 +106,11 @@ public class BorrowingsController implements Controller
 
   public void chooseBorrowings()
   {
-    viewHandler.openView(131,
-        borrowingsTable.getSelectionModel().getSelectedItem().getID());
+    if (borrowingsTable.getSelectionModel().getSelectedItem() != null)
+    {
+      viewHandler.openView(131,
+          borrowingsTable.getSelectionModel().getSelectedItem().getID());
+    }
   }
 
   public void addBorrowing()

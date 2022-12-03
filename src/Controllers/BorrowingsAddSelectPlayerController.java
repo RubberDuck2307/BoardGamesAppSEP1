@@ -49,7 +49,11 @@ public class BorrowingsAddSelectPlayerController implements Controller
 
   @FXML private void choosePlayer()
   {
-    viewHandler.openView(134, playersTable.getSelectionModel().getSelectedItem().getID());
+    if (playersTable.getSelectionModel().getSelectedItem() != null)
+    {
+      viewHandler.openView(134,
+          playersTable.getSelectionModel().getSelectedItem().getID());
+    }
   }
 
   @FXML public void backToHomePage()

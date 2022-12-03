@@ -18,7 +18,7 @@ public class PlayersController implements Controller
   private Region region;
   private ModelManager model;
   private ViewHandler viewHandler;
-
+  @FXML public Label memberCountLabel;
   @FXML public TextField searchField;
   @FXML public Button backButton;
   @FXML public RadioButton allRadio;
@@ -43,6 +43,14 @@ public class PlayersController implements Controller
     this.region = region;
     this.model = model;
     this.viewHandler = viewHandler;
+    if (model.getPlayersList().getMembers().size() == 1)
+    {
+      memberCountLabel.setText("1 Member");
+    }
+    else
+    {
+      memberCountLabel.setText("" + model.getPlayersList().getMembers().size() + " Members");
+    }
 
 
     fillTable();
@@ -56,8 +64,12 @@ public class PlayersController implements Controller
 
   @FXML private void choosePlayer()
   {
-    viewHandler.openView(8,
-        playersTable.getSelectionModel().getSelectedItem().getID());
+    if (playersTable.getSelectionModel().getSelectedItem() != null)
+    {
+      viewHandler.openView(8,
+          playersTable.getSelectionModel().getSelectedItem().getID());
+    }
+
   }
 
   @FXML public void backToHomePage()

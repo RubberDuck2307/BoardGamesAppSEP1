@@ -32,8 +32,7 @@ public class PlayersAddPlayerController implements Controller
    this.region = region;
    this.model = model;
    this.viewHandler = viewHandler;
-   feeDatePicker.setMouseTransparent(true);
-   feeDatePicker.setFocusTraversable(false);
+   feeDatePicker.setDisable(true);
   }
 
   @Override public Region getRegion()
@@ -108,5 +107,9 @@ public class PlayersAddPlayerController implements Controller
   public void switchFeePayment()
   {
     feeDatePicker.setDisable(!feeDatePicker.isDisable());
+    if (!membershipBox.isSelected())
+    {
+      feeDatePicker.setValue(null);
+    }
   }
 }

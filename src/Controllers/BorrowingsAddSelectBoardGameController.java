@@ -89,12 +89,15 @@ public class BorrowingsAddSelectBoardGameController implements Controller
   }
   @FXML private void chooseBoardgame()
   {
-    viewHandler.openView(135, ID,
-        boardGameTable.getSelectionModel().getSelectedItem().getID());
+    if (boardGameTable.getSelectionModel().getSelectedItem() != null)
+    {
+      viewHandler.openView(135, ID,
+          boardGameTable.getSelectionModel().getSelectedItem().getID());
+    }
   }
   public void goBack()
   {
-    viewHandler.openView(6, -1);
+    viewHandler.openView(133, -1);
   }
 
   public void fillTable()
