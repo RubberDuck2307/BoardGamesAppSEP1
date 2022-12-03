@@ -2,8 +2,6 @@ package Controllers;
 
 import Application.ViewHandler;
 import Model.*;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.*;
@@ -97,7 +95,7 @@ public class BorrowingsDetailPageController implements Controller
         BoardGamesList boardGamesList = model.getBoardGamesList();
         PlayersList playersList = model.getPlayersList();
 
-      if (Reservation.validateData(reservationsList, borrowingsList,startDate, endDate, nameOfBG,playersList, nameOfP))
+      if (Reservation.VALIDATE_DATA(reservationsList, borrowingsList,startDate, endDate, nameOfBG,playersList, nameOfP))
       {
         Reservation reservation1 = new Reservation(ID,nameOfBG,nameOfP,startDate,endDate, comment);
         model.setBorrowing(reservation1, ID);

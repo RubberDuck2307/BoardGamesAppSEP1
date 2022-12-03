@@ -16,4 +16,20 @@
     </to>
     <comment>xx</comment>
   </reservation>
+  <reservation>
+    <ID>1</ID>
+    <playerID>1</playerID>
+    <gameID>1</gameID>
+    <from>
+      <day>10</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>11</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </reservation>
 </reservationsList>

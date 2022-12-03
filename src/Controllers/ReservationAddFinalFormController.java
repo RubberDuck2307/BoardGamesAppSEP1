@@ -60,7 +60,8 @@ public class ReservationAddFinalFormController implements ExtendedController
     {
       Long.parseLong(durationField.getText());
     }
-    catch (Exception e){
+    catch (Exception e)
+    {
       Alert alert = new Alert(Alert.AlertType.ERROR);
       alert.setTitle("Invalid Data");
       alert.setHeaderText("Duration can be only number");
@@ -68,11 +69,13 @@ public class ReservationAddFinalFormController implements ExtendedController
       valid = false;
     }
 
-    if(valid)
+    if (valid)
     {
 
-      Reservation borrowing = model.getBorrowingsList().getBorrowingByGameID(boardGameID);
-      ArrayList<Reservation> reservations = model.getReservationsList().getSortedArrayListByGameID(boardGameID);
+      Reservation borrowing = model.getBorrowingsList()
+          .getBorrowingByGameID(boardGameID);
+      ArrayList<Reservation> reservations = model.getReservationsList()
+          .getSortedArrayListByGameID(boardGameID);
 
       if (borrowing != null)
       {
@@ -93,7 +96,8 @@ public class ReservationAddFinalFormController implements ExtendedController
         if (firstPeriod.getDays() >= Long.parseLong(durationField.getText()))
         {
           startingDate.setValue(LocalDate.now());
-          endingDate.setValue(LocalDate.now().plusDays(Long.parseLong(durationField.getText())));
+          endingDate.setValue(LocalDate.now()
+              .plusDays(Long.parseLong(durationField.getText())));
         }
         else
         {
@@ -106,7 +110,8 @@ public class ReservationAddFinalFormController implements ExtendedController
             if (period.getDays() >= Long.parseLong(durationField.getText()))
             {
               startingDate.setValue(reservations.get(i - 1).getTo());
-              endingDate.setValue(reservations.get(i - 1).getTo().plusDays(Long.parseLong(durationField.getText())));
+              endingDate.setValue(reservations.get(i - 1).getTo()
+                  .plusDays(Long.parseLong(durationField.getText())));
               set = true;
               break;
             }
@@ -116,7 +121,8 @@ public class ReservationAddFinalFormController implements ExtendedController
             startingDate.setValue(
                 reservations.get(reservations.size() - 1).getTo());
             endingDate.setValue(
-                reservations.get(reservations.size() - 1).getTo().plusDays(Long.parseLong(durationField.getText())));
+                reservations.get(reservations.size() - 1).getTo()
+                    .plusDays(Long.parseLong(durationField.getText())));
           }
         }
       }
@@ -127,17 +133,23 @@ public class ReservationAddFinalFormController implements ExtendedController
       throws ParserConfigurationException, TransformerException
   {
 
-
-
     try
     {
-      Reservation.VALIDATE_DATA(startingDate.getValue(), endingDate.getValue());
-      Reservation reservation = new Reservation(playerID, boardGameID,
-          startingDate.getValue(), endingDate.getValue(),
-          commentField.getText());
-      model.getReservationsList().addReservation(reservation);
-      model.saveReservation();
-      viewHandler.openView(5, -1);
+      if (Reservation.VALIDATE_DATA(
+          model.getReservationsList().getReservationByGameID(boardGameID),
+          model.getBorrowingsList().getByGameID(boardGameID),
+          startingDate.getValue(), endingDate.getValue(), boardGameID,
+          model.getPlayersList(), playerID))
+        ;
+      {
+
+        Reservation reservation = new Reservation(playerID, boardGameID,
+            startingDate.getValue(), endingDate.getValue(),
+            commentField.getText());
+        model.getReservationsList().addReservation(reservation);
+        model.saveReservation();
+        viewHandler.openView(5, -1);
+      }
     }
     catch (Exception e)
     {
@@ -146,7 +158,6 @@ public class ReservationAddFinalFormController implements ExtendedController
       alert.setHeaderText(e.getMessage());
       Optional<ButtonType> result = alert.showAndWait();
     }
-
   }
 
   @FXML public void goBack()

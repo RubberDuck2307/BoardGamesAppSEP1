@@ -2,7 +2,6 @@ package Controllers;
 
 import Application.ViewHandler;
 import Model.*;
-import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.layout.Region;
 
@@ -69,7 +68,7 @@ public class BorrowingsAddFinalFormController implements ExtendedController
     BorrowingsList borrowingsList = model.getBorrowingsList();
     PlayersList playersList = model.getPlayersList();
 
-    if (Reservation.validateData(reservationsList, borrowingsList,startDate, endDate,ID2, playersList, ID))
+    if (Reservation.VALIDATE_DATA(reservationsList, borrowingsList,startDate, endDate,ID2, playersList, ID))
     {
       model.addBorrowing( new Reservation(ID,ID2,startDate,endDate, comment));
       model.saveBorrowing();

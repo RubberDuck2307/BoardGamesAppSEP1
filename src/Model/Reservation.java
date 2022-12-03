@@ -1,7 +1,6 @@
 package Model;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class Reservation
 {
@@ -33,7 +32,7 @@ public class Reservation
     this.to = to;
     this.comment = comment;
   }
-  static public boolean validateData(ReservationsList reservationsList, BorrowingsList borrowingsList, LocalDate start, LocalDate end, int gameID, PlayersList playersList, int playerID)
+  static public boolean VALIDATE_DATA(ReservationsList reservationsList, BorrowingsList borrowingsList, LocalDate start, LocalDate end, int gameID, PlayersList playersList, int playerID)
   {
     if (!end.isAfter(start)){
       throw new RuntimeException("The borrowing must end after it starts");
