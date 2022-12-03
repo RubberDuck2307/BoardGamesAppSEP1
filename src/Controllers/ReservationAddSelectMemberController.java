@@ -84,9 +84,4 @@ public class ReservationAddSelectMemberController implements Controller
           membersTable.getSelectionModel().getSelectedItem().getID());
     }
   }
-
-  public void goBack()
-  {
-    viewHandler.openView(5, -1);
-  }
 }
