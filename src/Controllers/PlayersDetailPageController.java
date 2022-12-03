@@ -20,6 +20,7 @@ import java.util.Optional;
 
 public class PlayersDetailPageController implements Controller
 {
+  @FXML public Label headingLabel;
   public TextArea commentField;
   public TextField nameField;
   public TextField phoneNumberField;
@@ -49,6 +50,7 @@ public class PlayersDetailPageController implements Controller
   public void setData()
   {
     Player player = model.getPlayersList().getPlayerByID(ID);
+    headingLabel.setText(player.getName());
     votedBox.setSelected(player.getVoted());
     nameField.setText(player.getName());
     commentField.setText(player.getComment());
@@ -97,7 +99,11 @@ public class PlayersDetailPageController implements Controller
     phoneNumberField.setMouseTransparent(false);
     addressField.setMouseTransparent(false);
     membershipBox.setMouseTransparent(false);
-    paymentField.setMouseTransparent(false);
+    if (membershipBox.isSelected())
+    {
+      paymentField.setMouseTransparent(false);
+      paymentField.setFocusTraversable(true);
+    }
 
     nameField.setFocusTraversable(true);
     commentField.setFocusTraversable(true);
@@ -105,7 +111,6 @@ public class PlayersDetailPageController implements Controller
     phoneNumberField.setFocusTraversable(true);
     addressField.setFocusTraversable(true);
     membershipBox.setFocusTraversable(true);
-    paymentField.setFocusTraversable(true);
 
     editButton.setText("Save Changes");
 
@@ -156,6 +161,16 @@ public class PlayersDetailPageController implements Controller
 
     editButton.setOnAction(save);
 
+  }
+
+  public void switchFeePayment()
+  {
+    paymentField.setMouseTransparent(!paymentField.isMouseTransparent());
+    paymentField.setFocusTraversable(!paymentField.isFocusTraversable());
+    if (!membershipBox.isSelected())
+    {
+      paymentField.setValue(null);
+    }
   }
 
   public void delete() throws ParserConfigurationException, TransformerException

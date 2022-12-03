@@ -86,7 +86,7 @@ public class BoardGamesAddBoardGameController  implements Controller
 
   public void backButton()
   {
-    viewHandler.openView(3, -1);
+    viewHandler.openView(132, -1);
   }
 
 

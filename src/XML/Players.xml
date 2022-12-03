@@ -35,4 +35,14 @@
     <address>lů lů</address>
     <voted>false</voted>
   </Player>
+  <Player>
+    <ID>4</ID>
+    <name>a</name>
+    <phoneNumber>1</phoneNumber>
+    <email/>
+    <membership>true</membership>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+  </Player>
 </PlayersList>

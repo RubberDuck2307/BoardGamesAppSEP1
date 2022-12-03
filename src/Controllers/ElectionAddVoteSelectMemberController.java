@@ -79,8 +79,13 @@ public class ElectionAddVoteSelectMemberController implements Controller
   }
 
   @FXML public void choosePlayer(){
-    System.out.println(membersTable.getSelectionModel().getSelectedItem().getID());
-    viewHandler.openView(34,membersTable.getSelectionModel().getSelectedItem().getID());
+    if (membersTable.getSelectionModel().getSelectedItem() != null)
+    {
+      System.out.println(
+          membersTable.getSelectionModel().getSelectedItem().getID());
+      viewHandler.openView(34,
+          membersTable.getSelectionModel().getSelectedItem().getID());
+    }
 
   }
 }

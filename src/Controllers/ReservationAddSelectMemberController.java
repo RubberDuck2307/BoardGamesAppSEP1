@@ -78,6 +78,10 @@ public class ReservationAddSelectMemberController implements Controller
   }
 
   public void choosePlayer(){
-    viewHandler.openView(203, membersTable.getSelectionModel().getSelectedItem().getID());
+    if (membersTable.getSelectionModel().getSelectedItem() != null)
+    {
+      viewHandler.openView(203,
+          membersTable.getSelectionModel().getSelectedItem().getID());
+    }
   }
 }

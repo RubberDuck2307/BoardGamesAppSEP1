@@ -86,7 +86,11 @@ public class ReservationController implements Controller
   }
 
   public void chooseReservation(){
-    viewHandler.openView(201, reservationTable.getSelectionModel().getSelectedItem().getID());
+    if (reservationTable.getSelectionModel().getSelectedItem() != null)
+    {
+      viewHandler.openView(201,
+          reservationTable.getSelectionModel().getSelectedItem().getID());
+    }
   }
   @Override public Region getRegion()
   {

@@ -95,8 +95,11 @@ public class BoardGamesController implements Controller
 
   @FXML private void chooseBoardgame()
   {
-    viewHandler.openView(9,
-        boardGameTable.getSelectionModel().getSelectedItem().getID());
+    if (boardGameTable.getSelectionModel().getSelectedItem() != null)
+    {
+      viewHandler.openView(9,
+          boardGameTable.getSelectionModel().getSelectedItem().getID());
+    }
   }
 
   @Override public void reset()

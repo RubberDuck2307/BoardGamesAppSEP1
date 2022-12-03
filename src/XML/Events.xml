@@ -19,7 +19,12 @@
     <toHours>22</toHours>
     <toMinutes>0</toMinutes>
     <description/>
-    <playersIDs/>
+    <playersIDs>
+      <ID>3</ID>
+      <ID>4</ID>
+      <ID>0</ID>
+      <ID>1</ID>
+    </playersIDs>
     <comment/>
     <link/>
   </Event>
@@ -68,6 +73,7 @@
     <playersIDs>
       <ID>2</ID>
       <ID>3</ID>
+      <ID>1</ID>
     </playersIDs>
     <comment/>
     <link/>

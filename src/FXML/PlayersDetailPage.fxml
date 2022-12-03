@@ -43,7 +43,7 @@
                 <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="820.0" styleClass="heading" stylesheets="@../css/style.css" text="PLAYER NAME" textAlignment="CENTER" GridPane.columnIndex="1">
+                <Label fx:id="headingLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="820.0" styleClass="heading" stylesheets="@../css/style.css" text="PLAYER NAME" textAlignment="CENTER" GridPane.columnIndex="1">
                     <font>
                         <Font size="46.0" />
                     </font>
@@ -111,7 +111,7 @@
                 </Button>
                 <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
                     <children>
-                        <CheckBox fx:id="membershipBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="146.0" style="-fx-background-color: white;" text="Member">
+                        <CheckBox fx:id="membershipBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchFeePayment" prefHeight="50.0" prefWidth="146.0" style="-fx-background-color: white;" text="Member">
                             <font>
                                 <Font size="24.0" />
                             </font>
