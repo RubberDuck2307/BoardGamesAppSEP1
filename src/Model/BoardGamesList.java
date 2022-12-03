@@ -42,17 +42,19 @@ public class BoardGamesList
 
   public void setBoardGame(BoardGame boardgame, int ID)
   {
+    boolean found = false;
     for (int i = 0; i < boardGamesList.size(); i++)
     {
       if (boardGamesList.get(i).getID() == ID)
       {
         boardGamesList.set(i, boardgame);
+        found= true;
         break;
-      }
-      else
+      }}
+      if (!found)
       {
         boardGamesList.add(boardgame);
-      }
+
     }
   }
 
