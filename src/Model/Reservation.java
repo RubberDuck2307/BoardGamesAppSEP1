@@ -142,12 +142,17 @@ public class Reservation
     this.comment = comment;
   }
 
+  public Reservation copy(){
+    return new Reservation(getID(),getPlayerID(),getGameID(),getFrom(),getTo(),getComment());
+
+  }
+
   public static boolean VALIDATE_DATA(LocalDate from, LocalDate to){
     if(!from.isAfter(LocalDate.now())){
-      throw new RuntimeException("The event has to start in the future");
+      throw new RuntimeException("The starting date has to be in the future");
     }
     if (!to.isAfter(from)){
-      throw new RuntimeException("The event has to end after it starts");
+      throw new RuntimeException("The ending date has to be after starting date");
     }
     return true;
   }

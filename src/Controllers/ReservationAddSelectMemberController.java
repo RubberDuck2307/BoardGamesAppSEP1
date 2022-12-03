@@ -52,6 +52,9 @@ public class ReservationAddSelectMemberController implements Controller
 
   }
 
+  @FXML public void goBack(){
+    viewHandler.openView(5,-1);
+  }
   public void fillTable()
   {
     playersInTable.clear();

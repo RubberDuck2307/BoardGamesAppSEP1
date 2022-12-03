@@ -1,6 +1,8 @@
 package Model;
 
+import java.net.IDN;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class ReservationsList
 {
@@ -11,10 +13,6 @@ public class ReservationsList
     reservationsList = new ArrayList<>();
   }
 
-  public ReservationsList(ArrayList<Reservation> reservations)
-  {
-    this.reservationsList = reservations;
-  }
 
   public void addReservation(Reservation reservation)
   {
@@ -84,6 +82,35 @@ public class ReservationsList
     }
     return reservationsList.get(0);
   }
+
+  public ReservationsList getReservationByGameID(int ID){
+    ReservationsList reservationsList1 = new ReservationsList();
+    for (int i = 0; i < size(); i++)
+    {
+      if (getReservation(i).getGameID() == ID){
+        reservationsList1.addReservation(getReservation(i));
+      }
+    }
+    return reservationsList1;
+  }
+
+  public ArrayList<Reservation> getReservationsAsArrayList(){ //this is composition
+    ArrayList<Reservation> reservations = new ArrayList<>();
+    for (int i = 0; i < size(); i++)
+    {
+      reservations.add(getReservation(i).copy());
+    }
+    return reservations;
+  }
+
+  public ArrayList<Reservation> getSortedArrayListByGameID(int ID){
+    ArrayList<Reservation> reservationsList1 = getReservationByGameID(ID).getReservationsAsArrayList();
+    reservationsList1.sort(Comparator.comparing(Reservation::getFrom));
+
+    return reservationsList1;
+
+  }
+
 
   @Override public String toString()
   {

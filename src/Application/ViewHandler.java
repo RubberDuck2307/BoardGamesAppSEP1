@@ -47,6 +47,7 @@ public class ViewHandler
 
   private ReservationsDetailsPageController reservationsDetailsPageController;
   private ReservationAddSelectBoardGameController reservationAddSelectBoardGameController;
+  private ReservationAddFinalFormController reservationAddFinalFormController;
 
   public ViewHandler(ModelManager model)
   {
@@ -193,6 +194,7 @@ public class ViewHandler
         break;
       case 1: root = loadExtendedGuiView("/FXML/BoardgamesInsertRating.fxml", boardGamesInsertRatingController, IDOfItem, IDOfItem2);
       break;
+      case 204: root = loadExtendedGuiView("/FXML/ReservationsAddFinalForm.fxml", reservationAddFinalFormController, IDOfItem, IDOfItem2);
 
     }
 

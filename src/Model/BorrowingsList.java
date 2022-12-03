@@ -88,6 +88,17 @@ public class BorrowingsList
     }
   }
 
+  public Reservation getBorrowingByGameID(int ID){
+    for (int i = 0; i < size(); i++)
+    {
+      if (getBorrowing(i).getGameID() == ID){
+        return getBorrowing(i);
+      }
+    }
+    return null;
+
+  }
+
   @Override public String toString()
   {
     return "Model.BorrowingsList{" + "borrowingList=" + borrowingList + '}';
