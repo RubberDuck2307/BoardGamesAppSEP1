@@ -6,7 +6,7 @@
     <type>Engine Building</type>
     <numberOfPlayersMin>1</numberOfPlayersMin>
     <numberOfPlayersMax>1</numberOfPlayersMax>
-    <availabilityStatus>Unavailable</availabilityStatus>
+    <availabilityStatus>Available</availabilityStatus>
     <comment/>
     <ownerID>0</ownerID>
     <numberOfVotes>0</numberOfVotes>

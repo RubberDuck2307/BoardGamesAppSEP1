@@ -133,7 +133,7 @@ public class ReservationsDetailsPageController implements Controller{
         if(result.isPresent() && result.get() == ButtonType.OK){
             model.getReservationsList().deleteByID(ID);
             model.saveReservation();
-            viewHandler.openView(5,-1);}
+            viewHandler.openView(5,-1, -1);}
     }
 
     public void goBack(){
@@ -162,7 +162,7 @@ public class ReservationsDetailsPageController implements Controller{
         else {
             Reservation newBorrowing = new Reservation(reservation.getPlayerID(),
                 reservation.getID(), reservation.getFrom(), reservation.getTo(), reservation.getComment());
-            model.deleteReservationByID(reservation.getPlayerID());
+            model.deleteReservationByID(reservation.getID());
             model.getBorrowingsList().addBorrowing(newBorrowing);
             model.saveReservation();
             model.saveBorrowing();
