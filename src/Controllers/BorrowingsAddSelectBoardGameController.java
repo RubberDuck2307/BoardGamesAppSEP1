@@ -54,20 +54,20 @@ public class BorrowingsAddSelectBoardGameController implements Controller
         BoardGame.getAllowedStatuses());
     status.setItems(items2);
 
-    genre.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-      System.out.println(newValue.toString());
-      getGenre(observable, oldValue, newValue);
-      fillTable();
+    genre.getSelectionModel().selectedItemProperty()
+        .addListener((observable, oldValue, newValue) -> {
+          System.out.println(newValue.toString());
+          getGenre(observable, oldValue, newValue);
+          fillTable();
 
+        });
+    status.getSelectionModel().selectedItemProperty()
+        .addListener((observable, oldValue, newValue) -> {
+          System.out.println(newValue.toString());
+          getStatus(observable, oldValue, newValue);
+          fillTable();
 
-    });
-    status.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-      System.out.println(newValue.toString());
-      getStatus(observable, oldValue, newValue);
-      fillTable();
-
-
-    });
+        });
     name.setCellValueFactory(new PropertyValueFactory<>("name"));
     type.setCellValueFactory(new PropertyValueFactory<>("type"));
     availability.setCellValueFactory(
@@ -87,6 +87,7 @@ public class BorrowingsAddSelectBoardGameController implements Controller
   {
 
   }
+
   @FXML private void chooseBoardgame()
   {
     if (boardGameTable.getSelectionModel().getSelectedItem() != null)
@@ -95,6 +96,7 @@ public class BorrowingsAddSelectBoardGameController implements Controller
           boardGameTable.getSelectionModel().getSelectedItem().getID());
     }
   }
+
   public void goBack()
   {
     viewHandler.openView(133, -1);
@@ -105,41 +107,48 @@ public class BorrowingsAddSelectBoardGameController implements Controller
     boardGameTables.clear();
     BoardGamesList boardGamesList;
 
-
-    boardGamesList = model.getBoardGamesList().getBoardGameListByStatus(BoardGame.AVAILABLE_STATUS);
-
-
+    boardGamesList = model.getBoardGamesList()
+        .getBoardGameListByStatus(BoardGame.AVAILABLE_STATUS);
 
     boardGamesList = boardGamesList.filterBoardGameList(searchField.getText());
     String numberString = numberOfPlayersFilter.getText();
 
-
-    if(!numberString.equals("")){
+    if (!numberString.equals(""))
+    {
       int number = Integer.parseInt(numberOfPlayersFilter.getText());
       boardGamesList = boardGamesList.getBoardGameListByNumberOfPlayers(number);
     }
 
-
-
-
-
-    if(genreValue!=null){
+    if (genreValue != null)
+    {
       boardGamesList = boardGamesList.getBoardGameListByGenre(genreValue);
     }
-    if(statusValue!=null){
+    if (statusValue != null)
+    {
       boardGamesList = boardGamesList.getBoardGameListByStatus(statusValue);
     }
-    for (int i = 0; i < boardGamesList.size(); i++) {
+    for (int i = 0; i < boardGamesList.size(); i++)
+    {
       BoardGame boardGame = boardGamesList.getBoardGame(i);
-      String numberOfPlayer = boardGame.getNumberOfPlayersMin() + " - " + boardGame.getNumberOfPlayersMax();
-      boardGameTables.add(new BoardgameTable(boardGame.getName(), boardGame.getType(), boardGame.getAvailabilityStatus(),numberOfPlayer, boardGame.getID()));
+      String numberOfPlayer = boardGame.getNumberOfPlayersMin() + " - "
+          + boardGame.getNumberOfPlayersMax();
+      boardGameTables.add(
+          new BoardgameTable(boardGame.getName(), boardGame.getType(),
+              boardGame.getAvailabilityStatus(), numberOfPlayer,
+              boardGame.getID()));
     }
   }
-  public void getGenre(ObservableValue observableValue, Object oldValue, Object newValue){
+
+  public void getGenre(ObservableValue observableValue, Object oldValue,
+      Object newValue)
+  {
     this.genreValue = newValue.toString();
 
   }
-  public void getStatus(ObservableValue observableValue, Object oldValue, Object newValue){
+
+  public void getStatus(ObservableValue observableValue, Object oldValue,
+      Object newValue)
+  {
     this.statusValue = newValue.toString();
 
   }

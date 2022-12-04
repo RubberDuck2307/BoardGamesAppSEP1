@@ -95,7 +95,7 @@
                         <Insets left="25.0" />
                      </HBox.margin>
                      <children>
-                        <TextField fx:id="numberOfPlayersFilter" alignment="CENTER" styleClass="input-field" />
+                        <TextField fx:id="numberOfPlayersFilter" alignment="CENTER" onKeyTyped="#fillTable" styleClass="input-field" />
                      </children>
                   </HBox>
                </children>

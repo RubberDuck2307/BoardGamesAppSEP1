@@ -2,6 +2,7 @@ package Controllers;
 
 import Application.ViewHandler;
 import Model.*;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -23,6 +24,8 @@ public class ReservationAddSelectBoardGameController implements Controller
   @FXML public TableColumn<BoardgameTable, String> numberOfPlayers;
   public ChoiceBox status;
   public ChoiceBox genre;
+  private String genreValue;
+  private String statusValue;
   public TextField numberOfPlayersFilter;
   public TextField searchField;
 
@@ -41,6 +44,27 @@ public class ReservationAddSelectBoardGameController implements Controller
     IDOfPlayer = ID;
 
     fillData();
+    ObservableList<String> items = FXCollections.observableArrayList(
+        BoardGame.getAllowedTypes());
+    genre.setItems(items);
+    ObservableList<String> items2 = FXCollections.observableArrayList(
+        BoardGame.getAllowedStatuses());
+    status.setItems(items2);
+
+    genre.getSelectionModel().selectedItemProperty()
+        .addListener((observable, oldValue, newValue) -> {
+          System.out.println(newValue.toString());
+          getGenre(observable, oldValue, newValue);
+          fillData();
+
+        });
+    status.getSelectionModel().selectedItemProperty()
+        .addListener((observable, oldValue, newValue) -> {
+          System.out.println(newValue.toString());
+          getStatus(observable, oldValue, newValue);
+          fillData();
+
+        });
 
     name.setCellValueFactory(new PropertyValueFactory<>("name"));
     type.setCellValueFactory(new PropertyValueFactory<>("type"));
@@ -60,8 +84,29 @@ public class ReservationAddSelectBoardGameController implements Controller
   }
 
   @FXML public void fillData(){
-    BoardGamesList boardGamesList = model.getBoardGamesList().getBoardGameListByStatus(BoardGame.AVAILABLE_STATUS, BoardGame.BORROWED_STATUS);
+    gamesInTable.clear();
+    BoardGamesList boardGamesList;
 
+    boardGamesList = model.getBoardGamesList()
+        .getBoardGameListByStatus(BoardGame.AVAILABLE_STATUS);
+
+    boardGamesList = boardGamesList.filterBoardGameList(searchField.getText());
+    String numberString = numberOfPlayersFilter.getText();
+
+    if (!numberString.equals(""))
+    {
+      int number = Integer.parseInt(numberOfPlayersFilter.getText());
+      boardGamesList = boardGamesList.getBoardGameListByNumberOfPlayers(number);
+    }
+
+    if (genreValue != null)
+    {
+      boardGamesList = boardGamesList.getBoardGameListByGenre(genreValue);
+    }
+    if (statusValue != null)
+    {
+      boardGamesList = boardGamesList.getBoardGameListByStatus(statusValue);
+    }
 
 
 
@@ -82,8 +127,19 @@ public class ReservationAddSelectBoardGameController implements Controller
     System.out.println("hekko");
     viewHandler.openView(204,IDOfPlayer, gamesTable.getSelectionModel().getSelectedItem().getID());
   }
-
-  public void fillTable(ActionEvent actionEvent)
+  public void getGenre(ObservableValue observableValue, Object oldValue,
+      Object newValue)
   {
+    this.genreValue = newValue.toString();
+
   }
+
+  public void getStatus(ObservableValue observableValue, Object oldValue,
+      Object newValue)
+  {
+    this.statusValue = newValue.toString();
+
+  }
+
+
 }

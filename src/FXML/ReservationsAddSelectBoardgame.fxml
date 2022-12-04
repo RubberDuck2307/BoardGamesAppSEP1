@@ -53,7 +53,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="198.0">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fillTable" prefHeight="63.0" prefWidth="198.0" styleClass="button-search" text="Serach" textFill="WHITE">
+                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fillData" prefHeight="63.0" prefWidth="198.0" styleClass="button-search" text="Serach" textFill="WHITE">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -95,7 +95,7 @@
                         <Insets />
                      </HBox.margin>
                      <children>
-                        <TextField fx:id="numberOfPlayersFilter" />
+                        <TextField fx:id="numberOfPlayersFilter" onKeyTyped="#fillData" />
                      </children>
                   </HBox>
                </children>
@@ -127,7 +127,7 @@
                                     <Font size="24.0" />
                                  </font>
                               </Label>
-                              <ChoiceBox fx:id="status" onMousePressed="#fillTable" prefWidth="150.0" styleClass="input-select" />
+                              <ChoiceBox fx:id="status" onMousePressed="#fillData" prefWidth="150.0" styleClass="input-select" />
                            </children>
                         </VBox>
                      </children>
