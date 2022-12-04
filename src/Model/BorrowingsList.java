@@ -47,8 +47,8 @@ public class BorrowingsList
     for (int i = 0; i < size(); i++)
     {
       if (playersList.getPlayerByID(borrowingList.get(i).getPlayerID())
-          .getName().contains(charSequence) || boardGamesList.getBoardGameByID(
-          borrowingList.get(i).getGameID()).getName().contains(charSequence))
+          .getName().toLowerCase().contains(charSequence.toLowerCase()) || boardGamesList.getBoardGameByID(
+          borrowingList.get(i).getGameID()).getName().toLowerCase().contains(charSequence.toLowerCase()))
       {
         newBorrowingList.addBorrowing(borrowingList.get(i));
       }

@@ -107,7 +107,7 @@ public class ReservationsList
     ReservationsList reservationsList1 = new ReservationsList();
     for (int i = 0; i < size(); i++)
     {
-      if( boardGamesList.getBoardGame(getReservation(i).getGameID()).getName().trim().contains(name.trim()) || playersList.getNameByID(getReservation(i).getPlayerID()).trim().contains(name.trim())){
+      if( boardGamesList.getBoardGame(getReservation(i).getGameID()).getName().toLowerCase().contains(name.trim()) || playersList.getNameByID(getReservation(i).getPlayerID()).toLowerCase().contains(name.trim())){
         reservationsList1.addReservation(getReservation(i));
       }
     }
