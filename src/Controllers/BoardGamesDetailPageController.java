@@ -13,6 +13,7 @@ import javafx.scene.layout.Region;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.time.LocalDate;
+import java.util.Objects;
 import java.util.Optional;
 
 public class BoardGamesDetailPageController implements Controller
@@ -36,6 +37,9 @@ public class BoardGamesDetailPageController implements Controller
   private int ID;
   private EventHandler save;
 
+  @FXML public Button showRatingsButton;
+  @FXML public Button showReservationsButton;
+
   @Override public void init(Region region, ModelManager model,
       ViewHandler viewHandler, int ID)
   {
@@ -48,6 +52,18 @@ public class BoardGamesDetailPageController implements Controller
 
   public void setData()
   {
+    System.out.println("nice");
+    if(Objects.equals(
+        model.getBoardGamesList().getBoardGameByID(ID).getAvailabilityStatus(),
+        BoardGame.CONSIDERED_TO_BE_BOUGHT_STATUS)){
+      showReservationsButton.setVisible(false);
+      showRatingsButton.setVisible(false);
+    }
+    else {
+      showReservationsButton.setVisible(true);
+      showRatingsButton.setVisible(true);
+    }
+
     BoardGame boardGame = model.getBoardGamesList().getBoardGameByID(ID);
     PlayersList playersList = model.getPlayersList();
     heading.setText(boardGame.getName());
@@ -210,7 +226,7 @@ public class BoardGamesDetailPageController implements Controller
     else
     {
       alert.setTitle("Confirmation");
-      alert.setHeaderText("Are you sure you want to delete the player ");
+      alert.setHeaderText("Are you sure you want to delete the board game ");
       Optional<ButtonType> result = alert.showAndWait();
       if (result.isPresent() && result.get() == ButtonType.OK)
       {
@@ -267,9 +283,15 @@ public class BoardGamesDetailPageController implements Controller
       }
       setData();
     }
-
   }
 
+
+  public void showReservations(){
+
+      viewHandler.openView(5, -1,ID );
+
+
+  }
   public void showRatings()
   {
     viewHandler.openView(16, ID);

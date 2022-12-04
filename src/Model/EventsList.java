@@ -78,6 +78,17 @@ public class EventsList
     return eventsList.get(0);
   }
 
+  public EventsList getEventsByParticipantID(int ID){
+    EventsList eventsList1 = new EventsList();
+    for (int i = 0; i < size(); i++)
+    {
+      if (getEvent(i).getParticipantsIDs().contains(ID)){
+        eventsList1.addEvent(getEvent(i));
+      }
+    }
+    return eventsList1;
+  }
+
   public int size()
   {
     return eventsList.size();

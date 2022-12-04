@@ -78,13 +78,13 @@
                     </GridPane.margin>
                 </Button>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="14">
-                    <children>
-                        <Button fx:id="addButton1" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="SHOW BORROWINGS" textAlignment="CENTER">
+               <children>
+                        <Button fx:id="showRatingsButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showRatings" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="SHOW RATINGS" textAlignment="CENTER">
                             <font>
                                 <Font size="26.0" />
                             </font>
                         </Button>
-                    </children>
+               </children>
                 </VBox>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="15">
                     <children>
@@ -97,22 +97,14 @@
                 </VBox>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="15">
                     <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="SHOW RESERVATIONS" textAlignment="CENTER">
+                        <Button fx:id="showReservationsButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showReservations" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="SHOW RESERVATIONS" textAlignment="CENTER">
                             <font>
                                 <Font size="26.0" />
                             </font>
                         </Button>
                     </children>
                 </VBox>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="16">
-                    <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showRatings" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="SHOW RATINGS" textAlignment="CENTER">
-                            <font>
-                                <Font size="26.0" />
-                            </font>
-                        </Button>
-                    </children>
-                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="16" />
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>
                         <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#goBack" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />

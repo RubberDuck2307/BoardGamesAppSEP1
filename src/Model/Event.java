@@ -231,6 +231,11 @@ public class Event
     this.link = link;
   }
 
+  public void deleteParticipantByID(int ID){
+    participantsIDs.remove(ID);
+  }
+
+
   @Override public String toString()
   {
     return "Model.Event{" + "ID=" + ID + ", name='" + name + '\'' + ", location='"

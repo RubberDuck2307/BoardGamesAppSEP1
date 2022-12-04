@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <PlayersList>
   <Player>
-    <ID>1</ID>
+    <ID>2</ID>
     <name>Karel</name>
-    <phoneNumber>15</phoneNumber>
+    <phoneNumber>12</phoneNumber>
     <email/>
     <membership>true</membership>
     <comment/>
     <address/>
     <voted>false</voted>
-    <feePayment>
-      <day>7</day>
-      <month>12</month>
-      <year>2022</year>
-    </feePayment>
   </Player>
   <Player>
-    <ID>2</ID>
-    <name>Karel</name>
-    <phoneNumber>12</phoneNumber>
+    <ID>3</ID>
+    <name>Pavel</name>
+    <phoneNumber>55</phoneNumber>
     <email/>
-    <membership>false</membership>
+    <membership>true</membership>
     <comment/>
     <address/>
     <voted>false</voted>

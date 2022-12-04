@@ -80,10 +80,6 @@ public class ViewHandler
       case 4:
         root = loadSimpleGuiView("/FXML/Election.fxml", electionController, -1);
         break;
-      case 5:
-        root = loadSimpleGuiView("/FXML/Reservations.fxml",
-            reservationController, IDOfItem);
-        break;
       case 6:
         root = loadSimpleGuiView("/FXML/Borrowings.fxml", borrowingsController,
             IDOfItem);
@@ -148,26 +144,32 @@ public class ViewHandler
             boardGamesAddBoardGameControllerSelectOwner, -1);
         break;
       case 15:
-        root = loadSimpleGuiView("/FXML/BoardgamesAddRating.fxml",boardgamesAddRatingController ,IDOfItem);
+        root = loadSimpleGuiView("/FXML/BoardgamesAddRating.fxml",
+            boardgamesAddRatingController, IDOfItem);
         break;
       case 16:
-        root = loadSimpleGuiView("/FXML/BoardgamesRatings.fxml", boardGamesRatingsController, IDOfItem);
+        root = loadSimpleGuiView("/FXML/BoardgamesRatings.fxml",
+            boardGamesRatingsController, IDOfItem);
         break;
       case 17:
-        root = loadSimpleGuiView("/FXML/PlayersDeletePlayer.fxml", playersDeletePlayerController ,IDOfItem);
+        root = loadSimpleGuiView("/FXML/PlayersDeletePlayer.fxml",
+            playersDeletePlayerController, IDOfItem);
         break;
       case 133:
         root = loadSimpleGuiView("/FXML/BorrowingsAddSelectPlayer.fxml",
             borrowingsAddSelectPlayerController, -1);
         break;
       case 201:
-        root = loadSimpleGuiView("/FXML/ReservationsDetailPage.fxml", reservationsDetailsPageController, IDOfItem);
+        root = loadSimpleGuiView("/FXML/ReservationsDetailPage.fxml",
+            reservationsDetailsPageController, IDOfItem);
         break;
       case 202:
-        root = loadSimpleGuiView("/FXML/ReservationsAddSelectMember.fxml", reservationAddSelectMemberController, -1);
+        root = loadSimpleGuiView("/FXML/ReservationsAddSelectMember.fxml",
+            reservationAddSelectMemberController, -1);
         break;
       case 203:
-        root = loadSimpleGuiView("/FXML/ReservationsAddSelectBoardgame.fxml", reservationAddSelectBoardGameController, IDOfItem);
+        root = loadSimpleGuiView("/FXML/ReservationsAddSelectBoardgame.fxml",
+            reservationAddSelectBoardGameController, IDOfItem);
         break;
       case 134:
         root = loadSimpleGuiView("/FXML/BorrowingsAddSelectBoardgame.fxml",
@@ -190,12 +192,20 @@ public class ViewHandler
     {
       case 135:
         root = loadExtendedGuiView("/FXML/BorrowingsAddFinalForm.fxml",
-            borrowingsAddFinalFormController, IDOfItem,IDOfItem2 );
+            borrowingsAddFinalFormController, IDOfItem, IDOfItem2);
         break;
-      case 1: root = loadExtendedGuiView("/FXML/BoardgamesInsertRating.fxml", boardGamesInsertRatingController, IDOfItem, IDOfItem2);
-      break;
-      case 204: root = loadExtendedGuiView("/FXML/ReservationsAddFinalForm.fxml", reservationAddFinalFormController, IDOfItem, IDOfItem2);
-
+      case 1:
+        root = loadExtendedGuiView("/FXML/BoardgamesInsertRating.fxml",
+            boardGamesInsertRatingController, IDOfItem, IDOfItem2);
+        break;
+      case 204:
+        root = loadExtendedGuiView("/FXML/ReservationsAddFinalForm.fxml",
+            reservationAddFinalFormController, IDOfItem, IDOfItem2);
+        break;
+      case 5:
+        root = loadExtendedGuiView("/FXML/Reservations.fxml",
+            reservationController, IDOfItem, IDOfItem2);
+        break;
     }
 
     currentScene.setRoot(root);

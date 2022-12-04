@@ -51,7 +51,7 @@ public class ReservationsDetailsPageController implements Controller{
         System.out.println("This is> " +boardGamesList.getNameByID(reservation.getGameID()));
 
         boardGameField.setText(boardGamesList.getNameByID(reservation.getGameID()));
-        memberField.setText(playersList.getNameByID(reservation.getPlayerID()));
+        memberField.setText(playersList.getNameByID(reservation.getPlayerID()) + " " + playersList.getPlayerByID(reservation.getPlayerID()).getPhoneNumber());
         startingDateField.setValue(reservation.getFrom());
         endingDateField.setValue(reservation.getTo());
         commentField.setText(reservation.getComment());

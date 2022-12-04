@@ -53,7 +53,7 @@ public class ReservationAddSelectMemberController implements Controller
   }
 
   @FXML public void goBack(){
-    viewHandler.openView(5,-1);
+    viewHandler.openView(5,-1, -1);
   }
   public void fillTable()
   {

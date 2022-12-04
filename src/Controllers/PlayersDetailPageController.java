@@ -175,44 +175,66 @@ public class PlayersDetailPageController implements Controller
 
   public void delete() throws ParserConfigurationException, TransformerException
   {
-    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-    alert.setTitle("Confirmation");
-    alert.setHeaderText("Are you sure you want to delete the player ");
-    Optional<ButtonType> result = alert.showAndWait();
-    if (result.isPresent() && result.get() == ButtonType.OK)
+    boolean borrowing = false;
+
+    BorrowingsList borrowingsList = model.getBorrowingsList()
+        .getBorrowingsByPlayer(ID);
+
+    if (borrowingsList.size() != 0)
     {
-      RatingsList ratingsList = model.getRatingsByPlayer(ID);
-
-      for (int i = 0; i < ratingsList.size(); i++)
-      {
-        model.deleteRatingByID(ratingsList.getRating(i).getID());
-      }
-
-      ReservationsList reservationsList = model.getReservationsByPlayer(ID);
-      for (int i = 0; i < reservationsList.size(); i++)
-      {
-        model.deleteReservationByID(reservationsList.getReservation(i).getID());
-      }
-      model.saveRatings();
-      model.saveReservation();
-      for (int i = 0; i < reservationsList.size(); i++)
-      {
-        reservationsList.delete(i);
-      }
-
-      BoardGamesList ownedBoardGames = model.getBoardGamesByOwnership(ID);
-      if (ownedBoardGames.size() > 0)
-      {
-        viewHandler.openView(17, ID);
-      }
-      else
-      {
-        model.getPlayersList().deleteByID(ID);
-        model.savePlayers();
-        viewHandler.openView(2, -1);
-      }
+      borrowing = true;
+      Alert alert2 = new Alert(Alert.AlertType.ERROR);
+      alert2.setTitle("Error");
+      alert2.setHeaderText(
+          "The player cannot be deleted because he is currently borrowing a game");
+      Optional<ButtonType> result2 = alert2.showAndWait();
     }
 
+    if (!borrowing)
+    {
+
+      Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+      alert.setTitle("Confirmation");
+      alert.setHeaderText("Are you sure you want to delete the player");
+      Optional<ButtonType> result = alert.showAndWait();
+      if (result.isPresent() && result.get() == ButtonType.OK)
+      {
+
+        EventsList eventsList = model.getEventsList().getEventsByParticipantID(ID);
+        for (int i = 0; i < eventsList.size(); i++)
+        {
+          eventsList.getEvent(i).deleteParticipantByID(ID);
+        }
+
+        RatingsList ratingsList = model.getRatingsByPlayer(ID);
+
+        for (int i = 0; i < ratingsList.size(); i++)
+        {
+          model.deleteRatingByID(ratingsList.getRating(i).getID());
+        }
+
+        ReservationsList reservationsList = model.getReservationsByPlayer(ID);
+        for (int i = 0; i < reservationsList.size(); i++)
+        {
+          model.deleteReservationByID(
+              reservationsList.getReservation(i).getID());
+        }
+        model.saveRatings();
+        model.saveReservation();
+
+        BoardGamesList ownedBoardGames = model.getBoardGamesByOwnership(ID);
+        if (ownedBoardGames.size() > 0)
+        {
+          viewHandler.openView(17, ID);
+        }
+        else
+        {
+          model.getPlayersList().deleteByID(ID);
+          model.savePlayers();
+          viewHandler.openView(2, -1);
+        }
+      }
+    }
   }
 
   @FXML public void showOwnedGames()
@@ -222,7 +244,7 @@ public class PlayersDetailPageController implements Controller
 
   @FXML public void showReservations()
   {
-    viewHandler.openView(5, ID);
+    viewHandler.openView(5, ID, -1);
 
   }
 

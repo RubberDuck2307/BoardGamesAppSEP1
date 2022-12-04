@@ -13,13 +13,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
 
-public class ReservationController implements Controller
+public class ReservationController implements ExtendedController
 {
 
   private Region region;
   private ModelManager model;
   private ViewHandler viewHandler;
-  private int ID;
+  private int playerID;
+  private int gameID;
   @FXML private TableView<ReservationTable> reservationTable;
   @FXML public TableColumn<ReservationTable, String> boardGameName;
   @FXML public TableColumn<ReservationTable, String> memberName;
@@ -31,23 +32,21 @@ public class ReservationController implements Controller
 
   ObservableList<ReservationTable> reservationTables;
 
-
-
   public ReservationController()
   {
   }
 
   @Override public void init(Region region, ModelManager model,
-      ViewHandler viewHandler, int ID)
+      ViewHandler viewHandler, int ID, int ID2)
   {
     this.region = region;
     this.model = model;
     this.viewHandler = viewHandler;
-    this.ID = ID;
+    playerID = ID;
+    gameID = ID2;
 
     reservationTables = FXCollections.observableArrayList();
     fillTable();
-
 
     boardGameName.setCellValueFactory(
         new PropertyValueFactory<>("boardGameName"));
@@ -60,22 +59,31 @@ public class ReservationController implements Controller
 
   @FXML public void backToHomePage()
   {
-    if (ID == -1){
+    if (gameID == -1 && playerID == -1)
+    {
 
-    viewHandler.openView(1, -1);
-  }
-  else {
-    viewHandler.openView(8, ID);
+      viewHandler.openView(1, -1);
+    }
+    else if (gameID != -1)
+    {
+      viewHandler.openView(9,gameID);
+    }
+
+    else
+    {
+      viewHandler.openView(8, playerID);
     }
   }
 
-  public void chooseReservation(){
+  public void chooseReservation()
+  {
     if (reservationTable.getSelectionModel().getSelectedItem() != null)
     {
       viewHandler.openView(201,
           reservationTable.getSelectionModel().getSelectedItem().getID());
     }
   }
+
   @Override public Region getRegion()
   {
     return region;
@@ -86,26 +94,36 @@ public class ReservationController implements Controller
 
   }
 
-
-  @FXML public void addReservation(){
-    viewHandler.openView(202,-1);
+  @FXML public void addReservation()
+  {
+    viewHandler.openView(202, -1);
   }
 
-  public void fillTable() {
+  public void fillTable()
+  {
     reservationTables.clear();
     ReservationsList reservationsList;
-    if (ID == -1)
+    if (gameID == -1 && playerID == -1)
     {
 
       reservationsList = model.getReservationsList();
     }
 
-    else {
-      reservationsList = model.getReservationsByPlayer(ID);
+    else if (gameID != -1 && playerID == -1)
+    {
+      reservationsList = model.getReservationsList()
+          .getReservationByGameID(gameID);
       addButton.setVisible(false);
     }
 
-    reservationsList = reservationsList.filterByName(searchField.getText(), model.getBoardGamesList(), model.getPlayersList());
+    else
+    {
+      reservationsList = model.getReservationsByPlayer(playerID);
+      addButton.setVisible(false);
+    }
+
+    reservationsList = reservationsList.filterByName(searchField.getText(),
+        model.getBoardGamesList(), model.getPlayersList());
 
     for (int i = 0; i < reservationsList.size(); i++)
     {
@@ -121,6 +139,5 @@ public class ReservationController implements Controller
     }
 
   }
-
 
 }

@@ -48,7 +48,7 @@ public class HomeController implements Controller
   }
   @FXML public void openReservationPage()
   {
-    viewHandler.openView(5, -1);
+    viewHandler.openView(5, -1,-1);
   }
   @FXML public void openBorrowingsPage()
   {

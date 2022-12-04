@@ -72,6 +72,7 @@ public class ReservationAddSelectBoardGameController implements Controller
 }
 
   @FXML public void confirmBoardGame(){
+    System.out.println("hekko");
     viewHandler.openView(204,IDOfPlayer, gamesTable.getSelectionModel().getSelectedItem().getID());
   }
 }

@@ -149,7 +149,7 @@ public class ReservationAddFinalFormController implements ExtendedController
         model.getReservationsList().addReservation(reservation);
         System.out.println("LLLLLLL" + model.getReservationsList());
         model.saveReservation();
-        viewHandler.openView(5, -1);
+        viewHandler.openView(5, -1,-1);
       }
     }
     catch (Exception e)

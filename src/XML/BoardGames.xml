@@ -22,4 +22,15 @@
     <ownerID>0</ownerID>
     <numberOfVotes>0</numberOfVotes>
   </BoardGame>
+  <BoardGame>
+    <ID>5</ID>
+    <name>bbb</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>4</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
 </BoardGamesList>

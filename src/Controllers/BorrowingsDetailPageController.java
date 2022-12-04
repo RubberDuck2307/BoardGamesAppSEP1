@@ -39,11 +39,11 @@ public class BorrowingsDetailPageController implements Controller
   public void setData()
   {
     Reservation borrowing = model.getBorrowingsList().getBorrowingByID(ID);
-    //BorrowingsList borrowingsList = model.getBorrowingsList();
     BoardGamesList boardGamesList = model.getBoardGamesList();
     PlayersList playersList = model.getPlayersList();
     nameOfBoardgame.setText(boardGamesList.getNameByID(borrowing.getGameID()));
-    nameOfPlayer.setText(playersList.getNameByID(borrowing.getPlayerID()));
+    nameOfPlayer.setText(playersList.getNameByID(borrowing.getPlayerID()) + " " + playersList.getPlayerByID(
+        borrowing.getPlayerID()).getPhoneNumber());
     start.setValue(borrowing.getFrom());
     end.setValue(borrowing.getTo());
     comments.setText(borrowing.getComment());
