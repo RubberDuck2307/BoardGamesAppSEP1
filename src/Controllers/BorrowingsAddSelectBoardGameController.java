@@ -106,7 +106,7 @@ public class BorrowingsAddSelectBoardGameController implements Controller
     BoardGamesList boardGamesList;
 
 
-    boardGamesList = model.getBoardGamesList();
+    boardGamesList = model.getBoardGamesList().getBoardGameListByStatus(BoardGame.AVAILABLE_STATUS);
 
 
 

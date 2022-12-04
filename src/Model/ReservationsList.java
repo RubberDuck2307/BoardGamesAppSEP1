@@ -103,6 +103,16 @@ public class ReservationsList
     return reservations;
   }
 
+  public ReservationsList filterByName(String name, BoardGamesList boardGamesList, PlayersList playersList){
+    ReservationsList reservationsList1 = new ReservationsList();
+    for (int i = 0; i < size(); i++)
+    {
+      if( boardGamesList.getBoardGame(getReservation(i).getGameID()).getName().trim().contains(name.trim()) || playersList.getNameByID(getReservation(i).getPlayerID()).trim().contains(name.trim())){
+        reservationsList1.addReservation(getReservation(i));
+      }
+    }
+    return reservationsList1;
+  }
   public ArrayList<Reservation> getSortedArrayListByGameID(int ID){
     ArrayList<Reservation> reservationsList1 = getReservationByGameID(ID).getReservationsAsArrayList();
     reservationsList1.sort(Comparator.comparing(Reservation::getFrom));

@@ -2,45 +2,25 @@
 <PlayersList>
   <Player>
     <ID>1</ID>
-    <name>Alex</name>
-    <phoneNumber>123456789</phoneNumber>
-    <email>alex@iamalex.com</email>
+    <name>Karel</name>
+    <phoneNumber>15</phoneNumber>
+    <email/>
     <membership>true</membership>
     <comment/>
-    <address>jome</address>
+    <address/>
     <voted>false</voted>
     <feePayment>
-      <day>3</day>
+      <day>7</day>
       <month>12</month>
       <year>2022</year>
     </feePayment>
   </Player>
   <Player>
-    <ID>0</ID>
-    <name>Pavel Maria De la Nemas</name>
-    <phoneNumber>8456</phoneNumber>
-    <email>pavel@seznam.cz</email>
-    <membership>false</membership>
-    <comment/>
-    <address/>
-    <voted>false</voted>
-  </Player>
-  <Player>
-    <ID>3</ID>
-    <name>Anna</name>
-    <phoneNumber>6456</phoneNumber>
-    <email>a@seznam.cz</email>
-    <membership>false</membership>
-    <comment/>
-    <address>lů lů</address>
-    <voted>false</voted>
-  </Player>
-  <Player>
-    <ID>4</ID>
-    <name>a</name>
-    <phoneNumber>1</phoneNumber>
+    <ID>2</ID>
+    <name>Karel</name>
+    <phoneNumber>12</phoneNumber>
     <email/>
-    <membership>true</membership>
+    <membership>false</membership>
     <comment/>
     <address/>
     <voted>false</voted>

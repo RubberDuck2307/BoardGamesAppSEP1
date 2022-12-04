@@ -2,35 +2,24 @@
 <BoardGamesList>
   <BoardGame>
     <ID>1</ID>
-    <name>LOKOKOKOo</name>
+    <name>Pavel</name>
     <type>Engine Building</type>
     <numberOfPlayersMin>1</numberOfPlayersMin>
-    <numberOfPlayersMax>1</numberOfPlayersMax>
-    <availabilityStatus>Available</availabilityStatus>
+    <numberOfPlayersMax>5</numberOfPlayersMax>
+    <availabilityStatus>Borrowed</availabilityStatus>
     <comment/>
     <ownerID>0</ownerID>
     <numberOfVotes>0</numberOfVotes>
   </BoardGame>
   <BoardGame>
     <ID>2</ID>
-    <name>aaaa</name>
+    <name>Tade;</name>
     <type>Engine Building</type>
-    <numberOfPlayersMin>66</numberOfPlayersMin>
-    <numberOfPlayersMax>66</numberOfPlayersMax>
-    <availabilityStatus>Available</availabilityStatus>
-    <comment>cc</comment>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>6</numberOfPlayersMax>
+    <availabilityStatus>Unavailable</availabilityStatus>
+    <comment/>
     <ownerID>0</ownerID>
-    <numberOfVotes>0</numberOfVotes>
-  </BoardGame>
-  <BoardGame>
-    <ID>3</ID>
-    <name>aaa</name>
-    <type>Engine Building</type>
-    <numberOfPlayersMin>6</numberOfPlayersMin>
-    <numberOfPlayersMax>7</numberOfPlayersMax>
-    <availabilityStatus>Available</availabilityStatus>
-    <comment>km</comment>
-    <ownerID>1</ownerID>
     <numberOfVotes>0</numberOfVotes>
   </BoardGame>
 </BoardGamesList>

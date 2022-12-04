@@ -65,15 +65,11 @@ public class ReservationAddSelectMemberController implements Controller
 
     for (int i = 0; i < playersList.size(); i++)
     {
-      System.out.println(playersList.getPlayer(i));
       Player player = playersList.getPlayer(i);
-      if (!player.getVoted())
-      {
         playersInTable.add(
             new PlayerTable(player.getName(), player.getPhoneNumber(),
                 player.getEmail(), player.getID()));
 
-      }
     }
   }
 

@@ -81,6 +81,20 @@ public class BoardGamesList
     return newBoardGameList;
   }
 
+  public BoardGamesList getBoardGameListByStatus(String status, String status2)
+  {
+    BoardGamesList newBoardGameList = new BoardGamesList();
+    for (int i = 0; i < size(); i++)
+    {
+      if (Objects.equals(boardGamesList.get(i).getAvailabilityStatus(), status) || Objects.equals(boardGamesList.get(i).getAvailabilityStatus(), status2))
+      {
+        newBoardGameList.addBoardGame(boardGamesList.get(i));
+      }
+    }
+    return newBoardGameList;
+  }
+
+
   public BoardGamesList getBoardGameListByGenre(String genre)
   {
     BoardGamesList newBoardGameList = new BoardGamesList();
