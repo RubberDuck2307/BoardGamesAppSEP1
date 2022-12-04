@@ -53,7 +53,10 @@ public class ReservationAddSelectBoardGameController implements Controller
   }
 
   @FXML public void fillData(){
-    BoardGamesList boardGamesList = model.getBoardGamesList();
+    BoardGamesList boardGamesList = model.getBoardGamesList().getBoardGameListByStatus(BoardGame.AVAILABLE_STATUS, BoardGame.BORROWED_STATUS);
+
+
+
 
     for (int i = boardGamesList.size() -1 ;  i >= 0; i--)
     {

@@ -147,6 +147,7 @@ public class ReservationAddFinalFormController implements ExtendedController
             startingDate.getValue(), endingDate.getValue(),
             commentField.getText());
         model.getReservationsList().addReservation(reservation);
+        System.out.println("LLLLLLL" + model.getReservationsList());
         model.saveReservation();
         viewHandler.openView(5, -1);
       }

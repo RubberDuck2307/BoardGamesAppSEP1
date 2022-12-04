@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
 
@@ -26,6 +27,10 @@ public class ReservationController implements Controller
   @FXML public TableColumn<ReservationTable, String> to;
   @FXML public Button addButton;
 
+  @FXML public TextField searchField;
+
+  ObservableList<ReservationTable> reservationTables;
+
 
 
   public ReservationController()
@@ -40,30 +45,9 @@ public class ReservationController implements Controller
     this.viewHandler = viewHandler;
     this.ID = ID;
 
-    ObservableList<ReservationTable> reservationTables = FXCollections.observableArrayList();
-    ReservationsList reservationsList;
-    if (ID == -1)
-    {
+    reservationTables = FXCollections.observableArrayList();
+    fillTable();
 
-      reservationsList = model.getReservationsList();
-    }
-
-    else {
-      reservationsList = model.getReservationsByPlayer(ID);
-      addButton.setVisible(false);
-    }
-    for (int i = 0; i < reservationsList.size(); i++)
-    {
-      Reservation reservation = reservationsList.getReservation(i);
-      String boardgame = model.getBoardGamesList()
-          .getNameByID(reservation.getGameID());
-      String player = model.getPlayersList()
-          .getNameByID(reservation.getPlayerID());
-
-      reservationTables.add(new ReservationTable(boardgame, player,
-          String.valueOf(reservation.getFrom()),
-          String.valueOf(reservation.getTo()), reservation.getID()));
-    }
 
     boardGameName.setCellValueFactory(
         new PropertyValueFactory<>("boardGameName"));
@@ -102,11 +86,40 @@ public class ReservationController implements Controller
 
   }
 
+
   @FXML public void addReservation(){
     viewHandler.openView(202,-1);
   }
 
   public void fillTable() {
+    reservationTables.clear();
+    ReservationsList reservationsList;
+    if (ID == -1)
+    {
+
+      reservationsList = model.getReservationsList();
+    }
+
+    else {
+      reservationsList = model.getReservationsByPlayer(ID);
+      addButton.setVisible(false);
+    }
+
+    reservationsList = reservationsList.filterByName(searchField.getText(), model.getBoardGamesList(), model.getPlayersList());
+
+    for (int i = 0; i < reservationsList.size(); i++)
+    {
+      Reservation reservation = reservationsList.getReservation(i);
+      String boardgame = model.getBoardGamesList()
+          .getNameByID(reservation.getGameID());
+      String player = model.getPlayersList()
+          .getNameByID(reservation.getPlayerID());
+
+      reservationTables.add(new ReservationTable(boardgame, player,
+          String.valueOf(reservation.getFrom()),
+          String.valueOf(reservation.getTo()), reservation.getID()));
+    }
+
   }
 
 
