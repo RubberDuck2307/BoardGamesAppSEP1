@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BorrowingsDetailPageController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="window" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BorrowingsDetailPageController">
     <children>
         <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0">
             <columnConstraints>
@@ -23,19 +23,18 @@
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="155.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="30.0" minHeight="-Infinity" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="70.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="70.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="70.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="195.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="820.0" styleClass="heading" stylesheets="@../css/style.css" text="BORROWING DETAIL" textAlignment="CENTER" GridPane.columnIndex="1">
@@ -43,7 +42,7 @@
                         <Font size="46.0" />
                     </font>
                 </Label>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="204.0" styleClass="labels" stylesheets="@../css/style.css" text="Name of Board Game" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="204.0" styleClass="labels" stylesheets="@../css/style.css" text="Name of Board Game" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <font>
                         <Font size="32.0" />
                     </font>
@@ -56,7 +55,7 @@
                         <Insets />
                     </GridPane.margin>
                 </TextField>
-                <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="63.0" prefWidth="198.0" styleClass="button-orange" text="Return" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="12">
+                <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="63.0" prefWidth="198.0" styleClass="button-orange" text="Return" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="11">
                     <font>
                         <Font size="26.0" />
                     </font>
@@ -64,7 +63,7 @@
                         <Insets right="50.0" />
                     </GridPane.margin>
                 </Button>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
                     <children>
                         <Button fx:id="addButton1" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showMemberInfo" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="Show Member Info" textAlignment="CENTER">
                             <font>
@@ -73,7 +72,7 @@
                         </Button>
                     </children>
                 </VBox>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="12">
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="11">
                     <children>
                         <Button fx:id="editButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#edit" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Edit" textAlignment="CENTER">
                             <font>
@@ -82,7 +81,7 @@
                         </Button>
                     </children>
                 </VBox>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
                     <children>
                         <Button fx:id="addButton11" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showBoardGameInfo" prefHeight="63.0" prefWidth="181.0" styleClass="button-more-info" text="Show Board Game Info" textAlignment="CENTER">
                             <font>
@@ -91,7 +90,7 @@
                         </Button>
                     </children>
                 </VBox>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>
                         <Button alignment="TOP_LEFT" contentDisplay="RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#goBack" prefHeight="44.0" prefWidth="133.0" styleClass="button-back" />
@@ -114,19 +113,19 @@
                         <VBox prefHeight="30.0" prefWidth="355.0" />
                     </children>
                 </HBox>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Name of Member" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Name of Member" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
                 <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                     <children>
-                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="230.0" styleClass="labels" stylesheets="@../css/style.css" text="Ending Date">
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="235.0" styleClass="labels" stylesheets="@../css/style.css" text="Ending Date">
                             <font>
                                 <Font size="32.0" />
                             </font>
                         </Label>
-                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="299.0" styleClass="labels" stylesheets="@../css/style.css" text="Starting Date">
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="299.0" styleClass="labels" stylesheets="@../css/style.css" text="Starting Date">
                             <font>
                                 <Font size="32.0" />
                             </font>
@@ -147,12 +146,12 @@
                         </VBox>
                     </children>
                 </HBox>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Comments" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Comments" GridPane.columnIndex="1" GridPane.rowIndex="7">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <TextArea fx:id="comments" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                <TextArea fx:id="comments" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="63.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             </children>
         </GridPane>
     </children>

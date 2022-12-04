@@ -23,20 +23,20 @@
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="155.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="30.0" minHeight="-Infinity" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="70.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="70.0" valignment="TOP" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="70.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="70.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
@@ -45,7 +45,7 @@
                         <Font size="46.0" />
                     </font>
                 </Label>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="204.0" styleClass="labels" stylesheets="@../css/style.css" text="Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="204.0" styleClass="labels" stylesheets="@../css/style.css" text="Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <font>
                         <Font size="32.0" />
                     </font>
@@ -91,7 +91,7 @@
                         <VBox prefHeight="30.0" prefWidth="355.0" />
                     </children>
                 </HBox>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Location" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Location" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <font>
                         <Font size="32.0" />
                     </font>
@@ -122,48 +122,51 @@
                 </HBox>
                 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="820.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                     <children>
-                        <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="205.0">
+                        <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="205.0">
                             <children>
-                                <DatePicker fx:id="fromDateField" prefHeight="26.0" prefWidth="218.0" styleClass="input-field" />
+                                <DatePicker fx:id="fromDateField" prefHeight="36.0" prefWidth="218.0" styleClass="input-field" />
                             </children>
                         </VBox>
-                  <HBox prefHeight="100.0" prefWidth="205.0">
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="205.0">
                      <children>
-                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="68.0">
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="68.0">
                            <children>
-                              <TextField fx:id="fromHoursField" alignment="CENTER" />
+                              <TextField fx:id="fromHoursField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="68.0" />
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="18.0">
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="18.0">
                            <children>
-                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" styleClass="labels" text=":" />
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="5.0" styleClass="labels" text=":" />
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="69.0">
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="69.0">
                            <children>
-                              <TextField fx:id="fromMinutesField" alignment="CENTER" />
+                              <TextField fx:id="fromMinutesField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="68.0" />
                            </children>
                         </HBox>
                      </children>
                   </HBox>
-                  <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="205.0">
+                  <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="205.0">
                      <children>
                         <DatePicker fx:id="toDateField" prefHeight="26.0" prefWidth="218.0" styleClass="input-field" />
                      </children>
                   </VBox>
-                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="205.0">
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="205.0">
                      <children>
-                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="68.0">
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="68.0">
                            <children>
                               <TextField fx:id="toHoursField" alignment="CENTER" />
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="18.0">
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="18.0">
                            <children>
-                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" styleClass="labels" text=":" />
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="5.0" styleClass="labels" text=":">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin></Label>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="69.0">
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="69.0">
                            <children>
                               <TextField fx:id="toMinutesField" alignment="CENTER" />
                            </children>
@@ -172,17 +175,17 @@
                   </HBox>
                     </children>
                 </HBox>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Comments" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Comments" GridPane.columnIndex="1" GridPane.rowIndex="11">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
                     <children>
-                        <TextArea fx:id="commentField" prefHeight="200.0" prefWidth="200.0" />
+                        <TextArea fx:id="commentField" prefHeight="67.0" prefWidth="820.0" />
                     </children>
                 </VBox>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Link" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Link" GridPane.columnIndex="1" GridPane.rowIndex="7">
                     <font>
                         <Font size="32.0" />
                     </font>
@@ -192,12 +195,12 @@
                         <Font size="24.0" />
                     </font>
                 </TextField>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Description" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="383.0" styleClass="labels" stylesheets="@../css/style.css" text="Description" GridPane.columnIndex="1" GridPane.rowIndex="9">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <TextArea fx:id="descriptionField" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                <TextArea fx:id="descriptionField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="63.0" prefWidth="820.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
             </children>
         </GridPane>
     </children>

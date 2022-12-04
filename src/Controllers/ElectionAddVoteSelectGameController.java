@@ -8,6 +8,7 @@ import Model.ModelManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -18,7 +19,7 @@ import javax.xml.transform.TransformerException;
 
 public class ElectionAddVoteSelectGameController implements Controller
 {
-
+  @FXML public ChoiceBox genre;
   @FXML public TableView<ConsideredToBeBoughtTable> gamesTable;
   @FXML public TableColumn<ConsideredToBeBoughtTable, Integer> numberOfVotes;
   @FXML public TableColumn<ConsideredToBeBoughtTable, String> type;

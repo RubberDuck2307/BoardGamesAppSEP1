@@ -25,10 +25,10 @@
          </columnConstraints>
          <rowConstraints>
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="155.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="40.0" prefHeight="83.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="43.0" valignment="TOP" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="83.0" valignment="CENTER" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="54.0" valignment="TOP" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="395.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="383.0" valignment="BOTTOM" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" valignment="TOP" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
@@ -119,7 +119,7 @@
                   </HBox>
                </children>
             </HBox>
-            <TableView fx:id="playersTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMousePressed="#choosePlayer" prefHeight="395.0" prefWidth="820.0" styleClass="bootstrap" stylesheets="/css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <TableView fx:id="playersTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMousePressed="#choosePlayer" prefHeight="383.0" prefWidth="820.0" styleClass="bootstrap" stylesheets="/css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <columns>
                   <TableColumn id="text" fx:id="name" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Name" />
                   <TableColumn fx:id="phone" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Number" />

@@ -21,7 +21,7 @@
          </columnConstraints>
          <rowConstraints>
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="155.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="562.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="563.0" valignment="BOTTOM" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" valignment="TOP" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
@@ -33,7 +33,7 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <TableView fx:id="eventsTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMousePressed="#chooseEvent" prefHeight="562.0" prefWidth="820.0" styleClass="bootstrap" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TableView fx:id="eventsTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMousePressed="#chooseEvent" prefHeight="563.0" prefWidth="820.0" styleClass="bootstrap" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <columns>
                   <TableColumn id="text" fx:id="name" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Name" />
                   <TableColumn fx:id="notaplace" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Location" />

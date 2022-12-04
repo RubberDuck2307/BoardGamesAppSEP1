@@ -24,11 +24,11 @@
          </columnConstraints>
          <rowConstraints>
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="155.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="43.0" valignment="TOP" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" valignment="BOTTOM" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="56.0" valignment="TOP" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="83.0" valignment="CENTER" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="314.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="321.0" valignment="BOTTOM" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" valignment="BOTTOM" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="TOP" vgrow="SOMETIMES" />
          </rowConstraints>
@@ -63,7 +63,7 @@
                   </HBox>
                </children>
             </HBox>
-            <TableView fx:id="boardGameTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMousePressed="#chooseBoardgame" prefHeight="314.0" prefWidth="820.0" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <TableView fx:id="boardGameTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMousePressed="#chooseBoardgame" prefHeight="321.0" prefWidth="820.0" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <columns>
                   <TableColumn id="text" fx:id="name" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Name" />
                   <TableColumn fx:id="type" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Type" />
@@ -101,7 +101,7 @@
                   </HBox>
                </children>
             </HBox>
-            <Label layoutX="133.0" layoutY="148.0" styleClass="heading-2" text="Select Board Game" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label layoutX="133.0" layoutY="148.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" styleClass="heading-2" text="Select Board Game" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="36.0" />
                </font>

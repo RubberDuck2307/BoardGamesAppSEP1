@@ -26,20 +26,21 @@
             <rowConstraints>
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="155.0" valignment="BOTTOM" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="30.0" minHeight="-Infinity" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="70.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="70.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="42.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
@@ -48,27 +49,27 @@
                         <Font size="46.0" />
                     </font>
                 </Label>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="53.0" styleClass="labels" stylesheets="@../css/style.css" text="Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="53.0" styleClass="labels" stylesheets="@../css/style.css" text="Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="135.0" styleClass="labels" stylesheets="@../css/style.css" text="Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="135.0" styleClass="labels" stylesheets="@../css/style.css" text="Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="48.0" styleClass="labels" stylesheets="@../css/style.css" text="Email" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="48.0" styleClass="labels" stylesheets="@../css/style.css" text="Email" GridPane.columnIndex="1" GridPane.rowIndex="5">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="71.0" styleClass="labels" text="Address" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="71.0" styleClass="labels" text="Address" GridPane.columnIndex="1" GridPane.rowIndex="7">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="88.0" styleClass="labels" text="Comment" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="88.0" styleClass="labels" text="Comment" GridPane.columnIndex="1" GridPane.rowIndex="10">
                     <font>
                         <Font size="32.0" />
                     </font>
@@ -101,7 +102,7 @@
                         <Font size="24.0" />
                     </font>
                 </TextField>
-                <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="63.0" prefWidth="198.0" styleClass="button-red" text="Delete" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="15">
+                <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="63.0" prefWidth="198.0" styleClass="button-red" text="Delete" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="16">
                     <font>
                         <Font size="26.0" />
                     </font>
@@ -111,16 +112,16 @@
                 </Button>
                 <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
                     <children>
-                        <CheckBox fx:id="membershipBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchFeePayment" prefHeight="50.0" prefWidth="146.0" style="-fx-background-color: white;" text="Member">
+                        <CheckBox fx:id="membershipBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchFeePayment" prefHeight="40.0" prefWidth="146.0" style="-fx-background-color: white;" text="Member">
                             <font>
                                 <Font size="24.0" />
                             </font>
-                            <styleClass>
-                                <String fx:value="labels" />
-                                <String fx:value="check-box" />
-                            </styleClass>
+                     <styleClass>
+                        <String fx:value="labels" />
+                        <String fx:value="check-box" />
+                     </styleClass>
                         </CheckBox>
-                        <CheckBox fx:id="votedBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="138.0" style="-fx-background-color: white;" text="Voted">
+                        <CheckBox fx:id="votedBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="138.0" style="-fx-background-color: white;" text="Voted">
                             <font>
                                 <Font size="24.0" />
                             </font>
@@ -140,7 +141,7 @@
                         </Button>
                     </children>
                 </VBox>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="15">
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="16">
                     <children>
                         <Button fx:id="editButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#edit" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Edit" textAlignment="CENTER">
                             <font>
@@ -175,7 +176,7 @@
                         <Insets left="60.0" top="40.0" />
                     </GridPane.margin>
                 </VBox>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="182.0" styleClass="labels" text="Fee payment date" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="182.0" styleClass="labels" text="Fee payment date" GridPane.columnIndex="1" GridPane.rowIndex="12">
                     <font>
                         <Font size="32.0" />
                     </font>
