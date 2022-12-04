@@ -8,6 +8,7 @@ import Model.ModelManager;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
@@ -19,7 +20,7 @@ import javafx.scene.layout.Region;
 
 public class BorrowingsAddSelectBoardGameController implements Controller
 {
-  public TextField serach;
+  public TextField search;
   public TableColumn<Object, Object> name;
   public TableColumn<Object, Object> type;
   public TableColumn<Object, Object> availability;
@@ -151,5 +152,36 @@ public class BorrowingsAddSelectBoardGameController implements Controller
   {
     this.statusValue = newValue.toString();
 
+  }
+
+  public void clearFilters(ActionEvent actionEvent)
+  {
+    genre.setValue("");
+    status.setValue("");
+    boardGameTables.clear();
+    BoardGamesList boardGamesList;
+
+    boardGamesList = model.getBoardGamesList()
+        .getBoardGameListByStatus(BoardGame.AVAILABLE_STATUS);
+
+    boardGamesList = boardGamesList.filterBoardGameList(searchField.getText());
+    String numberString = numberOfPlayersFilter.getText();
+
+    if (!numberString.equals(""))
+    {
+      int number = Integer.parseInt(numberOfPlayersFilter.getText());
+      boardGamesList = boardGamesList.getBoardGameListByNumberOfPlayers(number);
+    }
+
+    for (int i = 0; i < boardGamesList.size(); i++)
+    {
+      BoardGame boardGame = boardGamesList.getBoardGame(i);
+      String numberOfPlayer = boardGame.getNumberOfPlayersMin() + " - "
+          + boardGame.getNumberOfPlayersMax();
+      boardGameTables.add(
+          new BoardgameTable(boardGame.getName(), boardGame.getType(),
+              boardGame.getAvailabilityStatus(), numberOfPlayer,
+              boardGame.getID()));
+    }
   }
 }

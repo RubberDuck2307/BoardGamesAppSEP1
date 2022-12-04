@@ -52,7 +52,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="198.0">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fillTable" prefHeight="63.0" prefWidth="198.0" styleClass="button-search" text="Serach" textFill="WHITE">
+                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fillTable" prefHeight="63.0" prefWidth="198.0" styleClass="button-search" text="Search" textFill="WHITE">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -75,7 +75,7 @@
                                     <Font size="24.0" />
                                  </font>
                               </Label>
-                              <ChoiceBox fx:id="status" onMousePressed="#fillTable" prefWidth="150.0" styleClass="input-select" />
+                              <ChoiceBox fx:id="status" prefWidth="150.0" styleClass="input-select" />
                            </children>
                         </VBox>
                      </children>
@@ -97,7 +97,7 @@
                   <TableColumn id="text" fx:id="name" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Name" />
                   <TableColumn fx:id="type" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Type" />
                   <TableColumn fx:id="availability" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Availability" />
-                  <TableColumn fx:id="numberOfPlayers" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="190.0" resizable="false" style="-fx-font-size: 24px;" text="Number Of Players" />
+                  <TableColumn fx:id="numberOfPlayers" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="190.0" resizable="false" style="-fx-font-size: 24px;" text="Number of Players" />
                </columns>
                <GridPane.margin>
                   <Insets />
@@ -133,7 +133,7 @@
                         <Insets left="25.0" />
                      </HBox.margin>
                      <children>
-                        <TextField fx:id="numberOfPlayersFilter" alignment="CENTER" onKeyTyped="#fillTable" />
+                        <TextField fx:id="numberOfPlayersFilter" alignment="CENTER" onKeyTyped="#fillTable" styleClass="input-field" />
                      </children>
                   </HBox>
                </children>
@@ -146,6 +146,11 @@
                   <Insets left="60.0" top="40.0" />
                </GridPane.margin>
             </VBox>
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clearFilters" prefHeight="63.0" prefWidth="198.0" styleClass="button-blue" text="Clear Filters" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
          </children>
       </GridPane>
    </children>

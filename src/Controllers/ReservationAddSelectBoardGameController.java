@@ -140,6 +140,30 @@ public class ReservationAddSelectBoardGameController implements Controller
     this.statusValue = newValue.toString();
 
   }
+  public void clearFilters(ActionEvent actionEvent)
+  {
+    genre.setValue("");
+    status.setValue("");
+    gamesInTable.clear();
+    BoardGamesList boardGamesList;
 
+    boardGamesList = model.getBoardGamesList()
+        .getBoardGameListByStatus(BoardGame.AVAILABLE_STATUS);
+
+    boardGamesList = boardGamesList.filterBoardGameList(searchField.getText());
+    String numberString = numberOfPlayersFilter.getText();
+    if (!numberString.equals(""))
+    {
+      int number = Integer.parseInt(numberOfPlayersFilter.getText());
+      boardGamesList = boardGamesList.getBoardGameListByNumberOfPlayers(number);
+    }
+    for (int i = boardGamesList.size() -1 ;  i >= 0; i--)
+    {
+      BoardGame game = boardGamesList.getBoardGame(i);
+      String numberOfPlayers = game.getNumberOfPlayersMin() + " - " + game.getNumberOfPlayersMax();
+      gamesInTable.add(new BoardgameTable(game.getName(), game.getType(), game.getAvailabilityStatus(), numberOfPlayers,
+          game.getID()));
+    }
+  }
 
 }
