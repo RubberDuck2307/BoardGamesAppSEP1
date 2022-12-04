@@ -5,13 +5,12 @@ import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.Region;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
+import java.util.Optional;
 
 public class BoardGamesAddBoardGameController  implements Controller
 {
@@ -65,22 +64,32 @@ public class BoardGamesAddBoardGameController  implements Controller
 
   }
 
-  public void addBoardGame()  throws
-      ParserConfigurationException, TransformerException
+  public void addBoardGame()
+
   {
-    int minimum = Integer.parseInt(min.getText());
-    int maximum = Integer.parseInt(max.getText());
-    System.out.println("this is id " +ID);
-    int owner = ID;
-    String typeOfGame = type.getValue().toString();
-    String statusOfGame = status.getValue().toString();
-    if(BoardGame.validateData(nameField.getText(), minimum, maximum)){
-      model.addBoardGame(new BoardGame( nameField.getText(), typeOfGame, minimum,maximum, statusOfGame, commentField.getText(), owner, 0 ));
-      model.saveBoardGames();
-      System.out.println(model.getBoardGamesList());
-      viewHandler.openView(9,model.getBoardGamesList().getBoardGame(model.getBoardGamesList()
-          .size() -1).getID());
+      int owner = ID;
+      String typeOfGame = type.getValue().toString();
+      String statusOfGame = status.getValue().toString();
+
+    try
+    {
+      if(BoardGame.validateData(nameField.getText(), min.getText(),max.getText()))
+      {
+        model.addBoardGame(new BoardGame( nameField.getText(), typeOfGame, Integer.parseInt(min.getText()),Integer.parseInt(max.getText()), statusOfGame, commentField.getText(), owner, 0 ));
+        model.saveBoardGames();
+        System.out.println(model.getBoardGamesList());
+        viewHandler.openView(9,model.getBoardGamesList().getBoardGame(model.getBoardGamesList()
+            .size() -1).getID());
+      }
+
     }
+    catch (Exception e){
+      Alert alert = new Alert(Alert.AlertType.ERROR);
+      alert.setTitle("Invalid data");
+      alert.setHeaderText(e.getMessage());
+      Optional<ButtonType> result = alert.showAndWait();
+    }
+
 
   }
 

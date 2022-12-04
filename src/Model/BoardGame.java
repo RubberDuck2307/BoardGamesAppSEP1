@@ -27,22 +27,35 @@ public class BoardGame
   static public String WITHOUT_DICE_TYPE = "Without Dice";
   static public String ROLL_AND_WRITE = "Roll and Write";
   static public String OTHER = "Other";
-  static public String[] ALLOWED_STATUSES = {"Available","Borrowed","Unavailable","Considered to be bought"};
+  static public String[] ALLOWED_STATUSES = {"Available", "Borrowed",
+      "Unavailable", "Considered to be bought"};
   static public String AVAILABLE_STATUS = "Available";
   static public String BORROWED_STATUS = "Borrowed";
   static public String UNAVAILABLE_STATUS = "Unavailable";
   static public String CONSIDERED_TO_BE_BOUGHT_STATUS = "Considered to be bought";
 
-  public BoardGame(String name, String type, int numberOfPlayersMin, int numberOfPlayersMax, String availabilityStatus, String comment, int ownerID, int numberOfVotes){
+  public BoardGame(String name, String type, int numberOfPlayersMin,
+      int numberOfPlayersMax, String availabilityStatus, String comment,
+      int ownerID, int numberOfVotes)
+  {
     int ID = -1;
-    set(ID, name, type , numberOfPlayersMin, numberOfPlayersMax, availabilityStatus, comment, ownerID, numberOfVotes);}
+    set(ID, name, type, numberOfPlayersMin, numberOfPlayersMax,
+        availabilityStatus, comment, ownerID, numberOfVotes);
+  }
 
-  public BoardGame(int ID, String name, String type, int numberOfPlayersMin, int numberOfPlayersMax, String availabilityStatus, String comment, int ownerID, int numberOfVotes){
-    set(ID, name, type , numberOfPlayersMin, numberOfPlayersMax, availabilityStatus, comment, ownerID, numberOfVotes);
+  public BoardGame(int ID, String name, String type, int numberOfPlayersMin,
+      int numberOfPlayersMax, String availabilityStatus, String comment,
+      int ownerID, int numberOfVotes)
+  {
+    set(ID, name, type, numberOfPlayersMin, numberOfPlayersMax,
+        availabilityStatus, comment, ownerID, numberOfVotes);
 
   }
 
-  public void set(int ID, String name, String type, int numberOfPlayersMin, int numberOfPlayersMax, String availabilityStatus, String comment, int ownerID, int numberOfVotes){
+  public void set(int ID, String name, String type, int numberOfPlayersMin,
+      int numberOfPlayersMax, String availabilityStatus, String comment,
+      int ownerID, int numberOfVotes)
+  {
     this.ID = ID;
     this.name = name;
     this.type = type;
@@ -51,7 +64,7 @@ public class BoardGame
     this.availabilityStatus = availabilityStatus;
     this.comment = comment;
     this.ownerID = ownerID;
-    this.numberOfVotes =numberOfVotes;
+    this.numberOfVotes = numberOfVotes;
   }
 
   public int getID()
@@ -139,8 +152,9 @@ public class BoardGame
     return numberOfVotes;
   }
 
-  public void addVote(){
-    numberOfVotes ++;
+  public void addVote()
+  {
+    numberOfVotes++;
   }
 
   public void setNumberOfVotes(int numberOfVotes)
@@ -148,46 +162,62 @@ public class BoardGame
     this.numberOfVotes = numberOfVotes;
   }
 
-  public BoardGame copy(){
-    return new BoardGame(ID,name,type,numberOfPlayersMin,numberOfPlayersMax,availabilityStatus,comment,ownerID,numberOfVotes);
+  public BoardGame copy()
+  {
+    return new BoardGame(ID, name, type, numberOfPlayersMin, numberOfPlayersMax,
+        availabilityStatus, comment, ownerID, numberOfVotes);
   }
 
   @Override public String toString()
   {
-    return "Model.BoardGame{" + "ID=" + ID + ", name='" + name + '\'' + ", type='"
-        + type + '\'' + ", numberOfPlayersMin=" + numberOfPlayersMin
-        + ", numberOfPlayersMax=" + numberOfPlayersMax
+    return "Model.BoardGame{" + "ID=" + ID + ", name='" + name + '\''
+        + ", type='" + type + '\'' + ", numberOfPlayersMin="
+        + numberOfPlayersMin + ", numberOfPlayersMax=" + numberOfPlayersMax
         + ", availabilityStatus='" + availabilityStatus + '\'' + ", comment='"
         + comment + '\'' + ", ownerID=" + ownerID + ", numberOfVotes="
         + numberOfVotes + '}';
   }
+
   static public boolean validateName(String name)
   {
     name = name.trim();
-    if (name.length() > 0)
+    if (name.length() == 0)
     {
-      return true;
+      throw new RuntimeException("The text field name is empty");
     }
-    return false;
-  }
-  static public boolean validateData(String name, int min, int max)
-  {
-    if (!validateName(name)){
-    throw new RuntimeException("The name is empty");
+    return true;
   }
 
-    if(!validateMinAndMax(min, max)){
-      throw new RuntimeException("The numbers are weird");
-    }
-    return true;
-  }
-  static public boolean validateMinAndMax(int min, int max)
+  static public boolean validateData(String name, String min, String max)
   {
-    if (min < 0  || min > max)
+    return  validateName(name) && validateMinAndMax(min, max);
+
+  }
+  static public int toInt(String number){
+    int number2 = Integer.parseInt(number);
+    return number2;
+  }
+
+  static public boolean validateMinAndMax(String min, String max)
+  {
+    try
     {
-      return false;
+      int minimum;
+      int maximum;
+      minimum = BoardGame.toInt(min);
+      maximum = BoardGame.toInt(max);
+      if (minimum < 0 || minimum > maximum)
+      {
+        throw new RuntimeException(
+            "The numbers the first number is not smaller then the other.");
+      }
+    }
+    catch(NumberFormatException nfe)
+    {
+      throw new RuntimeException("Please insert a number as a value for minimum and maximum number of players.");
     }
     return true;
+
   }
 
   public static String[] getAllowedTypes()

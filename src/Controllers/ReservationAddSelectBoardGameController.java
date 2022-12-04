@@ -4,9 +4,12 @@ import Application.ViewHandler;
 import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
 
@@ -18,6 +21,10 @@ public class ReservationAddSelectBoardGameController implements Controller
   @FXML public TableColumn<BoardgameTable, String> type;
   @FXML public TableColumn<BoardgameTable, String> name;
   @FXML public TableColumn<BoardgameTable, String> numberOfPlayers;
+  public ChoiceBox status;
+  public ChoiceBox genre;
+  public TextField numberOfPlayersFilter;
+  public TextField searchField;
 
   private Region region;
   private ModelManager model;
@@ -74,5 +81,9 @@ public class ReservationAddSelectBoardGameController implements Controller
   @FXML public void confirmBoardGame(){
     System.out.println("hekko");
     viewHandler.openView(204,IDOfPlayer, gamesTable.getSelectionModel().getSelectedItem().getID());
+  }
+
+  public void fillTable(ActionEvent actionEvent)
+  {
   }
 }

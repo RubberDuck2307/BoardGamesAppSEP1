@@ -150,7 +150,7 @@ public class BoardGamesDetailPageController implements Controller
           .getOwnerID();
       try
       {
-        if (BoardGame.validateData(name, minimum, maximum))
+        if (BoardGame.validateData(name, min.getText(), max.getText()))
         {
           BoardGame boardGame = new BoardGame(ID, name, typeOfGame, minimum,
               maximum, statusOfGame, comments, ownerName, numberOfVotesOfGame);
@@ -264,7 +264,7 @@ public class BoardGamesDetailPageController implements Controller
     String typeOfGame = type.getValue().toString();
     String statusOfGame = status.getValue().toString();
     int ownerName = 0;
-    if (BoardGame.validateData(name, minimum, maximum))
+    if (BoardGame.validateData(name, min.getText(), max.getText()))
     {
       BoardGame boardGame = new BoardGame(ID, name, typeOfGame, minimum,
           maximum, statusOfGame, comments, ownerName, numberOfVotesOfGame);
