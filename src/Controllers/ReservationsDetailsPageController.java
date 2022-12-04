@@ -137,7 +137,7 @@ public class ReservationsDetailsPageController implements Controller{
     }
 
     public void goBack(){
-        viewHandler.openView(5,-1);
+        viewHandler.openView(5,-1,-1);
     }
 
     public void displayBoardGame(){
