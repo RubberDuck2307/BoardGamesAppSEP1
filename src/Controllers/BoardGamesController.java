@@ -58,13 +58,11 @@ public class BoardGamesController implements Controller
       getGenre(observable, oldValue, newValue);
       fillTable();
 
-
     });
     status.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
       System.out.println(newValue.toString());
       getStatus(observable, oldValue, newValue);
       fillTable();
-
 
     });
     name.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -88,9 +86,10 @@ public class BoardGamesController implements Controller
     {
       viewHandler.openView(1, -1);
     }
-    else{
-     viewHandler.openView(8, ID);
-      }
+    else
+    {
+      viewHandler.openView(8, ID);
+    }
   }
 
   @FXML private void chooseBoardgame()
@@ -111,15 +110,19 @@ public class BoardGamesController implements Controller
   {
     viewHandler.openView(132, -1);
   }
-  public void fillTable(){
+
+  public void fillTable()
+  {
     boardGameTables.clear();
     BoardGamesList boardGamesList;
 
-    if (ID == -1){
+    if (ID == -1)
+    {
       boardGamesList = model.getBoardGamesList();
     }
 
-    else {
+    else
+    {
       addButton.setVisible(false);
       boardGamesList = model.getBoardGamesByOwnership(ID);
       System.out.println(boardGamesList);
@@ -127,34 +130,38 @@ public class BoardGamesController implements Controller
     boardGamesList = boardGamesList.filterBoardGameList(searchField.getText());
     String numberString = numberOfPlayersFilter.getText();
 
-
-    if(!numberString.equals("")){
+    if (!numberString.equals(""))
+    {
       int number = Integer.parseInt(numberOfPlayersFilter.getText());
       boardGamesList = boardGamesList.getBoardGameListByNumberOfPlayers(number);
     }
 
-
-
-
-
-    if(genreValue!=null){
+    if (genreValue != null)
+    {
       boardGamesList = boardGamesList.getBoardGameListByGenre(genreValue);
     }
-    if(statusValue!=null){
+    if (statusValue != null)
+    {
       boardGamesList = boardGamesList.getBoardGameListByStatus(statusValue);
     }
-    for (int i = 0; i < boardGamesList.size(); i++) {
+    for (int i = 0; i < boardGamesList.size(); i++)
+    {
       BoardGame boardGame = boardGamesList.getBoardGame(i);
       String numberOfPlayer = boardGame.getNumberOfPlayersMin() + " - " + boardGame.getNumberOfPlayersMax();
-      boardGameTables.add(new BoardgameTable(boardGame.getName(), boardGame.getType(), boardGame.getAvailabilityStatus(),numberOfPlayer, boardGame.getID()));
+      boardGameTables.add(
+          new BoardgameTable(boardGame.getName(), boardGame.getType(), boardGame.getAvailabilityStatus(),
+              numberOfPlayer, boardGame.getID()));
     }
   }
 
-  public void getGenre(ObservableValue observableValue, Object oldValue, Object newValue){
+  public void getGenre(ObservableValue observableValue, Object oldValue, Object newValue)
+  {
     this.genreValue = newValue.toString();
 
   }
-  public void getStatus(ObservableValue observableValue, Object oldValue, Object newValue){
+
+  public void getStatus(ObservableValue observableValue, Object oldValue, Object newValue)
+  {
     this.statusValue = newValue.toString();
 
   }
@@ -164,28 +171,27 @@ public class BoardGamesController implements Controller
 
     genre.setValue("");
     status.setValue("");
+    searchField.setText("");
+    numberOfPlayersFilter.setText("");
     boardGameTables.clear();
     BoardGamesList boardGamesList;
-    if (ID == -1){
+    if (ID == -1)
+    {
       boardGamesList = model.getBoardGamesList();
     }
-     else {
-    addButton.setVisible(false);
-    boardGamesList = model.getBoardGamesByOwnership(ID);
-    System.out.println(boardGamesList);
-  }
-    boardGamesList = boardGamesList.filterBoardGameList(searchField.getText());
-    String numberString = numberOfPlayersFilter.getText();
-
-
-    if(!numberString.equals("")){
-      int number = Integer.parseInt(numberOfPlayersFilter.getText());
-      boardGamesList = boardGamesList.getBoardGameListByNumberOfPlayers(number);
+    else
+    {
+      addButton.setVisible(false);
+      boardGamesList = model.getBoardGamesByOwnership(ID);
+      System.out.println(boardGamesList);
     }
-    for (int i = 0; i < boardGamesList.size(); i++) {
+    for (int i = 0; i < boardGamesList.size(); i++)
+    {
       BoardGame boardGame = boardGamesList.getBoardGame(i);
       String numberOfPlayer = boardGame.getNumberOfPlayersMin() + " - " + boardGame.getNumberOfPlayersMax();
-      boardGameTables.add(new BoardgameTable(boardGame.getName(), boardGame.getType(), boardGame.getAvailabilityStatus(),numberOfPlayer, boardGame.getID()));
+      boardGameTables.add(
+          new BoardgameTable(boardGame.getName(), boardGame.getType(), boardGame.getAvailabilityStatus(),
+              numberOfPlayer, boardGame.getID()));
     }
   }
 }

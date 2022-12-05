@@ -111,7 +111,8 @@ public class ReservationController implements ExtendedController
 
     else if (gameID != -1 && playerID == -1)
     {
-      reservationsList = model.getReservationsList()
+      reservationsList = model.getReservationsList();
+      reservationsList = reservationsList
           .getReservationByGameID(gameID);
       addButton.setVisible(false);
     }
