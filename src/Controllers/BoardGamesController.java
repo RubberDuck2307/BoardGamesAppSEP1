@@ -13,7 +13,6 @@ import javafx.scene.layout.Region;
 
 public class BoardGamesController implements Controller
 {
-
   public TextField searchField;
   public ChoiceBox genre;
   public ChoiceBox status;
