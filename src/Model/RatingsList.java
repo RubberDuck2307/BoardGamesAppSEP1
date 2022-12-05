@@ -58,6 +58,15 @@ public class RatingsList
     }
     return newRatingsList;
   }
+  public Rating getRatingByID(int ID){
+    for (int i = 0; i < size(); i++)
+    {
+      if(ID == getRating(i).getID()){
+        return getRating(i);
+      }
+    }
+    return null;
+  }
 
   public RatingsList getRatingsByPlayer(int ID){
     RatingsList newRatingsList = new RatingsList();
@@ -66,6 +75,14 @@ public class RatingsList
       if(ID == getRating(i).getPlayerID()){
         newRatingsList.addRating(getRating(i));
       }
+    }
+    return newRatingsList;
+  }
+  public RatingsList getRatings(){
+    RatingsList newRatingsList = new RatingsList();
+    for (int i = 0; i < size(); i++)
+    {
+        newRatingsList.addRating(getRating(i));
     }
     return newRatingsList;
   }

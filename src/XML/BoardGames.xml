@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <BoardGamesList>
   <BoardGame>
-    <ID>1</ID>
-    <name>KOLOKOLO</name>
-    <type>Engine Building</type>
-    <numberOfPlayersMin>1</numberOfPlayersMin>
-    <numberOfPlayersMax>1</numberOfPlayersMax>
-    <availabilityStatus>Available</availabilityStatus>
-    <comment/>
-    <ownerID>0</ownerID>
-    <numberOfVotes>0</numberOfVotes>
-  </BoardGame>
-  <BoardGame>
-    <ID>4</ID>
-    <name>fgfgfgf</name>
-    <type>Engine Building</type>
-    <numberOfPlayersMin>1</numberOfPlayersMin>
-    <numberOfPlayersMax>2</numberOfPlayersMax>
-    <availabilityStatus>Unavailable</availabilityStatus>
-    <comment/>
-    <ownerID>0</ownerID>
-    <numberOfVotes>0</numberOfVotes>
-  </BoardGame>
-  <BoardGame>
-    <ID>5</ID>
-    <name>bbb</name>
-    <type>Engine Building</type>
-    <numberOfPlayersMin>2</numberOfPlayersMin>
-    <numberOfPlayersMax>4</numberOfPlayersMax>
-    <availabilityStatus>Available</availabilityStatus>
-    <comment/>
-    <ownerID>0</ownerID>
-    <numberOfVotes>0</numberOfVotes>
-  </BoardGame>
-  <BoardGame>
     <ID>6</ID>
     <name>jjj</name>
     <type>Engine Building</type>

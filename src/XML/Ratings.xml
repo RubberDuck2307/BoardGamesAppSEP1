@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <RatingsList>
   <Rating>
-    <ID>0</ID>
-    <value>2</value>
+    <ID>2</ID>
+    <value>5</value>
     <playerID>2</playerID>
-    <gameID>1</gameID>
-  </Rating>
-  <Rating>
-    <ID>3</ID>
-    <value>2</value>
-    <playerID>2</playerID>
-    <gameID>1</gameID>
+    <gameID>4</gameID>
   </Rating>
 </RatingsList>

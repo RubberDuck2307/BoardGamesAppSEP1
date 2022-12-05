@@ -166,7 +166,6 @@ public class BoardGamesController implements Controller
 
   public void clearFilters(ActionEvent actionEvent)
   {
-
     genre.setValue("");
     status.setValue("");
     genreValue = null;
@@ -194,4 +193,5 @@ public class BoardGamesController implements Controller
               numberOfPlayer, boardGame.getID()));
     }
   }
+
 }
