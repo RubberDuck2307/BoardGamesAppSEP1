@@ -47,10 +47,10 @@ public class BoardGamesController implements Controller
     fillTable();
     //ObservableList<BoardgameTable> boardGameTables = FXCollections.observableArrayList();
     ObservableList<String> items = FXCollections.observableArrayList(
-        BoardGame.getAllowedTypes());
+        BoardGame.ALLOWED_TYPES);
     genre.setItems(items);
     ObservableList<String> items2 = FXCollections.observableArrayList(
-        BoardGame.getAllowedStatuses());
+        BoardGame.ALLOWED_STATUSES);
     status.setItems(items2);
 
     genre.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {

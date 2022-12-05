@@ -4,15 +4,28 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Objects;
 
+/**
+ * A class representing list of BoardGame objects
+ * @author Anna Andrlova, Christos Artemisios, Alex Bolfa, Jan Metela
+ * @version 1.0 - November 2022
+ */
 public class BoardGamesList
 {
   private ArrayList<BoardGame> boardGamesList;
 
+  /**
+   * Zero-argument constructor
+   * set attribute boardGamesList to new empty ArrayList
+   */
   public BoardGamesList()
   {
     boardGamesList = new ArrayList<>();
   }
 
+  /**
+   * set attribute boardGamesList to new ArrayList and fills it with copies of objects from boardGames parameter
+   * @param boardGames Arraylist of BoardGame objects
+   */
   public BoardGamesList(ArrayList<BoardGame> boardGames) //This is composition
   {
     this.boardGamesList = new ArrayList<>();

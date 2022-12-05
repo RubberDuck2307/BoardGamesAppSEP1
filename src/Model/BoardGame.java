@@ -1,6 +1,10 @@
 package Model;
 
-import java.time.LocalDate;
+/**
+ * A class representing a board game
+ * @author Anna Andrlova, Christos Artemisios, Alex Bolfa, Jan Metela
+ * @version 1.0 - November 2022
+ */
 
 public class BoardGame
 {
@@ -34,6 +38,17 @@ public class BoardGame
   static public String UNAVAILABLE_STATUS = "Unavailable";
   static public String CONSIDERED_TO_BE_BOUGHT_STATUS = "Considered to be bought";
 
+  /**
+   * Eight-argument constructor calling the set method. The missing attribute ID is set to -1
+   * @param name the name of the board game
+   * @param type the genre of the board game (see ALLOWED_TYPES)
+   * @param numberOfPlayersMin minimal number of players who can play the board game
+   * @param numberOfPlayersMax maximum number of player who can play the board game
+   * @param availabilityStatus the status of the board game (see ALLOWED_STATUSES attribute)
+   * @param comment a custom comment
+   * @param ownerID the ID of the player who owns the board games
+   * @param numberOfVotes the amount of votes the game has received
+   */
   public BoardGame(String name, String type, int numberOfPlayersMin,
       int numberOfPlayersMax, String availabilityStatus, String comment,
       int ownerID, int numberOfVotes)
@@ -43,6 +58,18 @@ public class BoardGame
         availabilityStatus, comment, ownerID, numberOfVotes);
   }
 
+  /**
+   * Nine-argument constructor calling the set method.
+   * @param ID the ID of the board game
+   * @param name the name of the board game
+   * @param type the type of the board game (see ALLOWED_TYPES)
+   * @param numberOfPlayersMin minimal number of players who can play the board game
+   * @param numberOfPlayersMax maximum number of player who can play the board game
+   * @param availabilityStatus the status of the board game (see ALLOWED_STATUSES attribute)
+   * @param comment a custom comment
+   * @param ownerID the ID of the player who owns the board games
+   * @param numberOfVotes the amount of votes the game has received
+   */
   public BoardGame(int ID, String name, String type, int numberOfPlayersMin,
       int numberOfPlayersMax, String availabilityStatus, String comment,
       int ownerID, int numberOfVotes)
@@ -51,6 +78,19 @@ public class BoardGame
         availabilityStatus, comment, ownerID, numberOfVotes);
 
   }
+
+  /**
+   * Setter for all attributes.
+   * @param ID the ID of the board game
+   * @param name the name of the board game
+   * @param type the type of the board game (see ALLOWED_TYPES)
+   * @param numberOfPlayersMin minimal number of players who can play the board game
+   * @param numberOfPlayersMax maximum number of player who can play the board game
+   * @param availabilityStatus the status of the board game (see ALLOWED_STATUSES attribute)
+   * @param comment a custom comment
+   * @param ownerID the ID of the player who owns the board games
+   * @param numberOfVotes the amount of votes the game has received
+   */
 
   public void set(int ID, String name, String type, int numberOfPlayersMin,
       int numberOfPlayersMax, String availabilityStatus, String comment,
@@ -67,107 +107,175 @@ public class BoardGame
     this.numberOfVotes = numberOfVotes;
   }
 
+  /**
+   * Getter for ID
+   */
   public int getID()
   {
     return ID;
   }
+
+  /**
+   * Setter for ID
+   */
 
   public void setID(int ID)
   {
     this.ID = ID;
   }
 
+  /**
+   * Getter for name
+   */
   public String getName()
   {
     return name;
   }
 
+  /**
+   * Setter for name
+   */
   public void setName(String name)
   {
     this.name = name;
   }
 
+  /**
+   * Getter for type
+   */
   public String getType()
   {
     return type;
   }
+
+  /**
+   * Setter for type
+   */
 
   public void setType(String type)
   {
     this.type = type;
   }
 
+  /**
+   * Getter for numberOfPlayersMin
+   */
   public int getNumberOfPlayersMin()
   {
     return numberOfPlayersMin;
   }
+
+  /**
+   * Setter for numberOfPlayersMin
+   */
 
   public void setNumberOfPlayersMin(int numberOfPlayersMin)
   {
     this.numberOfPlayersMin = numberOfPlayersMin;
   }
 
+  /**
+   * Getter for numberOfPlayersMax
+   */
   public int getNumberOfPlayersMax()
   {
     return numberOfPlayersMax;
   }
 
+  /**
+   * Setter for numberOfPlayersMin
+   */
   public void setNumberOfPlayersMax(int numberOfPlayersMax)
   {
     this.numberOfPlayersMax = numberOfPlayersMax;
   }
+
+  /**
+   * Getter for availabilityStatus
+   */
 
   public String getAvailabilityStatus()
   {
     return availabilityStatus;
   }
 
+  /**
+   *  Setter for availabilityStatus
+   */
   public void setAvailabilityStatus(String availabilityStatus)
   {
     this.availabilityStatus = availabilityStatus;
   }
 
+  /**
+   * Getter for comment
+   */
   public String getComment()
   {
     return comment;
   }
 
+  /**
+   * Setter for comment
+   */
   public void setComment(String comment)
   {
     this.comment = comment;
   }
 
+  /**
+   * Getter for ownerID
+   */
   public int getOwnerID()
   {
     return ownerID;
   }
 
+  /**
+   * Setter for owner ID
+   */
   public void setOwnerID(int ownerID)
   {
     this.ownerID = ownerID;
   }
 
+  /**
+   * Getter for NumberOfVotes
+   */
   public int getNumberOfVotes()
   {
     return numberOfVotes;
   }
 
+  /**
+   * Increment numberOfVotes by 1
+   */
   public void addVote()
   {
     numberOfVotes++;
   }
 
+  /**
+   * Setter for numberOfVotes
+   */
   public void setNumberOfVotes(int numberOfVotes)
   {
     this.numberOfVotes = numberOfVotes;
   }
 
+  /**
+   * get a copy of the board game
+   */
   public BoardGame copy()
   {
     return new BoardGame(ID, name, type, numberOfPlayersMin, numberOfPlayersMax,
         availabilityStatus, comment, ownerID, numberOfVotes);
   }
 
+  /**
+   *
+   * @return values of all the attributes as string
+   */
   @Override public String toString()
   {
     return "Model.BoardGame{" + "ID=" + ID + ", name='" + name + '\''
@@ -178,7 +286,14 @@ public class BoardGame
         + numberOfVotes + '}';
   }
 
-  static public boolean validateName(String name)
+  /**
+   *
+   * @param name The name of the board game
+   * @throws RuntimeException if name is an empty string
+   * @return true if name is not an empty string
+   */
+
+  static public boolean VALIDATE_NAME(String name)
   {
     name = name.trim();
     if (name.length() == 0)
@@ -188,24 +303,34 @@ public class BoardGame
     return true;
   }
 
-  static public boolean validateData(String name, String min, String max)
+  /**
+   *
+   * @param name
+   * @param min
+   * @param max
+   * @return
+   */
+  static public boolean VALIDATE_DATA(String name, String min, String max)
   {
-    return  validateName(name) && validateMinAndMax(min, max);
+    return  VALIDATE_NAME(name) && validateMinAndMax(min, max);
 
   }
-  static public int toInt(String number){
-    int number2 = Integer.parseInt(number);
-    return number2;
-  }
 
+  /**
+   *
+   * @param min the minimum number of players that can play the game
+   * @param max the maximum number of players that can play the game
+   * @throws RuntimeException if the parameters cannot be converted to int or if min is bigger than max
+   * @return true if min is smaller than max
+   */
   static public boolean validateMinAndMax(String min, String max)
   {
     try
     {
       int minimum;
       int maximum;
-      minimum = BoardGame.toInt(min);
-      maximum = BoardGame.toInt(max);
+      minimum = Integer.parseInt(min);
+      maximum = Integer.parseInt(max);
       if (minimum < 0 || minimum > maximum)
       {
         throw new RuntimeException(
@@ -220,14 +345,5 @@ public class BoardGame
 
   }
 
-  public static String[] getAllowedTypes()
-  {
-    return ALLOWED_TYPES;
-  }
-
-  public static String[] getAllowedStatuses()
-  {
-    return ALLOWED_STATUSES;
-  }
 
 }

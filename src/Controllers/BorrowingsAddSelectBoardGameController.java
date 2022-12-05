@@ -46,10 +46,10 @@ public class BorrowingsAddSelectBoardGameController implements Controller
     this.ID = ID;
     fillTable();
     ObservableList<String> items = FXCollections.observableArrayList(
-        BoardGame.getAllowedTypes());
+        BoardGame.ALLOWED_TYPES);
     genre.setItems(items);
     ObservableList<String> items2 = FXCollections.observableArrayList(
-        BoardGame.getAllowedStatuses());
+        BoardGame.ALLOWED_STATUSES);
     status.setItems(items2);
 
     genre.getSelectionModel().selectedItemProperty()

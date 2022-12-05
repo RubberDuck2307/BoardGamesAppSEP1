@@ -17,16 +17,32 @@
     <comment/>
   </Borrowing>
   <Borrowing>
-    <ID>2</ID>
+    <ID>1</ID>
     <playerID>2</playerID>
-    <gameID>7</gameID>
+    <gameID>0</gameID>
     <from>
-      <day>4</day>
+      <day>9</day>
       <month>12</month>
       <year>2022</year>
     </from>
     <to>
-      <day>9</day>
+      <day>11</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </Borrowing>
+  <Borrowing>
+    <ID>2</ID>
+    <playerID>2</playerID>
+    <gameID>7</gameID>
+    <from>
+      <day>5</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>6</day>
       <month>12</month>
       <year>2022</year>
     </to>

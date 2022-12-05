@@ -47,7 +47,7 @@ public class ElectionAddVoteSelectGameController implements Controller
 
     fillData();
     ObservableList<String> items = FXCollections.observableArrayList(
-        BoardGame.getAllowedTypes());
+        BoardGame.ALLOWED_TYPES);
     genre.setItems(items);
 
     genre.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -76,7 +76,7 @@ public class ElectionAddVoteSelectGameController implements Controller
   @FXML public void fillData(){
     gamesInTable.clear();
     BoardGamesList boardGamesList;
-    boardGamesList = model.getBoardGamesList();
+    boardGamesList = model.getBoardGamesList().getBoardGameListByStatus(BoardGame.CONSIDERED_TO_BE_BOUGHT_STATUS);
     boardGamesList = boardGamesList.filterBoardGameList(searchField.getText());
     String numberString = numberOfPlayersFilter.getText();
 
