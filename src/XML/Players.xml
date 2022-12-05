@@ -3,8 +3,8 @@
   <Player>
     <ID>2</ID>
     <name>Karel</name>
-    <phoneNumber>12</phoneNumber>
-    <email/>
+    <phoneNumber>57210356</phoneNumber>
+    <email>karel@mail.com</email>
     <membership>true</membership>
     <comment/>
     <address/>
@@ -13,8 +13,8 @@
   <Player>
     <ID>3</ID>
     <name>Pavel</name>
-    <phoneNumber>55</phoneNumber>
-    <email/>
+    <phoneNumber>57210348</phoneNumber>
+    <email>pavel@mail.com</email>
     <membership>true</membership>
     <comment/>
     <address/>
