@@ -4,12 +4,9 @@ import Application.ViewHandler;
 import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.layout.Region;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
 import java.util.Optional;
 
 public class BoardGamesAddBoardGameController  implements Controller
@@ -37,10 +34,10 @@ public class BoardGamesAddBoardGameController  implements Controller
   }
   public void setData(){
     ObservableList<String> items = FXCollections.observableArrayList(
-        BoardGame.getAllowedTypes());
+        BoardGame.ALLOWED_TYPES);
     type.setItems(items);
     ObservableList<String> items2 = FXCollections.observableArrayList(
-        BoardGame.getAllowedStatuses());
+        BoardGame.ALLOWED_TYPES);
     status.setItems(items2);
     type.setValue(items.get(0));
     status.setValue(items2.get(0));
@@ -73,7 +70,7 @@ public class BoardGamesAddBoardGameController  implements Controller
 
     try
     {
-      if(BoardGame.validateData(nameField.getText(), min.getText(),max.getText()))
+      if(BoardGame.VALIDATE_DATA(nameField.getText(), min.getText(),max.getText()))
       {
         model.addBoardGame(new BoardGame( nameField.getText(), typeOfGame, Integer.parseInt(min.getText()),Integer.parseInt(max.getText()), statusOfGame, commentField.getText(), owner, 0 ));
         model.saveBoardGames();

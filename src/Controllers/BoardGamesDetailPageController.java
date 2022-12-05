@@ -12,7 +12,6 @@ import javafx.scene.layout.Region;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
-import java.time.LocalDate;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -100,10 +99,10 @@ public class BoardGamesDetailPageController implements Controller
       owner.setText(playersList.getNameByID(boardGame.getOwnerID()));
     }
     ObservableList<String> items = FXCollections.observableArrayList(
-        BoardGame.getAllowedTypes());
+        BoardGame.ALLOWED_TYPES);
     type.setItems(items);
     ObservableList<String> items2 = FXCollections.observableArrayList(
-        BoardGame.getAllowedStatuses());
+        BoardGame.ALLOWED_STATUSES);
     status.setItems(items2);
     type.setValue(boardGame.getType());
     status.setValue(boardGame.getAvailabilityStatus());
@@ -150,7 +149,7 @@ public class BoardGamesDetailPageController implements Controller
           .getOwnerID();
       try
       {
-        if (BoardGame.validateData(name, min.getText(), max.getText()))
+        if (BoardGame.VALIDATE_DATA(name, min.getText(), max.getText()))
         {
           BoardGame boardGame = new BoardGame(ID, name, typeOfGame, minimum,
               maximum, statusOfGame, comments, ownerName, numberOfVotesOfGame);
@@ -270,7 +269,7 @@ public class BoardGamesDetailPageController implements Controller
     String typeOfGame = type.getValue().toString();
     String statusOfGame = status.getValue().toString();
     int ownerName = 0;
-    if (BoardGame.validateData(name, min.getText(), max.getText()))
+    if (BoardGame.VALIDATE_DATA(name, min.getText(), max.getText()))
     {
       BoardGame boardGame = new BoardGame(ID, name, typeOfGame, minimum,
           maximum, statusOfGame, comments, ownerName, numberOfVotesOfGame);

@@ -1,2 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<borrowingsList/>
+<borrowingsList>
+  <Borrowing>
+    <ID>0</ID>
+    <playerID>3</playerID>
+    <gameID>0</gameID>
+    <from>
+      <day>4</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>5</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </Borrowing>
+  <Borrowing>
+    <ID>1</ID>
+    <playerID>2</playerID>
+    <gameID>0</gameID>
+    <from>
+      <day>9</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>11</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </Borrowing>
+  <Borrowing>
+    <ID>2</ID>
+    <playerID>2</playerID>
+    <gameID>7</gameID>
+    <from>
+      <day>5</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>6</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </Borrowing>
+</borrowingsList>

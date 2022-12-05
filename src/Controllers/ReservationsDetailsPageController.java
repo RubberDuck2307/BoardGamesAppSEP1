@@ -161,7 +161,7 @@ public class ReservationsDetailsPageController implements Controller{
         }
         else {
             Reservation newBorrowing = new Reservation(reservation.getPlayerID(),
-                reservation.getID(), reservation.getFrom(), reservation.getTo(), reservation.getComment());
+                reservation.getGameID(), reservation.getFrom(), reservation.getTo(), reservation.getComment());
             model.deleteReservationByID(reservation.getID());
             model.getBorrowingsList().addBorrowing(newBorrowing);
             model.saveReservation();
