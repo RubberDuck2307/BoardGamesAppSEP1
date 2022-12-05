@@ -8,7 +8,7 @@
     <membership>true</membership>
     <comment/>
     <address/>
-    <voted>false</voted>
+    <voted>true</voted>
   </Player>
   <Player>
     <ID>3</ID>
