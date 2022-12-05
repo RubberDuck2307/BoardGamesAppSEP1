@@ -156,8 +156,11 @@ public class ModelManager
     return ratingsList.getRatingByBoardGame(ID);
   }
 
-  public void addRating(Rating rating){
-    ratingsList.addRating(rating);
+  public RatingsList getRatings(){
+    return ratingsList;
+  }
+
+  public void addRating(Rating rating){ratingsList.addRating(rating);
   }
 
   public void saveRatings()

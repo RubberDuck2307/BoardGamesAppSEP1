@@ -191,6 +191,7 @@ public class BoardGamesDetailPageController implements Controller
     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
     BorrowingsList borrowingsList = model.getBorrowingsList();
     Reservation reservation = borrowingsList.getBorrowingByBoardGame(ID);
+    RatingsList ratingsList = model.getRatingsByGame(ID);
     boolean isCurrentlyBorrowed = false;
     if (reservation != null)
     {
@@ -232,6 +233,11 @@ public class BoardGamesDetailPageController implements Controller
       {
         model.getBoardGamesList().deleteByID(ID);
         model.saveBoardGames();
+        /*deleting rating */
+        for(int i = 0; i<ratingsList.size(); i++){
+          model.getRatings().deleteByID(ratingsList.getRating(i).getID());
+          model.saveRatings();
+        }
       }
     }
     ReservationsList reservationsList = model.getReservationsList();
