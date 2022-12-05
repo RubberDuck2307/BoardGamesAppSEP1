@@ -120,7 +120,7 @@
                               <Font size="24.0" />
                            </font>
                            <HBox.margin>
-                              <Insets />
+                              <Insets right="25.0" />
                            </HBox.margin>
                         </Label>
                      </children>
@@ -133,7 +133,10 @@
                         <Insets left="25.0" />
                      </HBox.margin>
                      <children>
-                        <TextField fx:id="numberOfPlayersFilter" alignment="CENTER" onKeyTyped="#fillTable" styleClass="input-field" />
+                        <TextField fx:id="numberOfPlayersFilter" alignment="CENTER" onKeyTyped="#fillTable" prefHeight="25.0" prefWidth="0.0" styleClass="input-field">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin></TextField>
                      </children>
                   </HBox>
                </children>

@@ -68,7 +68,7 @@
                   <TableColumn id="text" fx:id="name" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" styleClass="text" text="Name" />
                   <TableColumn fx:id="type" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Type" />
                   <TableColumn fx:id="availability" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="205.0" resizable="false" style="-fx-font-size: 24px;" text="Availability" />
-                  <TableColumn fx:id="numberofPlayers" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="190.0" resizable="false" style="-fx-font-size: 24px;" text="Number of Players" />
+                  <TableColumn fx:id="numberOfPlayers" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="190.0" resizable="false" style="-fx-font-size: 24px;" text="Number of Players" />
                </columns>
                <GridPane.margin>
                   <Insets />
@@ -83,7 +83,7 @@
                               <Font size="24.0" />
                            </font>
                            <HBox.margin>
-                              <Insets />
+                              <Insets right="25.0" />
                            </HBox.margin>
                         </Label>
                      </children>
@@ -96,7 +96,10 @@
                         <Insets left="25.0" />
                      </HBox.margin>
                      <children>
-                        <TextField fx:id="numberOfPlayersFilter" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#fillTable" prefHeight="24.0" prefWidth="149.0" styleClass="input-field" />
+                        <TextField fx:id="numberOfPlayersFilter" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#fillTable" prefHeight="24.0" prefWidth="149.0" styleClass="input-field">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin></TextField>
                      </children>
                   </HBox>
                </children>

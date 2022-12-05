@@ -22,4 +22,26 @@
     <ownerID>2</ownerID>
     <numberOfVotes>0</numberOfVotes>
   </BoardGame>
+  <BoardGame>
+    <ID>8</ID>
+    <name>game1</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>1</numberOfPlayersMin>
+    <numberOfPlayersMax>4</numberOfPlayersMax>
+    <availabilityStatus>Considered to be bought</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>9</ID>
+    <name>game2</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>1</numberOfPlayersMin>
+    <numberOfPlayersMax>8</numberOfPlayersMax>
+    <availabilityStatus>Considered to be bought</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
 </BoardGamesList>
