@@ -144,6 +144,10 @@ public class ReservationAddSelectBoardGameController implements Controller
   {
     genre.setValue("");
     status.setValue("");
+    genreValue = null;
+    statusValue = null;
+    searchField.setText("");
+    numberOfPlayersFilter.setText("");
     gamesInTable.clear();
     BoardGamesList boardGamesList;
 

@@ -7,6 +7,7 @@ import Model.ConsideredToBeBoughtTable;
 import Model.ModelManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
@@ -85,5 +86,9 @@ public class ElectionAddVoteSelectGameController implements Controller
       model.saveBoardGames();
       viewHandler.openView(32, -1);
     }
+  }
+
+  public void clearFilters(ActionEvent actionEvent)
+  {
   }
 }

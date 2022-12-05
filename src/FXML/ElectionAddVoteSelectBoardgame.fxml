@@ -84,7 +84,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="156.0">
                            <children>
-                              <TextField fx:id="numberOfPlayersFilter" alignment="CENTER" onKeyTyped="#fillTable" prefHeight="25.0" prefWidth="0.0" styleClass="input-field" />
+                              <TextField fx:id="numberOfPlayersFilter" alignment="CENTER" onKeyTyped="#fillData" prefHeight="25.0" prefWidth="0.0" styleClass="input-field" />
                            </children>
                         </HBox>
                      </children>

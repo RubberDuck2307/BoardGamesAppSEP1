@@ -15,22 +15,19 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Region;
 
 public class BorrowingsAddSelectBoardGameController implements Controller
 {
-  public TextField search;
   public TableColumn<Object, Object> name;
   public TableColumn<Object, Object> type;
   public TableColumn<Object, Object> availability;
-  public TableColumn<Object, Object> numberofPlayers;
+  public TableColumn<Object, Object> numberOfPlayers;
   public TableView<BoardgameTable> boardGameTable;
   public ChoiceBox status;
   public TextField numberOfPlayersFilter;
   public TextField searchField;
   public ChoiceBox genre;
-  public TextField number;
   Region region;
   ModelManager model;
   ViewHandler viewHandler;
@@ -73,7 +70,7 @@ public class BorrowingsAddSelectBoardGameController implements Controller
     type.setCellValueFactory(new PropertyValueFactory<>("type"));
     availability.setCellValueFactory(
         new PropertyValueFactory<>("availability"));
-    numberofPlayers.setCellValueFactory(
+    numberOfPlayers.setCellValueFactory(
         new PropertyValueFactory<>("numberOfPlayers"));
     boardGameTable.setItems(boardGameTables);
 
@@ -158,6 +155,10 @@ public class BorrowingsAddSelectBoardGameController implements Controller
   {
     genre.setValue("");
     status.setValue("");
+    genreValue = null;
+    statusValue = null;
+    searchField.setText("");
+    numberOfPlayersFilter.setText("");
     boardGameTables.clear();
     BoardGamesList boardGamesList;
 

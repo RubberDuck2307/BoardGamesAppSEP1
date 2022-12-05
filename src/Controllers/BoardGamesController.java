@@ -164,28 +164,28 @@ public class BoardGamesController implements Controller
 
     genre.setValue("");
     status.setValue("");
+    genreValue = null;
+    statusValue = null;
+    searchField.setText("");
+    numberOfPlayersFilter.setText("");
     boardGameTables.clear();
     BoardGamesList boardGamesList;
-    if (ID == -1){
+    if (ID == -1)
+    {
       boardGamesList = model.getBoardGamesList();
     }
-     else {
-    addButton.setVisible(false);
-    boardGamesList = model.getBoardGamesByOwnership(ID);
-    System.out.println(boardGamesList);
-  }
-    boardGamesList = boardGamesList.filterBoardGameList(searchField.getText());
-    String numberString = numberOfPlayersFilter.getText();
-
-
-    if(!numberString.equals("")){
-      int number = Integer.parseInt(numberOfPlayersFilter.getText());
-      boardGamesList = boardGamesList.getBoardGameListByNumberOfPlayers(number);
+    else
+    {
+      addButton.setVisible(false);
+      boardGamesList = model.getBoardGamesByOwnership(ID);
+      System.out.println(boardGamesList);
     }
-    for (int i = 0; i < boardGamesList.size(); i++) {
+    for (int i = 0; i < boardGamesList.size(); i++)
+    {
       BoardGame boardGame = boardGamesList.getBoardGame(i);
       String numberOfPlayer = boardGame.getNumberOfPlayersMin() + " - " + boardGame.getNumberOfPlayersMax();
-      boardGameTables.add(new BoardgameTable(boardGame.getName(), boardGame.getType(), boardGame.getAvailabilityStatus(),numberOfPlayer, boardGame.getID()));
-    }
+      boardGameTables.add(
+          new BoardgameTable(boardGame.getName(), boardGame.getType(), boardGame.getAvailabilityStatus(),
+              numberOfPlayer, boardGame.getID()));}
   }
 }
