@@ -99,7 +99,13 @@ public class ReservationsDetailsPageController implements Controller{
             String comment = commentField.getText();
 
             try {
-                if (Reservation.VALIDATE_DATA(startingDate, endingDate)) {
+                ReservationsList reservationsList = model.getReservationsList();
+                BorrowingsList borrowingsList = model.getBorrowingsList();
+                PlayersList playersList = model.getPlayersList();
+
+                if (Reservation.VALIDATE_DATA(reservationsList,
+                    borrowingsList, startingDate, endingDate,  model.getReservationsList().getReservationByID(ID).getGameID(),
+                playersList, model.getReservationsList().getReservationByID(ID).getPlayerID(), ID,-1)) {
                     Reservation reservation1 = new Reservation(ID, memberID, boardGameID, startingDate, endingDate, comment);
                     model.setReservationByID(reservation1, ID);
                     try {
@@ -115,7 +121,7 @@ public class ReservationsDetailsPageController implements Controller{
                 }
             }
             catch (Exception error){
-                System.out.println(error.fillInStackTrace());
+                error.printStackTrace();
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Invalid Data");
                 alert.setHeaderText(error.getMessage());

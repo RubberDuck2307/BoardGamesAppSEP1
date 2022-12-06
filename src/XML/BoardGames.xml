@@ -44,4 +44,15 @@
     <ownerID>0</ownerID>
     <numberOfVotes>2</numberOfVotes>
   </BoardGame>
+  <BoardGame>
+    <ID>10</ID>
+    <name>Monapoly</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>1</numberOfPlayersMin>
+    <numberOfPlayersMax>6</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment/>
+    <ownerID>2</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
 </BoardGamesList>

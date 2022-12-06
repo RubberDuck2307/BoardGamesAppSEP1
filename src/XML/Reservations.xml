@@ -32,4 +32,52 @@
     </to>
     <comment/>
   </reservation>
+  <reservation>
+    <ID>2</ID>
+    <playerID>2</playerID>
+    <gameID>10</gameID>
+    <from>
+      <day>6</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>7</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </reservation>
+  <reservation>
+    <ID>3</ID>
+    <playerID>2</playerID>
+    <gameID>7</gameID>
+    <from>
+      <day>5</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>6</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </reservation>
+  <reservation>
+    <ID>4</ID>
+    <playerID>2</playerID>
+    <gameID>7</gameID>
+    <from>
+      <day>16</day>
+      <month>1</month>
+      <year>2023</year>
+    </from>
+    <to>
+      <day>31</day>
+      <month>1</month>
+      <year>2023</year>
+    </to>
+    <comment/>
+  </reservation>
 </reservationsList>

@@ -82,7 +82,6 @@ public class BorrowingsDetailPageController implements Controller
     comments.setFocusTraversable(true);
     editButton.setText("Save Changes");
     save = event -> {
-      //System.out.println("hello");
       int nameOfBG = borrowing.getGameID() ;
       int nameOfP = borrowing.getPlayerID();
       LocalDate startDate = start.getValue();
@@ -95,9 +94,9 @@ public class BorrowingsDetailPageController implements Controller
         BoardGamesList boardGamesList = model.getBoardGamesList();
         PlayersList playersList = model.getPlayersList();
 
-      if (Reservation.VALIDATE_DATA(reservationsList, borrowingsList,startDate, endDate, nameOfBG,playersList, nameOfP))
+      if (Reservation.VALIDATE_DATA(reservationsList, borrowingsList,startDate, endDate, nameOfBG,playersList, nameOfP,-1,ID))
       {
-        Reservation reservation1 = new Reservation(ID,nameOfBG,nameOfP,startDate,endDate, comment);
+        Reservation reservation1 = new Reservation(ID,nameOfP,nameOfBG,startDate,endDate, comment);
         model.setBorrowing(reservation1, ID);
         try
         {
@@ -118,6 +117,7 @@ public class BorrowingsDetailPageController implements Controller
       }
       }
     catch (Exception e){
+        e.printStackTrace();
         Alert alert = new Alert(Alert.AlertType.ERROR);
           alert.setTitle("Invalid Data");
           alert.setHeaderText(e.getMessage());

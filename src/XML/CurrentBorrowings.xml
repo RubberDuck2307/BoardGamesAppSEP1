@@ -3,7 +3,7 @@
   <Borrowing>
     <ID>0</ID>
     <playerID>3</playerID>
-    <gameID>0</gameID>
+    <gameID>7</gameID>
     <from>
       <day>4</day>
       <month>12</month>
@@ -19,7 +19,7 @@
   <Borrowing>
     <ID>1</ID>
     <playerID>2</playerID>
-    <gameID>0</gameID>
+    <gameID>6</gameID>
     <from>
       <day>9</day>
       <month>12</month>
@@ -35,7 +35,7 @@
   <Borrowing>
     <ID>2</ID>
     <playerID>2</playerID>
-    <gameID>7</gameID>
+    <gameID>8</gameID>
     <from>
       <day>5</day>
       <month>12</month>
@@ -43,6 +43,22 @@
     </from>
     <to>
       <day>6</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </Borrowing>
+  <Borrowing>
+    <ID>3</ID>
+    <playerID>2</playerID>
+    <gameID>10</gameID>
+    <from>
+      <day>7</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>8</day>
       <month>12</month>
       <year>2022</year>
     </to>

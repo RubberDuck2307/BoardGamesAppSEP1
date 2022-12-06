@@ -79,11 +79,11 @@ public class BorrowingsController implements Controller
     PlayersList playersList = model.getPlayersList();
     BoardGamesList boardGamesList = model.getBoardGamesList();
     borrowingsList = borrowingsList.filterBorrowingList(searchField.getText(), playersList,boardGamesList);
+    System.out.println(borrowingsList);
     for (int i = 0; i < borrowingsList.size(); i++)
     {
-
-
       Reservation borrowing = borrowingsList.getBorrowing(i);
+      System.out.println("hello" + borrowing.getGameID());
       String from = borrowing.getFrom() + "";
       String to = borrowing.getTo() + "";
       borrowingsTables.add(

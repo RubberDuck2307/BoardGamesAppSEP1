@@ -69,7 +69,7 @@ public class BorrowingsAddFinalFormController implements ExtendedController
     PlayersList playersList = model.getPlayersList();
     BoardGamesList boardGamesList = model.getBoardGamesList();
 
-    if (Reservation.VALIDATE_DATA(reservationsList, borrowingsList,startDate, endDate,ID2, playersList, ID))
+    if (Reservation.VALIDATE_DATA(reservationsList, borrowingsList,startDate, endDate,ID2, playersList, ID,-1,-1))
     {
       model.addBorrowing( new Reservation(ID,ID2,startDate,endDate, comment));
       model.saveBorrowing();

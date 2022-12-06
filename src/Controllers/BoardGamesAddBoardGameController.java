@@ -37,7 +37,7 @@ public class BoardGamesAddBoardGameController  implements Controller
         BoardGame.ALLOWED_TYPES);
     type.setItems(items);
     ObservableList<String> items2 = FXCollections.observableArrayList(
-        BoardGame.ALLOWED_TYPES);
+        BoardGame.ALLOWED_STATUSES);
     status.setItems(items2);
     type.setValue(items.get(0));
     status.setValue(items2.get(0));

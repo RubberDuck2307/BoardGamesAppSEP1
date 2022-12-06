@@ -139,7 +139,7 @@ public class ReservationAddFinalFormController implements ExtendedController
           model.getReservationsList().getReservationByGameID(boardGameID),
           model.getBorrowingsList().getByGameID(boardGameID),
           startingDate.getValue(), endingDate.getValue(), boardGameID,
-          model.getPlayersList(), playerID))
+          model.getPlayersList(), playerID , -1,-1))
         ;
       {
 
@@ -154,6 +154,8 @@ public class ReservationAddFinalFormController implements ExtendedController
     }
     catch (Exception e)
     {
+      System.out.println(e);
+      e.printStackTrace();
       Alert alert = new Alert(Alert.AlertType.ERROR);
       alert.setTitle("Invalid Data");
       alert.setHeaderText(e.getMessage());

@@ -2,7 +2,7 @@
 <PlayersList>
   <Player>
     <ID>2</ID>
-    <name>Karel</name>
+    <name>Korel</name>
     <phoneNumber>57210356</phoneNumber>
     <email>karel@mail.com</email>
     <membership>true</membership>
