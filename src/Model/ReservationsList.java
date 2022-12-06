@@ -152,7 +152,7 @@ public class ReservationsList
 
   /**
    *
-   * @return new ArrayList of copies of all reservations Object from the original list
+   * @return new ArrayList of copies of all Reservation objects from the original list
    */
   public ArrayList<Reservation> getReservationsAsArrayList(){ //this is composition
     ArrayList<Reservation> reservations = new ArrayList<>();
