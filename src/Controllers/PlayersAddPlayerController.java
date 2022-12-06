@@ -48,7 +48,7 @@ public class PlayersAddPlayerController implements Controller
   {
     try
     {
-      if (Player.validateData(nameField.getText(), phoneNumberField.getText(),
+      if (Player.VALIDATE_DATA(nameField.getText(), phoneNumberField.getText(),
           emailField.getText()))
       {
         Player newPlayer = new Player(nameField.getText(),

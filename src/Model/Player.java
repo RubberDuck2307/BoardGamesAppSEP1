@@ -96,7 +96,7 @@ public class Player
    * @throws RuntimeException if name is an empty string
    * @return true, if name is not an empty string
    */
-  static public boolean validateName(String name)
+  static public boolean VALIDATE_NAME(String name)
   {
     name = name.trim();
     if (name.length() > 0)
@@ -116,7 +116,7 @@ public class Player
    * @return true if phoneNumber meets all the conditions
    *
    */
-  static public boolean validatePhoneNumber(String phoneNumber)
+  static public boolean VALIDATE_PHONE_NUMBER(String phoneNumber)
   {
     phoneNumber = phoneNumber.trim();
     if(phoneNumber.length() == 0){
@@ -145,7 +145,7 @@ public class Player
    * @throws RuntimeException if is not in format simple@example.com
    * @return true if email is in format simple@example.com
    */
-  static public boolean validateEmail(String email)
+  static public boolean VALIDATE_EMAIL(String email)
   {
     email = email.trim();
     if (email.equals("")){
@@ -177,14 +177,14 @@ public class Player
   }
 
 
-  static public boolean validateData(String name, String phoneNumber,
+  static public boolean VALIDATE_DATA(String name, String phoneNumber,
       String email)
   {
-    System.out.println(validateName(name));
-    System.out.println(validatePhoneNumber(phoneNumber));
-    System.out.println(validateEmail(email));
-    return validateName(name) && validatePhoneNumber(phoneNumber)
-        && validateEmail(email);
+    System.out.println(VALIDATE_NAME(name));
+    System.out.println(VALIDATE_PHONE_NUMBER(phoneNumber));
+    System.out.println(VALIDATE_EMAIL(email));
+    return VALIDATE_NAME(name) && VALIDATE_PHONE_NUMBER(phoneNumber)
+        && VALIDATE_EMAIL(email);
   }
 
   /**

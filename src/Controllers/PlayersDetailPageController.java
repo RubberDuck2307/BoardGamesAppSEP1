@@ -126,7 +126,7 @@ public class PlayersDetailPageController implements Controller
       try
       {
 
-        if (Player.validateData(name, phone, email))
+        if (Player.VALIDATE_DATA(name, phone, email))
         {
           Player player = new Player(ID, name, phone, email, membership,
               comment, address, votedBox.isSelected(), feePayment);
