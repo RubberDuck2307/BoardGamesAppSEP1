@@ -8,7 +8,7 @@
     <numberOfPlayersMax>12</numberOfPlayersMax>
     <availabilityStatus>Available</availabilityStatus>
     <comment/>
-    <ownerID>2</ownerID>
+    <ownerID>0</ownerID>
     <numberOfVotes>0</numberOfVotes>
   </BoardGame>
   <BoardGame>
@@ -52,7 +52,7 @@
     <numberOfPlayersMax>6</numberOfPlayersMax>
     <availabilityStatus>Available</availabilityStatus>
     <comment/>
-    <ownerID>2</ownerID>
+    <ownerID>0</ownerID>
     <numberOfVotes>0</numberOfVotes>
   </BoardGame>
 </BoardGamesList>

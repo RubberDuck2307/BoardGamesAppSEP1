@@ -46,4 +46,14 @@ public class RatingTable
   {
     this.rating.set(rating);
   }
+
+  public int getID()
+  {
+    return ID;
+  }
+
+  public void setID(int ID)
+  {
+    this.ID = ID;
+  }
 }

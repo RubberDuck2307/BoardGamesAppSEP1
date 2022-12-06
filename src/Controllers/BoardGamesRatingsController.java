@@ -5,11 +5,13 @@ import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+import java.util.Optional;
 
 public class BoardGamesRatingsController implements Controller
 {
@@ -32,17 +34,10 @@ public class BoardGamesRatingsController implements Controller
     this.viewHandler = viewHandler;
     this.ID = ID;
 
-    RatingsList ratingsList = model.getRatingsByGame(ID);
 
     headingLabel.setText(model.getBoardGamesList().getNameByID(ID));
 
-    for (int i = 0; i < ratingsList.size(); i++)
-    {
-      Rating rating = ratingsList.getRating(i);
-      String name = model.getPlayersList().getNameByID(rating.getPlayerID());
-      ratingsInTable.add(new RatingTable(name,rating.getValue(), rating.getID()));
-
-    }
+    fillTable();
 
     player.setCellValueFactory(new PropertyValueFactory<>("player"));
     rating.setCellValueFactory(new PropertyValueFactory<>("rating"));
@@ -56,6 +51,32 @@ public class BoardGamesRatingsController implements Controller
 
   @Override public void reset()
   {
+  }
+
+  @FXML public void delete()
+      throws ParserConfigurationException, TransformerException
+  {
+    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+    alert.setTitle("Confirmation");
+    alert.setHeaderText("Are you sure that you want to delete the rating ?");
+    Optional<ButtonType> result = alert.showAndWait();
+    if (result.isPresent() && result.get() == ButtonType.OK){
+      model.getRatings().deleteByID(ratingsTable.getSelectionModel().getSelectedItem().getID());
+      model.saveRatings();
+      fillTable();
+    }
+  }
+
+  public void fillTable(){
+    ratingsInTable.clear();
+    RatingsList ratingsList = model.getRatingsByGame(ID);
+    for (int i = 0; i < ratingsList.size(); i++)
+    {
+      Rating rating = ratingsList.getRating(i);
+      String name = model.getPlayersList().getNameByID(rating.getPlayerID());
+      ratingsInTable.add(new RatingTable(name,rating.getValue(), rating.getID()));
+
+    }
   }
   @FXML public void addRating(){
     viewHandler.openView(15, ID);

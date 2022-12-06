@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<RatingsList>
-  <Rating>
-    <ID>2</ID>
-    <value>5</value>
-    <playerID>2</playerID>
-    <gameID>4</gameID>
-  </Rating>
-</RatingsList>
+<RatingsList/>
