@@ -1,10 +1,12 @@
 package Model;
 
+/**
+ * A class representing a rating of a board game
+ * @author Anna Andrlova, Christos Artemisios, Alex Bolfa, Jan Metela
+ * @version 1.0 - November 2022
+ */
 public class Rating
 {
-  /**
-   * A class representing a rating of a board game
-   */
   private int ID;
   private int value;
   private int playerID;
