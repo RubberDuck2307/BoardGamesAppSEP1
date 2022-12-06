@@ -2,25 +2,38 @@ package Model;
 
 import java.util.ArrayList;
 
+/**
+ * A class representing a list of Player objects
+ * @author Anna Andrlova, Christos Artemisios, Alex Bolfa, Jan Metela
+ */
 public class PlayersList
 {
   private ArrayList<Player> playerList;
 
+  /**
+   * Zero-argument constructor. Set playerList to new empty ArrayList
+   */
   public PlayersList()
   {
     playerList = new ArrayList<>();
   }
 
-  public PlayersList(ArrayList<Player> playerList)
-  {
-    this.playerList = playerList;
-  }
-
+  /**
+   *
+   * @param index index of the player
+   * @return player on the given index
+   */
   public Player getPlayer(int index)
   {
     return playerList.get(index);
   }
 
+  /**
+   *
+   * @param ID the player ID
+   * @throws RuntimeException if player with same ID is not in the list
+   * @return player whose ID equals the given ID
+   */
   public Player getPlayerByID(int ID)
   {
     for (int i = 0; i < size(); i++)
@@ -30,13 +43,24 @@ public class PlayersList
         return playerList.get(i);
       }
     }
-    return playerList.get(0);
+    throw new RuntimeException("Player with such ID is not in the list");
   }
+
+  /**
+   *
+   * @return size of playerList
+   */
   public int size()
   {
     return playerList.size();
   }
 
+
+   /**
+   * Add the given player to the List
+   * If the ID of the player is -1, it is set to the value of the ID of the last player in the list incremented by 1.
+   * If the list is empty, the ID is set to 1
+   */
   public void addPlayer(Player player)
   {
     if (player.getID() == -1)
@@ -59,6 +83,12 @@ public class PlayersList
     }
   }
 
+  /**
+   * Replace a player with a particular ID with the given player.
+   * If a player with the ID is not found in the list, the given player is added on the end of the list instead.
+   * @param player the player by which is the other event replaced
+   * @param ID ID of player that is replaced
+   */
   public void setPlayer(Player player, int ID)
   {
     boolean found = false;
@@ -77,6 +107,10 @@ public class PlayersList
     }
   }
 
+  /**
+   * Removes a player from the list by given ID
+   * @param ID ID of the player that is removed
+   */
   public void deleteByID(int ID)
   {
     for (int i = 0; i < playerList.size(); i++)
@@ -89,6 +123,10 @@ public class PlayersList
     }
   }
 
+  /**
+   *
+   * @return new PlayerList with only player from the original list whose membership is false
+   */
   public PlayersList getGuests()
   {
     PlayersList newPlayerList = new PlayersList();
@@ -103,7 +141,10 @@ public class PlayersList
     }
     return newPlayerList;
   }
-
+  /**
+   *
+   * @return new PlayerList with only player from the original list whose membership is true
+   */
   public PlayersList getMembers()
   {
     PlayersList newPlayerList = new PlayersList();
@@ -119,6 +160,11 @@ public class PlayersList
     return newPlayerList;
   }
 
+  /**
+   *
+   * @param charSequence the string that names of returned players contain
+   * @return new PlayersList with only the players from the original list whose name contains charSequence
+   */
   public PlayersList filterPlayerList(String charSequence)
   {
     PlayersList newPlayerList = new PlayersList();
@@ -131,6 +177,11 @@ public class PlayersList
     return newPlayerList;
   }
 
+  /**
+   * @param ID the ID of the player
+   * @throws RuntimeException if player with such ID is not in the list
+   * @return name of the player with given ID
+   */
   public String getNameByID(int ID)
   {
     System.out.println("hello" + ID);
@@ -141,9 +192,12 @@ public class PlayersList
         return playerList.get(i).getName();
       }
     }
-    return null;
+    throw new RuntimeException("Player with such ID is not in the List");
   }
 
+  /**
+   * Set the attribute voted of all players in the list to false
+   */
   public void setAllPlayersVotedFalse(){
     for (int i = 0; i < size(); i++)
     {
@@ -152,6 +206,10 @@ public class PlayersList
     }
   }
 
+  /**
+   *
+   * @return values of all the attributes of all the players as string
+   */
   @Override public String toString()
   {
     return "Model.PlayersList{" + "playerList=" + playerList + '}';

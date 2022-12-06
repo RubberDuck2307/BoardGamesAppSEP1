@@ -264,7 +264,7 @@ public class BoardGame
   }
 
   /**
-   * get a copy of the board game
+   * Get a copy of the board game
    */
   public BoardGame copy()
   {

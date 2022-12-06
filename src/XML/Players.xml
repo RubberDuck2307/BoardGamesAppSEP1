@@ -20,4 +20,14 @@
     <address/>
     <voted>true</voted>
   </Player>
+  <Player>
+    <ID>4</ID>
+    <name>DA</name>
+    <phoneNumber>+5054</phoneNumber>
+    <email/>
+    <membership>false</membership>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+  </Player>
 </PlayersList>

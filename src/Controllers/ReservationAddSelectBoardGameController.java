@@ -88,7 +88,7 @@ public class ReservationAddSelectBoardGameController implements Controller
     BoardGamesList boardGamesList;
 
     boardGamesList = model.getBoardGamesList()
-        .getBoardGameListByStatus(BoardGame.AVAILABLE_STATUS);
+        .getBoardGameListByStatus(BoardGame.AVAILABLE_STATUS, BoardGame.BORROWED_STATUS);
 
     boardGamesList = boardGamesList.filterBoardGameList(searchField.getText());
     String numberString = numberOfPlayersFilter.getText();
@@ -101,7 +101,7 @@ public class ReservationAddSelectBoardGameController implements Controller
 
     if (genreValue != null)
     {
-      boardGamesList = boardGamesList.getBoardGameListByGenre(genreValue);
+      boardGamesList = boardGamesList.getBoardGameListByType(genreValue);
     }
     if (statusValue != null)
     {

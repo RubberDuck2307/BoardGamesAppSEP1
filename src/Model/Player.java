@@ -4,6 +4,10 @@ package Model;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+/**
+ * A class representing a player
+ * @author Anna Andrlova, Christos Artemisios, Alex Bolfa, Jan Metela
+ */
 public class Player
 {
   private int ID;
@@ -18,11 +22,34 @@ public class Player
 
   private LocalDate feePaymentDate;
 
+  /**
+   * Nine-arguments constructor calling the set method
+   * @param ID the ID of the player
+   * @param name the name of the player
+   * @param phoneNumber the phone number of the player
+   * @param email the email of the player
+   * @param membership whether is the player a member or not
+   * @param comment a custom comment
+   * @param address the address of the player
+   * @param voted whether the player has voted in election or not
+   * @param feePaymentDate the date till when must the player pay his member fee
+   */
   public Player(int ID, String name, String phoneNumber, String email, boolean membership,
       String comment, String address, Boolean voted, LocalDate feePaymentDate)
   {
     set(ID, name, phoneNumber, email, membership, comment, address , voted, feePaymentDate);
   }
+  /**
+   * Eight-arguments constructor calling the set method. ID is set to -1.
+   * @param name the name of the player
+   * @param phoneNumber the phone number of the player
+   * @param email the email of the player
+   * @param membership whether is the player a member or not
+   * @param comment a custom comment
+   * @param address the address of the player
+   * @param voted whether the player has voted in election or not
+   * @param feePaymentDate the date till when must the player pay his member fee
+   */
   public Player(String name, String phoneNumber, String email, boolean membership,
       String comment, String address, Boolean voted, LocalDate feePaymentDate)
   {
@@ -30,17 +57,18 @@ public class Player
     set(ID,name, phoneNumber, email, membership, comment, address , voted, feePaymentDate);
   }
 
-
-  public Player(String name, String phoneNumber, boolean membership){
-    int ID = -1;
-    String email = "";
-    String comment = "";
-    String address = "";
-    boolean voted = false;
-
-    set(ID, name,phoneNumber,email, membership,comment,address,voted, null);
-
-  }
+  /**
+   * Setter for every attribute
+   * @param ID the ID of the player
+   * @param name the name of the player
+   * @param phoneNumber the phone number of the player
+   * @param email the email of the player
+   * @param membership whether is the player a member or not
+   * @param comment a custom comment
+   * @param address the address of the player
+   * @param voted whether the player has voted in election or not
+   * @param feePaymentDate the date till when must the player pay his member fee
+   */
 
   public void set(int ID,String name, String phoneNumber, String email,
       boolean membership, String comment, String address,
@@ -62,6 +90,12 @@ public class Player
     this.feePaymentDate = feePaymentDate;
   }
 
+  /**
+   *
+   * @param name the name of the player
+   * @throws RuntimeException if name is an empty string
+   * @return true, if name is not an empty string
+   */
   static public boolean validateName(String name)
   {
     name = name.trim();
@@ -72,6 +106,16 @@ public class Player
     throw new RuntimeException("Name is not valid");
   }
 
+  /**
+   * Checks whether given phoneNumber meets those conditions:
+   * phoneNumber contains only numbers and/or "+"
+   * phoneNumber is not an empty string
+   * if phoneNumber contains "+" it is first character of the string
+   * @param phoneNumber the phone number of the player
+   * @throws RuntimeException if phoneNumber does not meet any of the conditions
+   * @return true if phoneNumber meets all the conditions
+   *
+   */
   static public boolean validatePhoneNumber(String phoneNumber)
   {
     phoneNumber = phoneNumber.trim();
@@ -95,6 +139,12 @@ public class Player
     return true;
   }
 
+  /**
+   *
+   * @param email the email of the player
+   * @throws RuntimeException if is not in format simple@example.com
+   * @return true if email is in format simple@example.com
+   */
   static public boolean validateEmail(String email)
   {
     email = email.trim();
@@ -137,66 +187,141 @@ public class Player
         && validateEmail(email);
   }
 
+  /**
+   * Getter for ID
+   */
   public int getID()
   {
     return ID;
   }
-
+  /**
+   * Setter for ID
+   */
   public void setID(int ID)
   {
     this.ID = ID;
   }
-
+  /**
+   * Getter for name
+   */
   public String getName()
   {
     return name;
   }
+  /**
+   * Setter for name
+   */
+  public void setName(String name)
+  {
+    this.name = name;
+  }
 
+  /**
+   * Getter for phoneNumber
+   */
   public String getPhoneNumber()
   {
     return phoneNumber;
   }
-
+  /**
+   * Getter for Email
+   */
   public String getEmail()
   {
     return email;
   }
 
+  /**
+   * Getter for membership
+   */
+
   public boolean isMembership()
   {
     return membership;
   }
-
+  /**
+   * Getter for comment
+   */
   public String getComment()
   {
     return comment;
   }
-
+  /**
+   * Getter for address
+   */
   public String getAddress()
   {
     return address;
   }
-
+  /**
+   * Getter for voted
+   */
   public Boolean getVoted()
   {
     return voted;
   }
-
+  /**
+   * Setter for voted
+   */
   public void setVoted(Boolean voted)
   {
     this.voted = voted;
   }
-
+  /**
+   * Getter for feePaymentDate
+   */
   public LocalDate getFeePaymentDate()
   {
     return feePaymentDate;
   }
 
+  /**
+   * Setter for feePaymentDay
+   */
   public void setFeePaymentDate(LocalDate feePaymentDate)
   {
     this.feePaymentDate = feePaymentDate;
   }
 
+  /**
+   * Setter for phoneNumber
+   */
+  public void setPhoneNumber(String phoneNumber)
+  {
+    this.phoneNumber = phoneNumber;
+  }
+  /**
+   * Setter for email
+   */
+  public void setEmail(String email)
+  {
+    this.email = email;
+  }
+  /**
+   * Setter for membership
+   */
+  public void setMembership(boolean membership)
+  {
+    this.membership = membership;
+  }
+  /**
+   * Setter for comment
+   */
+  public void setComment(String comment)
+  {
+    this.comment = comment;
+  }
+  /**
+   * Setter for address
+   */
+  public void setAddress(String address)
+  {
+    this.address = address;
+  }
+
+  /**
+   * Returns value of all attributes as string
+   */
   @Override public String toString()
   {
     return "Model.Player{" + "ID=" + ID + ", name='" + name + '\'' + ", phoneNumber='"

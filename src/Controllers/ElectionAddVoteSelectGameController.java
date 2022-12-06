@@ -88,7 +88,7 @@ public class ElectionAddVoteSelectGameController implements Controller
 
     if (genreValue != null)
     {
-      boardGamesList = boardGamesList.getBoardGameListByGenre(genreValue);
+      boardGamesList = boardGamesList.getBoardGameListByType(genreValue);
     }
     for (int i = boardGamesList.size() -1 ;  i >= 0; i--)
     {

@@ -68,7 +68,6 @@ public class BorrowingsController implements Controller
   public void fillTable(){
     borrowingsTables.clear();
     BorrowingsList borrowingsList;
-    //System.out.println("ID is " + ID);
     if (ID == -1)
     {
       borrowingsList = model.getBorrowingsList();

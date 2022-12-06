@@ -91,15 +91,16 @@ public class ReservationsDetailsPageController implements Controller{
         editButton.setText("Save Changes");
 
         save = event -> {
-            int boardGameName = reservation.getGameID();
-            int memberName = reservation.getPlayerID();
+            System.out.println(reservation);
+            int boardGameID = reservation.getGameID();
+            int memberID = reservation.getPlayerID();
             LocalDate startingDate = startingDateField.getValue();
             LocalDate endingDate = endingDateField.getValue();
             String comment = commentField.getText();
 
             try {
                 if (Reservation.VALIDATE_DATA(startingDate, endingDate)) {
-                    Reservation reservation1 = new Reservation(ID, boardGameName, memberName, startingDate, endingDate, comment);
+                    Reservation reservation1 = new Reservation(ID, memberID, boardGameID, startingDate, endingDate, comment);
                     model.setReservationByID(reservation1, ID);
                     try {
                         model.saveReservation();
@@ -114,6 +115,7 @@ public class ReservationsDetailsPageController implements Controller{
                 }
             }
             catch (Exception error){
+                System.out.println(error.fillInStackTrace());
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Invalid Data");
                 alert.setHeaderText(error.getMessage());

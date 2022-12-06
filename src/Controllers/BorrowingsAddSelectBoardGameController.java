@@ -119,7 +119,7 @@ public class BorrowingsAddSelectBoardGameController implements Controller
 
     if (genreValue != null)
     {
-      boardGamesList = boardGamesList.getBoardGameListByGenre(genreValue);
+      boardGamesList = boardGamesList.getBoardGameListByType(genreValue);
     }
     if (statusValue != null)
     {
