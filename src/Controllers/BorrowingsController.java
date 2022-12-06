@@ -53,7 +53,14 @@ public class BorrowingsController implements Controller
 
   @FXML public void backToHomePage()
   {
-    viewHandler.openView(1, -1);
+    if (ID == -1)
+    {
+      viewHandler.openView(1, -1);
+    }
+    else
+    {
+      viewHandler.openView(8, ID);
+    }
   }
 
   @Override public Region getRegion()
