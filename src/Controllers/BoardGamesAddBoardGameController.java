@@ -74,7 +74,6 @@ public class BoardGamesAddBoardGameController  implements Controller
       {
         model.addBoardGame(new BoardGame( nameField.getText(), typeOfGame, Integer.parseInt(min.getText()),Integer.parseInt(max.getText()), statusOfGame, commentField.getText(), owner, 0 ));
         model.saveBoardGames();
-        System.out.println(model.getBoardGamesList());
         viewHandler.openView(9,model.getBoardGamesList().getBoardGame(model.getBoardGamesList()
             .size() -1).getID());
       }
