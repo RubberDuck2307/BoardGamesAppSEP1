@@ -16,12 +16,11 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class FileReader
 {
-  public static void savePlayersList(PlayersList playersList)
+  public static void SAVE_PLAYERS_LIST(PlayersList playersList)
       throws ParserConfigurationException, TransformerException
   {
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -105,7 +104,7 @@ public class FileReader
     transformer.transform(new DOMSource(doc), new StreamResult(file));
   }
 
-  public static PlayersList readPlayersList()
+  public static PlayersList READ_PLAYERS_LIST()
       throws ParserConfigurationException, IOException, SAXException,
       TransformerConfigurationException
   {
@@ -204,7 +203,7 @@ public class FileReader
     return playersList;
   }
 
-  public static void saveBoardGameList(BoardGamesList boardGamesList)
+  public static void SAVE_BOARDGAMES_LIST(BoardGamesList boardGamesList)
       throws ParserConfigurationException, TransformerException
   {
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -276,7 +275,7 @@ public class FileReader
 
   }
 
-  static public BoardGamesList readBoardGamesList()
+  static public BoardGamesList READ_BOARD_GAMES_LIST()
       throws ParserConfigurationException, IOException, SAXException,
       TransformerConfigurationException
   {
@@ -358,7 +357,7 @@ public class FileReader
     return boardGamesList;
   }
 
-  public static void saveEventsList(EventsList eventsList)
+  public static void SAVE_EVENTS_LIST(EventsList eventsList)
       throws ParserConfigurationException, TransformerException
   {
 
@@ -481,7 +480,7 @@ public class FileReader
 
   }
 
-  static public EventsList readEventsList()
+  static public EventsList READ_EVENTS_LIST()
       throws ParserConfigurationException, IOException, SAXException,
       TransformerConfigurationException
   {
@@ -643,7 +642,7 @@ public class FileReader
     return eventsList;
   }
 
-  public static void saveRatingsList(RatingsList ratingsList)
+  public static void SAVE_RATINGS_LIST(RatingsList ratingsList)
       throws ParserConfigurationException, TransformerException
   {
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -693,7 +692,7 @@ public class FileReader
 
   }
 
-  static public RatingsList readRatingsList()
+  static public RatingsList READ_RATINGS_LIST()
       throws ParserConfigurationException, IOException, SAXException,
       TransformerConfigurationException
   {
@@ -752,7 +751,7 @@ public class FileReader
     return ratingsList;
   }
 
-  public static void saveElection(Election election)
+  public static void SAVE_ELECTION(Election election)
       throws ParserConfigurationException, TransformerException
   {
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -808,7 +807,7 @@ public class FileReader
 
   }
 
-  static public Election readElection()
+  static public Election READ_ELECTION()
       throws ParserConfigurationException, IOException, SAXException,
       TransformerConfigurationException
   {
@@ -896,20 +895,9 @@ public class FileReader
     return new Election(startingDate, endingDate);
   }
 
-  public static void saveCurrentBorrowings(BorrowingsList borrowingsList)
-      throws ParserConfigurationException, TransformerException
-  {
-    saveBorrowingsList(borrowingsList, "./src/XML/CurrentBorrowings.xml");
-  }
 
-  public static void savePastBorrowings(BorrowingsList borrowingsList)
-      throws ParserConfigurationException, TransformerException
-  {
-    saveBorrowingsList(borrowingsList, "./src/XML/PastBorrowings.xml");
-  }
 
-  private static void saveBorrowingsList(BorrowingsList borrowingsList,
-      String fileName) throws ParserConfigurationException, TransformerException
+  public static void SAVE_CURRENT_BORROWINGS(BorrowingsList borrowingsList) throws ParserConfigurationException, TransformerException
   {
 
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -988,25 +976,13 @@ public class FileReader
     transformer.setOutputProperty(OutputKeys.INDENT, "yes");
     transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount",
         "2");
-    File file = new File(fileName);
+    File file = new File("./src/XML/CurrentBorrowings.xml");
     transformer.transform(new DOMSource(doc), new StreamResult(file));
 
   }
 
-  public static BorrowingsList readCurrentBorrowings()
-      throws TransformerConfigurationException, ParserConfigurationException,
-      IOException, SAXException
-  {
-    return readBorrowings("./src/XML/CurrentBorrowings.xml");
-  }
 
-  public static BorrowingsList readPastBorrowings()
-      throws TransformerConfigurationException, ParserConfigurationException,
-      IOException, SAXException
-  {
-    return readBorrowings("./src/XML/PastBorrowings.xml");
-  }
-  static private BorrowingsList readBorrowings(String filename)
+  static public BorrowingsList READ_CURRENT_BORROWINGS()
       throws ParserConfigurationException, IOException, SAXException,
       TransformerConfigurationException
   {
@@ -1014,7 +990,7 @@ public class FileReader
 
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     DocumentBuilder builder = factory.newDocumentBuilder();
-    Document doc = builder.parse(filename);
+    Document doc = builder.parse("./src/XML/CurrentBorrowings.xml");
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
 
@@ -1119,7 +1095,7 @@ public class FileReader
     return borrowingsList;
   }
 
-  public static void saveReservationsList(ReservationsList reservationsList) throws ParserConfigurationException, TransformerException
+  public static void SAVE_RESERVATIONS_LIST(ReservationsList reservationsList) throws ParserConfigurationException, TransformerException
   {
 
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -1208,7 +1184,7 @@ public class FileReader
 
   }
 
-  static public ReservationsList readReservations()
+  static public ReservationsList READ_RESERVATIONS()
       throws ParserConfigurationException, IOException, SAXException,
       TransformerConfigurationException
   {

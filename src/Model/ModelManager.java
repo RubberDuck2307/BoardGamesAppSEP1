@@ -10,14 +10,14 @@ import java.io.IOException;
 
 public class ModelManager
 {
-  private PlayersList playersList = FileReader.readPlayersList();
-  private BoardGamesList boardGamesList = FileReader.readBoardGamesList();
-  private ReservationsList reservationsList = FileReader.readReservations();
-  private EventsList eventsList = FileReader.readEventsList();
-  private BorrowingsList borrowingsList = FileReader.readCurrentBorrowings();
+  private PlayersList playersList = FileReader.READ_PLAYERS_LIST();
+  private BoardGamesList boardGamesList = FileReader.READ_BOARD_GAMES_LIST();
+  private ReservationsList reservationsList = FileReader.READ_RESERVATIONS();
+  private EventsList eventsList = FileReader.READ_EVENTS_LIST();
+  private BorrowingsList borrowingsList = FileReader.READ_CURRENT_BORROWINGS();
 
-  private RatingsList ratingsList = FileReader.readRatingsList();
-  private Election election = FileReader.readElection();
+  private RatingsList ratingsList = FileReader.READ_RATINGS_LIST();
+  private Election election = FileReader.READ_ELECTION();
 
   public BorrowingsList getBorrowingsList()
   {
@@ -66,13 +66,13 @@ public class ModelManager
   public void savePlayers()
       throws ParserConfigurationException, TransformerException
   {
-    FileReader.savePlayersList(playersList);
+    FileReader.SAVE_PLAYERS_LIST(playersList);
   }
 
   public void saveBorrowing()
       throws ParserConfigurationException, TransformerException
   {
-    FileReader.saveCurrentBorrowings(borrowingsList);
+    FileReader.SAVE_CURRENT_BORROWINGS(borrowingsList);
   }
 
   public void setPlayer(Player player, int ID)
@@ -93,7 +93,7 @@ public class ModelManager
   public void saveElection()
       throws ParserConfigurationException, TransformerException
   {
-    FileReader.saveElection(election);
+    FileReader.SAVE_ELECTION(election);
   }
 
   public void resetVotedOfAllPlayers()
@@ -104,7 +104,7 @@ public class ModelManager
   public void saveBoardGames()
       throws ParserConfigurationException, TransformerException
   {
-    FileReader.saveBoardGameList(boardGamesList);
+    FileReader.SAVE_BOARDGAMES_LIST(boardGamesList);
   }
 
   public void setAllVotesTo0()
@@ -130,7 +130,7 @@ public class ModelManager
   public void saveEvent()
       throws ParserConfigurationException, TransformerException
   {
-    FileReader.saveEventsList(eventsList);
+    FileReader.SAVE_EVENTS_LIST(eventsList);
   }
 
   public BoardGamesList getBoardGamesByOwnership(int ID)
@@ -166,14 +166,14 @@ public class ModelManager
   public void saveRatings()
       throws ParserConfigurationException, TransformerException
   {
-    FileReader.saveRatingsList(ratingsList);
+    FileReader.SAVE_RATINGS_LIST(ratingsList);
   }
 
   public void setReservationByID(Reservation reservation, int ID){
     reservationsList.setReservationByID(reservation, ID);
   }
   public void saveReservation() throws ParserConfigurationException, TransformerException {
-    FileReader.saveReservationsList(reservationsList);
+    FileReader.SAVE_RESERVATIONS_LIST(reservationsList);
   }
 
   public void deleteReservationByID(int ID){
