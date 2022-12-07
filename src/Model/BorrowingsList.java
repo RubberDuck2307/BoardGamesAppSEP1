@@ -144,8 +144,7 @@ public class BorrowingsList
   /**
    *
    * @param ID of the borrowing which is returned
-   * @throws RuntimeException if in the list is not a borrowing with such ID
-   * @return first borrowing in the list whose ID equals the given one
+   * @return first borrowing in the list whose ID equals the given one, or null if there is no borrowing with such ID
    */
   public Reservation getBorrowingByGameID(int ID){
     for (int i = 0; i < size(); i++)
@@ -154,7 +153,7 @@ public class BorrowingsList
         return getBorrowing(i);
       }
     }
-    throw new RuntimeException("Borrowing with such ID is not in the list");
+    return null;
 
   }
 

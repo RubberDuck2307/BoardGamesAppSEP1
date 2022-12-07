@@ -71,7 +71,7 @@ public class ReservationAddFinalFormController implements ExtendedController
 
     if (valid)
     {
-
+      System.out.println(boardGameID);
       Reservation borrowing = model.getBorrowingsList()
           .getBorrowingByGameID(boardGameID);
       ArrayList<Reservation> reservations = model.getReservationsList()

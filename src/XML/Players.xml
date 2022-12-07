@@ -30,4 +30,19 @@
     <address/>
     <voted>false</voted>
   </Player>
+  <Player>
+    <ID>5</ID>
+    <name>Annitska</name>
+    <phoneNumber>1234</phoneNumber>
+    <email/>
+    <membership>true</membership>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+    <feePayment>
+      <day>7</day>
+      <month>12</month>
+      <year>2022</year>
+    </feePayment>
+  </Player>
 </PlayersList>
