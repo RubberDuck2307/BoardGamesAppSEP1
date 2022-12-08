@@ -42,7 +42,7 @@ public class BorrowingsList
   /**
    *
    * @param id ID of the borrowing that is returned
-   * @return borrowing whose ID equals the given one
+   * @return borrowing whose ID equals the given one or null if there is no borrowing with such id in the list
    */
   public Reservation getBorrowingByID(int id)
   {
@@ -53,7 +53,7 @@ public class BorrowingsList
         return borrowingList.get(i);
       }
     }
-   throw new RuntimeException("Borrowing with such ID is not in the list");
+   return null;
   }
 
   /**

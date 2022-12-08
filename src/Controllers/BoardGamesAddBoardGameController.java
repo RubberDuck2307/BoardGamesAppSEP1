@@ -9,7 +9,7 @@ import javafx.scene.layout.Region;
 
 import java.util.Optional;
 
-public class BoardGamesAddBoardGameController  implements Controller
+public class BoardGamesAddBoardGameController implements Controller
 {
   public TextField owner;
   private Region region;
@@ -22,6 +22,7 @@ public class BoardGamesAddBoardGameController  implements Controller
   public TextField nameField;
   public TextArea commentField;
   private int ID;
+
   @Override public void init(Region region, ModelManager model,
       ViewHandler viewHandler, int ID)
   {
@@ -32,20 +33,26 @@ public class BoardGamesAddBoardGameController  implements Controller
     setData();
 
   }
-  public void setData(){
+
+  public void setData()
+  {
+    String[] allowedStatuses = {"Available",
+        "Unavailable", "Considered to be bought"};
     ObservableList<String> items = FXCollections.observableArrayList(
         BoardGame.ALLOWED_TYPES);
     type.setItems(items);
     ObservableList<String> items2 = FXCollections.observableArrayList(
-        BoardGame.ALLOWED_STATUSES);
+        allowedStatuses);
     status.setItems(items2);
     type.setValue(items.get(0));
     status.setValue(items2.get(0));
-    PlayersList playersList= model.getPlayersList();
-    if(ID == 0){
+    PlayersList playersList = model.getPlayersList();
+    if (ID == 0)
+    {
       owner.setText("Association");
     }
-    else{
+    else
+    {
       owner.setText(playersList.getNameByID(ID));
     }
 
@@ -64,28 +71,31 @@ public class BoardGamesAddBoardGameController  implements Controller
   public void addBoardGame()
 
   {
-      int owner = ID;
-      String typeOfGame = type.getValue().toString();
-      String statusOfGame = status.getValue().toString();
+    int owner = ID;
+    String typeOfGame = type.getValue().toString();
+    String statusOfGame = status.getValue().toString();
 
     try
     {
-      if(BoardGame.VALIDATE_DATA(nameField.getText(), min.getText(),max.getText()))
+      if (BoardGame.VALIDATE_DATA(nameField.getText(), min.getText(),
+          max.getText()))
       {
-        model.addBoardGame(new BoardGame( nameField.getText(), typeOfGame, Integer.parseInt(min.getText()),Integer.parseInt(max.getText()), statusOfGame, commentField.getText(), owner, 0 ));
+        model.addBoardGame(new BoardGame(nameField.getText(), typeOfGame,
+            Integer.parseInt(min.getText()), Integer.parseInt(max.getText()),
+            statusOfGame, commentField.getText(), owner, 0));
         model.saveBoardGames();
-        viewHandler.openView(9,model.getBoardGamesList().getBoardGame(model.getBoardGamesList()
-            .size() -1).getID());
+        viewHandler.openView(9, model.getBoardGamesList()
+            .getBoardGame(model.getBoardGamesList().size() - 1).getID());
       }
 
     }
-    catch (Exception e){
+    catch (Exception e)
+    {
       Alert alert = new Alert(Alert.AlertType.ERROR);
       alert.setTitle("Invalid data");
       alert.setHeaderText(e.getMessage());
       Optional<ButtonType> result = alert.showAndWait();
     }
-
 
   }
 
@@ -93,6 +103,5 @@ public class BoardGamesAddBoardGameController  implements Controller
   {
     viewHandler.openView(132, -1);
   }
-
 
 }

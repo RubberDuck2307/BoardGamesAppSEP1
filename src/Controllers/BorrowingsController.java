@@ -17,7 +17,7 @@ import javafx.scene.layout.Region;
 public class BorrowingsController implements Controller
 {
   public TextField searchField;
-  @FXML Button backButton;
+  @FXML Button addBorrowingButton;
   Region region;
   ModelManager model;
   ViewHandler viewHandler;
@@ -42,6 +42,10 @@ public class BorrowingsController implements Controller
     this.model = model;
     this.viewHandler = viewHandler;
     this.ID = ID;
+    if (ID != -1){
+      addBorrowingButton.setVisible(false);
+    }
+
     fillTable();
 
     boardGameName.setCellValueFactory(new PropertyValueFactory<>("boardGameName"));

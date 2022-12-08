@@ -15,7 +15,6 @@ public class ViewHandler
   private Stage primaryStage;
   private ModelManager model;
   private HomeController homeController;
-  private AddPlayerController addPlayerController;
   private PlayersDetailPageController playersDetailPageController;
   private PlayersController playersController;
   private BoardGamesController boardGamesController;

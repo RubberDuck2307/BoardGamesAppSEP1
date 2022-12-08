@@ -5,14 +5,14 @@
     <playerID>3</playerID>
     <gameID>7</gameID>
     <from>
-      <day>15</day>
-      <month>1</month>
-      <year>2023</year>
+      <day>8</day>
+      <month>12</month>
+      <year>2022</year>
     </from>
     <to>
-      <day>16</day>
-      <month>1</month>
-      <year>2023</year>
+      <day>10</day>
+      <month>12</month>
+      <year>2022</year>
     </to>
     <comment/>
   </reservation>

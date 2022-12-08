@@ -187,6 +187,7 @@ public class ReservationsList
    * @return a new Arraylist sorted by the from attribute with only reservation from the original list which has the same gameID as the given one
    */
   public ArrayList<Reservation> getSortedArrayListByGameID(int ID){
+
     ArrayList<Reservation> reservationsList1 = getReservationByGameID(ID).getReservationsAsArrayList();
     reservationsList1.sort(Comparator.comparing(Reservation::getFrom));
 

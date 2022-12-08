@@ -55,79 +55,90 @@ public class ReservationAddFinalFormController implements ExtendedController
 
   @FXML public void ASAP()
   {
-    boolean valid = true;
+    boolean valid = true; //2
     try
     {
-      Long.parseLong(durationField.getText());
+      Long.parseLong(durationField.getText()); // 2 Trying to convert inputted data to int
     }
-    catch (Exception e)
+    catch (Exception e) //If data is not a number, a pop-up error is shown
+        //This does not execute in the worst case
     {
-      Alert alert = new Alert(Alert.AlertType.ERROR);
-      alert.setTitle("Invalid Data");
-      alert.setHeaderText("Duration can be only number");
-      Optional<ButtonType> buttonType = alert.showAndWait();
-      valid = false;
+      Alert alert = new Alert(Alert.AlertType.ERROR); //2
+      alert.setTitle("Invalid Data"); //1
+      alert.setHeaderText("Duration can be only number"); //1
+      Optional<ButtonType> buttonType = alert.showAndWait(); //2
+      valid = false; //2
     }
 
-    if (valid)
+    if (valid) //1 If data was number, the execution of method continues
     {
-      System.out.println(boardGameID);
-      Reservation borrowing = model.getBorrowingsList()
-          .getBorrowingByGameID(boardGameID);
+      Reservation borrowing = model.getBorrowingsList() //Return a record of borrowing the game
+          .getBorrowingByGameID(boardGameID); // 3 + n
       ArrayList<Reservation> reservations = model.getReservationsList()
-          .getSortedArrayListByGameID(boardGameID);
-
-      if (borrowing != null)
+          .getSortedArrayListByGameID(boardGameID); // 4 + n * log(n)
+      //Return arrayList of reservations of the game sorted by the starting day
+      if (borrowing != null) //1
       {
-        reservations.add(0, borrowing);
+        reservations.add(0, borrowing); //n If there is a record about
+        // borrowing, it is added at the beginning of the arrayList
       }
-      System.out.println(reservations);
-      if (reservations.size() == 0)
-      {
-        startingDate.setValue(LocalDate.now());
+      if (reservations.size() == 0) //2 This does not execute in the worst case
+      {//If there is no reservation or borrowing, the starting day is set to today
+        // and the ending day se set to today + the duration of the reservation
+        startingDate.setValue(LocalDate.now()); //2
         endingDate.setValue(
-            LocalDate.now().plusDays(Long.parseLong(durationField.getText())));
+            LocalDate.now().plusDays(Long.parseLong(durationField.getText())));//5
       }
 
       else
       {
         Period firstPeriod = Period.between(LocalDate.now(),
-            reservations.get(0).getFrom());
-        if (firstPeriod.getDays() >= Long.parseLong(durationField.getText()))
-        {
-          startingDate.setValue(LocalDate.now());
+            reservations.get(0).getFrom());//5
+        if (firstPeriod.getDays() >= Long.parseLong(durationField.getText())) //4
+        {//Checks if there is enough days between today and the first reservation to create a new one
+          // and if so, set the dates
+          //This does not execute in the worst case
+          startingDate.setValue(LocalDate.now());//2
           endingDate.setValue(LocalDate.now()
-              .plusDays(Long.parseLong(durationField.getText())));
+              .plusDays(Long.parseLong(durationField.getText()))); //5
         }
         else
-        {
-          boolean set = false;
-          for (int i = 1; i < reservations.size(); i++)
+        { //Lops through all reservations and checks whether there is sufficient amount of days for
+          // creating a reservation between the start of one and end of the next one and if so,
+          // set dates
+          boolean set = false;//2
+          for (int i = 1; i < reservations.size(); i++) //2 + 2n - 3
           {
             Period period = Period.between(reservations.get(i - 1).getTo(),
-                reservations.get(i).getFrom());
-            System.out.println(period.getDays() + "The days between");
-            if (period.getDays() >= Long.parseLong(durationField.getText()))
-            {
-              startingDate.setValue(reservations.get(i - 1).getTo());
-              endingDate.setValue(reservations.get(i - 1).getTo()
+                reservations.get(i).getFrom()); //7n
+            if (period.getDays() >= Long.parseLong(durationField.getText())) //4n
+            { //This does not execute in the worst case
+              startingDate.setValue(reservations.get(i - 1).getTo()); //3
+              endingDate.setValue(reservations.get(i - 1).getTo() //6
                   .plusDays(Long.parseLong(durationField.getText())));
-              set = true;
+              set = true; //1
               break;
             }
           }
-          if (!set)
+          if (!set) //1 If the space for the new reservation is not found,
+            //the dates are set after the end of the last reservation
           {
             startingDate.setValue(
-                reservations.get(reservations.size() - 1).getTo());
+                reservations.get(reservations.size() - 1).getTo()); //4
             endingDate.setValue(
-                reservations.get(reservations.size() - 1).getTo()
+                reservations.get(reservations.size() - 1).getTo() //7
                     .plusDays(Long.parseLong(durationField.getText())));
           }
         }
       }
     }
   }
+  // The worst scenario is when the game is borrowed and reserved and there is not
+  // a big enough gap between two reservation to insert a new one
+  // T(n) = 39 + 15n + n * log(n)) after deleting the constants and choosing the fastest
+  // increasing part we get:
+  // T(n) = O(n * log(n))
+  // We chose this algorithm because it is the one most complex algorithms in the program
 
   @FXML public void reserveGame()
       throws ParserConfigurationException, TransformerException

@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Objects;
 
@@ -230,7 +231,7 @@ public class BoardGamesList
 
   /**
    *
-   * @return new BoardGamesList with all board games from the original list whose status equals to "Considered to be bought status" sorted by numberOfVotes
+   * @return new BoardGamesList with copies of all board games from the original list whose status equals to "Considered to be bought status" sorted by numberOfVotes
    */
   public BoardGamesList getConsideredToBeBoughtGames()
   {
@@ -266,22 +267,28 @@ public class BoardGamesList
   }
 
   /**
-   * return the board game with given ID. If there is no game with such ID a new BoardGame is returned.
    * @param ID ID of the board game
    * @throws RuntimeException if a game with given ID is not in boardGamesList
    * @return the board game with given ID
    */
   public BoardGame getBoardGameByID(int ID)
   {
-    for (int i = 0; i < size(); i++)
+
+    for (int i = 0; i < size(); i++) // 1 + 1 + 2n - 1
     {
-      if (getBoardGame(i).getID() == ID)
+      if (getBoardGame(i).getID() == ID) //3n  Compares ID of every board game in the list
       {
-        return getBoardGame(i);
+        return getBoardGame(i); //1 If the game with the same ID is found it is returned
       }
     }
-    throw new RuntimeException("In the list is no game with such ID");
+    throw new RuntimeException("In the list is no game with such ID"); //1 Otherwise an exception is thrown
   }
+  // variable n is the size of the list
+  // In the worst case scenario, the board game is not in the list.
+  // In the worst case scenario we loop n times.
+  // T(n) = 5n + 2 Ignoring the constants we get
+  // T(n) = O(n)
+  // We choose this method because it is one of the most essentials methods for our program to work
 
   /**
    *
