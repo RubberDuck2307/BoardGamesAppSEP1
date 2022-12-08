@@ -91,7 +91,7 @@ public class ElectionDetailPageController implements Controller
 
     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
     alert.setTitle("Confirmation");
-    alert.setHeaderText("The winner of the election is: " + model.getBoardGamesList().getBoardGameWithMostVotes() );
+    alert.setHeaderText("The winner of the election is: " + model.getBoardGamesList().getBoardGameWithMostVotes().getName() );
     Optional<ButtonType> result = alert.showAndWait();
     if (result.isPresent() && result.get() == ButtonType.OK)
     {
