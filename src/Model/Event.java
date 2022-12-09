@@ -106,7 +106,6 @@ public class Event
     this.link = link;
     this.from = fromDate.atTime(intFromHours,intFromMinutes);
     this.to = toDate.atTime(intToHours,intToMinutes);
-    System.out.println("Constructor" + toDate);
   }
 
   /**

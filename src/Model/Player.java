@@ -176,13 +176,17 @@ public class Player
     return true;
   }
 
-
+  /**
+   * Validates the inputted data by passing them to methods VALIDATE_NAME, VALIDATE EMAIL and VALIDATE_PHONE_NUMBER
+   *
+   * @param name the name of the player
+   * @param phoneNumber the phone number of the player
+   * @param email the email of the player
+   * @return true, if the data are valid
+   */
   static public boolean VALIDATE_DATA(String name, String phoneNumber,
       String email)
   {
-    System.out.println(VALIDATE_NAME(name));
-    System.out.println(VALIDATE_PHONE_NUMBER(phoneNumber));
-    System.out.println(VALIDATE_EMAIL(email));
     return VALIDATE_NAME(name) && VALIDATE_PHONE_NUMBER(phoneNumber)
         && VALIDATE_EMAIL(email);
   }

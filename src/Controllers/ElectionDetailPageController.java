@@ -88,7 +88,6 @@ public class ElectionDetailPageController implements Controller
   @FXML public void finishElection()
       throws ParserConfigurationException, TransformerException
   {
-    System.out.println("finished");
 
     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
     alert.setTitle("Confirmation");

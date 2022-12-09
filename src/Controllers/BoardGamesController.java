@@ -124,7 +124,6 @@ public class BoardGamesController implements Controller
     {
       addButton.setVisible(false);
       boardGamesList = model.getBoardGamesByOwnership(ID);
-      System.out.println(boardGamesList);
     }
     boardGamesList = boardGamesList.filterBoardGameList(searchField.getText());
     String numberString = numberOfPlayersFilter.getText();
@@ -184,7 +183,6 @@ public class BoardGamesController implements Controller
     {
       addButton.setVisible(false);
       boardGamesList = model.getBoardGamesByOwnership(ID);
-      System.out.println(boardGamesList);
     }
     for (int i = 0; i < boardGamesList.size(); i++)
     {

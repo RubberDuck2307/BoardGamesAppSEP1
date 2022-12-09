@@ -77,8 +77,6 @@ public class PlayersDeletePlayerController implements Controller
       else {
         borrowed = true;
         boardGamesList.getBoardGame(i).setAvailabilityStatus(BoardGame.UNAVAILABLE_STATUS);
-        System.out.println("here");
-        System.out.println(model.getBoardGamesList().getBoardGame(i));
       }
     }
     model.saveBoardGames();

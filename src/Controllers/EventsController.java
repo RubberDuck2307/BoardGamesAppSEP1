@@ -62,8 +62,7 @@ public class EventsController implements Controller
   {
     if (eventsTable.getSelectionModel().getSelectedItem() != null)
     {
-      System.out.println(
-          "YOU CLICKED" + eventsTable.getSelectionModel().getSelectedItem().getID());
+
       viewHandler.openView(11,
           eventsTable.getSelectionModel().getSelectedItem().getID());
     }

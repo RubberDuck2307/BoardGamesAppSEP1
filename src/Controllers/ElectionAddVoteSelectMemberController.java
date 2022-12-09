@@ -62,7 +62,6 @@ public class ElectionAddVoteSelectMemberController implements Controller
 
     for (int i = 0; i < playersList.size(); i++)
     {
-      System.out.println(playersList.getPlayer(i));
       Player player = playersList.getPlayer(i);
       if (!player.getVoted())
       {
@@ -81,8 +80,7 @@ public class ElectionAddVoteSelectMemberController implements Controller
   @FXML public void choosePlayer(){
     if (membersTable.getSelectionModel().getSelectedItem() != null)
     {
-      System.out.println(
-          membersTable.getSelectionModel().getSelectedItem().getID());
+
       viewHandler.openView(34,
           membersTable.getSelectionModel().getSelectedItem().getID());
     }

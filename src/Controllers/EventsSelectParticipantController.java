@@ -68,15 +68,12 @@ public class EventsSelectParticipantController implements Controller
       {
         membership = "Guest";
       }
-      System.out.println(participantsID);
-      System.out.println(player.getID());
       if (!participantsID.contains(player.getID()))
       {
         participantsInTable.add(
             new PlayerTable(player.getName(), player.getPhoneNumber(),
                 player.getEmail(), membership, player.getID()));
       }
-      System.out.println(participantsInTable);
     }
   }
 
@@ -92,7 +89,6 @@ public class EventsSelectParticipantController implements Controller
     {
       int playerID = participantsTable.getSelectionModel().getSelectedItem().getID();
       model.getEventsList().getEventByID(IDOfEvent).getParticipantsIDs().add(playerID);
-      System.out.println(model.getEventsList());
       model.saveEvent();
       viewHandler.openView(13, IDOfEvent);
     }

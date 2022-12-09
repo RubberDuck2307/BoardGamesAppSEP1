@@ -70,6 +70,20 @@ public class Reservation
     this.comment = comment;
   }
 
+  /**
+   * Checks whether the passed dates are valid, the guest have not already borrowed a game, and the game is not already borrowed or reserved for the inserted period
+   * @param reservationsList the list of all reservations of the game
+   * @param borrowingsList the list of all borrowings of the game
+   * @param start the starting date of the reservation of borrowing
+   * @param end the ending date of the reservation or borrowing
+   * @param gameID the ID of the game that is reserved borrowed
+   * @param playersList the list including record about the player who is reserving/borrowing the game
+   * @param playerID the ID of the player
+   * @param currentReservationID the ID of the reservation what is edited. If no reservation is edited -1 should be passed.
+   * @param currentBorrowingID the ID of the borrowing what is edited. If no reservation is edited -1 should be passed.
+   * @throws RuntimeException if the data are invalid
+   * @return true if the data are valid
+   */
   static public boolean VALIDATE_DATA(ReservationsList reservationsList,
       BorrowingsList borrowingsList, LocalDate start, LocalDate end, int gameID,
       PlayersList playersList, int playerID, int currentReservationID,

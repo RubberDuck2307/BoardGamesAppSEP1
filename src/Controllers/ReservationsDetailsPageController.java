@@ -48,7 +48,6 @@ public class ReservationsDetailsPageController implements Controller{
         BoardGamesList boardGamesList = model.getBoardGamesList();
         PlayersList playersList = model.getPlayersList();
         Reservation reservation = model.getReservationsList().getReservationByID(ID);
-        System.out.println("This is> " +boardGamesList.getNameByID(reservation.getGameID()));
 
         boardGameField.setText(boardGamesList.getNameByID(reservation.getGameID()));
         memberField.setText(playersList.getNameByID(reservation.getPlayerID()) + " " + playersList.getPlayerByID(reservation.getPlayerID()).getPhoneNumber());
@@ -91,7 +90,6 @@ public class ReservationsDetailsPageController implements Controller{
         editButton.setText("Save Changes");
 
         save = event -> {
-            System.out.println(reservation);
             int boardGameID = reservation.getGameID();
             int memberID = reservation.getPlayerID();
             LocalDate startingDate = startingDateField.getValue();
@@ -121,7 +119,6 @@ public class ReservationsDetailsPageController implements Controller{
                 }
             }
             catch (Exception error){
-                error.printStackTrace();
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Invalid Data");
                 alert.setHeaderText(error.getMessage());

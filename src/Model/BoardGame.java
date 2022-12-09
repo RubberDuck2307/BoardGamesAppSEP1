@@ -18,6 +18,10 @@ public class BoardGame
   private int ownerID; //0 is the ID of association
 
   private int numberOfVotes;
+  /**
+   * "Engine Building", "Deck Building", "Coop", "Work Placement",
+   * "Social Deduction", "RPG", "Without Dice", "Roll and Write", "Other"
+   */
 
   static public String[] ALLOWED_TYPES = {"Engine Building", "Deck Building",
       "Coop", "Work Placement", "Social Deduction", "RPG", "Without Dice",
@@ -31,6 +35,9 @@ public class BoardGame
   static public String WITHOUT_DICE_TYPE = "Without Dice";
   static public String ROLL_AND_WRITE = "Roll and Write";
   static public String OTHER = "Other";
+  /**
+   * "Available", "Borrowed", "Unavailable", "Considered to be bought"
+   */
   static public String[] ALLOWED_STATUSES = {"Available", "Borrowed",
       "Unavailable", "Considered to be bought"};
   static public String AVAILABLE_STATUS = "Available";
@@ -304,15 +311,15 @@ public class BoardGame
   }
 
   /**
-   *
-   * @param name
-   * @param min
-   * @param max
-   * @return
+   * Validates the inputted data by passing them to methods VALIDATE_NAME and VALIDATE_MIN_MAX
+   * @param name the name of the board game
+   * @param min the minimum number of players
+   * @param max the maximum number of players
+   * @return true, if the data are valid
    */
   static public boolean VALIDATE_DATA(String name, String min, String max)
   {
-    return  VALIDATE_NAME(name) && validateMinAndMax(min, max);
+    return  VALIDATE_NAME(name) && VALIDATE_MIN_MAX(min, max);
 
   }
 
@@ -321,9 +328,9 @@ public class BoardGame
    * @param min the minimum number of players that can play the game
    * @param max the maximum number of players that can play the game
    * @throws RuntimeException if the parameters cannot be converted to int or if min is bigger than max
-   * @return true if min is smaller than max
+   * @return true, if min is smaller than max
    */
-  static public boolean validateMinAndMax(String min, String max)
+  static public boolean VALIDATE_MIN_MAX(String min, String max)
   {
     try
     {

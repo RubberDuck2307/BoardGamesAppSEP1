@@ -117,7 +117,6 @@ public class BorrowingsDetailPageController implements Controller
       }
       }
     catch (Exception e){
-        e.printStackTrace();
         Alert alert = new Alert(Alert.AlertType.ERROR);
           alert.setTitle("Invalid Data");
           alert.setHeaderText(e.getMessage());

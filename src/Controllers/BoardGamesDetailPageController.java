@@ -51,7 +51,6 @@ public class BoardGamesDetailPageController implements Controller
 
   public void setData()
   {
-    System.out.println("nice");
     if(Objects.equals(
         model.getBoardGamesList().getBoardGameByID(ID).getAvailabilityStatus(),
         BoardGame.CONSIDERED_TO_BE_BOUGHT_STATUS)){
@@ -134,10 +133,8 @@ public class BoardGamesDetailPageController implements Controller
     max.setFocusTraversable(true);
     type.setFocusTraversable(true);
     status.setFocusTraversable(true);
-    //numberOfVotes.setDisable(false);
     edit.setText("Save Changes");
     save = event -> {
-      //System.out.println("hello");
       String name = nameField.getText();
       String comments = comment.getText();
       int minimum = Integer.parseInt(min.getText());
@@ -194,7 +191,6 @@ public class BoardGamesDetailPageController implements Controller
     boolean isCurrentlyBorrowed = false;
     if (reservation != null)
     {
-      System.out.println("Borrowings of game " + reservation);
       isCurrentlyBorrowed = true;
     }
     if (isCurrentlyBorrowed)
@@ -245,7 +241,6 @@ public class BoardGamesDetailPageController implements Controller
       if (reservationsList.getReservation(k).getGameID() == ID)
       {
         model.getReservationsList().deleteByID(k);
-        System.out.println("All reservation for this game was deleted");
         model.saveReservation();
       }
     }
@@ -260,7 +255,6 @@ public class BoardGamesDetailPageController implements Controller
 
   public void selectAsocAsOwner()
   {
-    //System.out.println("hello");
     String name = nameField.getText();
     String comments = comment.getText();
     int minimum = Integer.parseInt(min.getText());

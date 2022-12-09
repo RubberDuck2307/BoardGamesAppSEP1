@@ -115,7 +115,6 @@ public class PlayersDetailPageController implements Controller
     editButton.setText("Save Changes");
 
     save = event -> {
-      System.out.println("hello");
       String name = nameField.getText();
       String phone = phoneNumberField.getText();
       String email = emailField.getText();

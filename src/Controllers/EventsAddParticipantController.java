@@ -31,7 +31,7 @@ public class EventsAddParticipantController implements Controller
     this.region = region;
     this.model = model;
     this.viewHandler = viewHandler;
-    System.out.println("I am opened with ID" + ID);
+
     IDOfEvent = ID;
 
     fillTable();
@@ -49,7 +49,6 @@ public class EventsAddParticipantController implements Controller
     ArrayList<Integer> participantsID = model.getEventsList()
         .getEventByID(IDOfEvent).getParticipantsIDs();
 
-    System.out.println( model.getEventsList());
     PlayersList playersList = model.getPlayersList();
     for (int i = 0; i < playersList.size(); i++)
     {

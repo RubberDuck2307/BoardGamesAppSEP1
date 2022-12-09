@@ -326,7 +326,6 @@ public class BoardGamesList
    */
   public BoardGamesList findByOwnership(int ID)
   {
-    System.out.println(ID);
     BoardGamesList newBoardGamesList = new BoardGamesList();
     for (int i = 0; i < size(); i++)
     {

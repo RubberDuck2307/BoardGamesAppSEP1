@@ -29,7 +29,7 @@ public class Election
    * @param startingDate the starting date of the election
    * @param endingDate the ending date of the election
    * @throws RuntimeException if the starting date is not in future
-   * @throws RuntimeException if the ending date is not in future
+   * @throws RuntimeException if the ending date is not after the starting date
    * @return true, if the starting date is in future and the ending date is after the starting date
    */
   public static boolean VALIDATE_DATA(LocalDate startingDate, LocalDate endingDate){

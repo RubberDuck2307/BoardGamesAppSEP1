@@ -54,14 +54,12 @@ public class ReservationAddSelectBoardGameController implements Controller
 
     genre.getSelectionModel().selectedItemProperty()
         .addListener((observable, oldValue, newValue) -> {
-          System.out.println(newValue.toString());
           getGenre(observable, oldValue, newValue);
           fillData();
 
         });
     status.getSelectionModel().selectedItemProperty()
         .addListener((observable, oldValue, newValue) -> {
-          System.out.println(newValue.toString());
           getStatus(observable, oldValue, newValue);
           fillData();
 
@@ -125,7 +123,6 @@ public class ReservationAddSelectBoardGameController implements Controller
 }
 
   @FXML public void confirmBoardGame(){
-    System.out.println("hekko");
     viewHandler.openView(204,IDOfPlayer, gamesTable.getSelectionModel().getSelectedItem().getID());
   }
   public void getGenre(ObservableValue observableValue, Object oldValue,

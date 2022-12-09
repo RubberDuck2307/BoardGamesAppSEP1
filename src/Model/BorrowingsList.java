@@ -42,7 +42,7 @@ public class BorrowingsList
   /**
    *
    * @param id ID of the borrowing that is returned
-   * @return borrowing whose ID equals the given one or null if there is no borrowing with such id in the list
+   * @return borrowing whose ID equals the given one or null, if there is no borrowing with such id in the list
    */
   public Reservation getBorrowingByID(int id)
   {
@@ -115,8 +115,8 @@ public class BorrowingsList
 
   /**
    * add a borrowing into borrowingList.
-   * If the ID of the borrowing is -1 it is set to the value of the ID of the last borrowing in the list incremented by 1.
-   * If the list is empty the ID is set to 0
+   * If the ID of the borrowing is -1, it is set to the value of the ID of the last borrowing in the list incremented by 1.
+   * If the list is empty, the ID is set to 0
    */
 
   public void addBorrowing(Reservation borrowing)
@@ -144,7 +144,7 @@ public class BorrowingsList
   /**
    *
    * @param ID of the borrowing which is returned
-   * @return first borrowing in the list whose ID equals the given one, or null if there is no borrowing with such ID
+   * @return first borrowing in the list whose ID equals the given one or null, if there is no borrowing with such ID
    */
   public Reservation getBorrowingByGameID(int ID){
     for (int i = 0; i < size(); i++)

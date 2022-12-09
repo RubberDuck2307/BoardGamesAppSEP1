@@ -54,14 +54,12 @@ public class BorrowingsAddSelectBoardGameController implements Controller
 
     genre.getSelectionModel().selectedItemProperty()
         .addListener((observable, oldValue, newValue) -> {
-          System.out.println(newValue.toString());
           getGenre(observable, oldValue, newValue);
           fillTable();
 
         });
     status.getSelectionModel().selectedItemProperty()
         .addListener((observable, oldValue, newValue) -> {
-          System.out.println(newValue.toString());
           getStatus(observable, oldValue, newValue);
           fillTable();
 

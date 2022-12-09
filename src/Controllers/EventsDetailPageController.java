@@ -49,7 +49,6 @@ public class EventsDetailPageController implements Controller
     this.model = model;
     this.viewHandler = viewHandler;
     this.ID = ID;
-    System.out.println("I HAVE The ID of" + ID);
     setData();
   }
 
@@ -131,7 +130,6 @@ public class EventsDetailPageController implements Controller
     editButton.setText("Save Changes");
 
     save = event -> {
-      System.out.println("hello");
       String name = nameField.getText();
       String place = placeField.getText();
       String link = linkField.getText();
@@ -141,7 +139,6 @@ public class EventsDetailPageController implements Controller
       String fromMinutes = fromMinutesField.getText();
       int intFromMinutes = Integer.parseInt(fromMinutes);
       LocalDate toDate = toDateField.getValue();
-      System.out.println(toDate);
       String toHours = toHoursField.getText();
       int intToHours = Integer.parseInt(toHours);
       String toMinutes = toMinutesField.getText();
@@ -153,12 +150,9 @@ public class EventsDetailPageController implements Controller
       {
       LocalDateTime from = fromDate.atTime(intFromHours, intFromMinutes);
       LocalDateTime to = toDate.atTime(intToHours, intToMinutes);
-      System.out.println(to);
-
 
         if (Event.VALIDATE_DATA(name, place, from, to))
         {
-          System.out.println("I am validated");
           Event event1 = new Event(ID, name, place, fromDate, intFromHours,
               intFromMinutes, toDate, intToHours, intToMinutes, description,
               new ArrayList<>(), comment, link);
@@ -199,7 +193,6 @@ public class EventsDetailPageController implements Controller
     if (result.isPresent() && result.get() == ButtonType.OK)
     {
       model.getEventsList().deleteByID(ID);
-      System.out.println(model.getEventsList());
       model.saveEvent();
       viewHandler.openView(7, -1);
     }
