@@ -2,6 +2,7 @@ package Controllers;
 
 import Application.ViewHandler;
 import Model.*;
+import TableClasses.ConsideredToBeBoughtTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

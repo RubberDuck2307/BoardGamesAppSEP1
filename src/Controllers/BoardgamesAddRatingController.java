@@ -2,6 +2,7 @@ package Controllers;
 
 import Application.ViewHandler;
 import Model.*;
+import TableClasses.PlayerTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

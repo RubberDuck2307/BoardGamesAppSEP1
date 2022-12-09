@@ -39,10 +39,10 @@
     <type>Engine Building</type>
     <numberOfPlayersMin>1</numberOfPlayersMin>
     <numberOfPlayersMax>8</numberOfPlayersMax>
-    <availabilityStatus>Considered to be bought</availabilityStatus>
+    <availabilityStatus>Unavailable</availabilityStatus>
     <comment/>
     <ownerID>0</ownerID>
-    <numberOfVotes>2</numberOfVotes>
+    <numberOfVotes>0</numberOfVotes>
   </BoardGame>
   <BoardGame>
     <ID>10</ID>

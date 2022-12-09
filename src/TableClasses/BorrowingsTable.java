@@ -1,4 +1,4 @@
-package Model;
+package TableClasses;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;

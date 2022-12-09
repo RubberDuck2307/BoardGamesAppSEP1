@@ -3,7 +3,7 @@ package Controllers;
 import Application.ViewHandler;
 import Model.BoardGame;
 import Model.BoardGamesList;
-import Model.ConsideredToBeBoughtTable;
+import TableClasses.ConsideredToBeBoughtTable;
 import Model.ModelManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

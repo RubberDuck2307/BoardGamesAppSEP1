@@ -24,8 +24,8 @@ public class ElectionAddElectionController implements Controller
   @Override public void init(Region region, ModelManager model,
       ViewHandler viewHandler, int ID)
   {
-    startingDate.setValue(LocalDate.now());
-    endingDate.setValue(LocalDate.now());
+    startingDate.setValue(LocalDate.now().plusDays(1));
+    endingDate.setValue(LocalDate.now().plusDays(2));
 
     this.region = region;
     this.model = model;

@@ -3,7 +3,7 @@ package Controllers;
 import Application.ViewHandler;
 import Model.BoardGame;
 import Model.BoardGamesList;
-import Model.BoardgameTable;
+import TableClasses.BoardgameTable;
 import Model.ModelManager;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;

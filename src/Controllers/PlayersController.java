@@ -1,10 +1,9 @@
 package Controllers;
 
-import Application.FileReader;
 import Application.ViewHandler;
 import Model.ModelManager;
 import Model.Player;
-import Model.PlayerTable;
+import TableClasses.PlayerTable;
 import Model.PlayersList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

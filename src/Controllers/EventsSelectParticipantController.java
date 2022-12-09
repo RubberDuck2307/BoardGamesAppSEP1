@@ -2,6 +2,7 @@ package Controllers;
 
 import Application.ViewHandler;
 import Model.*;
+import TableClasses.PlayerTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,7 +13,6 @@ import javafx.scene.layout.Region;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.util.ArrayList;
-import java.util.SimpleTimeZone;
 
 public class EventsSelectParticipantController implements Controller
 {
