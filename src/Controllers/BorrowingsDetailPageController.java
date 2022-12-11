@@ -133,11 +133,13 @@ public class BorrowingsDetailPageController implements Controller
   {
     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
     alert.setTitle("Confirmation");
-    alert.setHeaderText("Are you sure you want to delete the borrowing ");
+    alert.setHeaderText("The record about the borrowing is going to be deleted");
     Optional<ButtonType> result = alert.showAndWait();
     if(result.isPresent() && result.get() == ButtonType.OK){
+      model.getBoardGamesList().getBoardGameByID(model.getBorrowingsList().getBorrowingByID(ID).getGameID()).setAvailabilityStatus(BoardGame.AVAILABLE_STATUS);
       model.getBorrowingsList().deleteByID(ID);
       model.saveBorrowing();
+      model.saveBoardGames();
       viewHandler.openView(6,-1);}
 
   }

@@ -124,37 +124,49 @@ public class PlayersDetailPageController implements Controller
       boolean membership = membershipBox.isSelected();
       try
       {
-
-        if (Player.VALIDATE_DATA(name, phone, email))
+        if (!membership
+            && model.getBorrowingsList().getBorrowingsByPlayer(ID).size() > 1)
         {
-          Player player = new Player(ID, name, phone, email, membership,
-              comment, address, votedBox.isSelected(), feePayment);
-          model.setPlayer(player, ID);
-          try
-          {
-            model.savePlayers();
-          }
-          catch (ParserConfigurationException e)
-          {
-            throw new RuntimeException(e);
-          }
-          catch (TransformerException e)
-          {
-            throw new RuntimeException(e);
-          }
-          setData();
-          editButton.setOnAction(this::edit);
-          editButton.setText("Edit");
+          Alert alert = new Alert(Alert.AlertType.ERROR);
+          alert.setTitle("Error");
+          alert.setHeaderText(
+              "The players is currently borrowing more than 1 game, so he cannot be changed to guest");
+          alert.showAndWait();
+        }
+        else
+        {
 
+          if (Player.VALIDATE_DATA(name, phone, email))
+          {
+            Player player = new Player(ID, name, phone, email, membership,
+                comment, address, votedBox.isSelected(), feePayment);
+            model.setPlayer(player, ID);
+            try
+            {
+              model.savePlayers();
+            }
+            catch (ParserConfigurationException e)
+            {
+              throw new RuntimeException(e);
+            }
+            catch (TransformerException e)
+            {
+              throw new RuntimeException(e);
+            }
+            setData();
+            editButton.setOnAction(this::edit);
+            editButton.setText("Edit");
+
+          }
         }
       }
-      catch (Exception e)
-      {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Invalid data");
-        alert.setHeaderText(e.getMessage());
-        Optional<ButtonType> result = alert.showAndWait();
-      }
+      catch(Exception e)
+        {
+          Alert alert = new Alert(Alert.AlertType.ERROR);
+          alert.setTitle("Invalid data");
+          alert.setHeaderText(e.getMessage());
+          Optional<ButtonType> result = alert.showAndWait();
+        }
 
     };
 

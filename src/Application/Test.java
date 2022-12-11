@@ -27,7 +27,6 @@ public class Test
     arrayList.add(reservation);
     arrayList.add(reservation1);
     arrayList.sort(Comparator.comparing(Reservation::getFrom));
-    System.out.println(arrayList);
 
 
 

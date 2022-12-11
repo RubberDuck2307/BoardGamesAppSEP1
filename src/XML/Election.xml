@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Election>
   <startingDate>
-    <day>9</day>
+    <day>12</day>
     <month>12</month>
     <year>2022</year>
   </startingDate>
   <endingDate>
-    <day>10</day>
+    <day>22</day>
     <month>12</month>
     <year>2022</year>
   </endingDate>

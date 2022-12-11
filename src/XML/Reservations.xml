@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <reservationsList>
   <reservation>
-    <ID>1</ID>
+    <ID>0</ID>
     <playerID>3</playerID>
     <gameID>7</gameID>
     <from>
-      <day>8</day>
+      <day>14</day>
       <month>12</month>
       <year>2022</year>
     </from>
     <to>
-      <day>10</day>
+      <day>19</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </reservation>
+  <reservation>
+    <ID>1</ID>
+    <playerID>2</playerID>
+    <gameID>0</gameID>
+    <from>
+      <day>15</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>18</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </reservation>
+  <reservation>
+    <ID>2</ID>
+    <playerID>8</playerID>
+    <gameID>16</gameID>
+    <from>
+      <day>14</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>19</day>
       <month>12</month>
       <year>2022</year>
     </to>

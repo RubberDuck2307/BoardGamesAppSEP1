@@ -58,10 +58,11 @@ public class ReservationAddFinalFormController implements ExtendedController
     boolean valid = true; //2
     try
     {
-      Long.parseLong(durationField.getText()); // 2 Trying to convert inputted data to int
+      Long.parseLong(
+          durationField.getText()); // 2 Trying to convert inputted data to int
     }
     catch (Exception e) //If data is not a number, a pop-up error is shown
-        //This does not execute in the worst case
+    //This does not execute in the worst case
     {
       Alert alert = new Alert(Alert.AlertType.ERROR); //2
       alert.setTitle("Invalid Data"); //1
@@ -86,15 +87,16 @@ public class ReservationAddFinalFormController implements ExtendedController
       {//If there is no reservation or borrowing, the starting day is set to today
         // and the ending day se set to today + the duration of the reservation
         startingDate.setValue(LocalDate.now()); //2
-        endingDate.setValue(
-            LocalDate.now().plusDays(Long.parseLong(durationField.getText())));//5
+        endingDate.setValue(LocalDate.now()
+            .plusDays(Long.parseLong(durationField.getText())));//5
       }
 
       else
       {
         Period firstPeriod = Period.between(LocalDate.now(),
             reservations.get(0).getFrom());//5
-        if (firstPeriod.getDays() >= Long.parseLong(durationField.getText())) //4
+        if (firstPeriod.getDays() >= Long.parseLong(
+            durationField.getText())) //4
         {//Checks if there is enough days between today and the first reservation to create a new one
           // and if so, set the dates
           //This does not execute in the worst case
@@ -111,7 +113,8 @@ public class ReservationAddFinalFormController implements ExtendedController
           {
             Period period = Period.between(reservations.get(i - 1).getTo(),
                 reservations.get(i).getFrom()); //7n
-            if (period.getDays() >= Long.parseLong(durationField.getText())) //4n
+            if (period.getDays() >= Long.parseLong(
+                durationField.getText())) //4n
             { //This does not execute in the worst case
               startingDate.setValue(reservations.get(i - 1).getTo()); //3
               endingDate.setValue(reservations.get(i - 1).getTo() //6
@@ -121,7 +124,7 @@ public class ReservationAddFinalFormController implements ExtendedController
             }
           }
           if (!set) //1 If the space for the new reservation is not found,
-            //the dates are set after the end of the last reservation
+          //the dates are set after the end of the last reservation
           {
             startingDate.setValue(
                 reservations.get(reservations.size() - 1).getTo()); //4
@@ -143,31 +146,52 @@ public class ReservationAddFinalFormController implements ExtendedController
   @FXML public void reserveGame()
       throws ParserConfigurationException, TransformerException
   {
-
-    try
-    {
-      if (Reservation.VALIDATE_DATA(
-          model.getReservationsList().getReservationByGameID(boardGameID),
-          model.getBorrowingsList().getByGameID(boardGameID),
-          startingDate.getValue(), endingDate.getValue(), boardGameID,
-          model.getPlayersList(), playerID , -1,-1))
-        ;
-      {
-
-        Reservation reservation = new Reservation(playerID, boardGameID,
-            startingDate.getValue(), endingDate.getValue(),
-            commentField.getText());
-        model.getReservationsList().addReservation(reservation);
-        model.saveReservation();
-        viewHandler.openView(5, -1,-1);
-      }
-    }
-    catch (Exception e)
+    LocalDate startDate = startingDate.getValue();
+    LocalDate endDate = endingDate.getValue();
+    if (startingDate.getValue() == null || endingDate.getValue() == null)
     {
       Alert alert = new Alert(Alert.AlertType.ERROR);
       alert.setTitle("Invalid Data");
-      alert.setHeaderText(e.getMessage());
+      alert.setHeaderText("Dates are not filled");
       Optional<ButtonType> result = alert.showAndWait();
+    }
+    else
+    {
+      if (startDate.isBefore(LocalDate.now()))
+      {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Invalid Data");
+        alert.setHeaderText("The reservation cannot start in the past");
+        Optional<ButtonType> result = alert.showAndWait();
+      }
+      else
+      {
+        try
+        {
+          if (Reservation.VALIDATE_DATA(
+              model.getReservationsList().getReservationByGameID(boardGameID),
+              model.getBorrowingsList(),
+              startingDate.getValue(), endingDate.getValue(), boardGameID,
+              model.getPlayersList(), playerID, -1, -1))
+            ;
+          {
+
+            Reservation reservation = new Reservation(playerID, boardGameID,
+                startingDate.getValue(), endingDate.getValue(),
+                commentField.getText());
+            model.getReservationsList().addReservation(reservation);
+            model.saveReservation();
+            viewHandler.openView(5, -1, -1);
+          }
+        }
+        catch (Exception e)
+        {
+          Alert alert = new Alert(Alert.AlertType.ERROR);
+          alert.setTitle("Invalid Data");
+          alert.setHeaderText(e.getMessage());
+          Optional<ButtonType> result = alert.showAndWait();
+        }
+      }
     }
   }
 

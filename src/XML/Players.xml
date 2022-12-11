@@ -2,9 +2,9 @@
 <PlayersList>
   <Player>
     <ID>2</ID>
-    <name>Korel</name>
-    <phoneNumber>57210356</phoneNumber>
-    <email>karel@mail.com</email>
+    <name>Frodo Baggins</name>
+    <phoneNumber>54086954</phoneNumber>
+    <email>hobbiton@ring.cz</email>
     <membership>true</membership>
     <comment/>
     <address/>
@@ -12,18 +12,33 @@
   </Player>
   <Player>
     <ID>3</ID>
-    <name>Pavel</name>
-    <phoneNumber>57210348</phoneNumber>
-    <email>pavel@mail.com</email>
+    <name>Gandal the grey</name>
+    <phoneNumber>+80223548</phoneNumber>
+    <email/>
     <membership>true</membership>
-    <comment/>
+    <comment>He likes spells</comment>
+    <address>Middle-Earth</address>
+    <voted>false</voted>
+    <feePayment>
+      <day>12</day>
+      <month>12</month>
+      <year>2022</year>
+    </feePayment>
+  </Player>
+  <Player>
+    <ID>4</ID>
+    <name>Saruman the White</name>
+    <phoneNumber>+980483546</phoneNumber>
+    <email>white@tower.me</email>
+    <membership>true</membership>
+    <comment>He is always returning games late</comment>
     <address/>
     <voted>false</voted>
   </Player>
   <Player>
-    <ID>4</ID>
-    <name>DA</name>
-    <phoneNumber>+5054</phoneNumber>
+    <ID>5</ID>
+    <name>Samwise Gange</name>
+    <phoneNumber>45558236</phoneNumber>
     <email/>
     <membership>false</membership>
     <comment/>
@@ -31,16 +46,36 @@
     <voted>false</voted>
   </Player>
   <Player>
-    <ID>5</ID>
-    <name>Annitska</name>
-    <phoneNumber>1234</phoneNumber>
+    <ID>6</ID>
+    <name>Elrond</name>
+    <phoneNumber>22</phoneNumber>
     <email/>
+    <membership>false</membership>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+  </Player>
+  <Player>
+    <ID>7</ID>
+    <name>Aragorn</name>
+    <phoneNumber>50489621</phoneNumber>
+    <email>king.of.Godnor@true.me</email>
     <membership>true</membership>
     <comment/>
     <address/>
     <voted>false</voted>
+  </Player>
+  <Player>
+    <ID>8</ID>
+    <name>Gimli</name>
+    <phoneNumber>89456216</phoneNumber>
+    <email>sonOfGloin@notDurin.me</email>
+    <membership>true</membership>
+    <comment/>
+    <address>Under the hill 23</address>
+    <voted>false</voted>
     <feePayment>
-      <day>7</day>
+      <day>16</day>
       <month>12</month>
       <year>2022</year>
     </feePayment>

@@ -44,7 +44,6 @@ public class EventsAddEventController implements Controller
     this.region = region;
     this.model = model;
     this.viewHandler = viewHandler;
-    //fromDateField.setDisable(false);
     fromDateField.setMouseTransparent(false);
     fromDateField.setFocusTraversable(true);
     fromDateField.setValue(LocalDate.now());
@@ -72,34 +71,53 @@ public class EventsAddEventController implements Controller
   {
     String name = nameField.getText();
     String place = placeField.getText();
-    int intFromHours = Integer.parseInt(fromHoursField.getText());
-    int intFromMinutes = Integer.parseInt(fromMinutesField.getText());
-    LocalDateTime from = fromDateField.getValue()
-        .atTime(intFromHours, intFromMinutes);
-    int intToHours = Integer.parseInt(toHoursField.getText());
-    int intToMinutes = Integer.parseInt(toMinutesField.getText());
-    LocalDateTime to = toDateField.getValue().atTime(intToHours, intToMinutes);
+    int intFromHours = 0;
+    int intFromMinutes = 0;
+    int intToHours = 0;
+    int intToMinutes = 0;
+    boolean valid = true;
     try
     {
-
-      if (Event.VALIDATE_DATA(name, place,from, to))
-      {
-
-        model.addEvent(new Event(nameField.getText(), placeField.getText(),
-            fromDateField.getValue(), intFromHours, intFromMinutes,
-            toDateField.getValue(), intToHours, intToMinutes,
-            descriptionField.getText(), new ArrayList<>(),
-            commentField.getText(), linkField.getText()));
-        model.saveEvent();
-        viewHandler.openView(11, model.getEventsList().size() - 1);
-      }
+      intFromHours = Integer.parseInt(fromHoursField.getText());
+      intFromMinutes = Integer.parseInt(fromMinutesField.getText());
+      intToHours = Integer.parseInt(toHoursField.getText());
+      intToMinutes = Integer.parseInt(toMinutesField.getText());
     }
     catch (Exception e)
-    {
+    { valid = false;
       Alert alert = new Alert(Alert.AlertType.ERROR);
+      alert.setHeaderText("The time data are invalid");
       alert.setTitle("Invalid data");
-      alert.setHeaderText(e.getMessage());
       Optional<ButtonType> result = alert.showAndWait();
+    }
+    if (valid)
+    {
+      LocalDateTime to = toDateField.getValue()
+          .atTime(intToHours, intToMinutes);
+      LocalDateTime from = fromDateField.getValue()
+          .atTime(intFromHours, intFromMinutes);
+      try
+      {
+
+        if (Event.VALIDATE_DATA(name, place, from, to))
+        {
+
+          model.addEvent(new Event(nameField.getText(), placeField.getText(),
+              fromDateField.getValue(), intFromHours, intFromMinutes,
+              toDateField.getValue(), intToHours, intToMinutes,
+              descriptionField.getText(), new ArrayList<>(),
+              commentField.getText(), linkField.getText()));
+          model.saveEvent();
+          viewHandler.openView(11, model.getEventsList().size() - 1);
+        }
+      }
+      catch (Exception e)
+      {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Invalid data");
+        alert.setHeaderText(e.getMessage());
+        Optional<ButtonType> result = alert.showAndWait();
+      }
     }
   }
 

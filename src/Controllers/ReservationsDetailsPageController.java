@@ -95,45 +95,67 @@ public class ReservationsDetailsPageController implements Controller{
             LocalDate startingDate = startingDateField.getValue();
             LocalDate endingDate = endingDateField.getValue();
             String comment = commentField.getText();
-
-            try {
-                ReservationsList reservationsList = model.getReservationsList();
-                BorrowingsList borrowingsList = model.getBorrowingsList();
-                PlayersList playersList = model.getPlayersList();
-
-                if (Reservation.VALIDATE_DATA(reservationsList,
-                    borrowingsList, startingDate, endingDate,  model.getReservationsList().getReservationByID(ID).getGameID(),
-                playersList, model.getReservationsList().getReservationByID(ID).getPlayerID(), ID,-1)) {
-                    Reservation reservation1 = new Reservation(ID, memberID, boardGameID, startingDate, endingDate, comment);
-                    model.setReservationByID(reservation1, ID);
-                    try {
-                        model.saveReservation();
-                    } catch (ParserConfigurationException e) {
-                        throw new RuntimeException(e);
-                    } catch (TransformerException e) {
-                        throw new RuntimeException(e);
-                    }
-                    setData();
-                    editButton.setOnAction(this::edit);
-                    editButton.setText("Edit");
-                }
-            }
-            catch (Exception error){
+            if (startingDate.isBefore(LocalDate.now()))
+            {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Invalid Data");
-                alert.setHeaderText(error.getMessage());
+                alert.setHeaderText("The reservation cannot start in the past");
                 Optional<ButtonType> result = alert.showAndWait();
+            }
+            else
+            {
+                try
+                {
+                    ReservationsList reservationsList = model.getReservationsList();
+                    BorrowingsList borrowingsList = model.getBorrowingsList();
+                    PlayersList playersList = model.getPlayersList();
+
+                    if (Reservation.VALIDATE_DATA(reservationsList,
+                        borrowingsList, startingDate, endingDate,
+                        model.getReservationsList().getReservationByID(ID).getGameID(),
+                        playersList,
+                        model.getReservationsList().getReservationByID(ID).getPlayerID(), ID,
+                        -1))
+                    {
+                        Reservation reservation1 = new Reservation(ID, memberID,
+                            boardGameID, startingDate, endingDate, comment);
+                        model.setReservationByID(reservation1, ID);
+                        try
+                        {
+                            model.saveReservation();
+                        }
+                        catch (ParserConfigurationException e)
+                        {
+                            throw new RuntimeException(e);
+                        }
+                        catch (TransformerException e)
+                        {
+                            throw new RuntimeException(e);
+                        }
+                        setData();
+                        editButton.setOnAction(this::edit);
+                        editButton.setText("Edit");
+                    }
+                }
+                catch (Exception error)
+                {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Invalid Data");
+                    alert.setHeaderText(error.getMessage());
+                    Optional<ButtonType> result = alert.showAndWait();
+                }
             }
         };
 
-        editButton.setOnAction(save);
-    }
+            editButton.setOnAction(save);
+        }
+
 
     public void delete() throws ParserConfigurationException, TransformerException
     {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
-        alert.setHeaderText("Are you sure you want to delete the player ");
+        alert.setHeaderText("Are you sure you want to delete the reservation");
         Optional<ButtonType> result = alert.showAndWait();
         if(result.isPresent() && result.get() == ButtonType.OK){
             model.getReservationsList().deleteByID(ID);
@@ -146,11 +168,11 @@ public class ReservationsDetailsPageController implements Controller{
     }
 
     public void displayBoardGame(){
-        viewHandler.openView(9, ID);
+        viewHandler.openView(9, model.getReservationsList().getReservationByID(ID).getGameID());
     }
 
     public void displayMember(){
-        viewHandler.openView(8, ID);
+        viewHandler.openView(8,  model.getReservationsList().getReservationByID(ID).getPlayerID());
     }
 
     @FXML public void borrowGame()

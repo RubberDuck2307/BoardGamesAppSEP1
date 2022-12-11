@@ -389,7 +389,7 @@ public class Event
    * @param ID ID of the player who participates the event
    */
   public void deleteParticipantByID(int ID){
-    participantsIDs.remove(ID);
+    participantsIDs.remove(Integer.valueOf(ID));
   }
 
   /**

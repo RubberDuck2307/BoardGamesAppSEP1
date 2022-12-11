@@ -2,78 +2,50 @@
 <EventsList>
   <Event>
     <ID>0</ID>
-    <name>anna's party</name>
-    <location>jbhu</location>
+    <name>Gandalf‘s birthday </name>
+    <location>Mount Doom</location>
     <fromDate>
-      <day>2</day>
+      <day>11</day>
       <month>12</month>
       <year>2022</year>
     </fromDate>
-    <fromHours>20</fromHours>
+    <fromHours>15</fromHours>
     <fromMinutes>0</fromMinutes>
     <toDate>
-      <day>3</day>
+      <day>13</day>
       <month>12</month>
       <year>2022</year>
     </toDate>
-    <toHours>22</toHours>
+    <toHours>0</toHours>
+    <toMinutes>0</toMinutes>
+    <description>Bring costumes !</description>
+    <playersIDs/>
+    <comment>I need to prepare food for 20 people</comment>
+    <link>https://lotr.fandom.com/wiki/Mount_Doom</link>
+  </Event>
+  <Event>
+    <ID>1</ID>
+    <name>Creation of new ring</name>
+    <location>Minas Thirit</location>
+    <fromDate>
+      <day>12</day>
+      <month>12</month>
+      <year>2022</year>
+    </fromDate>
+    <fromHours>16</fromHours>
+    <fromMinutes>0</fromMinutes>
+    <toDate>
+      <day>13</day>
+      <month>12</month>
+      <year>2022</year>
+    </toDate>
+    <toHours>18</toHours>
     <toMinutes>0</toMinutes>
     <description/>
     <playersIDs>
-      <ID>3</ID>
+      <ID>5</ID>
       <ID>4</ID>
-      <ID>0</ID>
-      <ID>1</ID>
-    </playersIDs>
-    <comment/>
-    <link/>
-  </Event>
-  <Event>
-    <ID>2</ID>
-    <name>zzz</name>
-    <location>zzz</location>
-    <fromDate>
-      <day>25</day>
-      <month>12</month>
-      <year>2022</year>
-    </fromDate>
-    <fromHours>1</fromHours>
-    <fromMinutes>2</fromMinutes>
-    <toDate>
-      <day>26</day>
-      <month>12</month>
-      <year>2022</year>
-    </toDate>
-    <toHours>1</toHours>
-    <toMinutes>2</toMinutes>
-    <description/>
-    <playersIDs/>
-    <comment/>
-    <link/>
-  </Event>
-  <Event>
-    <ID>3</ID>
-    <name>yyy</name>
-    <location>yyy</location>
-    <fromDate>
-      <day>27</day>
-      <month>12</month>
-      <year>2022</year>
-    </fromDate>
-    <fromHours>1</fromHours>
-    <fromMinutes>2</fromMinutes>
-    <toDate>
-      <day>28</day>
-      <month>12</month>
-      <year>2022</year>
-    </toDate>
-    <toHours>1</toHours>
-    <toMinutes>2</toMinutes>
-    <description/>
-    <playersIDs>
-      <ID>2</ID>
       <ID>3</ID>
-      <ID>1</ID>
     </playersIDs>
     <comment/>
     <link/>

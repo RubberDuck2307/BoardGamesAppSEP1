@@ -184,7 +184,7 @@ public class PlayersList
    */
   public String getNameByID(int ID)
   {
-    System.out.println("hello" + ID);
+
     for (int i = 0; i < playerList.size(); i++)
     {
       if (playerList.get(i).getID() == ID)
@@ -201,7 +201,6 @@ public class PlayersList
   public void setAllPlayersVotedFalse(){
     for (int i = 0; i < size(); i++)
     {
-      System.out.println("false");
       getPlayer(i).setVoted(false);
     }
   }

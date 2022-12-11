@@ -3,6 +3,7 @@ package Controllers;
 import Application.ViewHandler;
 import Model.BoardGame;
 import Model.BoardGamesList;
+import Model.RatingsList;
 import TableClasses.ConsideredToBeBoughtTable;
 import Model.ModelManager;
 import javafx.collections.FXCollections;
@@ -73,6 +74,11 @@ public class PlayersDeletePlayerController implements Controller
       if (model.getBorrowingsList().getByGameID(boardGamesList.getBoardGame(i).getID()).size() < 1)
       {
         model.getBoardGamesList().deleteByID(boardGamesList.getBoardGame(i).getID());
+        RatingsList ratingsList = model.getRatingsByGame(boardGamesList.getBoardGame(i).getID());
+        for(int j = 0; i<ratingsList.size(); j++){
+          model.getRatings().deleteByID(ratingsList.getRating(i).getID());
+          model.saveRatings();
+        }
       }
       else {
         borrowed = true;

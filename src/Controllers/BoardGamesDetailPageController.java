@@ -35,6 +35,7 @@ public class BoardGamesDetailPageController implements Controller
   private ViewHandler viewHandler;
   private int ID;
   private EventHandler save;
+  @FXML public Label numberOfVotesLabel;
 
   @FXML public Button showRatingsButton;
   @FXML public Button showReservationsButton;
@@ -56,8 +57,12 @@ public class BoardGamesDetailPageController implements Controller
         BoardGame.CONSIDERED_TO_BE_BOUGHT_STATUS)){
       showReservationsButton.setVisible(false);
       showRatingsButton.setVisible(false);
+      numberOfVotesLabel.setVisible(true);
+      numberOfVotes.setVisible(true);
     }
     else {
+      numberOfVotesLabel.setVisible(false);
+      numberOfVotes.setVisible(false);
       showReservationsButton.setVisible(true);
       showRatingsButton.setVisible(true);
     }
@@ -97,11 +102,13 @@ public class BoardGamesDetailPageController implements Controller
     {
       owner.setText(playersList.getNameByID(boardGame.getOwnerID()));
     }
+    String[] allowedStatuses = {"Available",
+        "Unavailable", "Considered to be bought"};
     ObservableList<String> items = FXCollections.observableArrayList(
         BoardGame.ALLOWED_TYPES);
     type.setItems(items);
     ObservableList<String> items2 = FXCollections.observableArrayList(
-        BoardGame.ALLOWED_STATUSES);
+        allowedStatuses);
     status.setItems(items2);
     type.setValue(boardGame.getType());
     status.setValue(boardGame.getAvailabilityStatus());

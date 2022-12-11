@@ -22,6 +22,7 @@ public class BorrowingsAddFinalFormController implements ExtendedController
   ViewHandler viewHandler;
   private int ID;
   private int ID2;
+
   @Override public void init(Region region, ModelManager model,
       ViewHandler viewHandler, int ID, int ID2)
   {
@@ -32,8 +33,14 @@ public class BorrowingsAddFinalFormController implements ExtendedController
     this.ID2 = ID2;
     setData();
   }
-  public void setData(){
-    PlayersList playersList= model.getPlayersList();
+
+  public void setData()
+  {
+    bgname.setMouseTransparent(true);
+    bgname.setFocusTraversable(false);
+    playername.setFocusTraversable(false);
+    playername.setMouseTransparent(true);
+    PlayersList playersList = model.getPlayersList();
     BoardGamesList boardGamesList = model.getBoardGamesList();
     bgname.setText(boardGamesList.getNameByID(ID2));
     playername.setText(playersList.getNameByID(ID));
@@ -51,52 +58,69 @@ public class BorrowingsAddFinalFormController implements ExtendedController
 
   public void goBack()
   {
-    viewHandler.openView(134, -1);
+    viewHandler.openView(134, ID);
   }
 
-  public void createBorrowing()throws ParserConfigurationException,
-      TransformerException
+  public void createBorrowing()
+      throws ParserConfigurationException, TransformerException
   {
+
     LocalDate startDate = start.getValue();
     LocalDate endDate = end.getValue();
-    String comment = comments.getText();
-
-
-    try
-  {
-    ReservationsList reservationsList = model.getReservationsList();
-    BorrowingsList borrowingsList = model.getBorrowingsList();
-    PlayersList playersList = model.getPlayersList();
-    BoardGamesList boardGamesList = model.getBoardGamesList();
-
-    if (Reservation.VALIDATE_DATA(reservationsList, borrowingsList,startDate, endDate,ID2, playersList, ID,-1,-1))
+    if (start.getValue() == null || end.getValue() == null)
     {
-      model.addBorrowing( new Reservation(ID,ID2,startDate,endDate, comment));
-      model.saveBorrowing();
-      boardGamesList.getBoardGameByID(ID2).setAvailabilityStatus("Borrowed");
-      viewHandler.openView(6,-1);
+      Alert alert = new Alert(Alert.AlertType.ERROR);
+      alert.setTitle("Invalid Data");
+      alert.setHeaderText("Dates are not filled");
+      Optional<ButtonType> result = alert.showAndWait();
+    }
+    else
+    {
+
+      String comment = comments.getText();
+
       try
       {
-        model.saveBorrowing();
+        ReservationsList reservationsList = model.getReservationsList();
+        BorrowingsList borrowingsList = model.getBorrowingsList();
+        PlayersList playersList = model.getPlayersList();
+        BoardGamesList boardGamesList = model.getBoardGamesList();
+
+        if (Reservation.VALIDATE_DATA(reservationsList, borrowingsList,
+            startDate, endDate, ID2, playersList, ID, -1, -1))
+        {
+          model.addBorrowing(
+              new Reservation(ID, ID2, startDate, endDate, comment));
+          model.saveBorrowing();
+          viewHandler.openView(6, -1);
+          model.getBoardGamesList().getBoardGameByID(ID2).setAvailabilityStatus(BoardGame.BORROWED_STATUS);
+          model.saveBoardGames();
+          try
+          {
+            model.saveBorrowing();
+          }
+          catch (ParserConfigurationException e)
+          {
+            throw new RuntimeException(e);
+          }
+          catch (TransformerException e)
+          {
+            throw new RuntimeException(e);
+          }
+
+        }
       }
-      catch (ParserConfigurationException e)
+      catch (Exception e)
       {
-        throw new RuntimeException(e);
-      }
-      catch (TransformerException e)
-      {
-        throw new RuntimeException(e);
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Invalid Data");
+        alert.setHeaderText(e.getMessage());
+        Optional<ButtonType> result = alert.showAndWait();
       }
 
     }
   }
-  catch (Exception e){
-    Alert alert = new Alert(Alert.AlertType.ERROR);
-    alert.setTitle("Invalid Data");
-    alert.setHeaderText(e.getMessage());
-    Optional<ButtonType> result = alert.showAndWait();
-  }
 
-  };
+
 
 }

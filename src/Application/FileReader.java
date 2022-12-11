@@ -350,7 +350,6 @@ public class FileReader
       boardGame = new BoardGame(ID, name, type, numberOfPlayersMin,
           numberOfPlayersMax, availabilityStatus, comment, ownerID,
           numberOfVotes);
-      System.out.println(boardGame);
       boardGamesList.addBoardGame(boardGame);
 
     }

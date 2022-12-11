@@ -89,6 +89,7 @@ public class Reservation
       PlayersList playersList, int playerID, int currentReservationID,
       int currentBorrowingID)
   {
+
     if (!end.isAfter(start))
     {
       throw new RuntimeException("The borrowing must end after it starts");
@@ -97,7 +98,7 @@ public class Reservation
     {
       for (int j = 0; j < borrowingsList.size(); j++)
       {
-        if (borrowingsList.getBorrowing(j).getPlayerID() == playerID)
+        if (borrowingsList.getBorrowing(j).getPlayerID() == playerID && borrowingsList.getBorrowing(j).getID() != currentBorrowingID)
         {
           throw new RuntimeException(
               "Guest can not make 2 borrowings in the same time");
@@ -126,6 +127,7 @@ public class Reservation
           }
         }
       }
+    }
       for (int k = 0; k < borrowingsList.size(); k++)
       {
         if (borrowingsList.getBorrowing(k).getGameID() == gameID)
@@ -150,7 +152,6 @@ public class Reservation
                   "This game is currently borrowed for this date, please change the date ");
             }
           }
-        }
 
       }
     }

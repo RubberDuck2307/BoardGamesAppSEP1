@@ -130,58 +130,78 @@ public class EventsDetailPageController implements Controller
     editButton.setText("Save Changes");
 
     save = event -> {
-      String name = nameField.getText();
-      String place = placeField.getText();
-      String link = linkField.getText();
-      LocalDate fromDate = fromDateField.getValue();
-      String fromHours = fromHoursField.getText();
-      int intFromHours = Integer.parseInt(fromHours);
-      String fromMinutes = fromMinutesField.getText();
-      int intFromMinutes = Integer.parseInt(fromMinutes);
-      LocalDate toDate = toDateField.getValue();
-      String toHours = toHoursField.getText();
-      int intToHours = Integer.parseInt(toHours);
-      String toMinutes = toMinutesField.getText();
-      int intToMinutes = Integer.parseInt(toMinutes);
-      String comment = commentField.getText();
-      String description = descriptionField.getText();
 
+      boolean valid = true;
+      int intFromHours = 0;
+      int intFromMinutes = 0;
+      int intToHours = 0;
+      int intToMinutes = 0;
       try
       {
-      LocalDateTime from = fromDate.atTime(intFromHours, intFromMinutes);
-      LocalDateTime to = toDate.atTime(intToHours, intToMinutes);
-
-        if (Event.VALIDATE_DATA(name, place, from, to))
-        {
-          Event event1 = new Event(ID, name, place, fromDate, intFromHours,
-              intFromMinutes, toDate, intToHours, intToMinutes, description,
-              new ArrayList<>(), comment, link);
-          model.setEvent(event1, ID);
-          try
-          {
-            model.saveEvent();
-          }
-          catch (ParserConfigurationException e)
-          {
-            throw new RuntimeException(e);
-          }
-          catch (TransformerException e)
-          {
-            throw new RuntimeException(e);
-          }
-          setData();
-          editButton.setOnAction(this::edit);
-          editButton.setText("Edit");
-        }
+        intFromHours = Integer.parseInt(fromHoursField.getText());
+        intFromMinutes = Integer.parseInt(fromMinutesField.getText());
+        intToHours = Integer.parseInt(toHoursField.getText());
+        intToMinutes = Integer.parseInt(toMinutesField.getText());
       }
       catch (Exception e)
       {
+        valid = false;
         Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setHeaderText("The time data are invalid");
         alert.setTitle("Invalid data");
-        alert.setHeaderText(e.getMessage());
         Optional<ButtonType> result = alert.showAndWait();
       }
-    }; editButton.setOnAction(save);
+
+      if (valid)
+      {
+        String name = nameField.getText();
+        String place = placeField.getText();
+        String link = linkField.getText();
+        LocalDate fromDate = fromDateField.getValue();
+
+        LocalDate toDate = toDateField.getValue();
+
+        String comment = commentField.getText();
+        String description = descriptionField.getText();
+
+        try
+        {
+          LocalDateTime from = fromDate.atTime(intFromHours, intFromMinutes);
+          LocalDateTime to = toDate.atTime(intToHours, intToMinutes);
+
+          if (Event.VALIDATE_DATA(name, place, from, to))
+          {
+            Event event1 = new Event(ID, name, place, fromDate, intFromHours,
+                intFromMinutes, toDate, intToHours, intToMinutes, description,
+                new ArrayList<>(), comment, link);
+            model.setEvent(event1, ID);
+            try
+            {
+              model.saveEvent();
+            }
+            catch (ParserConfigurationException e)
+            {
+              throw new RuntimeException(e);
+            }
+            catch (TransformerException e)
+            {
+              throw new RuntimeException(e);
+            }
+            setData();
+            editButton.setOnAction(this::edit);
+            editButton.setText("Edit");
+          }
+        }
+        catch (Exception e)
+        {
+          Alert alert = new Alert(Alert.AlertType.ERROR);
+          alert.setTitle("Invalid data");
+          alert.setHeaderText(e.getMessage());
+          Optional<ButtonType> result = alert.showAndWait();
+        }
+      }
+    };
+      editButton.setOnAction(save);
   }
 
   public void delete() throws ParserConfigurationException, TransformerException

@@ -122,6 +122,10 @@ public class Player
     if(phoneNumber.length() == 0){
       throw new RuntimeException("Phone number is not valid");
     }
+    int amountOfPluses = phoneNumber.length() - phoneNumber.replace("+", "").length();
+    if (amountOfPluses > 1){
+      throw new RuntimeException("Phone number is not valid");
+    }
     for (int i = 0; i < phoneNumber.length(); i++)
     {
       //If character on position is not a + or number, false is returned
