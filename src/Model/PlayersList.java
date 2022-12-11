@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 /**
  * A class representing a list of Player objects
+ *
  * @author Anna Andrlova, Christos Artemisios, Alex Bolfa, Jan Metela
  */
 public class PlayersList
@@ -11,7 +12,7 @@ public class PlayersList
   private ArrayList<Player> playerList;
 
   /**
-   * Zero-argument constructor. Set playerList to new empty ArrayList
+   * the zero-argument constructor sets playerList to new empty ArrayList
    */
   public PlayersList()
   {
@@ -19,9 +20,8 @@ public class PlayersList
   }
 
   /**
-   *
-   * @param index index of the player
-   * @return player on the given index
+   * @param index the index of the player
+   * @return the player with the given index
    */
   public Player getPlayer(int index)
   {
@@ -29,10 +29,9 @@ public class PlayersList
   }
 
   /**
-   *
-   * @param ID the player ID
-   * @throws RuntimeException if player with same ID is not in the list
-   * @return player whose ID equals the given ID
+   * @param ID the player's ID
+   * @return the player with the given ID
+   * @throws RuntimeException if a player with the same ID is not on the list
    */
   public Player getPlayerByID(int ID)
   {
@@ -47,18 +46,17 @@ public class PlayersList
   }
 
   /**
-   *
-   * @return size of playerList
+   * @return the size of playerList
    */
   public int size()
   {
     return playerList.size();
   }
 
-
-   /**
-   * Add the given player to the List
-   * If the ID of the player is -1, it is set to the value of the ID of the last player in the list incremented by 1.
+  /**
+   * Adds the given player to the List
+   * If the ID of the player is -1, it is set to the value of the
+   * last player's ID in the list, incremented by 1.
    * If the list is empty, the ID is set to 1
    */
   public void addPlayer(Player player)
@@ -84,10 +82,11 @@ public class PlayersList
   }
 
   /**
-   * Replace a player with a particular ID with the given player.
-   * If a player with the ID is not found in the list, the given player is added on the end of the list instead.
-   * @param player the player by which is the other event replaced
-   * @param ID ID of player that is replaced
+   * Replaces a player having a particular ID with the given player.
+   * If a player with the ID is not found in the list, the given player
+   * is added at the end of the list instead.
+   * @param player the player that will replace the current event.
+   * @param ID     the ID of the player that will be replaced
    */
   public void setPlayer(Player player, int ID)
   {
@@ -108,8 +107,9 @@ public class PlayersList
   }
 
   /**
-   * Removes a player from the list by given ID
-   * @param ID ID of the player that is removed
+   * Removes a player by ID from the list
+   *
+   * @param ID the ID of the player that is removed
    */
   public void deleteByID(int ID)
   {
@@ -124,8 +124,7 @@ public class PlayersList
   }
 
   /**
-   *
-   * @return new PlayerList with only player from the original list whose membership is false
+   * @return a new PlayerList showing only players that do not have a membership
    */
   public PlayersList getGuests()
   {
@@ -141,9 +140,9 @@ public class PlayersList
     }
     return newPlayerList;
   }
+
   /**
-   *
-   * @return new PlayerList with only player from the original list whose membership is true
+   * @return a new PlayerList showing only players that have a membership
    */
   public PlayersList getMembers()
   {
@@ -161,16 +160,18 @@ public class PlayersList
   }
 
   /**
-   *
-   * @param charSequence the string that names of returned players contain
-   * @return new PlayersList with only the players from the original list whose name contains charSequence
+   * @param charSequence the string containing the player's name
+   * @return a new PlayersList showing only the players matching with charSequence
    */
   public PlayersList filterPlayerList(String charSequence)
   {
     PlayersList newPlayerList = new PlayersList();
     for (int i = 0; i < size(); i++)
     {
-      if (playerList.get(i).getName().toLowerCase().contains(charSequence.toLowerCase()) || playerList.get(i).getPhoneNumber().contains(charSequence)){
+      if (playerList.get(i).getName().toLowerCase()
+          .contains(charSequence.toLowerCase()) || playerList.get(i)
+          .getPhoneNumber().contains(charSequence))
+      {
         newPlayerList.addPlayer(playerList.get(i));
       }
     }
@@ -179,8 +180,8 @@ public class PlayersList
 
   /**
    * @param ID the ID of the player
+   * @return the name of the player with given ID
    * @throws RuntimeException if player with such ID is not in the list
-   * @return name of the player with given ID
    */
   public String getNameByID(int ID)
   {
@@ -196,9 +197,10 @@ public class PlayersList
   }
 
   /**
-   * Set the attribute voted of all players in the list to false
+   * Sets the attribute voted for all players in the list to false
    */
-  public void setAllPlayersVotedFalse(){
+  public void setAllPlayersVotedFalse()
+  {
     for (int i = 0; i < size(); i++)
     {
       System.out.println("false");
@@ -207,11 +209,10 @@ public class PlayersList
   }
 
   /**
-   *
-   * @return values of all the attributes of all the players as string
+   * @return the values of the attributes of all the players as string
    */
   @Override public String toString()
   {
     return "Model.PlayersList{" + "playerList=" + playerList + '}';
   }
-  }
+}

@@ -18,13 +18,13 @@ public class Reservation
   private String comment;
 
   /**
-   * Six-arguments constructor calling the set method
+   * The six-arguments constructor calling the set method
    *
    * @param ID       the ID of the reservation/borrowing
-   * @param playerID the ID of the player who reserves/borrows the game
-   * @param gameID   the ID of the game which is reserved/borrowed
-   * @param from     the date since when is the game reserved/borrowed
-   * @param to       the date till when is the game reserved/borrowed
+   * @param playerID the ID of the player reserving/borrowing the game
+   * @param gameID   the ID of the reserved/borrowed game
+   * @param from     the starting date of the reservation/borrowing
+   * @param to       the ending date of the reservation/borrowing
    * @param comment  a custom comment
    */
   public Reservation(int ID, int playerID, int gameID, LocalDate from,
@@ -34,12 +34,12 @@ public class Reservation
   }
 
   /**
-   * Five-arguments constructor calling the set method. ID is set to -1.
+   * The five-arguments constructor calling the set method. ID is set to -1.
    *
-   * @param playerID the ID of the player who reserves/borrows the game
-   * @param gameID   the ID of the game which is reserved/borrowed
-   * @param from     the date since when is the game reserved/borrowed
-   * @param to       the date till when is the game reserved/borrowed
+   * @param playerID the ID of the player reserving/borrowing the game
+   * @param gameID   the ID of the reserved/borrowed game
+   * @param from     the starting date of the reservation/borrowing
+   * @param to       the ending date of the reservation/borrowing
    * @param comment  a custom comment
    */
   public Reservation(int playerID, int gameID, LocalDate from, LocalDate to,
@@ -50,13 +50,13 @@ public class Reservation
   }
 
   /**
-   * Setter for every attribute
+   * The setter for every attribute
    *
    * @param ID       the ID of the reservation/borrowing
-   * @param playerID the ID of the player who reserves/borrows the game
-   * @param gameID   the ID of the game which is reserved/borrowed
-   * @param from     the date since when is the game reserved/borrowed
-   * @param to       the date till when is the game reserved/borrowed
+   * @param playerID the ID of the player reserving/borrowing the game
+   * @param gameID   the ID of the reserved/borrowed game
+   * @param from     the starting date of the reservation/borrowing
+   * @param to       the ending date of the reservation/borrowing
    * @param comment  a custom comment
    */
   public void set(int ID, int playerID, int gameID, LocalDate from,
@@ -71,18 +71,18 @@ public class Reservation
   }
 
   /**
-   * Checks whether the passed dates are valid, the guest have not already borrowed a game, and the game is not already borrowed or reserved for the inserted period
+   * Checks whether the passed data is valid, the guest has not already borrowed a game, and if the game is not already borrowed or reserved for the inserted period
    * @param reservationsList the list of all reservations of the game
    * @param borrowingsList the list of all borrowings of the game
-   * @param start the starting date of the reservation of borrowing
-   * @param end the ending date of the reservation or borrowing
-   * @param gameID the ID of the game that is reserved borrowed
-   * @param playersList the list including record about the player who is reserving/borrowing the game
+   * @param start the starting date of the reservation/borrowing
+   * @param end the ending date of the reservation/borrowing
+   * @param gameID the ID of the reserved/borrowed game
+   * @param playersList the list including the record about the player reserving/borrowing the game
    * @param playerID the ID of the player
-   * @param currentReservationID the ID of the reservation what is edited. If no reservation is edited -1 should be passed.
-   * @param currentBorrowingID the ID of the borrowing what is edited. If no reservation is edited -1 should be passed.
-   * @throws RuntimeException if the data are invalid
-   * @return true if the data are valid
+   * @param currentReservationID the ID of the edited reservation. If no reservation is edited -1 should be passed.
+   * @param currentBorrowingID the ID of the edited borrowing. If no borrowing is edited -1 should be passed.
+   * @throws RuntimeException if the data is invalid
+   * @return true if the data is valid
    */
   static public boolean VALIDATE_DATA(ReservationsList reservationsList,
       BorrowingsList borrowingsList, LocalDate start, LocalDate end, int gameID,
@@ -158,7 +158,7 @@ public class Reservation
   }
 
   /**
-   * Getter for ID
+   * The getter for ID
    */
   public int getID()
   {
@@ -166,7 +166,7 @@ public class Reservation
   }
 
   /**
-   * Setter for ID
+   * The setter for ID
    */
   public void setID(int ID)
   {
@@ -174,7 +174,7 @@ public class Reservation
   }
 
   /**
-   * Getter for playerID
+   * The getter for playerID
    */
   public int getPlayerID()
   {
@@ -182,7 +182,7 @@ public class Reservation
   }
 
   /**
-   * Setter for playerID
+   * The setter for playerID
    */
   public void setPlayerID(int playerID)
   {
@@ -190,7 +190,7 @@ public class Reservation
   }
 
   /**
-   * Getter for gameID
+   * The getter for gameID
    */
   public int getGameID()
   {
@@ -198,7 +198,7 @@ public class Reservation
   }
 
   /**
-   * Setter for gameID
+   * The setter for gameID
    */
   public void setGameID(int gameID)
   {
@@ -206,7 +206,7 @@ public class Reservation
   }
 
   /**
-   * Getter for from
+   * The getter for from
    */
   public LocalDate getFrom()
   {
@@ -214,7 +214,7 @@ public class Reservation
   }
 
   /**
-   * Setter for from
+   * The setter for from
    */
   public void setFrom(LocalDate from)
   {
@@ -222,7 +222,7 @@ public class Reservation
   }
 
   /**
-   * Getter for to
+   * The getter for to
    */
   public LocalDate getTo()
   {
@@ -230,7 +230,7 @@ public class Reservation
   }
 
   /**
-   * Setter for to
+   * The setter for to
    */
   public void setTo(LocalDate to)
   {
@@ -238,7 +238,7 @@ public class Reservation
   }
 
   /**
-   * Getter for comment
+   * The getter for comment
    */
   public String getComment()
   {
@@ -246,7 +246,7 @@ public class Reservation
   }
 
   /**
-   * Setter for comment
+   * The setter for comment
    */
   public void setComment(String comment)
   {
@@ -264,7 +264,7 @@ public class Reservation
   }
 
   /**
-   * @return values of all attributes as string
+   * @return the values of all attributes as string
    */
   @Override public String toString()
   {

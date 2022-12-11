@@ -23,16 +23,16 @@ public class Player
   private LocalDate feePaymentDate;
 
   /**
-   * Nine-arguments constructor calling the set method
+   * The nine-arguments constructor calling the set method
    * @param ID the ID of the player
    * @param name the name of the player
    * @param phoneNumber the phone number of the player
    * @param email the email of the player
-   * @param membership whether is the player a member or not
+   * @param membership whether the player is a member or not
    * @param comment a custom comment
    * @param address the address of the player
-   * @param voted whether the player has voted in election or not
-   * @param feePaymentDate the date till when must the player pay his member fee
+   * @param voted whether the player has voted in the election or not
+   * @param feePaymentDate the date until when the player must pay his member fee
    */
   public Player(int ID, String name, String phoneNumber, String email, boolean membership,
       String comment, String address, Boolean voted, LocalDate feePaymentDate)
@@ -40,15 +40,15 @@ public class Player
     set(ID, name, phoneNumber, email, membership, comment, address , voted, feePaymentDate);
   }
   /**
-   * Eight-arguments constructor calling the set method. ID is set to -1.
+   * The eight-arguments constructor calling the set method. ID is set to -1.
    * @param name the name of the player
    * @param phoneNumber the phone number of the player
    * @param email the email of the player
-   * @param membership whether is the player a member or not
+   * @param membership whether the player is a member or not
    * @param comment a custom comment
    * @param address the address of the player
-   * @param voted whether the player has voted in election or not
-   * @param feePaymentDate the date till when must the player pay his member fee
+   * @param voted whether the player has voted in the election or not
+   * @param feePaymentDate the date until when the player must pay his member fee
    */
   public Player(String name, String phoneNumber, String email, boolean membership,
       String comment, String address, Boolean voted, LocalDate feePaymentDate)
@@ -58,16 +58,16 @@ public class Player
   }
 
   /**
-   * Setter for every attribute
+   * The setter for every attribute
    * @param ID the ID of the player
    * @param name the name of the player
    * @param phoneNumber the phone number of the player
    * @param email the email of the player
-   * @param membership whether is the player a member or not
+   * @param membership whether the player is a member or not
    * @param comment a custom comment
    * @param address the address of the player
-   * @param voted whether the player has voted in election or not
-   * @param feePaymentDate the date till when must the player pay his member fee
+   * @param voted whether the player has voted in the election or not
+   * @param feePaymentDate the date until when the player must pay his member fee
    */
 
   public void set(int ID,String name, String phoneNumber, String email,
@@ -110,7 +110,7 @@ public class Player
    * Checks whether given phoneNumber meets those conditions:
    * phoneNumber contains only numbers and/or "+"
    * phoneNumber is not an empty string
-   * if phoneNumber contains "+" it is first character of the string
+   * if phoneNumber contains "+" it is the first character of the string
    * @param phoneNumber the phone number of the player
    * @throws RuntimeException if phoneNumber does not meet any of the conditions
    * @return true if phoneNumber meets all the conditions
@@ -143,7 +143,7 @@ public class Player
    *
    * @param email the email of the player
    * @throws RuntimeException if is not in format simple@example.com
-   * @return true if email is in format simple@example.com
+   * @return true if email respects the format
    */
   static public boolean VALIDATE_EMAIL(String email)
   {
@@ -182,7 +182,7 @@ public class Player
    * @param name the name of the player
    * @param phoneNumber the phone number of the player
    * @param email the email of the player
-   * @return true, if the data are valid
+   * @return true, if the data is valid
    */
   static public boolean VALIDATE_DATA(String name, String phoneNumber,
       String email)
@@ -192,28 +192,28 @@ public class Player
   }
 
   /**
-   * Getter for ID
+   * The getter for ID
    */
   public int getID()
   {
     return ID;
   }
   /**
-   * Setter for ID
+   * The setter for ID
    */
   public void setID(int ID)
   {
     this.ID = ID;
   }
   /**
-   * Getter for name
+   * The getter for name
    */
   public String getName()
   {
     return name;
   }
   /**
-   * Setter for name
+   * The setter for name
    */
   public void setName(String name)
   {
@@ -221,14 +221,14 @@ public class Player
   }
 
   /**
-   * Getter for phoneNumber
+   * The getter for phoneNumber
    */
   public String getPhoneNumber()
   {
     return phoneNumber;
   }
   /**
-   * Getter for Email
+   * The getter for Email
    */
   public String getEmail()
   {
@@ -236,7 +236,7 @@ public class Player
   }
 
   /**
-   * Getter for membership
+   * The getter for membership
    */
 
   public boolean isMembership()
@@ -244,35 +244,35 @@ public class Player
     return membership;
   }
   /**
-   * Getter for comment
+   * The getter for comment
    */
   public String getComment()
   {
     return comment;
   }
   /**
-   * Getter for address
+   * The getter for address
    */
   public String getAddress()
   {
     return address;
   }
   /**
-   * Getter for voted
+   * The getter for voted
    */
   public Boolean getVoted()
   {
     return voted;
   }
   /**
-   * Setter for voted
+   * The setter for voted
    */
   public void setVoted(Boolean voted)
   {
     this.voted = voted;
   }
   /**
-   * Getter for feePaymentDate
+   * The getter for feePaymentDate
    */
   public LocalDate getFeePaymentDate()
   {
@@ -280,7 +280,7 @@ public class Player
   }
 
   /**
-   * Setter for feePaymentDay
+   * The setter for feePaymentDay
    */
   public void setFeePaymentDate(LocalDate feePaymentDate)
   {
@@ -288,35 +288,35 @@ public class Player
   }
 
   /**
-   * Setter for phoneNumber
+   * The setter for phoneNumber
    */
   public void setPhoneNumber(String phoneNumber)
   {
     this.phoneNumber = phoneNumber;
   }
   /**
-   * Setter for email
+   * The setter for email
    */
   public void setEmail(String email)
   {
     this.email = email;
   }
   /**
-   * Setter for membership
+   * The setter for membership
    */
   public void setMembership(boolean membership)
   {
     this.membership = membership;
   }
   /**
-   * Setter for comment
+   * The setter for comment
    */
   public void setComment(String comment)
   {
     this.comment = comment;
   }
   /**
-   * Setter for address
+   * The setter for address
    */
   public void setAddress(String address)
   {
@@ -324,7 +324,7 @@ public class Player
   }
 
   /**
-   * Returns value of all attributes as string
+   * @return the value of all attributes as string
    */
   @Override public String toString()
   {
