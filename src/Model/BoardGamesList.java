@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.Objects;
 
 /**
- * A class representing list of BoardGame objects
+ * A class representing the list of the BoardGame objects
  *
  * @author Anna Andrlova, Christos Artemisios, Alex Bolfa, Jan Metela
  * @version 1.0 - November 2022
@@ -16,8 +16,8 @@ public class BoardGamesList
   private ArrayList<BoardGame> boardGamesList;
 
   /**
-   * Zero-argument constructor
-   * set attribute boardGamesList to new empty ArrayList
+   * The zero-argument constructor
+   * sets the attribute boardGamesList to a new empty ArrayList
    */
   public BoardGamesList()
   {
@@ -25,9 +25,10 @@ public class BoardGamesList
   }
 
   /**
-   * set attribute boardGamesList to new ArrayList and fills it with copies of objects from given ArrayList
+   * The one-argument constructor
+   * sets the attribute boardGamesList to a new ArrayList and fills it with copies of the objects from the given ArrayList
    *
-   * @param boardGames Arraylist of BoardGame objects
+   * @param boardGames the Arraylist of the BoardGame objects
    */
   public BoardGamesList(ArrayList<BoardGame> boardGames) //This is composition
   {
@@ -40,8 +41,8 @@ public class BoardGamesList
   }
 
   /**
-   * add a board game into boardGamesList.
-   * If the ID of the board game is -1, it is set to the value of the ID of the last board game in the list incremented by 1.
+   * Adds a board game into the ArrayList boardGamesList.
+   * If the ID of the board game is -1, it is set to the value of the last board game's ID in the list, incremented by 1.
    * If the list is empty, the ID is set to 0
    */
   public void addBoardGame(BoardGame boardGame)
@@ -62,10 +63,12 @@ public class BoardGamesList
   }
 
   /**
-   * Replace a board game with particular ID with the given board game.
-   * If a game with the ID is not found in the list, the given board game is added on the end of the list instead.
-   * @param boardgame a board game by which will be the current board game replaced.
-   * @param ID the ID of the board game that will be replaced.
+   * Replaces a board game having a particular ID with the given board game.
+   * If a game with the ID is not found in the list, the given board game is
+   * added at the end of the list instead.
+   *
+   * @param boardgame the board game that will replace the current board game.
+   * @param ID        the ID of the board game that will be replaced.
    */
   public void setBoardGame(BoardGame boardgame, int ID)
   {
@@ -87,7 +90,8 @@ public class BoardGamesList
   }
 
   /**
-   * Removes a game from boardGamesList by ID
+   * Removes a game by ID from the ArrayList boardGamesList
+   *
    * @param ID id of the game that is removed
    */
   public void deleteByID(int ID)
@@ -103,8 +107,8 @@ public class BoardGamesList
   }
 
   /**
-   * @param status the status of board games which are returned
-   * @return a new BoardGamesList with only board games from the original list whose status is equal to status
+   * @param status the status of board games
+   * @return a new list of board games containing only the requested status
    */
   public BoardGamesList getBoardGameListByStatus(String status)
   {
@@ -120,9 +124,9 @@ public class BoardGamesList
   }
 
   /**
-   * @param status the status of board games which are returned
-   * @param status2 the status of board games which are returned
-   * @return a new BoardGamesList with only board games from the original list whose status is equal either to status1 or status2
+   * @param status  the status of board games
+   * @param status2 the second status of board games
+   * @return a new list of board games containing only the first or the second requested status
    */
   public BoardGamesList getBoardGameListByStatus(String status, String status2)
   {
@@ -140,8 +144,8 @@ public class BoardGamesList
   }
 
   /**
-   * @param type the type of board games which are returned
-   * @return a new BoardGamesList with only board games from the original list whose type is equal to inputted type
+   * @param type the type of board games
+   * @return a new list containing only the requested type
    */
   public BoardGamesList getBoardGameListByType(String type)
   {
@@ -157,8 +161,8 @@ public class BoardGamesList
   }
 
   /**
-   * @param numberOfPlayers the amount of players for which are returned board games playable (number of players is in range of minNumberOfPlayers - maxNumberOfPlayers)
-   * @return a new BoardGamesList with only board games from the original list that are playable by inputted number of players
+   * @param numberOfPlayers the wished number of players
+   * @return a new list of boardgames containing the requested number of players
    */
   public BoardGamesList getBoardGameListByNumberOfPlayers(int numberOfPlayers)
   {
@@ -175,9 +179,8 @@ public class BoardGamesList
   }
 
   /**
-   *
-   * @param index index of the board game which is returned
-   * @return the board game on given index
+   * @param index the index of the board game
+   * @return the board game with the requested index
    */
   public BoardGame getBoardGame(int index)
   {
@@ -185,9 +188,8 @@ public class BoardGamesList
   }
 
   /**
-   *
-   * @param charSequence the string that names of returned boardgames contain
-   * @return new BoardGamesList with only the board games from the original list whose name contains charSequence
+   * @param charSequence the string containing the searched board game
+   * @return new list of board games containing only charSequence
    */
   public BoardGamesList filterBoardGameList(String charSequence)
   {
@@ -203,10 +205,9 @@ public class BoardGamesList
   }
 
   /**
-   *
-   * @param ID ID of the board game
-   * @throws RuntimeException, if board game with such ID is not in the list
+   * @param ID The ID of the board game
    * @return the name of the board game with the given ID
+   * @throws RuntimeException, if the board game with this ID is not in the list
    */
   public String getNameByID(int ID)
   {
@@ -221,8 +222,7 @@ public class BoardGamesList
   }
 
   /**
-   *
-   * @return the size of boardGamesList
+   * @return the size of the board games list boardGamesList
    */
   public int size()
   {
@@ -230,8 +230,8 @@ public class BoardGamesList
   }
 
   /**
-   *
-   * @return new BoardGamesList with copies of all board games from the original list whose status equals to "Considered to be bought status" sorted by numberOfVotes
+   * @return new BoardGamesList containing only games with the status
+   * "Considered to be bought" sorted by numberOfVotes in descending order
    */
   public BoardGamesList getConsideredToBeBoughtGames()
   {
@@ -252,7 +252,6 @@ public class BoardGamesList
   }
 
   /**
-   *
    * @return A new ArrayList with the copies of the board games
    */
   public ArrayList<BoardGame> getBoardGamesListAsArrayList()
@@ -267,21 +266,24 @@ public class BoardGamesList
   }
 
   /**
-   * @param ID ID of the board game
-   * @throws RuntimeException if a game with given ID is not in boardGamesList
+   * @param ID the ID of the board game
    * @return the board game with given ID
+   * @throws RuntimeException if a game with the given ID is not in boardGamesList
    */
   public BoardGame getBoardGameByID(int ID)
   {
 
     for (int i = 0; i < size(); i++) // 1 + 1 + 2n - 1
     {
-      if (getBoardGame(i).getID() == ID) //3n  Compares ID of every board game in the list
+      if (getBoardGame(i).getID()
+          == ID) //3n  Compares ID of every board game in the list
       {
-        return getBoardGame(i); //1 If the game with the same ID is found it is returned
+        return getBoardGame(
+            i); //1 If the game with the same ID is found it is returned
       }
     }
-    throw new RuntimeException("In the list is no game with such ID"); //1 Otherwise an exception is thrown
+    throw new RuntimeException(
+        "In the list is no game with such ID"); //1 Otherwise an exception is thrown
   }
   // variable n is the size of the list
   // In the worst case scenario, the board game is not in the list.
@@ -291,8 +293,7 @@ public class BoardGamesList
   // We choose this method because it is one of the most essentials methods for our program to work
 
   /**
-   *
-   * @return board game that has the biggest numberOfVotes
+   * @return the board game that has the highest value for numberOfVotes
    */
   public BoardGame getBoardGameWithMostVotes()
   {
@@ -308,7 +309,7 @@ public class BoardGamesList
   }
 
   /**
-   * Set attribute of all the boardgames in the list to 0
+   * Sets the attribute of all the boardgames in the list to 0
    */
   public void setAllVotesTo0()
   {
@@ -320,9 +321,8 @@ public class BoardGamesList
   }
 
   /**
-   *
-   * @param ID ID of a player
-   * @return new BoardGamesList of board games from the original list which are owned by player with the given ID
+   * @param ID the ID of a player
+   * @return new BoardGamesList containing only the games owned by the player with the given ID
    */
   public BoardGamesList findByOwnership(int ID)
   {
@@ -338,8 +338,7 @@ public class BoardGamesList
   }
 
   /**
-   *
-   * @return values of attribute of all the board games in the list as string
+   * @return the values of the attributes of all the board games in the list as string
    */
   @Override public String toString()
   {

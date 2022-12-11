@@ -12,7 +12,7 @@ public class EventsList
   private ArrayList<Event> eventsList;
 
   /**
-   * Zero-argument constructor. Set eventsList to new empty ArrayList
+   * The zero-argument constructor sets eventsList to new empty ArrayList
    */
   public EventsList()
   {
@@ -20,8 +20,9 @@ public class EventsList
   }
 
   /**
-   * Add the given event to the List
-   * If the ID of the Event is -1 it is set to the value of the ID of the last Event in the list incremented by 1.
+   * Adds the given event to the eventsList
+   * If the ID of the Event is -1, it is set to the value of the last event's ID
+   * in the list, incremented by 1.
    * If the list is empty the ID is set to 0
    */
   public void addEvent(Event event)
@@ -42,10 +43,11 @@ public class EventsList
 
 
   /**
-   * Replace an event with particular ID with the given event.
-   * If an event with the ID is not found in the list, the given event is added on the end of the list instead.
-   * @param event event by which is the other event replaced
-   * @param ID ID of event that is replaced
+   * Replace an event having a particular ID with the given event.
+   * If an event with the ID is not found in the list, the given event is added
+   * at the end of the list instead.
+   * @param event the event that will replace the current event.
+   * @param ID the ID of the event that will be replaced.
    */
   public void setEvent(Event event, int ID)
   {
@@ -66,8 +68,8 @@ public class EventsList
   }
 
   /**
-   * Removes an event from the list by given ID
-   * @param ID ID of the event that is removed
+   * Removes an event by ID from the list
+   * @param ID the ID of the event that is removed
    */
   public void deleteByID(int ID)
   {
@@ -83,8 +85,8 @@ public class EventsList
 
   /**
    *
-   * @param index index of an event
-   * @return an event on given index
+   * @param index the index of an event
+   * @return the event with the given index
    */
   public Event getEvent(int index)
   {
@@ -93,9 +95,9 @@ public class EventsList
 
   /**
    *
-   * @param ID ID of an event
-   * @throws RuntimeException if event with such ID is not in the list
-   * @return an event whose ID equals to the given ID
+   * @param ID the ID of an event
+   * @throws RuntimeException if the event with such ID is not in the list
+   * @return an event matching the given ID
    */
   public Event getEventByID(int ID){
     for (int i = 0; i < size(); i++){
@@ -108,8 +110,8 @@ public class EventsList
 
   /**
    *
-   * @param ID the ID of player who participates the event
-   * @return a new EventsLists with only events from the original list which participantsIDs list contains the given ID
+   * @param ID the ID of player participating in the event
+   * @return a new EventsLists showing only events matching with the given ID
    */
   public EventsList getEventsByParticipantID(int ID){
     EventsList eventsList1 = new EventsList();
@@ -124,7 +126,7 @@ public class EventsList
 
   /**
    *
-   * @return size of eventsList
+   * @return the size of eventsList
    */
   public int size()
   {
@@ -133,7 +135,7 @@ public class EventsList
 
   /**
    *
-   * @return values of all attributes of all the events in the list
+   * @return the values of the attributes of all the events in the list
    */
   @Override public String toString()
   {

@@ -3,13 +3,14 @@ package Model;
 import java.util.ArrayList;
 
 /**
- * A class representing list of Rating objects
+ * A class representing the list of Rating objects
  */
 public class RatingsList
 {
   private ArrayList<Rating> ratingList;
+
   /**
-   * Zero-argument constructor. Set ratingList to new empty ArrayList
+   * The zero-argument constructor sets ratingList to new empty ArrayList
    */
   public RatingsList()
   {
@@ -17,9 +18,8 @@ public class RatingsList
   }
 
   /**
-   *
-   * @param index index of the rating
-   * @return the rating on the given index
+   * @param index the index of the rating
+   * @return the rating with the given index
    */
   public Rating getRating(int index)
   {
@@ -27,7 +27,6 @@ public class RatingsList
   }
 
   /**
-   *
    * @return the size of ratingList
    */
 
@@ -36,10 +35,10 @@ public class RatingsList
     return ratingList.size();
   }
 
-
   /**
-   * Add the given rating to the List
-   * If the ID of the rating is -1, it is set to the value of the ID of the last rating in the list incremented by 1.
+   * Adds the given rating to the List
+   * If the ID of the rating is -1, it is set to the value of the
+   * last rating's ID in the list, incremented by 1.
    * If the list is empty, the ID is set to 0
    */
   public void addRating(Rating rating)
@@ -65,31 +64,16 @@ public class RatingsList
   }
 
   /**
-   *
-   * @param ID ID of the game which is rated
-   * @return new Rating list with only ratings from the original list whose gameID equals the given ID
+   * @param ID the ID of the rated game
+   * @return a new Rating list showing only ratings matching with the given ID
    */
-  public RatingsList getRatingByBoardGame(int ID){
-   RatingsList newRatingsList = new RatingsList();
-    for (int i = 0; i < size(); i++)
-    {
-      if(ID == getRating(i).getGameID()){
-        newRatingsList.addRating(getRating(i));
-      }
-    }
-    return newRatingsList;
-  }
-
-  /**
-   *
-   * @param ID ID of the player who rated a game
-   * @return new Rating list with only ratings from the original list whose playerID equals the given ID
-   */
-  public RatingsList getRatingsByPlayer(int ID){
+  public RatingsList getRatingByBoardGame(int ID)
+  {
     RatingsList newRatingsList = new RatingsList();
     for (int i = 0; i < size(); i++)
     {
-      if(ID == getRating(i).getPlayerID()){
+      if (ID == getRating(i).getGameID())
+      {
         newRatingsList.addRating(getRating(i));
       }
     }
@@ -97,8 +81,24 @@ public class RatingsList
   }
 
   /**
-   *
-   * @return values of all attributes of all ratings in the list as string
+   * @param ID the ID of the player rating a game
+   * @return a new Rating list showing only ratings matching with the given ID
+   */
+  public RatingsList getRatingsByPlayer(int ID)
+  {
+    RatingsList newRatingsList = new RatingsList();
+    for (int i = 0; i < size(); i++)
+    {
+      if (ID == getRating(i).getPlayerID())
+      {
+        newRatingsList.addRating(getRating(i));
+      }
+    }
+    return newRatingsList;
+  }
+
+  /**
+   * @return the values of the attributes of all the ratings in the list as string
    */
   @Override public String toString()
   {
@@ -106,23 +106,28 @@ public class RatingsList
   }
 
   /**
-   * Removes a rating from the list by given ID
-   * @param ID ID of the player that is removed
+   * Removes a rating by given ID from the list
+   *
+   * @param ID the ID of the player that is removed
    */
-  public void deleteByID(int ID){
+  public void deleteByID(int ID)
+  {
     for (int i = 0; i < size(); i++)
     {
-      if (getRating(i).getID() == ID){
+      if (getRating(i).getID() == ID)
+      {
         ratingList.remove(i);
       }
     }
   }
 
   /**
-   * Remove the rating on the given index from the list
-   * @param index index of the removed rating
+   * Removes the rating from the list at the given index
+   *
+   * @param index the index of the removed rating
    */
-  public void delete(int index){
+  public void delete(int index)
+  {
     ratingList.remove(index);
   }
 }
