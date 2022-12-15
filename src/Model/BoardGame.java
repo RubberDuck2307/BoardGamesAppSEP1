@@ -46,14 +46,14 @@ public class BoardGame
   static public String CONSIDERED_TO_BE_BOUGHT_STATUS = "Considered to be bought";
 
   /**
-   * Eight-argument constructor calling the set method. The missing attribute ID is set to -1
+   * The eight-argument constructor calling the set method. The missing attribute ID is set to -1
    * @param name the name of the board game
    * @param type the genre of the board game (see ALLOWED_TYPES)
-   * @param numberOfPlayersMin minimal number of players who can play the board game
-   * @param numberOfPlayersMax maximum number of player who can play the board game
+   * @param numberOfPlayersMin the minimal number of players possible to play the board game
+   * @param numberOfPlayersMax the maximum number of player possible to play the board game
    * @param availabilityStatus the status of the board game (see ALLOWED_STATUSES attribute)
    * @param comment a custom comment
-   * @param ownerID the ID of the player who owns the board games
+   * @param ownerID the ID of the player owning the board games
    * @param numberOfVotes the amount of votes the game has received
    */
   public BoardGame(String name, String type, int numberOfPlayersMin,
@@ -66,15 +66,15 @@ public class BoardGame
   }
 
   /**
-   * Nine-argument constructor calling the set method.
+   * The nine-argument constructor calling the set method.
    * @param ID the ID of the board game
    * @param name the name of the board game
    * @param type the type of the board game (see ALLOWED_TYPES)
-   * @param numberOfPlayersMin minimal number of players who can play the board game
-   * @param numberOfPlayersMax maximum number of player who can play the board game
+   * @param numberOfPlayersMin the minimal number of players possible to play the board game
+   * @param numberOfPlayersMax the maximum number of player possible to play the board game
    * @param availabilityStatus the status of the board game (see ALLOWED_STATUSES attribute)
    * @param comment a custom comment
-   * @param ownerID the ID of the player who owns the board games
+   * @param ownerID the ID of the player owning the board games
    * @param numberOfVotes the amount of votes the game has received
    */
   public BoardGame(int ID, String name, String type, int numberOfPlayersMin,
@@ -87,15 +87,15 @@ public class BoardGame
   }
 
   /**
-   * Setter for all attributes.
+   * The setter for all attributes.
    * @param ID the ID of the board game
    * @param name the name of the board game
    * @param type the type of the board game (see ALLOWED_TYPES)
-   * @param numberOfPlayersMin minimal number of players who can play the board game
-   * @param numberOfPlayersMax maximum number of player who can play the board game
+   * @param numberOfPlayersMin the minimal number of players possible to play the board game
+   * @param numberOfPlayersMax the maximum number of player possible to play the board game
    * @param availabilityStatus the status of the board game (see ALLOWED_STATUSES attribute)
    * @param comment a custom comment
-   * @param ownerID the ID of the player who owns the board games
+   * @param ownerID the ID of the player who owning the board games
    * @param numberOfVotes the amount of votes the game has received
    */
 
@@ -115,7 +115,7 @@ public class BoardGame
   }
 
   /**
-   * Getter for ID
+   * The getter for ID
    */
   public int getID()
   {
@@ -123,7 +123,7 @@ public class BoardGame
   }
 
   /**
-   * Setter for ID
+   * The setter for ID
    */
 
   public void setID(int ID)
@@ -132,7 +132,7 @@ public class BoardGame
   }
 
   /**
-   * Getter for name
+   * The getter for name
    */
   public String getName()
   {
@@ -140,7 +140,7 @@ public class BoardGame
   }
 
   /**
-   * Setter for name
+   * The setter for name
    */
   public void setName(String name)
   {
@@ -148,7 +148,7 @@ public class BoardGame
   }
 
   /**
-   * Getter for type
+   * The getter for type
    */
   public String getType()
   {
@@ -156,7 +156,7 @@ public class BoardGame
   }
 
   /**
-   * Setter for type
+   * The setter for type
    */
 
   public void setType(String type)
@@ -165,7 +165,7 @@ public class BoardGame
   }
 
   /**
-   * Getter for numberOfPlayersMin
+   * The getter for numberOfPlayersMin
    */
   public int getNumberOfPlayersMin()
   {
@@ -173,7 +173,7 @@ public class BoardGame
   }
 
   /**
-   * Setter for numberOfPlayersMin
+   * The setter for numberOfPlayersMin
    */
 
   public void setNumberOfPlayersMin(int numberOfPlayersMin)
@@ -182,7 +182,7 @@ public class BoardGame
   }
 
   /**
-   * Getter for numberOfPlayersMax
+   * The getter for numberOfPlayersMax
    */
   public int getNumberOfPlayersMax()
   {
@@ -190,7 +190,7 @@ public class BoardGame
   }
 
   /**
-   * Setter for numberOfPlayersMin
+   * The setter for numberOfPlayersMin
    */
   public void setNumberOfPlayersMax(int numberOfPlayersMax)
   {
@@ -198,7 +198,7 @@ public class BoardGame
   }
 
   /**
-   * Getter for availabilityStatus
+   * The getter for availabilityStatus
    */
 
   public String getAvailabilityStatus()
@@ -207,7 +207,7 @@ public class BoardGame
   }
 
   /**
-   *  Setter for availabilityStatus
+   *  The setter for availabilityStatus
    */
   public void setAvailabilityStatus(String availabilityStatus)
   {
@@ -215,7 +215,7 @@ public class BoardGame
   }
 
   /**
-   * Getter for comment
+   * The getter for comment
    */
   public String getComment()
   {
@@ -223,7 +223,7 @@ public class BoardGame
   }
 
   /**
-   * Setter for comment
+   * The setter for comment
    */
   public void setComment(String comment)
   {
@@ -231,7 +231,7 @@ public class BoardGame
   }
 
   /**
-   * Getter for ownerID
+   * The getter for ownerID
    */
   public int getOwnerID()
   {
@@ -239,7 +239,7 @@ public class BoardGame
   }
 
   /**
-   * Setter for owner ID
+   * The setter for owner ID
    */
   public void setOwnerID(int ownerID)
   {
@@ -247,7 +247,7 @@ public class BoardGame
   }
 
   /**
-   * Getter for NumberOfVotes
+   * The getter for NumberOfVotes
    */
   public int getNumberOfVotes()
   {
@@ -263,7 +263,7 @@ public class BoardGame
   }
 
   /**
-   * Setter for numberOfVotes
+   * The setter for numberOfVotes
    */
   public void setNumberOfVotes(int numberOfVotes)
   {
@@ -281,7 +281,7 @@ public class BoardGame
 
   /**
    *
-   * @return values of all the attributes as string
+   * @return the values of all the attributes as string
    */
   @Override public String toString()
   {
@@ -295,7 +295,7 @@ public class BoardGame
 
   /**
    *
-   * @param name The name of the board game
+   * @param name the name of the board game
    * @throws RuntimeException if name is an empty string
    * @return true if name is not an empty string
    */
@@ -311,11 +311,11 @@ public class BoardGame
   }
 
   /**
-   * Validates the inputted data by passing them to methods VALIDATE_NAME and VALIDATE_MIN_MAX
+   * Validates the inputted data by passing them to the methods VALIDATE_NAME and VALIDATE_MIN_MAX
    * @param name the name of the board game
    * @param min the minimum number of players
    * @param max the maximum number of players
-   * @return true, if the data are valid
+   * @return true, if the data is valid
    */
   static public boolean VALIDATE_DATA(String name, String min, String max)
   {
@@ -325,9 +325,9 @@ public class BoardGame
 
   /**
    *
-   * @param min the minimum number of players that can play the game
-   * @param max the maximum number of players that can play the game
-   * @throws RuntimeException if the parameters cannot be converted to int or if min is bigger than max
+   * @param min the minimal number of players possible to play the board game
+   * @param max the maximum number of players possible to play the game
+   * @throws RuntimeException if the parameters cannot be converted to an int data type or if min is bigger than max
    * @return true, if min is smaller than max
    */
   static public boolean VALIDATE_MIN_MAX(String min, String max)

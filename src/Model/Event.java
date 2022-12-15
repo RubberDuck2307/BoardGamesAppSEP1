@@ -25,19 +25,19 @@ public class Event
   private String link;
 
   /**
-   * Thirteen-argument constructor calling the set method
+   * The thirteen-argument constructor calling the set method
    * @param ID the ID of the event
    * @param name the name of the event
-   * @param place the place where is the event going to happen
-   * @param fromDate the date and the time of the event start
-   * @param intFromHours the hour of the event start
-   * @param intFromMinutes the minutes of the event star
-   * @param toDate the date and the time of the event end
-   * @param intToHours the hour of the event end
-   * @param intToMinutes the minutes of the event end
+   * @param place the place where the event takes place
+   * @param fromDate the date and time when the event starts
+   * @param intFromHours the hour when the event starts
+   * @param intFromMinutes the minutes when the event stars
+   * @param toDate the date and the time when the event ends
+   * @param intToHours the hour when the event ends
+   * @param intToMinutes the minutes when the event ends
    * @param description the description of the event
-   * @param participantsIDs the list with IDs of players attends the event
-   * @param comment the custom comment
+   * @param participantsIDs the list with the IDs of the players attending the event
+   * @param comment a custom comment
    * @param link the link to a webpage where more info about the event can be found
    */
   public Event(int ID, String name, String place, LocalDate fromDate, int intFromHours, int intFromMinutes,
@@ -49,18 +49,18 @@ public class Event
   }
 
   /**
-   * Twelve-argument constructor calling the set method. ID is set to -1.
+   * The twelve-argument constructor calling the set method. ID is set to -1.
    * @param name the name of the event
    * @param place the place where the event takes place
-   * @param fromDate the date and the time of the event start
-   * @param intFromHours the hour of the event start
-   * @param intFromMinutes the minutes of the event star
-   * @param toDate the date and the time of the event end
-   * @param intToHours the hour of the event end
-   * @param intToMinutes the minutes of the event end
+   * @param fromDate the date and time when the event starts
+   * @param intFromHours the hour when the event starts
+   * @param intFromMinutes the minutes when the event stars
+   * @param toDate the date and the time when the event ends
+   * @param intToHours the hour when the event ends
+   * @param intToMinutes the minutes when the event ends
    * @param description the description of the event
-   * @param participantsIDs the list with IDs of players attends the event
-   * @param comment the custom comment
+   * @param participantsIDs the list with the IDs of the players attending the event
+   * @param comment a custom comment
    * @param link the link to a webpage where more info about the event can be found
    */
   public Event(String name, String place, LocalDate fromDate, int intFromHours, int intFromMinutes,
@@ -73,18 +73,18 @@ public class Event
   }
 
   /**
-   * Setter for all attributes
+   * The setter for all attributes
    * @param name the name of the event
    * @param place the place where the event takes place
-   * @param fromDate the date and the time of the event start
-   * @param intFromHours the hour of the event start
-   * @param intFromMinutes the minutes of the event star
-   * @param toDate the date and the time of the event end
-   * @param intToHours the hour of the event end
-   * @param intToMinutes the minutes of the event end
+   * @param fromDate the date and time when the event starts
+   * @param intFromHours the hour when the event starts
+   * @param intFromMinutes the minutes when the event stars
+   * @param toDate the date and the time when the event ends
+   * @param intToHours the hour when the event ends
+   * @param intToMinutes the minutes when the event ends
    * @param description the description of the event
-   * @param participantsIDs the list with IDs of players attends the event
-   * @param comment the custom comment
+   * @param participantsIDs the list with the IDs of the players attending the event
+   * @param comment a custom comment
    * @param link the link to a webpage where more info about the event can be found
    */
   public void set(int ID, String name, String place, LocalDate fromDate, int intFromHours, int intFromMinutes,
@@ -112,10 +112,10 @@ public class Event
    *
    * @param name the name of the event
    * @param place the place where the event takes place
-   * @param from the date and time of the event start
-   * @param to the date of the event end
-   * @throws RuntimeException if from is not in the future or if to is not after from or if name is empty string or if place is empty string
-   * @return true, if from is in the future and if to is after from and if name is not empty string and if place is not empty string
+   * @param from the date and time when the event starts
+   * @param to the date when the event ends
+   * @throws RuntimeException if from is not in the future or if to is not after from or if name is an empty string or if place is an empty string
+   * @return true, if from is in the future and if to is after from and if name is not an empty string and if place is not an empty string
    */
   static public boolean VALIDATE_DATA(String name, String place, LocalDateTime from,LocalDateTime to)
   {
@@ -141,7 +141,7 @@ public class Event
   }
 
   /**
-   * Getter for ID
+   * The getter for ID
    */
   public int getID()
   {
@@ -149,7 +149,7 @@ public class Event
   }
 
   /**
-   * Setter for ID
+   * The setter for ID
    */
   public void setID(int ID)
   {
@@ -157,7 +157,7 @@ public class Event
   }
 
   /**
-   * Getter for name
+   * The getter for name
    */
   public String getName()
   {
@@ -165,7 +165,7 @@ public class Event
   }
 
   /**
-   * Setter for name
+   * The setter for name
    */
   public void setName(String name)
   {
@@ -173,14 +173,14 @@ public class Event
   }
 
   /**
-   * Getter for place
+   * The getter for place
    */
   public String getPlace()
   {
     return place;
   }
   /**
-   * Setter for place
+   * The setter for place
    */
   public void setPlace(String place)
   {
@@ -188,7 +188,7 @@ public class Event
   }
 
   /**
-   * Getter for fromDate
+   * The getter for fromDate
    */
   public LocalDate getFromDate()
   {
@@ -196,7 +196,7 @@ public class Event
   }
 
   /**
-   * Setter for fromDate
+   * The setter for fromDate
    */
   public void setFromDate(LocalDate fromDate)
   {
@@ -204,7 +204,7 @@ public class Event
   }
 
   /**
-   * Getter for toDate
+   * The getter for toDate
    */
   public LocalDate getToDate()
   {
@@ -212,7 +212,7 @@ public class Event
   }
 
   /**
-   * Setter for toDate
+   * The setter for toDate
    */
   public void setToDate(LocalDate toDate)
   {
@@ -220,7 +220,7 @@ public class Event
   }
 
   /**
-   * Getter for intFromHours
+   * The getter for intFromHours
    */
   public int getIntFromHours()
   {
@@ -228,7 +228,7 @@ public class Event
   }
 
   /**
-   * Setter for intFromHours
+   * The setter for intFromHours
    */
 
   public void setIntFromHours(int intFromHours)
@@ -237,7 +237,7 @@ public class Event
   }
 
   /**
-   * Getter for intFromMinutes
+   * The getter for intFromMinutes
    */
 
   public int getIntFromMinutes()
@@ -246,7 +246,7 @@ public class Event
   }
 
   /**
-   * Setter for intFromMinutes
+   * The setter for intFromMinutes
    */
 
   public void setIntFromMinutes(int intFromMinutes)
@@ -255,7 +255,7 @@ public class Event
   }
 
   /**
-   * Getter for intToHours
+   * The getter for intToHours
    */
   public int getIntToHours()
   {
@@ -263,7 +263,7 @@ public class Event
   }
 
   /**
-   * Setter for intToHours
+   * The setter for intToHours
    */
   public void setIntToHours(int intToHours)
   {
@@ -271,7 +271,7 @@ public class Event
   }
 
   /**
-   * Getter for intTomMinutes
+   * The getter for intTomMinutes
    */
   public int getIntToMinutes()
   {
@@ -279,7 +279,7 @@ public class Event
   }
 
   /**
-   * Setter for intToMinutes
+   * The setter for intToMinutes
    */
   public void setIntToMinutes(int intToMinutes)
   {
@@ -287,7 +287,7 @@ public class Event
   }
 
   /**
-   * Getter for from
+   * The getter for from
    */
 
   public LocalDateTime getFrom()
@@ -296,7 +296,7 @@ public class Event
   }
 
   /**
-   * Setter for from
+   * The setter for from
    */
   public void setFrom(LocalDateTime from)
   {
@@ -304,7 +304,7 @@ public class Event
   }
 
   /**
-   * Getter for to
+   * The getter for to
    */
   public LocalDateTime getTo()
   {
@@ -312,7 +312,7 @@ public class Event
   }
 
   /**
-   * Getter for to
+   * The getter for to
    */
   public void setTo(LocalDateTime to)
   {
@@ -320,7 +320,7 @@ public class Event
   }
 
   /**
-   * Getter for description
+   * The getter for description
    */
   public String getDescription()
   {
@@ -328,7 +328,7 @@ public class Event
   }
 
   /**
-   * Setter for description
+   * The setter for description
    */
   public void setDescription(String description)
   {
@@ -336,7 +336,7 @@ public class Event
   }
 
   /**
-   * Getter for participantsIDs
+   * The getter for participantsIDs
    */
   public ArrayList<Integer> getParticipantsIDs()
   {
@@ -344,7 +344,7 @@ public class Event
   }
 
   /**
-   * Setter for participantsIDs
+   * The setter for participantsIDs
    */
 
   public void setParticipantsIDs(ArrayList<Integer> participantsIDs)
@@ -353,7 +353,7 @@ public class Event
   }
 
   /**
-   * Getter for comment
+   * The getter for comment
    */
   public String getComment()
   {
@@ -361,7 +361,7 @@ public class Event
   }
 
   /**
-   * Setter for comment
+   * The setter for comment
    */
   public void setComment(String comment)
   {
@@ -369,7 +369,7 @@ public class Event
   }
 
   /**
-   * Getter for link
+   * The getter for link
    */
   public String getLink()
   {
@@ -377,7 +377,7 @@ public class Event
   }
 
   /**
-   * Setter for link
+   * The setter for link
    */
   public void setLink(String link)
   {
@@ -385,8 +385,8 @@ public class Event
   }
 
   /**
-   * Deletes the given ID from participantsID
-   * @param ID ID of the player who participates the event
+   * Deletes the given ID from the array list participantsID
+   * @param ID the ID of the player participating in the event
    */
   public void deleteParticipantByID(int ID){
     participantsIDs.remove(Integer.valueOf(ID));
@@ -394,7 +394,7 @@ public class Event
 
   /**
    *
-   * @return values of all the attributes as string
+   * @return the values of all the attributes as string
    */
 
   @Override public String toString()

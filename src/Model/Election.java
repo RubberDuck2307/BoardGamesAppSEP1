@@ -14,7 +14,7 @@ public class Election
   private LocalDate endingDate;
 
   /**
-   * Two-argument constructor
+   * The two-argument constructor
    * @param startingDate the starting date of the election
    * @param endingDate the ending date of the election
    */
@@ -28,9 +28,9 @@ public class Election
    *
    * @param startingDate the starting date of the election
    * @param endingDate the ending date of the election
-   * @throws RuntimeException if the starting date is not in future
+   * @throws RuntimeException if the starting date is not in the future
    * @throws RuntimeException if the ending date is not after the starting date
-   * @return true, if the starting date is in future and the ending date is after the starting date
+   * @return true, if the starting date is in the future and the ending date is after the starting date
    */
   public static boolean VALIDATE_DATA(LocalDate startingDate, LocalDate endingDate){
     if(!startingDate.isAfter(LocalDate.now())){
@@ -43,7 +43,7 @@ public class Election
   }
 
   /**
-   * Getter for startingDate
+   * The getter for startingDate
    */
   public LocalDate getStartingDate()
   {
@@ -51,7 +51,7 @@ public class Election
   }
 
   /**
-   * Setter for startingDate
+   * The setter for startingDate
    */
   public void setStartingDate(LocalDate startingDate)
   {
@@ -59,7 +59,7 @@ public class Election
   }
 
   /**
-   * Getter for endingDate
+   * The getter for endingDate
    */
   public LocalDate getEndingDate()
   {
@@ -67,7 +67,7 @@ public class Election
   }
 
   /**
-   * Setter for endingDate
+   * The setter for endingDate
    */
 
   public void setEndingDate(LocalDate endingDate)
@@ -77,7 +77,7 @@ public class Election
 
   /**
    *
-   * @return values of all attributes as string
+   * @return the values of all attributes as string
    */
   @Override public String toString()
   {

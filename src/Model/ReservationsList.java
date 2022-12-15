@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 /**
- * A class representing list of reservations
+ * A class representing the list of reservations
  * @author Jan Metela
  * @version 1.0 - November 2022
  */
@@ -14,16 +14,16 @@ public class ReservationsList
   private ArrayList<Reservation> reservationsList;
 
   /**
-   * Zero-argument constructor
-   * set attribute reservationsList to new empty ArrayList
+   * The zero-argument constructor
+   * sets the attribute reservationsList to new empty ArrayList
    */
   public ReservationsList()
   {
     reservationsList = new ArrayList<>();
   }
   /**
-   * add a reservation into reservationList.
-   * If the ID of the reservation is -1 it is set to the value of the ID of the last reservation in the list incremented by 1.
+   * Adds a reservation into reservationList.
+   * If the ID of the reservation is -1, it is set to the value of the last reservation's ID in the list, incremented by 1.
    * If the list is empty the ID is set to 0
    */
   public void addReservation(Reservation reservation)
@@ -43,8 +43,8 @@ public class ReservationsList
   }
 
   /**
-   * Removes a reservation from the list by ID
-   * @param ID ID of the reservation that is removed
+   * Removes a reservation by ID from the list
+   * @param ID the ID of the reservation that is removed
    */
   public void deleteByID(int ID){
     for (int i = 0; i < reservationsList.size(); i++) {
@@ -58,8 +58,8 @@ public class ReservationsList
 
   /**
    *
-   * @param index index of the reservation which is returned
-   * @return reservation on the given index
+   * @param index the index of the reservation
+   * @return the reservation with the given index
    */
   public Reservation getReservation(int index)
   {
@@ -68,8 +68,8 @@ public class ReservationsList
 
   /**
    *
-   * @param ID ID of the player who reserve the game
-   * @return new reservations list with only reservation from the original list which has the same playerID as the given one
+   * @param ID the ID of the player reserving the game
+   * @return a new reservations list showing only reservations matching with the player's ID
    */
   public ReservationsList getReservationsByPlayer(int ID){
     ReservationsList newReservationList = new ReservationsList();
@@ -83,8 +83,8 @@ public class ReservationsList
   }
 
   /**
-   * Remove the reservation on the given index from the list
-   * @param index index of the game which is removed
+   * Removes the reservation with the given index from the list
+   * @param index the index of the removed game
    */
   public void delete(int index){
     reservationsList.remove(index);
@@ -92,17 +92,17 @@ public class ReservationsList
 
   /**
    *
-   * @return size of reservationsList
+   * @return the size of reservationsList
    */
   public int size(){
     return reservationsList.size();
   }
 
   /**
-   * Replace a reservation with particular ID with the given reservation.
-   * If a reservation with the ID is not found in the list, the given reservation is added on the end of the list instead.
-   * @param reservation reservation by which is the current reservation replaced.
-   * @param ID the ID of the reservation that will is replaced.
+   * Replaces a reservation having a particular ID with the given reservation.
+   * If a reservation with the ID is not found in the list, the given reservation is added at the end of the list instead.
+   * @param reservation the reservation that will replace the current reservation.
+   * @param ID the ID of the reservation that will be replaced.
    */
   public void setReservationByID(Reservation reservation, int ID){
     boolean found = false;
@@ -121,9 +121,9 @@ public class ReservationsList
 
   /**
    *
-   * @param ID ID of the reservation that is returned
-   * @throws RuntimeException if the reservation with given ID is not in the list
-   * @return the reservation whose ID equals the given one
+   * @param ID the ID of the reservation
+   * @throws RuntimeException if the reservation with the given ID is not in the list
+   * @return the reservation matching the given ID
    */
   public Reservation getReservationByID( int ID) {
     for (int i = 0; i < size(); i++) {
@@ -136,8 +136,8 @@ public class ReservationsList
 
   /**
    *
-   * @param ID ID of the game that is reserved
-   * @return new reservations list with only reservation from the original list which has the same gameID as the given one
+   * @param ID the ID of the game that is reserved
+   * @return a new reservations list showing only reservations matching with the given ID
    */
   public ReservationsList getReservationByGameID(int ID){
     ReservationsList reservationsList1 = new ReservationsList();
@@ -152,7 +152,7 @@ public class ReservationsList
 
   /**
    *
-   * @return new ArrayList of copies of all Reservation objects from the original list
+   * @return a new ArrayList containing copies of all the Reservation objects
    */
   public ArrayList<Reservation> getReservationsAsArrayList(){ //this is composition
     ArrayList<Reservation> reservations = new ArrayList<>();
@@ -165,10 +165,11 @@ public class ReservationsList
 
   /**
    *
-   * @param name string that name of the player who reserve the game or name of the game which is reserved must include
-   * @param boardGamesList the boardGamesList from which is the board game name get
-   * @param playersList the playersList from which is the player name get
-   * @return a new ReservationsList with only reservations from the original list whose name of the player who reserve the game or name of the game which is reserved contains the given name string
+   * @param name the string containing either the name of the player reserving
+   * or the name of the reserved game
+   * @param boardGamesList the list containing all the board games
+   * @param playersList the list containing all the players
+   * @return a new ReservationsList showing only the reservations matching with the attribute name
    */
   public ReservationsList filterByName(String name, BoardGamesList boardGamesList, PlayersList playersList){
     ReservationsList reservationsList1 = new ReservationsList();
@@ -183,8 +184,9 @@ public class ReservationsList
 
   /**
    *
-   * @param ID ID of the game that is reserved
-   * @return a new Arraylist sorted by the from attribute with only reservation from the original list which has the same gameID as the given one
+   * @param ID the ID of the game that is reserved
+   * @return a new Arraylist sorted by the attribute "from" showing only
+   * reservations matching with the game's ID
    */
   public ArrayList<Reservation> getSortedArrayListByGameID(int ID){
 
@@ -197,7 +199,7 @@ public class ReservationsList
 
   /**
    *
-   * @return values of all the attributes of all the reservations as string
+   * @return the values of the attributes of all the reservations as string
    */
   @Override public String toString()
   {

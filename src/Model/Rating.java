@@ -13,10 +13,10 @@ public class Rating
   private int gameID;
 
   /**
-   * 3-argument constructor calling the set method. ID is set to -1.
+   * The three-argument constructor calling the set method. ID is set to -1.
    * @param value the value in the range 1-5, expressing how good the game is, while 5 being the best.
-   * @param playerID the id of the player who rated the game
-   * @param gameID the id of the game which is rated
+   * @param playerID the ID of the player rating the game
+   * @param gameID the ID of the rated game
    */
   public Rating(int value, int playerID, int gameID)
   {
@@ -25,22 +25,22 @@ public class Rating
   }
 
   /**
-   * 4-argument constructor calling the set method
+   * The four-argument constructor calling the set method
    * @param ID The ID of the rating
    * @param value the value in the range 1-5, expressing how good the game is, while 5 being the best.
-   * @param playerID the id of the player who rated the game
-   * @param gameID the id of the game which is rated
+   * @param playerID the ID of the player rating the game
+   * @param gameID the ID of the rated game
    */
   public Rating(int ID, int value, int playerID, int gameID)
   {
     set(ID, value, playerID, gameID);
   }
   /**
-   * Setter for all attributes
+   * The setter for all attributes
    * @param ID The ID of the rating
    * @param value the value in the range 1-5, expressing how good the game is, while 5 being the best.
-   * @param playerID the id of the player who rated the game
-   * @param gameID the id of the game which is rated
+   * @param playerID the ID of the player rating the game
+   * @param gameID the ID of the rated game
    */
   public void set(int ID, int value, int playerID, int gameID)
   {
@@ -51,7 +51,7 @@ public class Rating
   }
 
   /**
-   * Getter for ID
+   * The getter for ID
    */
   public int getID()
   {
@@ -59,7 +59,7 @@ public class Rating
   }
 
   /**
-   * Setter for ID
+   * The setter for ID
    */
   public void setID(int ID)
   {
@@ -67,7 +67,7 @@ public class Rating
   }
 
   /**
-   * Getter for value
+   * The getter for value
    */
   public int getValue()
   {
@@ -75,7 +75,7 @@ public class Rating
   }
 
   /**
-   * Setter for value
+   * The setter for value
    */
   public void setValue(int value)
   {
@@ -83,7 +83,7 @@ public class Rating
   }
 
   /**
-   * Getter for playerID
+   * The getter for playerID
    */
   public int getPlayerID()
   {
@@ -91,7 +91,7 @@ public class Rating
   }
 
   /**
-   * Setter for playerID
+   * The setter for playerID
    */
   public void setPlayerID(int playerID)
   {
@@ -99,7 +99,7 @@ public class Rating
   }
 
   /**
-   * Getter for gameID
+   * The getter for gameID
    */
   public int getGameID()
   {
@@ -108,7 +108,7 @@ public class Rating
 
 
   /**
-   * Setter for gameID
+   * The setter for gameID
    */
   public void setGameID(int gameID)
   {
@@ -117,7 +117,7 @@ public class Rating
 
   /**
    *
-   * @return values of all attributes as string
+   * @return the values of all attributes as string
    */
   @Override public String toString()
   {

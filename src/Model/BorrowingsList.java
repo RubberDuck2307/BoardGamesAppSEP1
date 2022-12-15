@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 /**
- * A class representing list of borrowings using Reservation objects
+ * A class representing the list of borrowings using Reservation objects
  * @author Anna Andrlova, Christos Artemisios, Alex Bolfa, Jan Metela
  */
 public class BorrowingsList
@@ -13,7 +13,7 @@ public class BorrowingsList
   private ArrayList<Reservation> borrowingList;
 
   /**
-   * Zero-argument set borrowingList to new empty ArrayList
+   * The zero-argument sets borrowingList to new empty ArrayList
    */
   public BorrowingsList()
   {
@@ -22,8 +22,8 @@ public class BorrowingsList
 
   /**
    *
-   * @param index index of the borrowing that is returned
-   * @return the borrowing in the given index
+   * @param index the index of the borrowing
+   * @return the borrowing with the given index
    */
   public Reservation getBorrowing(int index)
   {
@@ -41,8 +41,8 @@ public class BorrowingsList
 
   /**
    *
-   * @param id ID of the borrowing that is returned
-   * @return borrowing whose ID equals the given one or null, if there is no borrowing with such id in the list
+   * @param id the ID of the borrowing
+   * @return the borrowing matching with the given ID or null, if there is no borrowing with such ID in the list
    */
   public Reservation getBorrowingByID(int id)
   {
@@ -58,10 +58,11 @@ public class BorrowingsList
 
   /**
    *
-   * @param charSequence string that name of the player who reserve the game or name of the game which is reserved must include
-   * @param boardGamesList the boardGamesList from which is the board game name get
-   * @param playersList the playersList from which is the player name get
-   * @return a new BorrowingsList with only borrowings from the original list whose name of the player who reserve the game or name of the game which is reserved contains the given charSequence string
+   * @param charSequence the string containing either the name of the player
+   * reserving or the name of the reserved game
+   * @param boardGamesList the list containing all the board games
+   * @param playersList the list containing all the players
+   * @return a new BorrowingsList showing only the borrowings matching with charSequence
    */
   public BorrowingsList filterBorrowingList(String charSequence,
       PlayersList playersList, BoardGamesList boardGamesList)
@@ -82,8 +83,8 @@ public class BorrowingsList
 
   /**
    *
-   * @param ID The ID of the player who borrows a game
-   * @return new BorrowingsList with only borrowings from the original list whose playerID equals the given one
+   * @param ID the ID of the player borrowing a game
+   * @return new BorrowingsList showing only the borrowings matching the player's ID
    */
   public BorrowingsList getBorrowingsByPlayer(int ID){
     BorrowingsList newBorrowingList = new BorrowingsList();
@@ -98,8 +99,8 @@ public class BorrowingsList
 
   /**
    *
-   * @param ID The ID of the game that is borrowed
-   * @return new BorrowingsList with only borrowings from the original list whose gameID equals the given one
+   * @param ID The ID of the borrowed game
+   * @return new BorrowingsList showing only borrowings matching game's ID
    */
   public Reservation getBorrowingByBoardGame(int ID){
     Reservation reservation;
@@ -114,8 +115,9 @@ public class BorrowingsList
   }
 
   /**
-   * add a borrowing into borrowingList.
-   * If the ID of the borrowing is -1, it is set to the value of the ID of the last borrowing in the list incremented by 1.
+   * Adds a borrowing to the borrowingList.
+   * If the ID of the borrowing is -1, it is set to the value of the
+   * last borrowing's ID in the list, incremented by 1.
    * If the list is empty, the ID is set to 0
    */
 
@@ -143,8 +145,9 @@ public class BorrowingsList
 
   /**
    *
-   * @param ID of the borrowing which is returned
-   * @return first borrowing in the list whose ID equals the given one or null, if there is no borrowing with such ID
+   * @param ID the ID of the borrowing
+   * @return the first borrowing in the list matching the given ID or null,
+   * if there is no borrowing with such ID
    */
   public Reservation getBorrowingByGameID(int ID){
     for (int i = 0; i < size(); i++)
@@ -159,7 +162,7 @@ public class BorrowingsList
 
   /**
    *
-   * @return values of all attributes of all the borrowings int the list as a string
+   * @return the values of the attributes of all the borrowings in the list as a string
    */
   @Override public String toString()
   {
@@ -168,8 +171,8 @@ public class BorrowingsList
 
 
   /**
-   * Removes a borrowing from the list by ID
-   * @param ID ID of the borrowing that is removed
+   * Removes a borrowing by ID from the list
+   * @param ID the ID of the borrowing that is removed
    */
   public void deleteByID(int ID)
   {
@@ -185,8 +188,8 @@ public class BorrowingsList
 
   /**
    *
-   * @param ID ID of the game that is borrowed
-   * @return new BorrowingsList with only borrowings from the original list which has the same gameID as the given one
+   * @param ID the ID of the game that is borrowed
+   * @return new BorrowingsList containing only borrowings matching the game's ID
    */
   public BorrowingsList getByGameID(int ID)
   {
@@ -202,10 +205,11 @@ public class BorrowingsList
   }
 
   /**
-   * Replace a borrowing with particular ID with the given borrowing.
-   * If a borrowing with the ID is not found in the list, the given borrowing is added on the end of the list instead.
-   * @param borrowing borrowing by which is the current borrowing replaced.
-   * @param ID the ID of the borrowing that will is replaced.
+   * Replaces a borrowing having a particular ID with the given borrowing.
+   * If a borrowing with the ID is not found in the list,
+   * the given borrowing is added at the end of the list instead.
+   * @param borrowing the borrowing that will replace the current borrowing.
+   * @param ID the ID of the borrowing that will be replaced.
    */
   public void setBorrowing(Reservation borrowing, int ID)
   {
