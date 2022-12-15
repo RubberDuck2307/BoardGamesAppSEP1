@@ -17,22 +17,6 @@
     <comment/>
   </reservation>
   <reservation>
-    <ID>1</ID>
-    <playerID>2</playerID>
-    <gameID>0</gameID>
-    <from>
-      <day>15</day>
-      <month>12</month>
-      <year>2022</year>
-    </from>
-    <to>
-      <day>18</day>
-      <month>12</month>
-      <year>2022</year>
-    </to>
-    <comment/>
-  </reservation>
-  <reservation>
     <ID>2</ID>
     <playerID>8</playerID>
     <gameID>16</gameID>

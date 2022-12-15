@@ -14,8 +14,8 @@ public class BoardGameApplication extends javafx.application.Application
       throws TransformerConfigurationException, ParserConfigurationException,
       IOException, SAXException
   {
-    ModelManager gradeListModelManager = new ModelManager();
-    ViewHandler viewHandler = new ViewHandler(gradeListModelManager);
+    ModelManager modelManager = new ModelManager();
+    ViewHandler viewHandler = new ViewHandler(modelManager);
     viewHandler.start(stage);
   }
 

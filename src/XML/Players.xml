@@ -5,7 +5,7 @@
     <name>Frodo Baggins</name>
     <phoneNumber>54086954</phoneNumber>
     <email>hobbiton@ring.cz</email>
-    <membership>true</membership>
+    <membership>false</membership>
     <comment/>
     <address/>
     <voted>false</voted>

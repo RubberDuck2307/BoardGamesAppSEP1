@@ -21,6 +21,7 @@ import java.util.Optional;
 public class PlayersDetailPageController implements Controller
 {
   @FXML public Label headingLabel;
+  @FXML public Button reservationButton;
   public TextArea commentField;
   public TextField nameField;
   public TextField phoneNumberField;
@@ -68,8 +69,10 @@ public class PlayersDetailPageController implements Controller
     emailField.setFocusTraversable(false);
     phoneNumberField.setFocusTraversable(false);
     addressField.setFocusTraversable(false);
+    reservationButton.setVisible(false);
     if (player.isMembership())
     {
+      reservationButton.setVisible(true);
       membershipBox.setSelected(true);
     }
     membershipBox.setMouseTransparent(true);
@@ -124,6 +127,14 @@ public class PlayersDetailPageController implements Controller
       boolean membership = membershipBox.isSelected();
       try
       {
+        if (!membership){
+          ReservationsList reservationsList = model.getReservationsList().getReservationsByPlayer(ID);
+          for (int i = 0; i < reservationsList.size(); i++)
+          {
+            model.getReservationsList().deleteByID(reservationsList.getReservation(i).getID());
+          }
+          model.saveReservation();
+        }
         if (!membership
             && model.getBorrowingsList().getBorrowingsByPlayer(ID).size() > 1)
         {
