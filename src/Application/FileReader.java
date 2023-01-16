@@ -57,7 +57,6 @@ public class FileReader
           doc.createTextNode(String.valueOf(player.isMembership())));
       subElement.appendChild(subSubElement);
 
-
       subSubElement = doc.createElement("comment");
       subSubElement.appendChild(
           doc.createTextNode(String.valueOf(player.getComment())));
@@ -73,23 +72,23 @@ public class FileReader
           doc.createTextNode(String.valueOf(player.getVoted())));
       subElement.appendChild(subSubElement);
 
-
       if (player.getFeePaymentDate() != null)
       {
         subSubElement = doc.createElement("feePayment");
         Element subSubSubElement = doc.createElement("day");
-        subSubSubElement.appendChild(doc.createTextNode(String.valueOf(player.getFeePaymentDate().getDayOfMonth())));
+        subSubSubElement.appendChild(doc.createTextNode(
+            String.valueOf(player.getFeePaymentDate().getDayOfMonth())));
         subSubElement.appendChild(subSubSubElement);
         subSubSubElement = doc.createElement("month");
-        subSubSubElement.appendChild(doc.createTextNode(String.valueOf(player.getFeePaymentDate().getMonthValue())));
+        subSubSubElement.appendChild(doc.createTextNode(
+            String.valueOf(player.getFeePaymentDate().getMonthValue())));
         subSubElement.appendChild(subSubSubElement);
         subSubSubElement = doc.createElement("year");
-        subSubSubElement.appendChild(doc.createTextNode(String.valueOf(player.getFeePaymentDate().getYear())));
+        subSubSubElement.appendChild(doc.createTextNode(
+            String.valueOf(player.getFeePaymentDate().getYear())));
         subSubElement.appendChild(subSubSubElement);
         subElement.appendChild(subSubElement);
       }
-
-
 
       rootElement.appendChild(subElement);
 
@@ -196,7 +195,8 @@ public class FileReader
           feePayment = LocalDate.of(year, month, day);
         }
       }
-      Player player = new Player(ID, name, phoneNumber, email, membership, comment, address, voted, feePayment);
+      Player player = new Player(ID, name, phoneNumber, email, membership,
+          comment, address, voted, feePayment);
 
       playersList.addPlayer(player);
     }
@@ -286,7 +286,6 @@ public class FileReader
     Document doc = builder.parse("./src/XML/BoardGames.xml");
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
-
 
     NodeList rootList = doc.getElementsByTagName("BoardGame");
     for (int i = 0; i < rootList.getLength(); i++)
@@ -389,42 +388,42 @@ public class FileReader
       subSubElement = doc.createElement("fromDate");
 
       Element subSubSubElement = doc.createElement("day");
-      subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getFrom().getDayOfMonth())));
+      subSubSubElement.appendChild(
+          doc.createTextNode(String.valueOf(event.getFrom().getDayOfMonth())));
       subSubElement.appendChild(subSubSubElement);
 
       subSubSubElement = doc.createElement("month");
-      subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getFrom().getMonthValue())));
+      subSubSubElement.appendChild(
+          doc.createTextNode(String.valueOf(event.getFrom().getMonthValue())));
       subSubElement.appendChild(subSubSubElement);
 
       subSubSubElement = doc.createElement("year");
-      subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getFrom().getYear())));
+      subSubSubElement.appendChild(
+          doc.createTextNode(String.valueOf(event.getFrom().getYear())));
       subSubElement.appendChild(subSubSubElement);
 
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("fromHours");
-      subSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getFrom().getHour())));
+      subSubElement.appendChild(
+          doc.createTextNode(String.valueOf(event.getFrom().getHour())));
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("fromMinutes");
-      subSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getFrom().getMinute())));
+      subSubElement.appendChild(
+          doc.createTextNode(String.valueOf(event.getFrom().getMinute())));
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("toDate");
 
       subSubSubElement = doc.createElement("day");
-      subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getTo().getDayOfMonth())));
+      subSubSubElement.appendChild(
+          doc.createTextNode(String.valueOf(event.getTo().getDayOfMonth())));
       subSubElement.appendChild(subSubSubElement);
 
       subSubSubElement = doc.createElement("month");
-      subSubSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getTo().getMonthValue())));
+      subSubSubElement.appendChild(
+          doc.createTextNode(String.valueOf(event.getTo().getMonthValue())));
       subSubElement.appendChild(subSubSubElement);
 
       subSubSubElement = doc.createElement("year");
@@ -435,13 +434,13 @@ public class FileReader
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("toHours");
-      subSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getTo().getHour())));
+      subSubElement.appendChild(
+          doc.createTextNode(String.valueOf(event.getTo().getHour())));
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("toMinutes");
-      subSubElement.appendChild(doc.createTextNode(
-          String.valueOf(event.getTo().getMinute())));
+      subSubElement.appendChild(
+          doc.createTextNode(String.valueOf(event.getTo().getMinute())));
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("description");
@@ -490,7 +489,6 @@ public class FileReader
     Document doc = builder.parse("src/XML/Events.xml");
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
-
 
     NodeList rootList = doc.getElementsByTagName("Event");
 
@@ -634,8 +632,9 @@ public class FileReader
           link = subNode.getTextContent();
         }
       }
-      event = new Event(ID, name, location, fromDate, fromHours, fromMinutes, toDate, toHours, toMinutes,
-          description, participantsIDs, comment, link);
+      event = new Event(ID, name, location, fromDate, fromHours, fromMinutes,
+          toDate, toHours, toMinutes, description, participantsIDs, comment,
+          link);
       eventsList.addEvent(event);
     }
     return eventsList;
@@ -678,7 +677,6 @@ public class FileReader
           doc.createTextNode(Integer.toString(rating.getGameID())));
       subElement.appendChild(subSubElement);
 
-
       rootElement.appendChild(subElement);
     }
     doc.appendChild(rootElement);
@@ -702,7 +700,6 @@ public class FileReader
     Document doc = builder.parse("src/XML/Ratings.xml");
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
-
 
     NodeList rootList = doc.getElementsByTagName("Rating");
 
@@ -759,37 +756,44 @@ public class FileReader
 
     Element rootElement = doc.createElement("Election");
 
-    if (!(election == null)){
+    if (!(election == null))
+    {
 
       Element subElement;
       Element subSubElement;
 
       subElement = doc.createElement("startingDate");
       subSubElement = doc.createElement("day");
-      subSubElement.appendChild(doc.createTextNode(String.valueOf(election.getStartingDate().getDayOfMonth())));
+      subSubElement.appendChild(doc.createTextNode(
+          String.valueOf(election.getStartingDate().getDayOfMonth())));
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("month");
-      subSubElement.appendChild(doc.createTextNode(String.valueOf(election.getStartingDate().getMonthValue())));
+      subSubElement.appendChild(doc.createTextNode(
+          String.valueOf(election.getStartingDate().getMonthValue())));
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("year");
-      subSubElement.appendChild(doc.createTextNode(String.valueOf(election.getStartingDate().getYear())));
+      subSubElement.appendChild(doc.createTextNode(
+          String.valueOf(election.getStartingDate().getYear())));
       subElement.appendChild(subSubElement);
 
       rootElement.appendChild(subElement);
 
       subElement = doc.createElement("endingDate");
       subSubElement = doc.createElement("day");
-      subSubElement.appendChild(doc.createTextNode(String.valueOf(election.getEndingDate().getDayOfMonth())));
+      subSubElement.appendChild(doc.createTextNode(
+          String.valueOf(election.getEndingDate().getDayOfMonth())));
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("month");
-      subSubElement.appendChild(doc.createTextNode(String.valueOf(election.getEndingDate().getMonthValue())));
+      subSubElement.appendChild(doc.createTextNode(
+          String.valueOf(election.getEndingDate().getMonthValue())));
       subElement.appendChild(subSubElement);
 
       subSubElement = doc.createElement("year");
-      subSubElement.appendChild(doc.createTextNode(String.valueOf(election.getEndingDate().getYear())));
+      subSubElement.appendChild(doc.createTextNode(
+          String.valueOf(election.getEndingDate().getYear())));
       subElement.appendChild(subSubElement);
 
       rootElement.appendChild(subElement);
@@ -888,15 +892,15 @@ public class FileReader
         endingDate = LocalDate.of(year, month, day);
       }
     }
-    if (startingDate == null || endingDate == null){
+    if (startingDate == null || endingDate == null)
+    {
       return null;
     }
     return new Election(startingDate, endingDate);
   }
 
-
-
-  public static void SAVE_CURRENT_BORROWINGS(BorrowingsList borrowingsList) throws ParserConfigurationException, TransformerException
+  public static void SAVE_CURRENT_BORROWINGS(BorrowingsList borrowingsList)
+      throws ParserConfigurationException, TransformerException
   {
 
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -980,7 +984,6 @@ public class FileReader
 
   }
 
-
   static public BorrowingsList READ_CURRENT_BORROWINGS()
       throws ParserConfigurationException, IOException, SAXException,
       TransformerConfigurationException
@@ -992,7 +995,6 @@ public class FileReader
     Document doc = builder.parse("./src/XML/CurrentBorrowings.xml");
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
-
 
     NodeList rootList = doc.getElementsByTagName("Borrowing");
 
@@ -1094,7 +1096,8 @@ public class FileReader
     return borrowingsList;
   }
 
-  public static void SAVE_RESERVATIONS_LIST(ReservationsList reservationsList) throws ParserConfigurationException, TransformerException
+  public static void SAVE_RESERVATIONS_LIST(ReservationsList reservationsList)
+      throws ParserConfigurationException, TransformerException
   {
 
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -1166,10 +1169,7 @@ public class FileReader
       subSubElement.appendChild(doc.createTextNode(reservation.getComment()));
       subElement.appendChild(subSubElement);
 
-
-
       rootElement.appendChild(subElement);
-
 
     }
 
@@ -1194,8 +1194,6 @@ public class FileReader
     Document doc = builder.parse("src/XML/Reservations.xml");
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
     transformer.setOutputProperty(OutputKeys.INDENT, "no");
-
-
 
     NodeList rootList = doc.getElementsByTagName("reservation");
 

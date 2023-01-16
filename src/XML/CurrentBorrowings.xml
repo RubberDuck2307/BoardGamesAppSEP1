@@ -2,65 +2,81 @@
 <borrowingsList>
   <Borrowing>
     <ID>0</ID>
-    <playerID>5</playerID>
-    <gameID>4</gameID>
+    <playerID>2</playerID>
+    <gameID>1</gameID>
     <from>
-      <day>9</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>16</day>
+      <month>1</month>
+      <year>2023</year>
     </from>
     <to>
-      <day>15</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>18</day>
+      <month>1</month>
+      <year>2023</year>
     </to>
     <comment/>
   </Borrowing>
   <Borrowing>
     <ID>1</ID>
-    <playerID>4</playerID>
-    <gameID>0</gameID>
+    <playerID>8</playerID>
+    <gameID>12</gameID>
     <from>
-      <day>11</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>15</day>
+      <month>1</month>
+      <year>2023</year>
     </from>
     <to>
-      <day>15</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>18</day>
+      <month>1</month>
+      <year>2023</year>
     </to>
     <comment/>
   </Borrowing>
   <Borrowing>
     <ID>2</ID>
-    <playerID>4</playerID>
-    <gameID>7</gameID>
+    <playerID>6</playerID>
+    <gameID>0</gameID>
     <from>
-      <day>11</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>17</day>
+      <month>1</month>
+      <year>2023</year>
     </from>
     <to>
-      <day>14</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>19</day>
+      <month>1</month>
+      <year>2023</year>
     </to>
     <comment/>
   </Borrowing>
   <Borrowing>
     <ID>3</ID>
+    <playerID>5</playerID>
+    <gameID>7</gameID>
+    <from>
+      <day>17</day>
+      <month>1</month>
+      <year>2023</year>
+    </from>
+    <to>
+      <day>19</day>
+      <month>1</month>
+      <year>2023</year>
+    </to>
+    <comment/>
+  </Borrowing>
+  <Borrowing>
+    <ID>4</ID>
     <playerID>4</playerID>
     <gameID>16</gameID>
     <from>
-      <day>11</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>17</day>
+      <month>1</month>
+      <year>2023</year>
     </from>
     <to>
-      <day>14</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>19</day>
+      <month>1</month>
+      <year>2023</year>
     </to>
     <comment/>
   </Borrowing>

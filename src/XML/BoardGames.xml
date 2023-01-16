@@ -17,7 +17,7 @@
     <type>RPG</type>
     <numberOfPlayersMin>2</numberOfPlayersMin>
     <numberOfPlayersMax>8</numberOfPlayersMax>
-    <availabilityStatus>Available</availabilityStatus>
+    <availabilityStatus>Borrowed</availabilityStatus>
     <comment/>
     <ownerID>0</ownerID>
     <numberOfVotes>0</numberOfVotes>
@@ -39,7 +39,7 @@
     <type>Other</type>
     <numberOfPlayersMin>2</numberOfPlayersMin>
     <numberOfPlayersMax>2</numberOfPlayersMax>
-    <availabilityStatus>Borrowed</availabilityStatus>
+    <availabilityStatus>Available</availabilityStatus>
     <comment/>
     <ownerID>0</ownerID>
     <numberOfVotes>0</numberOfVotes>
@@ -127,7 +127,7 @@
     <type>Social Deduction</type>
     <numberOfPlayersMin>2</numberOfPlayersMin>
     <numberOfPlayersMax>4</numberOfPlayersMax>
-    <availabilityStatus>Available</availabilityStatus>
+    <availabilityStatus>Borrowed</availabilityStatus>
     <comment/>
     <ownerID>0</ownerID>
     <numberOfVotes>0</numberOfVotes>
@@ -171,9 +171,20 @@
     <type>Social Deduction</type>
     <numberOfPlayersMin>1</numberOfPlayersMin>
     <numberOfPlayersMax>5</numberOfPlayersMax>
-    <availabilityStatus>Available</availabilityStatus>
+    <availabilityStatus>Borrowed</availabilityStatus>
     <comment/>
     <ownerID>6</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>17</ID>
+    <name>Chess</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>2</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
     <numberOfVotes>0</numberOfVotes>
   </BoardGame>
 </BoardGamesList>
